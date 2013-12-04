@@ -34,8 +34,38 @@
           </p>
         </div>
 
+        <div class="panel-group" id="accordion">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                  <i class='icon-info-sign'></i> What is this?
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse">
+              <div class="panel-body">
+                <p>Every so often, severe weather events force Chicagoland water management agencies to pump excess wastewater into the lake and river in order to prevent flooding. The <a href='http://en.wikipedia.org/wiki/Tunnel_and_Reservoir_Plan'>Deep Tunnel Project</a> was started in the 1970's to avoid this and is scheduled to be completed in 2029.</p>
+
+                <p>Data comes from scraping the <a href='http://www.mwrd.org'>Metropolitan Water Reclamation District of Greater Chicago</a> portal on <a href='http://www.mwrd.org/irj/portal/anonymous?NavigationTarget=navurl://54454aed0504d716cb64a988dcec8478'>Combined Sewer Overflows</a>.</p>
+
+                <p><i class='icon-cloud-download'></i> Want to make something with this info? We made our scraped data available via a simple API. 
+
+                <pre>
+# for data on the current status
+http://istheresewageinthechicagoriver.com/water-status/
+
+# for data on a specific day from Jan 2007 on
+http://istheresewageinthechicagoriver.com/water-status/?date=MM/DD/YYYY
+                </pre>
+
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="footer">
-          <p>Data comes from the <a href='http://www.mwrd.org'>Metropolitan Water Reclamation District of Greater Chicago</a> portal on <a href='http://www.mwrd.org/irj/portal/anonymous?NavigationTarget=navurl://54454aed0504d716cb64a988dcec8478'>Combined Sewer Overflows</a>.</p>
           <p>&copy; Derek Eder and Forest Gregg of <a href='http://opencityapps.org'>Open City</a> 2013 | <a href='https://github.com/open-city/chicago-river-sewage'><i class='icon-github'></i> Pull requests welcome!</a></p>
         </div>
       </div>
@@ -54,12 +84,12 @@
     <script>
       var current_date = moment().format("M/D/YYYY");
 
-      $.when( $.getJSON("/water-status/" ) ).then(function( data, textStatus, jqXHR ) {
+      $.when( $.getJSON("/water-status/?date=" + current_date) ).then(function( data, textStatus, jqXHR ) {
 
         $("#the-answer").attr("href", "http://apps.mwrd.org/CSO/display_all.aspx?link_date=" + current_date);
 
         if (data['is-there-sewage'] == 'yes') {
-          $("#the-answer").html("<span class='label label-danger'>Yes, in " + data['cso-events'].length + " places</span>");
+          $("#the-answer").html("<span class='label label-warning'>Yes, in " + data['cso-events'].length + " places</span>");
           // $.each(data['cso-events'], function(i, json){
           //   $("#waterway-images").append("<div style='Z-INDEX: 1; WIDTH: 576px; POSITION: absolute; HEIGHT: 661px'><img src='http://apps.mwrd.org/CSO/" + data['cso-events'][i] + "' /></div>");
           //   console.log(data['cso-events'][i]);
