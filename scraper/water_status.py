@@ -16,10 +16,10 @@ def water_status():
         water_segments = re.findall('images\/\d+.GIF"', water_page.content)
         if len(water_segments) == 0:
           water_resp['cso-events'] = []
-          water_resp['is-there-shit'] = 'no'
+          water_resp['is-there-sewage'] = 'no'
         else:
           water_resp['cso-events'] = water_segments
-          water_resp['is-there-shit'] = 'yes'
+          water_resp['is-there-sewage'] = 'yes'
 
         resp = make_response(json.dumps(water_resp))
     else: 

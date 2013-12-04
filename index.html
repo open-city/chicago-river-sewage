@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Is there shit in the Chicago River?</title>
+    <title>Is there sewage in the Chicago River?</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -28,7 +28,7 @@
       <div class='col-md-10 col-md-offset-1'>
 
         <div class="jumbotron">
-          <p>Is there shit in the Chicago River?</p>
+          <p>Is there sewage in the Chicago River?</p>
           <h1><a id='the-answer' href='#'><span class="label label-success">No, carry on</span></a></h1>
           <p id='water-details'>
           </p>
@@ -36,7 +36,7 @@
 
         <div class="footer">
           <p>Data comes from the <a href='http://www.mwrd.org'>Metropolitan Water Reclamation District of Greater Chicago</a> portal on <a href='http://www.mwrd.org/irj/portal/anonymous?NavigationTarget=navurl://54454aed0504d716cb64a988dcec8478'>Combined Sewer Overflows</a>.</p>
-          <p>&copy; Derek Eder and Forest Gregg of <a href='http://opencityapps.org'>Open City</a> 2013 | <a href='https://github.com/open-city/chicago-river-shit'><i class='icon-github'></i> Pull requests welcome!</a></p>
+          <p>&copy; Derek Eder and Forest Gregg of <a href='http://opencityapps.org'>Open City</a> 2013 | <a href='https://github.com/open-city/chicago-river-sewage'><i class='icon-github'></i> Pull requests welcome!</a></p>
         </div>
       </div>
     </div> <!-- /container -->
@@ -54,11 +54,11 @@
     <script>
       var current_date = moment().format("M/D/YYYY");
 
-      $.when( $.getJSON("/scraper/water-status-12-04-2013.json" ) ).then(function( data, textStatus, jqXHR ) {
+      $.when( $.getJSON("/scraper/water-status-11-17-2013.json" ) ).then(function( data, textStatus, jqXHR ) {
 
         $("#the-answer").attr("href", "http://apps.mwrd.org/CSO/display_all.aspx?link_date=" + current_date);
 
-        if (data['is-there-shit'] == 'yes') {
+        if (data['is-there-sewage'] == 'yes') {
           $("#the-answer").html("<span class='label label-danger'>Yes, in " + data['cso-events'].length + " places</span>");
           // $.each(data['cso-events'], function(i, json){
           //   $("#waterway-images").append("<div style='Z-INDEX: 1; WIDTH: 576px; POSITION: absolute; HEIGHT: 661px'><img src='http://apps.mwrd.org/CSO/" + data['cso-events'][i] + "' /></div>");
