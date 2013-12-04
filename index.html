@@ -29,10 +29,9 @@
 
         <div class="jumbotron">
           <p>Is there shit in the Chicago River?</p>
-          <h1><a id='mwrd-link' href='#'><span class="label label-success">No</span></a></h1>
-          <p>
-          <br />
-          <img src='http://apps.mwrd.org/CSO/images/waterway.gif' alt='Chicagoland Area Waterways' /></p>
+          <h1><a id='the-answer' href='#'><span class="label label-success">No</span></a></h1>
+          <p id='water-details'>
+          </p>
         </div>
 
         <div class="footer">
@@ -54,7 +53,25 @@
 
     <script>
       var current_date = moment().format("M/D/YYYY");
-      $("#mwrd-link").attr("href", "http://apps.mwrd.org/CSO/display_all.aspx?link_date=" + current_date);
+
+      $.when( $.getJSON("/scraper/water-status-12-04-2013.json" ) ).then(function( data, textStatus, jqXHR ) {
+
+        $("#the-answer").attr("href", "http://apps.mwrd.org/CSO/display_all.aspx?link_date=" + current_date);
+
+        if (data['is-there-shit'] == 'yes') {
+          $("#the-answer").html("<span class='label label-danger'>Yes, in " + data['cso-events'].length + " places</span>");
+          // $.each(data['cso-events'], function(i, json){
+          //   $("#waterway-images").append("<div style='Z-INDEX: 1; WIDTH: 576px; POSITION: absolute; HEIGHT: 661px'><img src='http://apps.mwrd.org/CSO/" + data['cso-events'][i] + "' /></div>");
+          //   console.log(data['cso-events'][i]);
+          // });
+
+          $("#water-details").append("<br /><i class='icon-map-marker'></i> <a href='http://apps.mwrd.org/CSO/display_all.aspx?link_date=" + current_date + "'>Map</a>")
+
+          $("#water-details").append("&nbsp;&nbsp;&nbsp;<i class='icon-file-text'></i> <a href='http://apps.mwrd.org/CSO/CSOEventSynopsisReport.aspx?passdate=" + current_date + "'>Report</a>")
+        }
+        
+
+      });
     </script>
 
   </body>
