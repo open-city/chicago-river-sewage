@@ -5,26 +5,6 @@ body {
   font-size: 17px;
 }
 
-.contributors img {
-  width: 50px;
-}
-
-.contributor-owner img {
-  border: 1px solid #428bca;
-}
-
-.people td {
-  font-size: 20px;
-}
-
-.people img {
-  width: 50px;
-}
-
-.sponsors img {
-  padding: 10px 30px 10px 0;
-}
-
 .label:hover { text-decoration: none; }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -69,12 +49,8 @@ body {
   padding: 14px 24px;
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
+.jumbotron li {
+  font-size: 16px;
 }
 
 /* Responsive: Portrait tablets and up */
@@ -97,9 +73,3 @@ body {
 }
 
 .nowrap { white-space:nowrap; }
-
-#recent-event { margin: 10px 0 0 0; }
-
-.api-title { width: 30%; }
-
-.thumbnail {margin-bottom: 5px;}

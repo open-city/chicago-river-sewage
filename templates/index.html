@@ -90,9 +90,10 @@ http://istheresewageinthechicagoriver.com/water-status/?date=MM/DD/YYYY
 
         if (data['is-there-sewage'] == 'yes') {
           $("#the-answer").html("<span class='label label-warning'>Yes, in " + data['cso-events'].length + " places</span>");
+
+          // $("#water-details").append("<ul id='cso-events'></ul>");
           // $.each(data['cso-events'], function(i, json){
-          //   $("#waterway-images").append("<div style='Z-INDEX: 1; WIDTH: 576px; POSITION: absolute; HEIGHT: 661px'><img src='http://apps.mwrd.org/CSO/" + data['cso-events'][i] + "' /></div>");
-          //   console.log(data['cso-events'][i]);
+          //   $("#cso-events").append("<li>" + data['cso-events'][i][1] + "</li>");
           // });
 
           $("#water-details").append("<br /><i class='icon-map-marker'></i> <a href='http://apps.mwrd.org/CSO/display_all.aspx?link_date=" + current_date + "'>Map</a>")
