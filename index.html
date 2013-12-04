@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Is There Shit in the Chicago River?</title>
+    <title>Is there shit in the Chicago River?</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -28,11 +28,15 @@
       <div class='col-md-10 col-md-offset-1'>
 
         <div class="jumbotron">
-          <h3>Is There Shit in the Chicago River?</h3>
-          <h1>Yes</h2>
+          <p>Is there shit in the Chicago River?</p>
+          <h1><a id='mwrd-link' href='#'><span class="label label-success">No</span></a></h1>
+          <p>
+          <br />
+          <img src='http://apps.mwrd.org/CSO/images/waterway.gif' alt='Chicagoland Area Waterways' /></p>
         </div>
 
         <div class="footer">
+          <p>Data comes from the <a href='http://www.mwrd.org/irj/portal/anonymous?NavigationTarget=navurl://54454aed0504d716cb64a988dcec8478'>Metropolitan Water Reclamation District of Greater Chicago</a>.</p>
           <p>&copy; Derek Eder and Forest Gregg of <a href='http://opencityapps.org'>Open City</a> 2013 | <a href='https://github.com/open-city/chicago-river-shit'><i class='icon-github'></i> Pull requests welcome!</a></p>
         </div>
       </div>
@@ -45,6 +49,13 @@
     <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/analytics_lib.js"></script>
+
+    <script src="js/moment.min.js"></script>
+
+    <script>
+      var current_date = moment().format("M/D/YYYY");
+      $("#mwrd-link").attr("href", "http://apps.mwrd.org/CSO/display_all.aspx?link_date=" + current_date);
+    </script>
 
   </body>
 </html>
