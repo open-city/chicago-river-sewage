@@ -4,6 +4,11 @@ Scrapes data from the [Metropolitan Water Reclamation District of Greater Chicag
 
 Built with Flask and Python
 
+```bash
+pip install -r requirements.txt
+python app.py
+```
+
 ## Javascript libraries
 
 * [Bootstrap 3](http://getbootstrap.com) - HTML and CSS layouts
