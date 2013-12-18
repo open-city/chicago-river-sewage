@@ -42,7 +42,7 @@ def water_status():
   water_page = requests.get('http://apps.mwrd.org/CSO/display_all.aspx?link_date=%s' % lookup_date)
   if water_page.status_code is 200:
       water_resp = {'date': lookup_date}
-      water_segments = re.findall('images\/(\d+).GIF"', water_page.content)
+      water_segments = set(re.findall('images\/(\d+).GIF"', water_page.content))
       water_segment_details = []
       for w in water_segments:
         water_segment_details.append([int(w), waterway_segments[int(w) - 1]])
