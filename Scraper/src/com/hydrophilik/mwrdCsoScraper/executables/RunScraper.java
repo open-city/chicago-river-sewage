@@ -27,6 +27,16 @@ public class RunScraper {
 			return;
 		}
 		
+		System.out.println("Scraping...");
+		
+		scrapeWebsite(rawScrapingsDir);
+		
+		System.out.println("Done");
+
+	}
+	
+	private static void scrapeWebsite(String rawScrapingsDir) {	
+		
 		BezDate theDate;
 		BezDate endDate;
 		
@@ -41,12 +51,7 @@ public class RunScraper {
 		
 		System.out.println("Scraper started with start date: " + theDate.convertToString() +
 				" and end date: " + endDate.convertToString());
-		
-		scrapeWebsite(theDate, endDate, rawScrapingsDir);
 
-	}
-	
-	private static void scrapeWebsite(BezDate theDate, BezDate endDate, String rawScrapingsDir) {	
 		
 		while (false == theDate.isSameDayAs(endDate)) {
 			
@@ -54,7 +59,8 @@ public class RunScraper {
 			
 			if (file.exists()) {
 				// Date has already been scraped.  Skip it.
-				return;
+				theDate.incrementDays(1);
+				continue;
 			}
 			
 			String date = theDate.convertToString();
