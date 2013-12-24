@@ -31,7 +31,7 @@ public class RunScraper {
 		BezDate endDate;
 		
 		try {
-			theDate = new BezDate("12/22/2013");
+			theDate = new BezDate("1/1/2007");
 			endDate = new BezDate(); // today
 		}
 		catch (Exception e) {
@@ -91,8 +91,7 @@ public class RunScraper {
 					return;
 				}
 			}
-			
-			System.out.println("Processing: " + file.getAbsolutePath());			
+		
 			theDate.incrementDays(1);
 		}
 	}
