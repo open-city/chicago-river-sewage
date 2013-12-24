@@ -44,8 +44,7 @@ public class RunScraper {
 				return;
 			}
 			
-			System.out.println("Processing: " + file.getAbsolutePath());
-			
+			System.out.println("Processing: " + file.getAbsolutePath());			
 			theDate.incrementDays(1);
 		}
 	}
