@@ -1,0 +1,248 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+	<HEAD>
+		<title>CSOEventSynopsisReport</title>
+		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+		<meta content="Visual Basic .NET 7.1" name="CODE_LANGUAGE">
+		<meta content="JavaScript" name="vs_defaultClientScript">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<LINK href="http://www.mwrd.org//irj/go/km/docs/documents/MWRD/include/css/mwrd_style.css"	type="text/css" rel="stylesheet">
+		<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function popUp(URL) {
+day = new Date();
+id = day.getTime();
+eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=200,height=400');");
+}
+// End -->
+		</SCRIPT>
+	</HEAD>
+	<body>
+		<form name="Form1" method="post" action="CSOEventSynopsisReport.aspx?passdate=6%2f26%2f2010" id="Form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+			<P align="left">CSO EVENT SYNOPSIS REPORT (DRAFT)</P>
+			<P align="left">
+				<TABLE id="Table1" style="WIDTH: 584px; HEIGHT: 45px" cellSpacing="1" cellPadding="1" width="584"
+					border="0">
+					<TR>
+						<TD style="WIDTH: 58px">Event # :
+						</TD>
+						<TD style="WIDTH: 224px">
+							<P align="left">
+								<span id="lbevent"><u>10-300</u></span></P>
+						</TD>
+						<TD>For Details of TARP Connections,</TD>
+					</TR>
+					<TR>
+						<TD style="WIDTH: 58px">Date(s) :
+						</TD>
+						<TD style="WIDTH: 224px">
+							<span id="lbdate"><u>6/26/2010</u></span>
+							</TD>
+						<TD><A HREF="http://www.mwrd.org/irj/portal/anonymous?NavigationTarget=navurl://7ad58824541a9c5fc243b2463c35b36d"
+								title="TARP Community" target="_top">Click here to see TARP Connection 
+								Database!</A></TD>
+					</TR>
+				</TABLE>
+			</P>
+			<P align="left">Event rainfall&nbsp;summary (inches): North
+				<span id="lbnorth"><u>.35</u></span>, 
+				Central
+				<span id="lbcentral"><u>.60</u></span>, 
+				South
+				<span id="lbsouth"><u>.45</u></span>&nbsp;<BR>
+				*The rain summary average is as of midnight of :
+				<span id="lbdate3">6/26/2010</span></P>
+			<P align="left"><table cellspacing="0" rules="all" border="1" id="DG1">
+	<tr>
+		<td>Outfall Location</td><td>Waterway Segment</td><td>Start Time (HH:MM)</td><td>Stop Time (HH:MM)</td><td>Duration (HH:MM)</td>
+	</tr><tr>
+		<td>NBPS (DS-M90 & DS-M91)</td><td>3</td><td>05:16</td><td>07:31</td><td>02:15</td>
+	</tr><tr>
+		<td>DS-D02</td><td>13</td><td>04:39</td><td>05:43</td><td>01:04</td>
+	</tr><tr>
+		<td>DS-D05</td><td>13</td><td>04:56</td><td>05:22</td><td>00:26</td>
+	</tr><tr>
+		<td>DS-D06</td><td>13</td><td>04:42</td><td>07:01</td><td>02:19</td>
+	</tr><tr>
+		<td>DS-D07</td><td>13</td><td>04:43</td><td>16:21</td><td>11:38</td>
+	</tr><tr>
+		<td>DS-D10</td><td>14</td><td>04:30</td><td>05:30</td><td>01:00</td>
+	</tr><tr>
+		<td>DS-D13</td><td>14</td><td>04:30</td><td>05:23</td><td>00:53</td>
+	</tr><tr>
+		<td>DS-D14</td><td>14</td><td>04:37</td><td>05:25</td><td>00:48</td>
+	</tr><tr>
+		<td>DS-D15</td><td>14</td><td>04:52</td><td>06:52</td><td>02:00</td>
+	</tr><tr>
+		<td>DS-D16</td><td>14</td><td>04:25</td><td>05:09</td><td>00:44</td>
+	</tr><tr>
+		<td>DS-D17</td><td>14</td><td>04:37</td><td>04:46</td><td>00:09</td>
+	</tr><tr>
+		<td>DS-D18</td><td>14</td><td>04:31</td><td>05:20</td><td>00:49</td>
+	</tr><tr>
+		<td>DS-D19,23</td><td>14</td><td>04:54</td><td>05:54</td><td>01:00</td>
+	</tr><tr>
+		<td>DS-D22,24,25</td><td>14</td><td>05:08</td><td>05:52</td><td>00:44</td>
+	</tr><tr>
+		<td>DS-D27I</td><td>14</td><td>04:33</td><td>16:20</td><td>11:47</td>
+	</tr><tr>
+		<td>DS-D28</td><td>14</td><td>04:39</td><td>05:54</td><td>01:15</td>
+	</tr><tr>
+		<td>DS-D28,30</td><td>14</td><td>04:47</td><td>05:22</td><td>00:35</td>
+	</tr><tr>
+		<td>DS-D31</td><td>14</td><td>04:25</td><td>16:17</td><td>11:52</td>
+	</tr><tr>
+		<td>DS-D32</td><td>14</td><td>04:31</td><td>16:18</td><td>11:47</td>
+	</tr><tr>
+		<td>DS-D36</td><td>14</td><td>04:37</td><td>05:38</td><td>01:01</td>
+	</tr><tr>
+		<td>DS-D37,38</td><td>16</td><td>04:42</td><td>07:15</td><td>02:33</td>
+	</tr><tr>
+		<td>DS-D39,42,46</td><td>16</td><td>04:43</td><td>06:40</td><td>01:57</td>
+	</tr><tr>
+		<td>DS-D41</td><td>15</td><td>04:39</td><td>06:24</td><td>01:45</td>
+	</tr><tr>
+		<td>DS-D44,45</td><td>15</td><td>04:40</td><td>05:55</td><td>01:15</td>
+	</tr><tr>
+		<td>DS-D47,50,51</td><td>16</td><td>04:45</td><td>16:20</td><td>11:35</td>
+	</tr><tr>
+		<td>DS-D49</td><td>15</td><td>04:36</td><td>07:33</td><td>02:57</td>
+	</tr><tr>
+		<td>DS-D52</td><td>14</td><td>04:58</td><td>07:05</td><td>02:07</td>
+	</tr><tr>
+		<td>DS-D62</td><td>16</td><td>04:37</td><td>05:04</td><td>00:27</td>
+	</tr><tr>
+		<td>DS-M08</td><td>9</td><td>05:29</td><td>07:34</td><td>02:05</td>
+	</tr><tr>
+		<td>DS-M11</td><td>9</td><td>05:06</td><td>12:58</td><td>07:52</td>
+	</tr><tr>
+		<td>DS-M13</td><td>8</td><td>04:53</td><td>06:38</td><td>01:45</td>
+	</tr><tr>
+		<td>DS-M19</td><td>8</td><td>05:14</td><td>07:19</td><td>02:05</td>
+	</tr><tr>
+		<td>DS-M25</td><td>6</td><td>04:55</td><td>06:35</td><td>01:40</td>
+	</tr><tr>
+		<td>DS-M26</td><td>7</td><td>05:32</td><td>05:59</td><td>00:27</td>
+	</tr><tr>
+		<td>DS-M26</td><td>7</td><td>06:00</td><td>06:09</td><td>00:09</td>
+	</tr><tr>
+		<td>DS-M26</td><td>7</td><td>06:13</td><td>06:16</td><td>00:03</td>
+	</tr><tr>
+		<td>DS-M30</td><td>7</td><td>04:47</td><td>08:00</td><td>03:13</td>
+	</tr><tr>
+		<td>DS-M45</td><td>6</td><td>04:53</td><td>05:43</td><td>00:50</td>
+	</tr><tr>
+		<td>DS-M47</td><td>6</td><td>04:53</td><td>05:15</td><td>00:22</td>
+	</tr><tr>
+		<td>DS-M49</td><td>6</td><td>04:49</td><td>05:13</td><td>00:24</td>
+	</tr><tr>
+		<td>DS-M51</td><td>6</td><td>04:49</td><td>04:59</td><td>00:10</td>
+	</tr><tr>
+		<td>DS-M70</td><td>3</td><td>04:46</td><td>05:13</td><td>00:27</td>
+	</tr><tr>
+		<td>DS-M73</td><td>3</td><td>05:00</td><td>05:29</td><td>00:29</td>
+	</tr><tr>
+		<td>DS-M75</td><td>3</td><td>04:51</td><td>06:12</td><td>01:21</td>
+	</tr><tr>
+		<td>TG-I28 & I29</td><td>6</td><td>04:34</td><td>04:42</td><td>00:08</td>
+	</tr><tr>
+		<td>TG-I8</td><td>8</td><td>05:49</td><td>05:56</td><td>00:07</td>
+	</tr><tr>
+		<td>RAPS (DS-M27, DS-M28, DS-M29)</td><td>7</td><td>05:30</td><td>08:30</td><td>03:00</td>
+	</tr><tr>
+		<td>DS-M106E</td><td>1</td><td>05:51</td><td>07:14</td><td>01:23</td>
+	</tr><tr>
+		<td>DS-M109 N</td><td>1</td><td>05:14</td><td>05:37</td><td>00:23</td>
+	</tr><tr>
+		<td>DS-M76</td><td>3</td><td>04:42</td><td>05:42</td><td>01:00</td>
+	</tr><tr>
+		<td>DS-M80</td><td>3</td><td>05:03</td><td>05:32</td><td>00:29</td>
+	</tr><tr>
+		<td>DS-M82</td><td>3</td><td>04:36</td><td>07:26</td><td>02:50</td>
+	</tr><tr>
+		<td>DS-M84</td><td>3</td><td>04:58</td><td>06:50</td><td>01:52</td>
+	</tr><tr>
+		<td>DS-M85</td><td>3</td><td>04:46</td><td>06:23</td><td>01:37</td>
+	</tr><tr>
+		<td>DS-M86</td><td>3</td><td>05:23</td><td>05:38</td><td>00:15</td>
+	</tr><tr>
+		<td>DS-M97</td><td>2</td><td>04:59</td><td>07:38</td><td>02:39</td>
+	</tr><tr>
+		<td>DS-N02</td><td>4</td><td>04:41</td><td>16:32</td><td>11:51</td>
+	</tr><tr>
+		<td>DS-N03</td><td>4</td><td>04:41</td><td>05:43</td><td>01:02</td>
+	</tr><tr>
+		<td>DS-N04</td><td>4</td><td>04:49</td><td>05:26</td><td>00:37</td>
+	</tr><tr>
+		<td>DS-N05</td><td>4</td><td>04:42</td><td>16:32</td><td>11:50</td>
+	</tr><tr>
+		<td>DS-N06</td><td>4</td><td>04:38</td><td>05:34</td><td>00:56</td>
+	</tr><tr>
+		<td>DS-N08</td><td>4</td><td>04:34</td><td>10:03</td><td>05:29</td>
+	</tr><tr>
+		<td>DS-N09</td><td>4</td><td>04:36</td><td>05:06</td><td>00:30</td>
+	</tr><tr>
+		<td>DS-N10A</td><td>4</td><td>04:39</td><td>05:41</td><td>01:02</td>
+	</tr><tr>
+		<td>DS-N10B</td><td>4</td><td>04:32</td><td>06:26</td><td>01:54</td>
+	</tr><tr>
+		<td>DS-N13R</td><td>4</td><td>04:32</td><td>05:47</td><td>01:15</td>
+	</tr><tr>
+		<td>DS-N16</td><td>4</td><td>04:34</td><td>05:05</td><td>00:31</td>
+	</tr><tr>
+		<td>DS-N17</td><td>4</td><td>04:36</td><td>05:36</td><td>01:00</td>
+	</tr><tr>
+		<td>DS-N18</td><td>4</td><td>04:37</td><td>05:37</td><td>01:00</td>
+	</tr><tr>
+		<td>DS-N19</td><td>4</td><td>04:34</td><td>05:20</td><td>00:46</td>
+	</tr><tr>
+		<td>WCPS (DS-D34-AI)</td><td>23</td><td>03:30</td><td>05:00</td><td>01:30</td>
+	</tr><tr>
+		<td>DS-M40</td><td>6</td><td>04:55</td><td>16:30</td><td>11:35</td>
+	</tr><tr>
+		<td>DS-M40</td><td>6</td><td>20:11</td><td>20:52</td><td>00:41</td>
+	</tr><tr>
+		<td>Wilmette DS-M114N-2</td><td>1</td><td>04:44</td><td>14:08</td><td>09:24</td>
+	</tr><tr>
+		<td>Wilmette DS-M114N-2</td><td>1</td><td>16:18</td><td>16:21</td><td>00:03</td>
+	</tr><tr>
+		<td>Wilmette DS-M114N-2</td><td>1</td><td>16:36</td><td>16:38</td><td>00:02</td>
+	</tr>
+</table></P>
+			<P align="left">1.&nbsp;&nbsp; North Shore Channel: Lake Michigan to North Side WRP<BR>
+				2.&nbsp;&nbsp; North Shore Channel: North Side WRP to the confluence with the 
+				North Branch of the Chicago River (NBCR)<BR>
+				3.&nbsp;&nbsp; NBCR: confluence with the North Shore Channel to Wolf Point, 
+				including the North Branch Canal east of Goose Island.<BR>
+				4.&nbsp;&nbsp; NBCR: Beckwith Road and West Fork to confluence with the North 
+				Shore Channel<BR>
+				5.&nbsp;&nbsp; Chicago River: Wolf Point to Chicago River Controlling Works 
+				(CRCW)<BR>
+				6.&nbsp;&nbsp; South Branch of Chicago River: Wolf Point to Damen Avenue<BR>
+				7.&nbsp;&nbsp; South Fork of SBCR (Bubbly Creek)<BR>
+				8.&nbsp;&nbsp; Chicago Sanitary and Ship Canal (CSSC): Damen Avenue to the 
+				Stickney WRP<BR>
+				9.&nbsp;&nbsp; CSSC: Stickney WRP to the confluence with the Calumet-Sag 
+				Channel<BR>
+				10. CSSC: from the confluence with the Calumet-Sag Channel to the Lemont WRP<BR>
+				11. CSSC: Lemont WRP to Lockport Lock &amp; Dam<BR>
+				12. Weller Creek<BR>
+				13. Des Plaines River: Weller Creek to Willow-Higgins Creek<BR>
+				14. Des Plaines River: Willow-Higgins Creek to the confluence with Salt Creek<BR>
+				15. Des Plaines River: the confluence with Salt Creek to the confluence with 
+				the CSSC<BR>
+				16. Salt Creek: from Addison Creek to the confluence with the Des Plaines River<BR>
+				17. Calumet River: O'Brien Locks to Lake Michigan<BR>
+				18. Grand Calumet River: from confluence with the Little Calumet River to the 
+				Indiana state line<BR>
+				19. Little Calumet River: O'Brien Locks to the Calumet-Sag Channel<BR>
+				20. Little Calumet River: Indiane state line to the Calumet-Sag Channel<BR>
+				21. Calumet-Sag Channel<BR>
+				22. Calumet Union Drainage Ditch<BR>
+				23. Addison Creek</P>
+		</form>
+	</body>
+</HTML>

@@ -1,0 +1,118 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+	<HEAD>
+		<title>CSOEventSynopsisReport</title>
+		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+		<meta content="Visual Basic .NET 7.1" name="CODE_LANGUAGE">
+		<meta content="JavaScript" name="vs_defaultClientScript">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<LINK href="http://www.mwrd.org//irj/go/km/docs/documents/MWRD/include/css/mwrd_style.css"	type="text/css" rel="stylesheet">
+		<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function popUp(URL) {
+day = new Date();
+id = day.getTime();
+eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=200,height=400');");
+}
+// End -->
+		</SCRIPT>
+	</HEAD>
+	<body>
+		<form name="Form1" method="post" action="CSOEventSynopsisReport.aspx?passdate=10%2f25%2f2009" id="Form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTIwMTgxNjI3Mg9kFgICAQ9kFhICAQ8PFgIeBFRleHQFBjA5LTI1M2RkAgMPDxYCHwAFCjEwLzI1LzIwMDlkZAIFDw8WAh4HVmlzaWJsZWdkZAIGDw8WBB8ABQoxMC8yNi8yMDA5HwFnZGQCCA8PFgIfAAUDLjEyZGQCCg8PFgIfAAUDLjE2ZGQCDA8PFgIfAAUDLjE0ZGQCDg8PFgIfAAUKMTAvMjUvMjAwOWRkAhAPPCsACwEADxYIHghEYXRhS2V5cxYAHgtfIUl0ZW1Db3VudAILHglQYWdlQ291bnQCAR4VXyFEYXRhU291cmNlSXRlbUNvdW50AgtkFgJmD2QWFgIBD2QWCmYPDxYCHwAFBkNEUy0yMWRkAgEPDxYCHwAFAjE4ZGQCAg8PFgIfAAUFMDA6MDFkZAIDDw8WAh8ABQUwMzowOGRkAgQPDxYCHwAFBTAzOjA3ZGQCAg9kFgpmDw8WAh8ABQZEUy1EMTBkZAIBDw8WAh8ABQIxNGRkAgIPDxYCHwAFBTIzOjQ1ZGQCAw8PFgIfAAUFMjM6NTlkZAIEDw8WAh8ABQUwMDoxNGRkAgMPZBYKZg8PFgIfAAUGRFMtRDI4ZGQCAQ8PFgIfAAUCMTRkZAICDw8WAh8ABQUyMzowOGRkAgMPDxYCHwAFBTIzOjU5ZGQCBA8PFgIfAAUFMDA6NTFkZAIED2QWCmYPDxYCHwAFBkRTLU0wOGRkAgEPDxYCHwAFATlkZAICDw8WAh8ABQUyMzo1OGRkAgMPDxYCHwAFBTAyOjU4ZGQCBA8PFgIfAAUFMDM6MDBkZAIFD2QWCmYPDxYCHwAFBkRTLU04MmRkAgEPDxYCHwAFATNkZAICDw8WAh8ABQUyMzozNGRkAgMPDxYCHwAFBTAyOjQwZGQCBA8PFgIfAAUFMDM6MDZkZAIGD2QWCmYPDxYCHwAFBkRTLU4wMmRkAgEPDxYCHwAFATRkZAICDw8WAh8ABQUyMzo1MmRkAgMPDxYCHwAFBTA2OjQ2ZGQCBA8PFgIfAAUFMDY6NTRkZAIHD2QWCmYPDxYCHwAFBkRTLU4wNWRkAgEPDxYCHwAFATRkZAICDw8WAh8ABQUyMzo1M2RkAgMPDxYCHwAFBTA1OjA0ZGQCBA8PFgIfAAUFMDU6MTFkZAIID2QWCmYPDxYCHwAFBkRTLU4wOGRkAgEPDxYCHwAFATRkZAICDw8WAh8ABQUyMzo0MGRkAgMPDxYCHwAFBTAzOjM4ZGQCBA8PFgIfAAUFMDM6NThkZAIJD2QWCmYPDxYCHwAFB0RTLU4xMEJkZAIBDw8WAh8ABQE0ZGQCAg8PFgIfAAUFMjM6NTVkZAIDDw8WAh8ABQUwMjoyNmRkAgQPDxYCHwAFBTAyOjMxZGQCCg9kFgpmDw8WAh8ABQdEUy1OMTNSZGQCAQ8PFgIfAAUBNGRkAgIPDxYCHwAFBTIzOjU4ZGQCAw8PFgIfAAUFMDE6NTZkZAIEDw8WAh8ABQUwMTo1OGRkAgsPZBYKZg8PFgIfAAUGRFMtTTE1ZGQCAQ8PFgIfAAUBOGRkAgIPDxYCHwAFBTIzOjQ4ZGQCAw8PFgIfAAUFMDk6MjVkZAIEDw8WAh8ABQUwOTozN2RkZELxc7aflnFUVaFJ0ZHrtIU4o4+M" />
+
+			<P align="left">CSO EVENT SYNOPSIS REPORT (DRAFT)</P>
+			<P align="left">
+				<TABLE id="Table1" style="WIDTH: 584px; HEIGHT: 45px" cellSpacing="1" cellPadding="1" width="584"
+					border="0">
+					<TR>
+						<TD style="WIDTH: 58px">Event # :
+						</TD>
+						<TD style="WIDTH: 224px">
+							<P align="left">
+								<span id="lbevent"><u>09-253</u></span></P>
+						</TD>
+						<TD>For Details of TARP Connections,</TD>
+					</TR>
+					<TR>
+						<TD style="WIDTH: 58px">Date(s) :
+						</TD>
+						<TD style="WIDTH: 224px">
+							<span id="lbdate"><u>10/25/2009</u></span>
+							<span id="lbdash"> - </span><span id="lbdate2"><u>10/26/2009</u></span></TD>
+						<TD><A HREF="http://www.mwrd.org/irj/portal/anonymous?NavigationTarget=navurl://7ad58824541a9c5fc243b2463c35b36d"
+								title="TARP Community" target="_top">Click here to see TARP Connection 
+								Database!</A></TD>
+					</TR>
+				</TABLE>
+			</P>
+			<P align="left">Event rainfall&nbsp;summary (inches): North
+				<span id="lbnorth"><u>.12</u></span>, 
+				Central
+				<span id="lbcentral"><u>.16</u></span>, 
+				South
+				<span id="lbsouth"><u>.14</u></span>&nbsp;<BR>
+				*The rain summary average is as of midnight of :
+				<span id="lbdate3">10/25/2009</span></P>
+			<P align="left"><table cellspacing="0" rules="all" border="1" id="DG1">
+	<tr>
+		<td>Outfall Location</td><td>Waterway Segment</td><td>Start Time (HH:MM)</td><td>Stop Time (HH:MM)</td><td>Duration (HH:MM)</td>
+	</tr><tr>
+		<td>CDS-21</td><td>18</td><td>00:01</td><td>03:08</td><td>03:07</td>
+	</tr><tr>
+		<td>DS-D10</td><td>14</td><td>23:45</td><td>23:59</td><td>00:14</td>
+	</tr><tr>
+		<td>DS-D28</td><td>14</td><td>23:08</td><td>23:59</td><td>00:51</td>
+	</tr><tr>
+		<td>DS-M08</td><td>9</td><td>23:58</td><td>02:58</td><td>03:00</td>
+	</tr><tr>
+		<td>DS-M82</td><td>3</td><td>23:34</td><td>02:40</td><td>03:06</td>
+	</tr><tr>
+		<td>DS-N02</td><td>4</td><td>23:52</td><td>06:46</td><td>06:54</td>
+	</tr><tr>
+		<td>DS-N05</td><td>4</td><td>23:53</td><td>05:04</td><td>05:11</td>
+	</tr><tr>
+		<td>DS-N08</td><td>4</td><td>23:40</td><td>03:38</td><td>03:58</td>
+	</tr><tr>
+		<td>DS-N10B</td><td>4</td><td>23:55</td><td>02:26</td><td>02:31</td>
+	</tr><tr>
+		<td>DS-N13R</td><td>4</td><td>23:58</td><td>01:56</td><td>01:58</td>
+	</tr><tr>
+		<td>DS-M15</td><td>8</td><td>23:48</td><td>09:25</td><td>09:37</td>
+	</tr>
+</table></P>
+			<P align="left">1.&nbsp;&nbsp; North Shore Channel: Lake Michigan to North Side WRP<BR>
+				2.&nbsp;&nbsp; North Shore Channel: North Side WRP to the confluence with the 
+				North Branch of the Chicago River (NBCR)<BR>
+				3.&nbsp;&nbsp; NBCR: confluence with the North Shore Channel to Wolf Point, 
+				including the North Branch Canal east of Goose Island.<BR>
+				4.&nbsp;&nbsp; NBCR: Beckwith Road and West Fork to confluence with the North 
+				Shore Channel<BR>
+				5.&nbsp;&nbsp; Chicago River: Wolf Point to Chicago River Controlling Works 
+				(CRCW)<BR>
+				6.&nbsp;&nbsp; South Branch of Chicago River: Wolf Point to Damen Avenue<BR>
+				7.&nbsp;&nbsp; South Fork of SBCR (Bubbly Creek)<BR>
+				8.&nbsp;&nbsp; Chicago Sanitary and Ship Canal (CSSC): Damen Avenue to the 
+				Stickney WRP<BR>
+				9.&nbsp;&nbsp; CSSC: Stickney WRP to the confluence with the Calumet-Sag 
+				Channel<BR>
+				10. CSSC: from the confluence with the Calumet-Sag Channel to the Lemont WRP<BR>
+				11. CSSC: Lemont WRP to Lockport Lock &amp; Dam<BR>
+				12. Weller Creek<BR>
+				13. Des Plaines River: Weller Creek to Willow-Higgins Creek<BR>
+				14. Des Plaines River: Willow-Higgins Creek to the confluence with Salt Creek<BR>
+				15. Des Plaines River: the confluence with Salt Creek to the confluence with 
+				the CSSC<BR>
+				16. Salt Creek: from Addison Creek to the confluence with the Des Plaines River<BR>
+				17. Calumet River: O'Brien Locks to Lake Michigan<BR>
+				18. Grand Calumet River: from confluence with the Little Calumet River to the 
+				Indiana state line<BR>
+				19. Little Calumet River: O'Brien Locks to the Calumet-Sag Channel<BR>
+				20. Little Calumet River: Indiane state line to the Calumet-Sag Channel<BR>
+				21. Calumet-Sag Channel<BR>
+				22. Calumet Union Drainage Ditch<BR>
+				23. Addison Creek</P>
+		</form>
+	</body>
+</HTML>
