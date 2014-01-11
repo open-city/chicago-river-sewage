@@ -29,7 +29,7 @@
 
         <div class="jumbotron">
           <p>Is there raw sewage being dumped in the Chicago River right now?</p>
-          <h1><a id='the-answer' href='#'><span class="label label-success">No</span></a></h1>
+          <h1><a id='the-answer' href='#'></a></h1>
           <p id='water-details'>
           </p>
         </div>
@@ -47,7 +47,7 @@
               <div class="panel-body">
                 <p>Every so often when Chicago gets a lot of rain or there's a significant snowmelt, the Chicagoland water management agencies pump excess wastewater into the lake and river in order to prevent flooding.</p>
 
-                <p>It's because of practices like these that the city <a href='http://en.wikipedia.org/wiki/Chicago_River#Reversing_the_flow'>reversed Chicago River's flow in 1848</a> to avoid contaminating our drinking supply. As a result, a significant amount of <a href='http://www.wbez.org/episode-segments/2011-06-23/front-and-center-how-chicagos-excrement-killing-fish-gulf-mexico-88234'>'nutrient pollution' from Chicago<a> travels down the Illinois and Mississippi rivers and collects in the Gulf of Mexico in a <a href='http://news.nationalgeographic.com/news/2013/06/130621-dead-zone-biggest-gulf-of-mexico-science-environment/'>dead zone roughly the size of New Hampshire</a>.</p>
+                <p>It's because of practices like these that the city <a href='http://en.wikipedia.org/wiki/Chicago_River#Reversing_the_flow'>reversed Chicago River's flow in 1848</a> to avoid contaminating our drinking supply. As a result, a significant amount of <a href='http://www.wbez.org/episode-segments/2011-06-23/front-and-center-how-chicagos-excrement-killing-fish-gulf-mexico-88234'>'nutrient pollution' from Chicago</a> travels down the Illinois and Mississippi rivers and collects in the Gulf of Mexico in a <a href='http://news.nationalgeographic.com/news/2013/06/130621-dead-zone-biggest-gulf-of-mexico-science-environment/'>dead zone roughly the size of New Hampshire</a>.</p>
 
                 <p>In 1975, the <a href='http://www.mwrd.org/irj/portal/anonymous/Home'>Metropolitan Water Reclamation District of Greater Chicago</a> started building a massive <a href='http://en.wikipedia.org/wiki/Tunnel_and_Reservoir_Plan'>Tunnel and Reservoir</a> (dubbed TARP) to prevent this flooding, but is not scheduled to complete it until 2029. The <a href='http://articles.chicagotribune.com/2011-05-12/travel/ct-met-chicago-river-swimming-20110512_1_epa-orders-clean-water-act-chicago-river'>EPA has since sued to push this deadline forward</a>, but as of Jan 9, 2014 <a href='http://www.dailywhale.com/content-preview/eb2628e2081c3a62a1757bba96f68ef7/'>a judge ruled that the 2029 deadline will stand</a>.</p>
 
@@ -93,7 +93,7 @@ http://istheresewageinthechicagoriver.com/water-status/?date=MM/DD/YYYY
         </div>
 
         <div class="footer">
-          <p>&copy; Derek Eder and Forest Gregg of <a href='http://opencityapps.org'>Open City</a> 2013 | <a href='https://github.com/open-city/chicago-river-sewage'><i class='icon-github'></i> Pull requests welcome!</a></p>
+          <p>An <a href='http://opencityapps.org'>Open City</a> app by Scott Beslow, Derek Eder, Forest Gregg and Eric van Zanten | <a href='https://github.com/open-city/chicago-river-sewage'><i class='icon-github'></i> Pull requests welcome!</a></p>
         </div>
       </div>
     </div> <!-- /container -->
@@ -130,6 +130,9 @@ http://istheresewageinthechicagoriver.com/water-status/?date=MM/DD/YYYY
           $("#water-details").append("<br /><i class='icon-map-marker'></i> <a href='http://apps.mwrd.org/CSO/display_all.aspx?link_date=" + current_date + "'>Map</a>")
 
           $("#water-details").append("&nbsp;&nbsp;&nbsp;<i class='icon-file-text'></i> <a href='http://apps.mwrd.org/CSO/CSOEventSynopsisReport.aspx?passdate=" + current_date + "'>Report</a>")
+        }
+        else {
+          $("#the-answer").html("<span class='label label-success'>No</span>");
         }
         
 
