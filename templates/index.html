@@ -28,7 +28,7 @@
       <div class='col-md-10 col-md-offset-1'>
 
         <div class="jumbotron">
-          <p>Is there sewage in the Chicago River?</p>
+          <p>Is there raw sewage being dumped in the Chicago River right now?</p>
           <h1><a id='the-answer' href='#'><span class="label label-success">No</span></a></h1>
           <p id='water-details'>
           </p>
@@ -108,7 +108,11 @@ http://istheresewageinthechicagoriver.com/water-status/?date=MM/DD/YYYY
         $("#the-answer").attr("href", "http://apps.mwrd.org/CSO/display_all.aspx?link_date=" + current_date);
 
         if (data['is-there-sewage'] == 'yes') {
-          $("#the-answer").html("<span class='label label-warning'>Yes, in " + data['cso-events'].length + " places</span>");
+          var suffix = 'places';
+          if (data['cso-events'].length == 1)
+            suffix = 'place';
+
+          $("#the-answer").html("<span class='label label-warning'>Yes, in " + data['cso-events'].length + " " + suffix + "</span>");
 
           // $("#water-details").append("<ul id='cso-events'></ul>");
           // $.each(data['cso-events'], function(i, json){
