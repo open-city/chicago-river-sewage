@@ -3,12 +3,17 @@ from xlrd import open_workbook, xldate_as_tuple
 import datetime
 import csv
 
+def clean_string(value):
+    return value.strip().lower().replace(" ", "_").replace("-", "_")
+
 def process(cell):
     if cell.ctype == 3:
         value = xldate_as_tuple(cell.value, wb.datemode)
         value = str(datetime.datetime(*value))
     else:
         value = unicode(cell.value).encode("utf-8")
+        if isinstance(value, str):
+            value = clean_string(value)
     return value
 
 def csv_filename_from(sheet, year):
