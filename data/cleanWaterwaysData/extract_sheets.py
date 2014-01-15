@@ -14,12 +14,14 @@ def process(cell):
 def csv_filename_from(sheet, year):
     return str(year) + '/' + sheet.name.replace(" ", "").lower() + '.csv'
 
+def waterways_workbook_for(year):
+    return str(year) + '/waterways' + str(year) + '.xls'
+
 for year in range(2005,2013):
-    wb = open_workbook(str(year) + '/waterways' + str(year) + '.xls')
+    wb = open_workbook(waterways_workbook_for(year))
     annual_water_sheets = [sheet for sheet in wb.sheets() if str(year) in sheet.name]
     for s in annual_water_sheets:
         with open(csv_filename_from(s, year), 'w') as f :
             writer = csv.writer(f)
             rows = [[process(s.cell(row,col)) for col in range(s.ncols)] for row in range(s.nrows)]
             writer.writerows(rows)
-
