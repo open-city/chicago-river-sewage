@@ -26,13 +26,12 @@ def process_first_rows(rows):
     rows[0] = [ cell_1 + '(' + cell_2 + ')' for cell_1, cell_2 in zip(rows[0], old_second_row) ]
     return rows
 
-# checks the last 10 rows to see if they start with something that 'looks like' a date
+# checks last rows to see if they start with something that 'looks like' a date
 # removes them if they don't
 def process_last_rows(rows):
-    for i in range(-1, -10, -1):
-        print rows[i][0]
-        if not re.match(r'\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}',rows[i][0]):
-            rows.pop(i)
+    while not re.match(r'\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}',rows[-1][0]) or not rows[-1][0]:
+        print rows[-1][0]
+        rows.pop(-1)
     return rows
 
 def csv_filename_from(sheet, year):
