@@ -2,11 +2,14 @@ from mmap import mmap,ACCESS_READ
 from xlrd import open_workbook, xldate_as_tuple
 import datetime
 import csv
+import re
 
+# useful for cleaning up the headers; 'pH   ' => 'ph'
 def clean_string(value):
     return value.strip().lower().replace(" ", "_").replace("-", "_")
 
-def process(cell):
+# resolves encoding issues that were occuring when processing the xls files
+def process_cell(cell):
     if cell.ctype == 3:
         value = xldate_as_tuple(cell.value, wb.datemode)
         value = str(datetime.datetime(*value))
@@ -15,6 +18,22 @@ def process(cell):
         if isinstance(value, str):
             value = clean_string(value)
     return value
+
+# removes the third row (empty row) and merges the second into the first
+def process_first_rows(rows):
+    rows.pop(2)
+    old_second_row = rows.pop(1)
+    rows[0] = [ cell_1 + '(' + cell_2 + ')' for cell_1, cell_2 in zip(rows[0], old_second_row) ]
+    return rows
+
+# checks the last 10 rows to see if they start with something that 'looks like' a date
+# removes them if they don't
+def process_last_rows(rows):
+    for i in range(-1, -10, -1):
+        print rows[i][0]
+        if not re.match(r'\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}',rows[i][0]):
+            rows.pop(i)
+    return rows
 
 def csv_filename_from(sheet, year):
     return str(year) + '/' + sheet.name.replace(" ", "").lower() + '.csv'
@@ -28,5 +47,7 @@ for year in range(2005,2013):
     for s in annual_water_sheets:
         with open(csv_filename_from(s, year), 'w') as f :
             writer = csv.writer(f)
-            rows = [[process(s.cell(row,col)) for col in range(s.ncols)] for row in range(s.nrows)]
-            writer.writerows(rows)
+            sheet = [[process_cell(s.cell(row,col)) for col in range(s.ncols)] for row in range(s.nrows)]
+            sheet = process_first_rows(sheet)
+            sheet = process_last_rows(sheet)
+            writer.writerows(sheet)

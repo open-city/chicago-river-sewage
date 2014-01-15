@@ -1,6 +1,4 @@
-collect,time,sampling,do,temp,ph,no2+no3,nh3_n,tkn,tot_p,so4,tds,tds,ss,vss,turb,alk,cl,cl,f,toc,phenol,cn,cn_wad,fog,radiochem,radiochem,fec_col,chloroph,chloroph,as_tot,as_sol,ba_tot,ba_sol,b_tot,b_sol,cd_tot,cd_sol,ca_tot,ca_sol,cr_tot,cr_sol,cr_sol,cr6,cu_tot,cu_sol,fe_tot,fe_sol,pb_tot,pb_sol,mg_tot,mg_sol,mn_tot,mn_sol,hg_tot,hg_sol,ni_tot,ni_sol,ni_sol,se_tot,se_sol,ag_tot,ag_sol,zn_tot,zn_sol,zn_sol,hg_ll,hg_ll,benzene,ethylbenzene,toluene,o_xylene,m__and/or_p_xylenes,xylenes_(total)
-date,collected,point,mg/l,deg_c,,mg/l,mg/l,mg/l,mg/l,mg/l,mg/l,qual_code,mg/l,mg/l,ntu,mg/l,mg/l,qual_code,mg/l,mg/l,ug/l,mg/l,mg/l,mg/l,alpha,beta,cts/100ml,yll_a,qual_code,mg/l,mg/l,mg/l,mg/l,mg/l,mg/l,mg/l,mg/l,mg/l,mg/l,mg/l,mg/l,qual_code,ug/l,mg/l,mg/l,mg/l,mg/l,mg/l,mg/l,mg/l,mg/l,mg/l,mg/l,ug/l,ug/l,mg/l,mg/l,qual_code,mg/l,mg/l,mg/l,mg/l,mg/l,mg/l,qual_code,ng/l,qual_code,ug/l,ug/l,ug/l,ug/l,ug/l,ug/l
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+collect(date),time(collected),sampling(point),do(mg/l),temp(deg_c),ph(),no2+no3(mg/l),nh3_n(mg/l),tkn(mg/l),tot_p(mg/l),so4(mg/l),tds(mg/l),tds(qual_code),ss(mg/l),vss(mg/l),turb(ntu),alk(mg/l),cl(mg/l),cl(qual_code),f(mg/l),toc(mg/l),phenol(ug/l),cn(mg/l),cn_wad(mg/l),fog(mg/l),radiochem(alpha),radiochem(beta),fec_col(cts/100ml),chloroph(yll_a),chloroph(qual_code),as_tot(mg/l),as_sol(mg/l),ba_tot(mg/l),ba_sol(mg/l),b_tot(mg/l),b_sol(mg/l),cd_tot(mg/l),cd_sol(mg/l),ca_tot(mg/l),ca_sol(mg/l),cr_tot(mg/l),cr_sol(mg/l),cr_sol(qual_code),cr6(ug/l),cu_tot(mg/l),cu_sol(mg/l),fe_tot(mg/l),fe_sol(mg/l),pb_tot(mg/l),pb_sol(mg/l),mg_tot(mg/l),mg_sol(mg/l),mn_tot(mg/l),mn_sol(mg/l),hg_tot(ug/l),hg_sol(ug/l),ni_tot(mg/l),ni_sol(mg/l),ni_sol(qual_code),se_tot(mg/l),se_sol(mg/l),ag_tot(mg/l),ag_sol(mg/l),zn_tot(mg/l),zn_sol(mg/l),zn_sol(qual_code),hg_ll(ng/l),hg_ll(qual_code),benzene(ug/l),ethylbenzene(ug/l),toluene(ug/l),o_xylene(ug/l),m__and/or_p_xylenes(ug/l),xylenes_(total)(ug/l)
 2012-07-09 00:00:00,1025.0,ww_13,6.1,26.1,7.59,13.801,0.11,1.02,2.4,73.36,706.0,,8.0,<4,,153.0,197.0,,0.81,5.7,<5,<0.005,<0.001,,<2.10,5.7,140.0,3.4,,,0.02,0.078,,0.26,,,0.001,60.0,,,<0.005,,<6,,<0.005,,<0.1,,<0.02,25.0,,0.044,,<0.2,,,0.005,,<0.005,,0.001,0.001,,0.02,,10.578,,,,,,,
 2012-07-09 00:00:00,1150.0,ww_78,8.3,23.1,7.61,14.369,<0.1,1.08,3.07,77.82,616.0,,<4,<4,,128.0,143.0,,0.94,5.4,<5,<0.005,0.0017,,<2.10,4.8,20.0,0.5,,,<0.02,0.016,,0.37,,,<0.001,65.0,,,<0.005,,<6,,0.006,,<0.1,,<0.02,24.0,,0.003,,<0.2,,,0.01,,<0.005,,0.001,0.001,,0.04,,16.982,,,,,,,
 2012-07-09 00:00:00,1245.0,ww_17,4.5,28.5,7.94,13.758,<0.1,1.0,2.08,77.43,742.0,,4.0,<4,,147.0,215.0,,0.76,7.2,<5,<0.005,<0.001,,<2.20,5.8,170.0,2.9,,,<0.02,0.052,,0.27,,,<0.001,64.0,,,<0.005,,<6,,<0.005,,<0.1,,<0.02,28.0,,0.038,,<0.2,,,0.005,,<0.005,,0.001,0.001,,0.02,,<5.0,,,,,,,
@@ -63,18 +61,9 @@ date,collected,point,mg/l,deg_c,,mg/l,mg/l,mg/l,mg/l,mg/l,mg/l,qual_code,mg/l,mg
 2012-07-30 00:00:00,1210.0,ww_92,4.5,30.9,7.38,4.128,0.38,<1,0.83,60.93,500.0,,<4,<4,,117.0,93.0,,0.58,4.0,<5,<0.005,<0.001,<5,,,80.0,5.5,,,<0.02,0.017,,0.17,,,<0.001,44.0,,,<0.005,,<6,,<0.005,,<0.1,,<0.02,15.0,,0.022,,<0.2,,,0.005,,0.005,,0.001,0.001,,0.02,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-reporting_limit,,,,,,0.15,0.1,1.0,0.1,5.0,60.0,,4.0,,,10.0,10.0,,0.1,1.0,5.0,0.005,0.001,5.0,,,10.0,,,,0.02,0.004,,0.05,,,0.001,1.0,,,0.005,,6.0,,0.005,,0.1,,0.02,1.0,,0.001,,0.2,,,0.005,,0.005,,0.001,0.001,,0.01,,0.5*,,2.0,2.0,2.0,3.0,3.0,3.0
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 "*_ll_hg:_based_on_the_sample_matrix_some_samples_need_to_be_diluted_x2,_x5_and_x10.__the_reporting_limit",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"of_0.5_ng/l_for_ll_hg_will_then_change_by_the_same_factor_resulting_in_reporting_limits_of_1.0,_2.5,_and_5.0_ng/l_respectively.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 "ww_97,_july_30,_2012_tds_and_ll_hg,_t/x:_l_=_unable_to_confirm_results",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-x=_matrix_spike_recovery_failure.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 aaa=_batch_failed_qa_standard;_assignable_cause;_insufficient_sample_for_rerun.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-aab=result_greater_than_il_ww_standard;_no_sample_remaining_to_confirm_result.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
