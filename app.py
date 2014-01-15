@@ -39,7 +39,10 @@ def water_status():
   request_date = request.args.get('date')
   if request_date:
     lookup_date = request_date
-  water_page = requests.get('http://apps.mwrd.org/CSO/display_all.aspx?link_date=%s' % lookup_date)
+    water_page = requests.get('http://apps.mwrd.org/CSO/display_all.aspx?link_date=%s' % lookup_date)
+  else: # if no date given, MWRD has a different page for the current status :P
+    water_page = requests.get('http://apps.mwrd.org/CSO/cso_quick_view.aspx')
+
   if water_page.status_code is 200:
       water_resp = {'date': lookup_date}
       water_segments = set(re.findall('images\/(\d+).GIF"', water_page.content))
