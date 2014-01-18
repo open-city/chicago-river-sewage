@@ -1,5 +1,6 @@
 import pandas as pd
 import calendar
+import re
 
 pieces = []
 
@@ -10,7 +11,12 @@ for year in years:
     for month in months:
         path = '%s/%s%s.csv' % (year, month, year)
         frame = pd.read_csv(path)
+        columns_to_remove = (x for x in frame.columns if (re.search('^\(\)\.\d+$|^\(\)$|^$',x))) # Remove columns that don't have headers, can't join correctly or really tell what the data is
+        for i in columns_to_remove:
+            frame = frame.drop(i,1)
         pieces.append(frame)
-flat = pd.concat(pieces, ignore_index=True)
+        frame.columns
+        print('%s/%s%s.csv' % (year, month, year))
+flat = pd.concat(pieces, ignore_index=True, join='outer')
 
-# still unfinished
+flat.to_csv("clean-waterway-measurements.csv")
