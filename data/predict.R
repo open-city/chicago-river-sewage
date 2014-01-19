@@ -17,7 +17,7 @@ f <- MASS::stepAIC(fit)
 actual <- resid(f) + fitted(f)
 
 png()
-plot(exp(resid(f))/exp(actual) ~ actual,
+plot(abs(exp(actual)-exp(fitted(f)))/exp(actual) ~ actual,
      ylab="proportional error",
      xlab="fecal coliform, log scale")
 dev.off()
