@@ -14,11 +14,14 @@ fit <- lm(log(fec_col.cts.100ml.) ~ ., data=water_numeric)
 
 f <- MASS::stepAIC(fit)
 
-print(attr(f$terms, "term.labels"))
-
 actual <- resid(f) + fitted(f)
 
+png()
 plot(exp(resid(f))/exp(actual) ~ actual,
      ylab="proportional error",
      xlab="fecal coliform, log scale")
+dev.off()
+
+write.csv(coef(f), "predictors.csv")
+
 
