@@ -14,7 +14,7 @@ for year in years:
         path = '%s/%s%s.csv' % (year, month, year)
         frame = pd.read_csv(path)
         frame = frame.merge(location_frame, how='left', on='sampling(point)')
-        columns_to_remove = (x for x in frame.columns if (re.search('^\(\)\.\d+$|^\(\)$|^$|Unnamed',x))) # Remove columns that don't have headers, can't join correctly or really tell what the data is
+        columns_to_remove = (x for x in frame.columns if (re.search('^\(\)\.\d+$|^\(\)$|^$|Unnamed|code',x))) # Remove columns that don't have headers, can't join correctly or really tell what the data is
         for i in columns_to_remove:
             frame = frame.drop(i,1)
         pieces.append(frame)
