@@ -3,6 +3,7 @@ from xlrd import open_workbook, xldate_as_tuple
 import datetime
 import csv
 import re
+import IPython as py
 
 # useful for cleaning up the headers; 'pH   ' => 'ph'
 def clean_string(value):
@@ -40,23 +41,9 @@ def csv_filename_from(sheet, year):
 def waterways_workbook_for(year):
     return str(year) + '/waterways' + str(year) + '.xls'
 
-def process_location_sheet(rows):
-    rows.pop(1)
-    rows[0] = [ cell.lower().replace('\n', '_') for cell in rows[0] ]
-    rows[0][0] = 'sampling(point)'
-    return rows
-
 for year in range(2005,2013):
     wb = open_workbook(waterways_workbook_for(year))
     annual_water_sheets = [sheet for sheet in wb.sheets() if str(year) in sheet.name]
-    location_sheet = [sheet for sheet in wb.sheets() if 'location' in sheet.name.lower()]
-    for s in location_sheet:
-        with open(csv_filename_from(s, year), 'w') as f:
-            writer = csv.writer(f)
-            sheet = [[process_cell(s.cell(row,col)) for col in range(s.ncols)] for row in range(s.nrows)]
-            sheet = process_location_sheet(sheet)
-            writer.writerows(sheet)
-
     for s in annual_water_sheets:
         with open(csv_filename_from(s, year), 'w') as f :
             writer = csv.writer(f)
