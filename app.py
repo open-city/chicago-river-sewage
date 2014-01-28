@@ -64,6 +64,10 @@ def water_status():
   resp.headers['Content-Type'] = 'application/json'
   return resp
 
+@app.route('/espanol/')
+def index_es():
+  return render_app_template('index.es.html')
+
 @app.route('/')
 def index():
   return render_app_template('index.html')
