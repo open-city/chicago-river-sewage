@@ -1,9 +1,9 @@
 import pandas as pd
 import numpy as np
+import os
 
 
-
-def mwrd(directory='/Users/thoughtworker/chicago-river-sewage/data/', file='mwrd_rain_measurements.csv'):
+def mwrd(directory='../data/', file='mwrd_rain_measurements.csv'):
    data= pd.read_csv(directory+file, na_values='na')
    print data.shape[0]
    location= list(set(data.ix[0:,3]))
@@ -30,11 +30,11 @@ def mwrd(directory='/Users/thoughtworker/chicago-river-sewage/data/', file='mwrd
    print data_new.shape
    np.savetxt(file, data_new,fmt='%s', delimiter=",")
 
-def clean_water(directory='/Users/thoughtworker/chicago-river-sewage/data/',file='clean-waterway-measurements.csv'):
+def clean_water(directory='../data/',file='clean-waterway-measurements.csv'):
     data=pd.read_csv(directory+file, na_values='na')
     np.savetxt(file, data,fmt='%s', delimiter=",")
 
-def cso(directory='/Users/thoughtworker/chicago-river-sewage/data/', file='cso_events_timestamped.csv', file1='ssmma_mwrd_merge_cleanedup.csv'):
+def cso(directory='../data/', file='cso_events_timestamped.csv', file1='ssmma_mwrd_merge_cleanedup.csv'):
     readdata= pd.read_csv(directory+file1, na_values='na')    
     loc=list(readdata['TARP Connection'])
     lat=list(readdata['LAT_DEC'])
@@ -75,14 +75,13 @@ def cso(directory='/Users/thoughtworker/chicago-river-sewage/data/', file='cso_e
                  ct+=1                
     print ct                  
     fw.close()
-
+    os.system('mv jnk.csv '+ file)
 
    
 
           
 
 if __name__=="__main__":
-    #mwrd()
+    mwrd()
     cso()
-    #clean_water()
-    #cso_loc()
+    clean_water()
