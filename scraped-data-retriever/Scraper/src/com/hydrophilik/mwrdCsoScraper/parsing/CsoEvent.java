@@ -1,14 +1,14 @@
 package com.hydrophilik.mwrdCsoScraper.parsing;
 
-import com.orangewall.bezutils.beztime.BezCal;
+import org.joda.time.DateTime;
 
 public class CsoEvent {
-	private BezCal startTime = null;
-	private BezCal endTime = null;
+	private DateTime startTime = null;
+	private DateTime endTime = null;
 	private String outfallLocation = null;
 	private int waterwaySegment;
 
-	public CsoEvent(BezCal startTime, BezCal endTime,
+	public CsoEvent(DateTime startTime, DateTime endTime,
 			String outfallLocation, int waterwaySegment) {
 		super();
 		this.startTime = startTime;
@@ -24,10 +24,13 @@ public class CsoEvent {
 	}
 	
 	public String parseToString() {
+		
+		long millisBetweenStartAndEnd = endTime.getMillis() - startTime.getMillis();
+		String secondsBetweenStartAndEnd = Long.toString(millisBetweenStartAndEnd / 60000);
 
-		return outfallLocation + ";" + waterwaySegment + ";" + startTime.parseDate() +
-				";" + startTime.parseTime() + ";" + endTime.parseTime() + ";" +
-				startTime.getMinutesUntil(endTime);
+		return outfallLocation + ";" + waterwaySegment + ";" + startTime.toLocalDate().toString() +
+				";" + startTime.toLocalTime().toString() + ";" + endTime.toLocalTime().toString() + ";" +
+				secondsBetweenStartAndEnd;
 
 	}
 	

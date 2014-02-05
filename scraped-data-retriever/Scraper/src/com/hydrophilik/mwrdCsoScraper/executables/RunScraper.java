@@ -9,21 +9,25 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 
-import com.orangewall.bezutils.beztime.BezDate;
+import org.joda.time.LocalDate;
+
+import com.hydrophilik.mwrdCsoScraper.parsing.MwrdParser;
 
 public class RunScraper {
 	
 	public static String mwrdWebPrefix = "http://apps.mwrd.org/CSO/CSOEventSynopsisReport.aspx?passdate=";
 
 	public static void main(String[] args) {
-		
+
 		String rawScrapingsDir;
+		String csvDataDir;
 		// arg0 => directory where the raw scraped html code is placed.
 		try {
 			rawScrapingsDir = args[0];
+			csvDataDir = args[1];
 		}
 		catch (Exception e) {
-			System.out.println("You must specify a directory to place scraped html");
+			System.out.println("You must specify directories for input");
 			return;
 		}
 		
@@ -31,39 +35,43 @@ public class RunScraper {
 		
 		scrapeWebsite(rawScrapingsDir);
 		
-		System.out.println("Done");
+		System.out.println("Parsing");
+		
+		MwrdParser parser = new MwrdParser(rawScrapingsDir, csvDataDir);
+		
+		parser.parse();
 
 	}
 	
-	private static void scrapeWebsite(String rawScrapingsDir) {	
+	private static void scrapeWebsite(String rawScrapingsDir) {
 		
-		BezDate theDate;
-		BezDate endDate;
+		LocalDate theDate;
+		LocalDate endDate;
 		
 		try {
-			theDate = new BezDate("1/1/2007");
-			endDate = new BezDate(); // today
+			theDate = new LocalDate(2014, 2, 1);
+			endDate = new LocalDate(); //today
+
 		}
 		catch (Exception e) {
 			System.out.println("Unable to parse dates");
 			return;
 		}
 		
-		System.out.println("Scraper started with start date: " + theDate.convertToString() +
-				" and end date: " + endDate.convertToString());
+		System.out.println("Scraper started with start date: " + theDate.toString() +
+				" and end date: " + endDate.toString());
 
-		
-		while (false == theDate.isSameDayAs(endDate)) {
+		while (false == theDate.toString().equals(endDate.toString())) {
 			
-			File file = new File(rawScrapingsDir + "/" + theDate.dateYearFirst() + ".txt");
+			File file = new File(rawScrapingsDir + "/" + theDate.toString() + ".txt");
 			
 			if (file.exists()) {
 				// Date has already been scraped.  Skip it.
-				theDate.incrementDays(1);
+				theDate = theDate.plusDays(1);
 				continue;
 			}
 			
-			String date = theDate.convertToString();
+			String date = theDate.toString();
 			
 			BufferedWriter bw = null;
 			FileWriter fw = null;
@@ -98,7 +106,7 @@ public class RunScraper {
 				}
 			}
 		
-			theDate.incrementDays(1);
+			theDate = theDate.plusDays(1);
 		}
 	}
 
