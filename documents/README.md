@@ -1,1 +1,2 @@
-a
+* [Testimony of Dr. Marcelo Garcia about the fluid dynamics Chicago Area Waterways](https://github.com/open-city/chicago-river-sewage/blob/master/documents/Feb.%2017th%2C%202009%20%20morning.pdf)
+* [2006 Report by Friends of the River on the Urban River Monitoring and Recovery Initiative. Outlines who in Chicago is doing monitoring work](https://github.com/open-city/chicago-river-sewage/blob/master/documents/Friends%20of%20the%20Chicago%20River%2002-105%20URMRI.pdf)
