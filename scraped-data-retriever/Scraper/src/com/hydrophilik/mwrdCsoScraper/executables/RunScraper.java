@@ -49,7 +49,7 @@ public class RunScraper {
 		LocalDate endDate;
 		
 		try {
-			theDate = new LocalDate(2014, 2, 1);
+			theDate = new LocalDate(2007, 1, 1);
 			endDate = new LocalDate(); //today
 
 		}

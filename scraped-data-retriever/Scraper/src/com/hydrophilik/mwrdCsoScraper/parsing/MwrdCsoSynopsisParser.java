@@ -3,9 +3,14 @@ package com.hydrophilik.mwrdCsoScraper.parsing;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+
+import com.hydrophilik.mwrdCsoScraper.utils.DateTimeUtils;
 
 public class MwrdCsoSynopsisParser {
 	
@@ -37,7 +42,7 @@ public class MwrdCsoSynopsisParser {
 		Elements eventsTags = eventTable.getElementsByTag("tr");		
 		for (Element event : eventsTags) {
 			Elements theRow = event.getElementsByTag("td");
-			
+
 			// Each row represents one event.  The event has five rows in it.
 			// Create an array of strings, and place the values along the column
 			// into it.
@@ -90,7 +95,7 @@ public class MwrdCsoSynopsisParser {
 		String outfallLocation = row[0];
 		int waterwaySegment = Integer.parseInt(row[1]);
 
-		BezCal startTime = new BezCal(startDate, row[2]);
+		DateTime start = DateTimeUtils.createDateTime(startDate, row[2]);
 		
 		// Use the duration field to determine if the event goes into the next day(s)
 		String [] durations = row[4].split(":");
@@ -104,11 +109,11 @@ public class MwrdCsoSynopsisParser {
 			return retVal;
 		}
 		
-		BezCal calculatedEndTime = new BezCal(startTime.parseDate(), startTime.parseTime());
-		calculatedEndTime.addMinutes(durationMins);
-
-		if (true == startTime.sameDayAs(calculatedEndTime)) {
-			CsoEvent csoEvent = new CsoEvent(startTime, calculatedEndTime,
+		// Calculate the end time based on the duration
+		DateTime calculatedEndTime = start.plusMinutes(durationMins);
+		
+		if (DateTimeUtils.isSameDay(start, calculatedEndTime)) {
+			CsoEvent csoEvent = new CsoEvent(start, calculatedEndTime,
 					outfallLocation, waterwaySegment);
 			retVal.add(csoEvent);
 			return retVal;
@@ -119,17 +124,19 @@ public class MwrdCsoSynopsisParser {
 		
 		//System.out.println("Outfall " + outfallLocation + " overflowed across days starting " + startDate);		
 		
-		while (false == startTime.sameDayAs(calculatedEndTime)) {
-			BezCal endOfThisDay = new BezCal(startTime.parseDate(), "24:0");
-			CsoEvent csoEvent = new CsoEvent(startTime, endOfThisDay, outfallLocation,
+		while (false == DateTimeUtils.isSameDay(start, calculatedEndTime)) {
+			DateTimeFormatter fmt = DateTimeFormat.forPattern("MM/dd/yyyy");
+			DateTime endOfThisDay = DateTimeUtils.createDateTime(fmt.print(start), "23:59").plusMinutes(1);
+
+			CsoEvent csoEvent = new CsoEvent(start, endOfThisDay, outfallLocation,
 					waterwaySegment);
 			retVal.add(csoEvent);
 			
-			startTime = new BezCal(endOfThisDay.parseDate(), "0:00");
+			start = DateTimeUtils.createDateTime(fmt.print(start.plusDays(1)), "0:00");
 
 		}
 		
-		CsoEvent csoEvent = new CsoEvent(startTime, calculatedEndTime, outfallLocation, waterwaySegment);
+		CsoEvent csoEvent = new CsoEvent(start, calculatedEndTime, outfallLocation, waterwaySegment);
 		
 		retVal.add(csoEvent);
 		

@@ -27,6 +27,9 @@ public class CsoEvent {
 		
 		long millisBetweenStartAndEnd = endTime.getMillis() - startTime.getMillis();
 		String secondsBetweenStartAndEnd = Long.toString(millisBetweenStartAndEnd / 60000);
+		
+		String a = startTime.toLocalTime().toString();
+		String b = endTime.toLocalTime().toString();
 
 		return outfallLocation + ";" + waterwaySegment + ";" + startTime.toLocalDate().toString() +
 				";" + startTime.toLocalTime().toString() + ";" + endTime.toLocalTime().toString() + ";" +
