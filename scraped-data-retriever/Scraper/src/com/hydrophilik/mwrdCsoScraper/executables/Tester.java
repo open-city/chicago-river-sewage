@@ -2,12 +2,10 @@ package com.hydrophilik.mwrdCsoScraper.executables;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.List;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
-import com.hydrophilik.mwrdCsoScraper.parsing.CsoEvent;
 import com.hydrophilik.mwrdCsoScraper.parsing.MwrdCsoSynopsisParser;
 
 public class Tester {
@@ -27,7 +25,8 @@ public class Tester {
 		
 		MwrdCsoSynopsisParser mwrdParser = new MwrdCsoSynopsisParser(doc);
 
-		List<CsoEvent> thisDaysEvents = mwrdParser.parseEvents();
+		mwrdParser.parseEvents();
+		
 
 	}
 
