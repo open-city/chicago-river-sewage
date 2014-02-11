@@ -13,14 +13,12 @@ import org.jsoup.nodes.Document;
 public class MwrdParser {
 	
 	private String rawScrapingsDir = null;
-	private String csvDataDir = null;
 
-	public MwrdParser(String rawScrapingsDir, String csvDataDir) {
+	public MwrdParser(String rawScrapingsDir) {
 		this.rawScrapingsDir = rawScrapingsDir;
-		this.csvDataDir = csvDataDir;
 	}
 	
-	public void parse() {
+	public void parseToCSV(String csvDataDir) {
 
 		File csvDir = new File(csvDataDir);
 		
@@ -87,5 +85,8 @@ public class MwrdParser {
 			e.printStackTrace();
 		}
 		System.out.println("Parsing done");
+	}
+	
+	public void parseToDb() {
 	}
 }
