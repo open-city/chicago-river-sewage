@@ -1,10 +1,22 @@
 from flask import Flask, request, make_response, render_template
 from datetime import date, datetime, timedelta
+from sqlalchemy import Table, func, distinct, Column, create_engine, MetaData
+from sqlalchemy.orm import sessionmaker, scoped_session
+from sqlalchemy.exc import NoSuchTableError
 import json
 import requests
 import re
 
 app = Flask(__name__)
+
+engine = create_engine('sqlite:///data/processed_data/cso-data.db')
+metadata = MetaData()
+session = scoped_session(sessionmaker(autocommit=False,
+                                      autoflush=False,
+                                      bind=engine))
+
+csos_table = Table('CSOs', metadata,
+        autoload=True, autoload_with=engine, extend_existing=True)
 
 waterway_segments = [
   "North Shore Channel: Lake Michigan to North Side WRP",
@@ -62,6 +74,35 @@ def water_status():
       resp = make_response(json.dumps({'status': 'error', 'message': 'Something went wrong while performing your query. Try again'}), 500)
 
   resp.headers['Content-Type'] = 'application/json'
+  return resp
+
+@app.route('/cso-history/')
+def cso_history():
+
+  resp = []
+  table_keys = csos_table.columns.keys()
+  query = list(
+    session.query(csos_table.c.Segment, func.count(csos_table.c.Segment))\
+    .group_by(csos_table.c.Segment)\
+    .order_by(func.count(csos_table.c.Segment).desc())\
+    .all()
+  )
+
+  for value in query:
+      d = {}
+      for k, v in zip(['segment','count'], value):
+        d[k] = v
+      resp.append(d)
+
+  # for value in query:
+  #   d = {}
+  #   for k, v in zip(table_keys, value):
+  #     d[k] = v
+  #   resp.append(d)
+
+  resp = make_response(json.dumps(resp))
+  resp.headers['Content-Type'] = 'application/json'
+
   return resp
 
 @app.route('/espanol/')
