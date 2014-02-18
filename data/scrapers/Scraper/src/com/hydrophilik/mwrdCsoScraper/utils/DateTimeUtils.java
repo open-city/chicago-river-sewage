@@ -2,6 +2,7 @@ package com.hydrophilik.mwrdCsoScraper.utils;
 
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
+import org.joda.time.LocalTime;
 
 public abstract class DateTimeUtils {
 	
@@ -24,5 +25,10 @@ public abstract class DateTimeUtils {
 		if (firstDay.toLocalDate().toString().equals(secondDay.toLocalDate().toString()))
 				return true;
 		return false;
+	}
+	
+	public static String getTimeAsHoursMins(LocalTime localTime) {
+		String [] timeArray = localTime.toString().split(":");
+		return timeArray[0] + ":" + timeArray[1];
 	}
 }

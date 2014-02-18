@@ -2,6 +2,8 @@ package com.hydrophilik.mwrdCsoScraper.parsing;
 
 import org.joda.time.DateTime;
 
+import com.hydrophilik.mwrdCsoScraper.utils.DateTimeUtils;
+
 public class CsoEvent {
 	private DateTime startTime = null;
 	private DateTime endTime = null;
@@ -39,8 +41,8 @@ public class CsoEvent {
 		String secondsBetweenStartAndEnd = Long.toString(millisBetweenStartAndEnd / 60000);
 
 		return "INSERT INTO CSOs VALUES (NULL, '" + outfallLocation + "'," + waterwaySegment + ",'" +
-				startTime.toLocalDate().toString() + "','" + startTime.toLocalTime().toString() + "','" +
-				endTime.toLocalTime().toString() + "'," +
+				startTime.toLocalDate().toString() + "','" + DateTimeUtils.getTimeAsHoursMins(startTime.toLocalTime()) +
+				"','" + DateTimeUtils.getTimeAsHoursMins(endTime.toLocalTime()) + "'," +
 				secondsBetweenStartAndEnd + ")";
 
 	}

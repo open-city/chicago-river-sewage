@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.List;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 import org.joda.time.LocalDate;
@@ -123,7 +124,15 @@ public class MwrdParser {
 				for (CsoEvent event : thisDaysEvents) {
 					stmt = connection.createStatement();
 					String sql = event.getSqlInsert();
-					stmt.executeUpdate(sql);						
+					
+					try {
+					
+						stmt.executeUpdate(sql);
+					}
+					catch (Exception e) {
+						System.out.println("Unable to add\n" + sql);
+						continue;
+					}
 				}
 			}
 	    }
