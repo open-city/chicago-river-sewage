@@ -34,4 +34,15 @@ public class CsoEvent {
 
 	}
 	
+	public String getSqlInsert() {
+		long millisBetweenStartAndEnd = endTime.getMillis() - startTime.getMillis();
+		String secondsBetweenStartAndEnd = Long.toString(millisBetweenStartAndEnd / 60000);
+
+		return "INSERT INTO CSOs VALUES (NULL, '" + outfallLocation + "'," + waterwaySegment + ",'" +
+				startTime.toLocalDate().toString() + "','" + startTime.toLocalTime().toString() + "','" +
+				endTime.toLocalTime().toString() + "'," +
+				secondsBetweenStartAndEnd + ")";
+
+	}
+	
 }
