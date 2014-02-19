@@ -1,4 +1,6 @@
 """
+Taken from https://github.com/odoe/SpatialJSON
+
 This script will convert an EsriJSON
 dictionary to a GeoJSON dictionary
 
