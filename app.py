@@ -82,9 +82,9 @@ def cso_history():
   resp = []
   table_keys = csos_table.columns.keys()
   query = list(
-    session.query(csos_table.c.Segment, func.count(csos_table.c.Segment))\
+    session.query(csos_table.c.Segment, func.sum(csos_table.c.Duration))\
     .group_by(csos_table.c.Segment)\
-    .order_by(func.count(csos_table.c.Segment).desc())\
+    .order_by(func.count(csos_table.c.Duration).desc())\
     .all()
   )
 
