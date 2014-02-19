@@ -10,5 +10,7 @@ My understanding is @mapmeld inspected the network traffic when the page loaded.
 
 ### Reproject EPSG:3857 to EPSG:4326 
 ```bash
-ogr2ogr -f "GeoJSON" cso_outfalls.geojson cso_outfalls_pseudo_mercator.geojson -s_srs EPSG:3857 -t_srs EPSG:4326 
+> ogr2ogr -f "GeoJSON" cso_outfalls.geojson cso_outfalls_pseudo_mercator.geojson -s_srs EPSG:3857 -t_srs EPSG:4326 
+> ogr2ogr -f CSV cso_outfalls.csv cso_outfalls.geojson -lco GEOMETRY=AS_X
+Y
 ```
