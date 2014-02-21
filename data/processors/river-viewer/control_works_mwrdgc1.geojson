@@ -1,0 +1,18 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "Id": 0, "FID": 12, "feature": "Chicago River Lock & Controlling Works" }, "geometry": { "type": "Point", "coordinates": [ -87.60764112828015, 41.888420484814304 ] } }
+,
+{ "type": "Feature", "properties": { "Id": 0, "FID": 13, "feature": "Wilmette Pumping Station" }, "geometry": { "type": "Point", "coordinates": [ -87.684905225867269, 42.075535367824152 ] } }
+,
+{ "type": "Feature", "properties": { "Id": 0, "FID": 14, "feature": "O'Brien Lock & Controlling Works" }, "geometry": { "type": "Point", "coordinates": [ -87.567118125813508, 41.652030625803327 ] } }
+,
+{ "type": "Feature", "properties": { "Id": 0, "FID": 15, "feature": "Lockport Powerhouse & Lock" }, "geometry": { "type": "Point", "coordinates": [ -88.077828331141149, 41.56938448300037 ] } }
+,
+{ "type": "Feature", "properties": { "Id": 0, "FID": 16, "feature": "Lockport Controlling Works" }, "geometry": { "type": "Point", "coordinates": [ -88.066186165058966, 41.597833958010149 ] } }
+,
+{ "type": "Feature", "properties": { "Id": 0, "FID": 17, "feature": "North Branch Dam" }, "geometry": { "type": "Point", "coordinates": [ -87.704757993646311, 41.973962831032189 ] } }
+
+]
+}
