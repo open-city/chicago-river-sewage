@@ -10,7 +10,7 @@ import re
 import os
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data/processed_data/cso-data.db'
 db = SQLAlchemy(app)
 
 class CSOEvent(db.Model):
