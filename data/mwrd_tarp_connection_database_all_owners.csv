@@ -226,7 +226,6 @@ Chicago,IL0045012,65,Western Ave East Bank (N),6',NBCR,TG-M81,M
 Chicago,IL0045012,10,Ardmore Ave (E),7' x 5.6',NSC,TG-M94,M
 Chicago,IL0045012,189,Nashville Ave P.S. (S),12' Tunnel,CSSC,TG-NASH,M
 Chicago/ Calumet Park,ILM580016/IL0045012,001 / 218,Laflin Ave (N),17' x 13.6',CSC,CDS-10,M
-Chicago/ Calumet Park ,ILM580016/IL0045012 ,001 / 218,Laflin Ave (N),17' x 13.6',CSC,CDS-10,M
 Des Plaines,ILM580026,2,Prairie Ave (River Rd & Thacker St (W),3' &amp; 4',DPR,DS-D01,M 
 Des Plaines,Not Permitted,NP,Algonquin Rd (South of bridge) (W),2.5',DPR,DS-D02,U 
 Des Plaines,Not Permitted,NP,Algonquin Rd (North of bridge) (W),3',DPR,DS-D02,U 
@@ -280,7 +279,6 @@ Lagrange Park,ILM580032,3,Logan Ave (31st St) (W )),6',SC,"DS-D37,38",M
 LaGrange Park,ILM580008,5,W est of Edgewood Avenueest of Edgewood Avenue,21“,SC,,U 
 LaGrange Park,ILM580008,6,W est of Edgewood Avenueest of Edgewood Avenue,48“,SC,,U
 Lansing / Calumet City,ILM580027 ,002 / 005,Burnham Ave (170th St) (S),8',LCalR,CDS-55,M 
-Lansing / Calumet City,ILM580027 / ILM580025,002 / 005,Burnham Ave (170th St) (S),8',LCalR,CDS-55,M
 Lemont,,2,Stephen St (S),5.5',I&M Canal,None,U
 Lemont,,3,Stephen St (S),5.5',CSSC,None,U
 Lincolnwood,ILM580034,2,Pratt Ave (W),7',NSC,I-96,U
@@ -322,7 +320,6 @@ Niles,ILM580035,3,Dobson St and Nordica Ave (W),4',NBCR,DS-N16,M
 Niles,ILM580035,2,Cleveland St east of Caldwell Ave (W),4.5',NBCR,DS-N17,M
 Niles,ILM580035,1,East of Caldwell Ave at Main St ext.(W),5.5',NBCR,DS-N18,M
 Niles,Not Permitted,NP,Howard (W),1.5',NBCR,Indirect (DS-N16),U
-Niles / Chicago,ILM580035 / IL0045012,008 / 236,6872 Touhy Ave  (Franks &amp; Nieman) (W),5',NBCR,DS-N13R,M
 Niles / Chicago,ILM580035 / IL0045012,008 / 236,6872 Touhy Ave  (Franks & Nieman) (W),5',NBCR,DS-N13R,M
 North Riverside,ILM580030,2,26th St (West abutement of the bridge) (W),4.5',DPR,DS-D35,M
 North Riverside,ILM580030,1,26th St (East abutement of the bridge) (E),5',DPR,DS-D36,M
@@ -340,7 +337,6 @@ River Grove,ILM580021,3,Herrick Ave (W),2.5',DPR,DS-D17,M
 River Grove,ILM580021,4,Fullerton Ave ext. (W),1.75',DPR,DS-D17,M
 River Grove,ILM580021,5,Fullerton Ave (Maple &amp; Fullerton) (E),5',DPR,DS-D18,M
 River Grove,ILM580021,6,Lyndale/Palmer Ave (W),4',DPR,DS-D20I,M
-River Grove / Franklin Park,ILM580021 / ILM580029,001 / 002,Franklin St (W )),10',DPR,DS-D15,M
 River Grove / Franklin Park,ILM580021 / ILM580029,001 / 002,Franklin St (W),10',DPR,DS-D15,M
 Riverdale,Not Permitted,NP,Wabash (IL Central RR) (S),1.5',LCalR,CDS-15,U
 Riverdale,ILM580007,2,Penn Central RR &amp; Dearborn St ext. (Near 134th St) (ACME,3.5',LCalR,CDS-15-1,M
