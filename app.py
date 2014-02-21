@@ -33,15 +33,6 @@ class CSOEvent(db.Model):
 
 dthandler = lambda obj: obj.isoformat() if isinstance(obj, datetime) or isinstance(obj, date) else None
 
-engine = create_engine('sqlite:///data/processed_data/cso-data.db')
-metadata = MetaData()
-session = scoped_session(sessionmaker(autocommit=False,
-                                      autoflush=False,
-                                      bind=engine))
-
-csos_table = Table('CSOs', metadata,
-        autoload=True, autoload_with=engine, extend_existing=True)
-
 waterway_segments = [
   "North Shore Channel: Lake Michigan to North Side WRP",
   "North Shore Channel: North Side WRP to the confluence with the North Branch of the Chicago River (NBCR)",
@@ -114,32 +105,14 @@ def api():
 
 @app.route('/cso-history/')
 def cso_history():
-
-  resp = []
-  table_keys = csos_table.columns.keys()
-  query = list(
-    session.query(csos_table.c.Segment, func.sum(csos_table.c.Duration))\
-    .group_by(csos_table.c.Segment)\
-    .order_by(func.count(csos_table.c.Duration).desc())\
-    .all()
-  )
-
-  for value in query:
-      d = {}
-      for k, v in zip(['segment','count'], value):
-        d[k] = v
-      resp.append(d)
-
-  # for value in query:
-  #   d = {}
-  #   for k, v in zip(table_keys, value):
-  #     d[k] = v
-  #   resp.append(d)
-
-  resp = make_response(json.dumps(resp))
-  resp.headers['Content-Type'] = 'application/json'
-
-  return resp
+    base_query = db.session.query(CSOEvent.segment,
+        func.count(CSOEvent.duration))\
+        .group_by(CSOEvent.segment)\
+        .order_by(func.count(CSOEvent.duration).desc())
+    resp = [{'segment': s, 'count': c} for s,c in base_query.all()]
+    resp = make_response(json.dumps(resp))
+    resp.headers['Content-Type'] = 'application/json'
+    return resp
 
 @app.route('/espanol/')
 def index_es():
