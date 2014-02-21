@@ -22,7 +22,7 @@ public class MwrdCsoSynopsisParser {
 
 		startDate = getUValue(doc.getElementById("lbdate"));
 	}
-	
+
 	public List<CsoEvent> parseEvents() {
 		
 		// StartDate cannot be null
