@@ -1,0 +1,377 @@
+Owner,NPDES Permit number,Outfall Number,Location,Size,Waterway,TARP Connection,Monitored or Unmonitored
+Arlington Heights,ILM580006,1,S of Central Rd Bridge (N),10' x 10',Weller Creek,UDP-DS1 (K1),M 
+Arlington Heights,ILM580006,1,S of Central Rd Bridge (N),8' x 7.5',Weller Creek,UDP-DS1A (K1A),M
+Blue Island,ILM580031,2,Irving Ave (West of Fulton Fulton & Chatham St),5',CSC,CDS-7,M 
+Blue Island,ILM580031,3,Division Ave (S),5.5',CSC,CDS-8,M 
+Blue Island,ILM580031,4,Division Ave (N),5',CSC,CDS-9,U 
+Blue Island / Posen,ILM580031 / IL0043133,005 / 001,California Ave &amp; Edward St (S),4.5',CSC,CDS-6,M
+Blue Island / Posen,ILM580031/IL0043133,005 / 001,California Ave &amp; Edward St (S),4.5',CSC,CDS-6,M
+Brookfield,ILM580032,1,30th St ext. (W )),2.5,SC,"DS-D37,38",M 
+Brookfield,ILM580032,7,Brookfield Ave (W )),2.5',SC,"DS-D39,42,46",M 
+Brookfield,ILM580032,4,Brookfield Ave (SE wing wall of the bridge) (E),2',SC,"DS-D39,42,46",M 
+Brookfield,ILM580032,5,Brookfield Ave (Southwest wing wall of the bridge) (W ) ),4',SC,"DS-D39,42,46",M 
+Brookfield,ILM580032,3,Jackson Ave ext. (Jackson & Prairie) (W ) ),2.5',SC,DS-D40,M 
+Brookfield,ILM580032,6,Southview Ave ext. (W )),2',SC,"DS-D47,50,51",M 
+Brookfield,Not Permitted,NP,Extended Southview Ave (E),1',SC,"DS-D47,50,51",M 
+Brookfield,Not Permitted,NP,"Jackson Ave  (Brookfield Zoo, across from Wolf Den) (E)",2.5',SC,DS-D62,M 
+Brookfield,Not Permitted,NP,Southview Ave Ext. (W )),1',DPR,DS-DA6,U
+Burnham,ILM580018,1,Escanaba Ave near 138th (S),4',GCalR,CDS-21,M 
+Burnham,ILM580018,2,138th Pl. extended (N),3',GCalR,CDS-22,M 
+Burnham,ILM580018,3,East of 142nd St. extended and Mackinaw St. (E) ,5',GCalR,CDS-23,M
+Calumet City,ILM580025,1,Burnham Ave (S),7' x 7.5',GCalR,CDS-24,U
+Calumet City,ILM580025,2,River Dr (N),2.25',LCalR,CDS-53,M 
+Calumet City,ILM580025,3,Woodview Ave (N),3.5',LCalR,CDS-53,M 
+Calumet City,ILM580025,4,Green Bay Ave (N),4',LCalR,CDS-55,M 
+Calumet City,ILM580025,5,Burnham Ave (N),2.5',LCalR,CDS-55,M 
+Calumet City,ILM580025,6,Stanley Blvd (Freeland Ave) (N),3',LCalR,CDS-55,M 
+Calumet City,ILM580025,7,Lincoln Ave (N),4',LCalR,CDS-55,M 
+Chicago,Not Permitted,241,Stewart Ave (also known as Normal Ave or Harvard) (N),2 (12'x12'),LCalR,CDS-12,M
+Chicago,IL0045012,211,130th St (E),5.5',LCalR,CDS-14,M
+Chicago,ILM580007,5,Indiana Ave (East of Wabash) (ACME Steel) (W),2 (2.5'),LCalR,CDS-15-4,U
+Chicago,IL0045012,210,Indiana Ave (E),2',LCalR,CDS-15-5,M
+Chicago,IL0045012,239,Vernon Ave & E. 134th St (N),6',LCalR,CDS-16,M
+Chicago,IL0045012,206,Torrence Ave (134th & Brainard) (N),10' x 6',LCalR,CDS-20,M
+Chicago,IL0045012,216,Peoria Ave (N),2.5',LCalR,CI-6,U
+Chicago,IL0045012,215,Halsted St (N),4.5',LCalR,CI-7,U
+Chicago,IL0045012,214,Parnell Ave (N),4',LCalR,CI-8,U
+Chicago,IL0045012,209,Forest Ave (N),1.5',LCalR,CI-9,U
+Chicago,IL0045012,226,Wilson Ave ext. (Wilson & East River Rd) (E),6',DPR,DS-D10,M
+Chicago,IL0045012,227,Belmont Ave (E),12' x 6.58',DPR,DS-D11,M
+Chicago,IL0045012,42,Lawrence Ave (W),15.5' x 19.5' Tunnel,NBCR,DS-LAT,M
+Chicago,IL0045012,188,Natchez Ave ext. (S),12' x 9.5',CSSC,DS-M08,M
+Chicago,IL0028088,101,Sheridan Rd (Wilmette P.S.) (W),8' x 7',NSC,DS-M114N,M
+Chicago,IL0045012,187,Leamington Ave (S),21.5' x 19.33',CSSC,DS-M12,M
+Chicago,IL0045012,185,Kenton Ave (Kostner Ave Ext.) (N),18' x 14.42',CSSC,DS-M15,M
+Chicago,IL0045012,180,Kedzie Ave (S),9',CSSC,DS-M17,M
+Chicago,IL0045012,179,Kedzie Ave (N),2.25',CSSC,DS-M18,U
+Chicago,IL0045012,176,California Ave (S),15' x 15',CSSC,DS-M19,M
+Chicago,IL0045012,174,Rockwell St (N),10.67',CSSC,DS-M20,M
+Chicago,IL0045012,173,Western Ave (S),12' x 14',CSSC,DS-M21,M
+Chicago,IL0045012,170,Damen Ave (N),3',SBCR,DS-M23,U
+Chicago,IL0045012,169,Wood St (N),0.67',SBCR,DS-M23,U
+Chicago,IL0045012,168,Paulina St (N),9',SBCR,DS-M25,M
+Chicago,IL0045012,198,Iron St (50' Wof NW RAPS) (S)  corner of,12' x 12',SFSBCR,DS-M26,M
+Chicago,IL0045012,194,35th St. (W),6.5',SFSBCR,DS-M30,M
+Chicago,IL0045012,193,31st St (E),5',SFSBCR,DS-M31,U
+Chicago,IL0045012,192,Archer Ave (E),3',SFSBCR,DS-M31,U
+Chicago,IL0045012,191,Archer Ave (W),3',SFSBCR,DS-M32,U
+Chicago,IL0045012,190,Ashland Ave (W),4',SFSBCR,DS-M33,U
+Chicago,IL0045012,167,Ashland Ave (N),5.5',SBCR,DS-M34,U
+Chicago,IL0045012,166,Laflin St (N),2 Barrel (15' x 12'),SBCR,DS-M35,M
+Chicago,IL0045012,165,Loomis St (S),3',SBCR,DS-M36,U
+Chicago,IL0045012,157,Halsted St (N),4',SBCR,DS-M37,U
+Chicago,IL0045012,156,Union Ave (N),11.42' x 9.17',SBCR,DS-M38,M
+Chicago,IL0045012,155,Wallace St (S),6',SBCR,DS-M39,U
+Chicago,IL0045012,154,Normal Ave (S),16' x 12.83',SBCR,DS-M40,M
+Chicago,IL0045012,151,Canal St & Grove St (S),8',SBCR,DS-M41,M
+Chicago,IL0045012,147,18th St (W),4',SBCR,DS-M42,U
+Chicago,IL0045012,145,16th St (W),4',SBCR,DS-M43,U
+Chicago,IL0045012,144,15th St (E),3',SBCR,DS-M44,U
+Chicago,IL0045012,143,14th St (E),8' x 6.75',SBCR,DS-M45,M
+Chicago,IL0045012,141,14th St (W),4',SBCR,DS-M46,U
+Chicago,IL0045012,140,Maxwell St (Maxwell & Lumber) (W),5',SBCR,DS-M47,M
+Chicago,IL0045012,139,Roosevelt Rd (E),3',SBCR,DS-M48,U
+Chicago,IL0045012,138,Roosevelt Rd (Roosevelt & Lumber) (W),4.33' x 5.5',SBCR,DS-M49,M
+Chicago,IL0045012,137,Taylor St (E),8',SBCR,DS-M50,U
+Chicago,IL0045012,132,Harrison St (W),5',SBCR,DS-M51,M
+Chicago,IL0045012,129,Quincy St & Lower Wacker Dr (E),9' x 7.17',SBCR,DS-M52,M
+Chicago,IL0045012,121,Franklin St (S),3',CR,DS-M54,M
+Chicago,IL0045012,107,Michigan Ave (S),7',CR,DS-M55,M
+Chicago,IL0045012,104,Lake Shore Dr (N),3',CR,DS-M59,U
+Chicago,IL0045012,105,Fairbanks Ct. (St. Clair) (N),5.5',CR,DS-M60,U
+Chicago,IL0045012,103,Fulton St & Canal St (W),2 ( 7' x 9.5'),NBCR,DS-M61A,M
+Chicago,IL0045012,95,Halsted St (N),2',NBCR,DS-M63,U
+Chicago,IL0045012,93,Cortez St (W),3.5',NBCR,DS-M64,U
+Chicago,IL0045012,92,Cortez St & Elston (1030 N. Elston) (W),11' x 9',NBCR,DS-M64,M
+Chicago,IL0045012,88,Division St (E),3',NBCR,DS-M65,U
+Chicago,IL0045012,89,Division St (W),1.25',NBCR,DS-M65,U
+Chicago,IL0045012,84,Blackhawk St (W),16.5' x 11',NBCR,DS-M66,M
+Chicago,IL0045012,90,Halsted St (E),3',NBCR,DS-M67R,U
+Chicago,IL0045012,230,Hobbie St (E),13' x 9.25',NBCR,DS-M67R,U
+Chicago,IL0045012,85,Blackhawk St (E),3.5',NBCR,DS-M69,U
+Chicago,IL0045012,83,North Ave (E),4.5',NBCR,DS-M70,M
+Chicago,IL0045012,81,Clifton Ave (E),2.5',NBCR,DS-M72,U
+Chicago,IL0045012,77,McLean Ave (W),9',NBCR,DS-M73,M
+Chicago,IL0045012,-74 Storm,Fullerton Ave (E),12',NBCR,DS-M75,M
+Chicago,IL0045012,73,Fullerton Ave (W),6',NBCR,DS-M76,M
+Chicago,IL0045012,72,Damen Ave West Bank (S),1',NBCR,DS-M77,U
+Chicago,IL0045012,69,Diversey Ave (E),5.5',NBCR,DS-M78,U
+Chicago,IL0045012,68,Diversey Ave (W),7.5',NBCR,DS-M79,M
+Chicago,IL0045012,70,Logan Blvd (W),2 (14' x 8'),NBCR,DS-M79,M
+Chicago,IL0045012,67,"Leavitt St East Bank (N), Southwest of DS-M80",12' x 12',NBCR,DS-M80,M
+Chicago,IL0045012,66,Oakley Ave East Bank (E),2',NBCR,DS-M80,U
+Chicago,IL0045012,64,Belmont Ave (W),7',NBCR,DS-M82,M
+Chicago,IL0045012,238,Melrose St & North Rockwell St (W),4.5',NBCR,DS-M83,M
+Chicago,IL0045012,63,Roscoe St (W),4 (8' x 8'),NBCR,DS-M84,M
+Chicago,IL0045012,61,Addison St (Inside ComEd's property) (E),12' x 9.58',NBCR,DS-M85,M
+Chicago,IL0045012,231,"Grace St (W), North of DS-M86",12' x 12',NBCR,DS-M86,M
+Chicago,IL0045012,58,Irving Park Rd (E),6',NBCR,DS-M87,U
+Chicago,IL0045012,57,Berteau Ave (W),14.5' x 10.5',NBCR,DS-M88,M
+Chicago,IL0045012,51,Montrose Ave (E),6',NBCR,DS-M89,U
+Chicago,IL0045012,13,Balmoral Ave (E),3',NSC,DS-M92,U
+Chicago,IL0045012,233,Berwyn Ave (E),5.5',NSC,DS-M92,U
+Chicago,IL0045012,15,Foster Ave (E),1.25',NSC,DS-M92,U
+Chicago,IL0045012,11,Bryn Mawr Ave (E),4.75',NSC,DS-M93,U
+Chicago,IL0045012,6,Peterson Ave (E),5',NSC,DS-M95,U
+Chicago,IL0045012,5,Devon Ave (E),6',NSC,DS-M96,U
+Chicago,IL0045012,3,North Shore Ave (E),3',NSC,DS-M97,M
+Chicago,IL0045012,2,Pratt Ave (E),13' x 13',NSC,DS-M97,M
+Chicago,IL0045012,1,Touhy Ave (E),6',NSC,DS-M98,U
+Chicago,IL0045012,39,Birchwood Ave (E),7',NSC,DS-M99,U
+Chicago,IL0045012,34,St. Louis Ave (N),2.5',NBCR,DS-N01,U
+Chicago,IL0045012,235,Trumbull Ave (N) (Bernard),1',NBCR,DS-N01,U
+Chicago,IL0045012,30,Foster Ave & Keeler (W),6.5',NBCR,DS-N02,M
+Chicago,IL0045012,29,Kilbourn Ave & Bryn Mawr (N),7',NBCR,DS-N03,M
+Chicago,IL0045012,26,"Cicero Ave (N), South of Forest Glen",4',NBCR,DS-N04,M
+Chicago,IL0045012,24,"Forest Glen Ave (S), West of Cicero",6',NBCR,DS-N05,M
+Chicago,IL0045012,25,Lamon Ave (S),1.5',NBCR,DS-N05,U
+Chicago,IL0045012,234,Ardmore Ave (Indian & Ardmore)  (W),2' & 2.5',NBCR,DS-N06,M
+Chicago,IL0045012,22,Linder Ave (W),18“,NBCR,DS-N06,U
+Chicago,IL0045012,21,Central Ave (5900 - 6100 North) (N),2.5',NBCR,DS-N07,M
+Chicago,IL0045012,20,Mango Ave ext. (Leonard & Miltmore) (W),9.5',NBCR,DS-N08,M
+Chicago,IL0045012,19,Peterson Ave (W),1.25',NBCR,DS-N08,U
+Chicago,IL0045012,18,Miami Ave (Indian & Monitor) (W),2.5',NBCR,DS-N09,M
+Chicago,IL0045012,16,Wildwood Ave ext. (Caldwell & Tonty) (E),4.5',NBCR,DS-N10A,M
+Chicago,IL0045012,17,Imlay St & Milwaukee (W),7',NBCR,DS-N10B,M
+Chicago,Not Permitted,NP,Fargo Ave at Nordica Ave (W),4',NBCR,DS-N15,U
+Chicago,IL0045012,181,Central Park Ave (S),2.5' X 2.79',CSSC,I-10,U
+Chicago,IL0045012,38,Berwyn Ave (W),6',NSC,I-116,U
+Chicago,IL0045012,196,37th St (W),3',SFSBCR,I-117,U
+Chicago,IL0045012,197,37th St (E),2',SFSBCR,I-118,U
+Chicago,IL0045012,195,35th St (E),4.5',SFSBCR,I-119,U
+Chicago,IL0045012,152,Cermak Rd (W),2',SBCR,I-123,U
+Chicago,IL0045012,163,Throop St (S),3',SBCR,I-15,U
+Chicago,IL0045012,161,Racine Ave (N),4.5',SBCR,I-17,U
+Chicago,IL0045012,160,Senour Ave (S),3',SBCR,I-18,U
+Chicago,IL0045012,159,Morgan St (N),4.5',SBCR,I-19,U
+Chicago,IL0045012,158,Halsted St (S),5',SBCR,I-20,U
+Chicago,IL0045012,153,Cermak Rd (E),3',SBCR,I-21,U
+Chicago,IL0045012,149,19th St (E),3',SBCR,I-23,U
+Chicago,IL0045012,148,18th St (E),3',SBCR,I-24,U
+Chicago,IL0045012,146,16th St (E),3',SBCR,I-25,U
+Chicago,IL0045012,133,Harrison St (E),3',SBCR,I-33,U
+Chicago,IL0045012,131,Van Buren St (E),3',SBCR,I-35,U
+Chicago,IL0045012,130,Jackson Blvd (E),3',SBCR,I-38,U
+Chicago,IL0045012,128,Adams St (E),3',SBCR,I-39,U
+Chicago,IL0045012,127,Monroe St (E),2 (3.5' X 4'),SBCR,I-41,U
+Chicago,IL0045012,126,Madison St (E),3',SBCR,I-42,U
+Chicago,IL0045012,124,Washington St (E),3',SBCR,I-44,U
+Chicago,IL0045012,123,Randolph St (E),10' X 9.5',SBCR,I-44 & I-45,U
+Chicago,IL0045012,120,Wells St (S),3',CR,I-46,U
+Chicago,IL0045012,119,Wells St (N),5' X 7',CR,I-47A & I-47B,U
+Chicago,IL0045012,118,LaSalle St (S),3',CR,I-48,U
+Chicago,IL0045012,117,LaSalle St (N),2 (1.25'),CR,I-49 & I-50,U
+Chicago,IL0045012,116,Clark St (S),3',CR,I-51,U
+Chicago,IL0045012,115,Clark St (N),6',CR,I-52,U
+Chicago,IL0045012,114,Dearborn St  & Lower Wacker,3',CR,I-53,U
+Chicago,IL0045012,113,Dearborn St (N),2',CR,I-54,U
+Chicago,IL0045012,112,State St (S),3',CR,I-55,U
+Chicago,IL0045012,111,Wabash Ave (S),3',CR,I-56,U
+Chicago,IL0045012,110,Rush St. (N),5',CR,I-58,U
+Chicago,IL0045012,109,Michigan Ave (S),4',CR,I-59,U
+Chicago,IL0045012,101,Kinzie St (W),6',NBCR,I-62,U
+Chicago,IL0045012,100,Grand Ave (W),4',NBCR,I-63,U
+Chicago,IL0045012,99,Erie St (E),4',NBCR,I-64,U
+Chicago,IL0045012,98,Erie St (W),3',NBCR,I-65(A&B),U
+Chicago,IL0045012,97,Chicago Ave (E),4',NBCR,I-66,U
+Chicago,IL0045012,96,Chicago Ave (W),3',NBCR,I-67,U
+Chicago,IL0045012,237,Halsted St (S),2',NBCR,I-67,U
+Chicago,IL0045012,94,Haines St (E),1.5',NBCR,I-68A,U
+Chicago,IL0045012,91,Halsted St (W),2',NBCR,I-68B,U
+Chicago,IL0045012,87,Division St (W),5',NBCR,I-70,U
+Chicago,IL0045012,86,Eastman St (E),3',NBCR,I-71,U
+Chicago,IL0045012,80,Cortland St (E),4',NBCR,I-72,U
+Chicago,IL0045012,79,Cortland St (W),2',NBCR,I-73,U
+Chicago,IL0045012,78,McLean Ave (E),2.25',NBCR,I-74,U
+Chicago,IL0045012,75,Ashland Ave East Bank (N),2',NBCR,I-75,U
+Chicago,IL0045012,76,Webster Ave (E),4',NBCR,I-75,U
+Chicago,IL0045012,62,Addison St (W),5.5',NBCR,I-76,U
+Chicago,IL0045012,59,Irving Park Rd (W),6',NBCR,I-77,U
+Chicago,IL0045012,52,Montrose Ave (W),6',NBCR,I-78,U
+Chicago,IL0045012,50,Agatite Ave (E),1',NBCR,I-79A,U
+Chicago,IL0045012,49,Sunnyside Ave (W),6',NBCR,I-80,U
+Chicago,IL0045012,48,Sunnyside Ave (E),1.5',NBCR,I-81,U
+Chicago,IL0045012,46,Wilson Ave (E),2.5',NBCR,I-82,U
+Chicago,IL0045012,47,Wilson Ave (W),3.5',NBCR,I-83,U
+Chicago,IL0045012,45,Leland Ave (E),1.5',NBCR,I-84,U
+Chicago,IL0045012,44,Leland Ave (W),1.25',NBCR,I-85,U
+Chicago,IL0045012,43,Giddings St (W),1',NBCR,I-86,U
+Chicago,IL0045012,41,Lawrence Ave (W),5',NBCR,I-87,U
+Chicago,IL0045012,40,Argyle St (W),6',NBCR,I-88,U
+Chicago,IL0045012,35,Kedzie Ave (S),1.25',NBCR,I-88,U
+Chicago,IL0045012,14,Foster Ave (W),3.5',NSC,I-89,U
+Chicago,IL0045012,12,Bryn Mawr Ave (W),5.5',NSC,I-91,U
+Chicago,IL0045012,9,Ardmore Ave (W),2.75',NSC,I-92,U
+Chicago,IL0045012,8,Thorndale Ave (W),4.5',NSC,I-93,U
+Chicago,IL0045012,7,Peterson Ave (W),5.5',NSC,I-94,U
+Chicago,IL0045012,4,Devon Ave (W),7.5',NSC,I-95,U
+Chicago,IL0045012,23,Forest Glen Ave (N),1.25',NBCR,Indirect (DS-,U
+Chicago,IL0045012,28,Kenton Ave (N),2.25',NBCR,Indirect (DS-,U
+Chicago,IL0045012,162,Throop St (N),2',SBCR,Indirect (DS-M35),U
+Chicago,IL0045012,150,Stewart Ave (S),3',SBCR,Indirect (DS-M41),U
+Chicago,IL0045012,108,St. Clair St (Beaubien Ct) (N),2',CR,Indirect (DS-M60),U
+Chicago,IL0045012,60,Grace St (W),1.5',NBCR,Indirect (DS-M90),U
+Chicago,IL0045012,125,Washington St (W),12' X 9',SBCR,Indirect (TG-M53),M
+Chicago,IL0045012,178,Albany Ave (N),9',CC,TG-I12,M
+Chicago,IL0045012,136,Taylor St (W),5.5' x 4.33',SBCR,TG-I28 & I29,M
+Chicago,IL0045012,134,Polk St (W),3.42' x 4.5',SBCR,TG-I32,M
+Chicago,IL0045012,186,Cicero Ave (S),9' x 7.5',CSSC,TG-I5,M
+Chicago,IL0045012,184,Pulaski Rd (S),10.5',CSSC,TG-I8,M
+Chicago,IL0045012,183,Pulaski Rd (N),8' x 8',CSSC,TG-I9,M
+Chicago,IL0045012,182,Lawndale Ave (N),7',CSSC,TG-M16,M
+Chicago,IL0045012,172,Oakley Ave (N),10' x 8',CSSC,TG-M22,M
+Chicago,IL0045012,106,Beaubien Ct (St. Clair Street) (N),9' x 8',CR,TG-M60,M
+Chicago,IL0045012,82,North Ave (W),6',NBCR,TG-M71,M
+Chicago,IL0045012,65,Western Ave East Bank (N),6',NBCR,TG-M81,M
+Chicago,IL0045012,10,Ardmore Ave (E),7' x 5.6',NSC,TG-M94,M
+Chicago,IL0045012,189,Nashville Ave P.S. (S),12' Tunnel,CSSC,TG-NASH,M
+Chicago/ Calumet Park,ILM580016/IL0045012,001 / 218,Laflin Ave (N),17' x 13.6',CSC,CDS-10,M
+Des Plaines,ILM580026,2,Prairie Ave (River Rd & Thacker St (W),3' &amp; 4',DPR,DS-D01,M 
+Des Plaines,Not Permitted,NP,Algonquin Rd (South of bridge) (W),2.5',DPR,DS-D02,U 
+Des Plaines,Not Permitted,NP,Algonquin Rd (North of bridge) (W),3',DPR,DS-D02,U 
+Des Plaines,Not Permitted,NP,Des Plaines River Rd at Riverview Ave (W),7',DPR,DS-D03R,M 
+Des Plaines,Not Permitted,NP,Oakton St (W )),2.5',DPR,DS-D03R,U 
+Des Plaines,Not Permitted,NP,N of Columbia and Seegers (N),3',Weller Creek,Indirect (UDP-DS5),M
+Des Plaines,ILM580026,1,Howard Ave (W )),5',DPR,None,U 
+Dixmoor,ILM580011,1,Ashland Ave (S),4.5',LCalR,CDS-39,M
+Dolton,ILM580017,1,Park Ave (Forest Av Ext.) (S),4.5',LCalR,CDS-17,M 
+Dolton,ILM580017,2,Dorchester Ave ext. (S),5.5',LCalR,CDS-18,M 
+Dolton,ILM580017,3,Ellis Ave (N),7',LCalR,CDS-51,M
+Evanston,ILM580002,13,Mulford St (E),5',NSC,DS-M101,U 
+Evanston,ILM580002,A13,Mulford St (E),2 (5'),NSC,DS-M101,M
+Evanston,ILM580002,12,Oakton (E),2',NSC,DS-M102,U 
+Evanston,ILM580002,11,Cleveland St (E),4.5',NSC,DS-M103,U 
+Evanston,ILM580002,A10,Main St (E),1.75',NSC,DS-M104,U 
+Evanston,ILM580002,10,Main St (E),2 (10' x 8'),NSC,DS-M104E,M 
+Evanston,ILM580002,A08,Lake St (E),9',NSC,DS-M106E,U 
+Evanston,ILM580002,5,Bridge St (N),1.67',NSC,DS-M106W,U 
+Evanston,ILM580002,A07,Emerson St (W )),5',NSC,DS-M107-2,M 
+Evanston,ILM580002,6,Elgin Road (Emerson St) (E),9',NSC,DS-M107-2,U 
+Evanston,ILM580002,A06,Emerson St (E),3',NSC,DS-M108,U 
+Evanston,ILM580002,A04,Green Bay Rd &amp; McCormick (W )),9',NSC,DS-M109S,M 
+Evanston,ILM580002,4,Asbury Ave (E),3',NSC,DS-M110,U 
+Evanston,ILM580002,A02,Central St (E),1.25',NSC,DS-M111,U 
+Evanston,ILM580002,A01,Isabella St (E),1.5',NSC,DS-M112,U 
+Evanston,Not Permitted,NP,Green Bay Rd (Grant St & McCormick Blvd (N),4',NSC,I-108,U 
+Evanston,ILM580002,3,Lincoln St (N),3',NSC,I-109,U 
+Evanston,ILM580002,9,Greenleaf St (E),5',NSC,TG-M105E,M
+Forest Park,ILM580019,2,Van Buren ext. in Concordia Cemetery (At C&NW Rail Rd) ,5.5',DPR,DS-D28,M 
+Forest Park,ILM580019,1,Roosevelt Rd (East bridge abutement) (E),5.5',DPR,"DS-D28,30",M
+Forest View,Not Permitted,NP,Grove Ave (N),2.25' &amp; 5' x 3.17',CSSC,DS-M07,U
+Franklin Park,ILM580029,1,Robinson Rd (W )),10' x 6',DPR,DS-D13,M 
+Franklin Park,ILM580029,3,King Street (Elm St) (W )),2.5',DPR,DS-D14,U 
+Franklin Park,ILM580029,4,Belmont Ave (W )),11',DPR,DS-D14,M 
+Golf,IL0072389,1,Golf Rd (E),1.25',W F-NBCRF-NBCR,Indirect (DS-N20),U
+Harvey,ILM580020,1,144th St (W )),7.5',LCalR,CDS-41,M 
+Harvey,ILM580020,2,Center Ave (E),7',LCalR,CDS-41,M 
+Harvey,ILM580020,3,Union St (W )),6.5',LCalR,CDS-42,M 
+Harvey,ILM580020,4,Clinton St (W )),2',LCalR,CDS-43,M 
+Harvey,ILM580020,5,Illinois Central Railroad (E),2.5',LCalR,CDS-43,M 
+Harvey,ILM580020,6,147th St (N),2',LCalR,CDS-45,M 
+Harvey,ILM580020,7,149th St (E),2.5',LCalR,CDS-45,M
+IL American ,Not Permitted,,Mt Prospect (S),3.5',Weller Creek,DS-UD5,M
+LaGrange,ILM580009,2,Drexal Ave (S),2',SC,DS-13A-68,U 
+LaGrange,ILM580009,1,41st &amp; Custer (Konrad Ave) (S),6.5',SC,"DS-D47,50,51 & DS-13A-1 ",M
+LaGrange Park,ILM580008,1,Jackson Ave (E),2',SC,DS-13A-53,U 
+LaGrange Park,ILM580008,2,Brainard and Monroe (E),2.5',SC,DS-13A-53,U 
+LaGrange Park,ILM580008,4,31st St (South of Harding at SC) (S),2',SC,DS-13A-54,U 
+Lagrange Park,ILM580032,3,Logan Ave (31st St) (W )),6',SC,"DS-D37,38",M 
+LaGrange Park,ILM580008,5,W est of Edgewood Avenueest of Edgewood Avenue,21“,SC,,U 
+LaGrange Park,ILM580008,6,W est of Edgewood Avenueest of Edgewood Avenue,48“,SC,,U
+Lansing / Calumet City,ILM580027 ,002 / 005,Burnham Ave (170th St) (S),8',LCalR,CDS-55,M 
+Lemont,,2,Stephen St (S),5.5',I&M Canal,None,U
+Lemont,,3,Stephen St (S),5.5',CSSC,None,U
+Lincolnwood,ILM580034,2,Pratt Ave (W),7',NSC,I-96,U
+Lyons,ILM580004,3,47th St (41st St &amp; DesPlaines River) (W) ,5',DPR,DS-13A-4,M
+Lyons,ILM580004,2,40th St ext. (40th St &amp; Haas) (E),3',DPR,DS-D48,M 
+Lyons,ILM580004,1,Ogden Ave (SW wing wall of the bridge) (W),5.5',DPR,DS-D49,M 
+Markham,ILM580028,1,161st St. and Damen Ave (Markham PS) (N),2',CUDD,CDS-57,M
+Maywood,Not Permitted,NP,Lake St. (Just S. of the Bridge) (W),2',DPR,"DS-D21,25",M 
+Maywood,Not Permitted,NP,Lake St (Approx. 200' south of the bridge) (W),4.25',DPR,"DS-D21,25",M 
+Maywood,ILM580022,3,Lake St. (approx. 200' S. of the bridge) (W) ,2.5',DPR,"DS-D21,25",M 
+Maywood,ILM580022,1,Augusta St (W),2.75',DPR,"DS-D22,24,25",M 
+Maywood,ILM580022,2,Rice St (W),2.5',DPR,"DS-D22,24,25",M 
+Maywood,Not Permitted,NP,Huron/Superior Street (Forest Preserve) (W) ,3',DPR,"DS-D22,24,25",M 
+Maywood,Not Permitted,NP,N. of 1st Ave. &amp; Oak St. (W )),2.5',DPR,DS-D27I,M 
+Maywood,ILM580022,4,1st Ave & Oak St (W),4.5',DPR,DS-D27I,M 
+Maywood,ILM580022,5,1st Ave & Maple St (W),3',DPR,DS-D27I,M 
+Maywood,Not Permitted,NP,Washington Blvd. (S. of the ashington Blvd. (S. of the bridge) (W) ,5',DPR,DS-D31,M 
+Maywood,ILM580022,6,School Street ext. (South of Washington Blvd Washington Blvd W ) ,3.5',DPR,DS-D31,M 
+Maywood,ILM580022,7,Maybrook Dr - C&NW RR (S),2.5',DPR,DS-D32,M
+Melrose Park,ILM580003,1,Division St & 1st Ave (W),5',DPR,DS-D52,M
+Methodist Campground,Not Permitted,NP,Algonquin Rd (E),1.25',DPR,DS-D02,U
+Morton Grove,ILM580005,2,Dempster St near Lincoln Ave (E),2.67' x 4',NBCR,DS-N19,M
+Morton Grove,ILM580005,1,Church St (Austin Avenue) (E),4.75',NBCR,DS-N20,U 
+Mt. Prospect,Not Permitted,NP,S of Lincoln St (E),1.5',Weller Creek,None (K3),M 
+Mt. Prospect,Not Permitted,NP,Can-Dota Ave (extended) (S),3',Weller Creek,UDP-DS3 (K11),M 
+Mt. Prospect,Not Permitted,NP,Wa-Pella Ave (extended) (S),3.5',Weller Creek,UDP-DS3 (K14),M 
+Mt. Prospect,Not Permitted,NP,W of Elmhurst Rd (N),6',Weller Creek,UDP-DS4 (K20),M 
+Mt. Prospect,Not Permitted,NP,William St. Bridge (N),7.6' x 4.8',Weller Creek,UDP-DS6 (K22),M
+Mt. Prospect,Not Permitted,NP,E of Feehanville Rd (W),5',Feehanville Ditch,UDP-DS8 (K25-1&K25-2),M
+Mt. Prospect,Not Permitted,NP,E of Feehanville Rd (W),4',Feehanville Ditch,UDP-DS8 (K26),M 
+MW RD / Blue RD / Blue Island,IL0028061 / LM580031,156 / 001,Francisco Ave (N),6.5' x 6.5',CSC,CDS-5,M
+MWRD,IL0028088,102,Green Bay Rd &amp; McCormick (W),8.5' x 9.5',NSC,DS-M109N,M
+MWRD / Lincolnwood,IL0028088/ILM580034 ,106 / 001,Morse Ave Ext. (No. of Pratt Ave) (W) ,7',NSC,I-97,U 
+Niles,ILM580035,9,Forestview Lane &amp; Riverside Dr (E of Milwaukee) (W),3.5',NBCR,DS-N11,M
+Niles,ILM580035,10,Caldwell Ave &amp; Touhy Ave (Harts Rd &amp; Touhy Ave) (E),2 (5.5' x 3.58'),NBCR,DS-N12,M
+Niles,ILM580035,6,Jarvis Ave (350 feet east of School St) (W),1',NBCR,DS-N15,U
+Niles,ILM580035,7,Niles Terrace (350 feet east of School St) (W),1.25',NBCR,DS-N15,U
+Niles,ILM580035,3,Dobson St and Nordica Ave (W),4',NBCR,DS-N16,M
+Niles,ILM580035,2,Cleveland St east of Caldwell Ave (W),4.5',NBCR,DS-N17,M
+Niles,ILM580035,1,East of Caldwell Ave at Main St ext.(W),5.5',NBCR,DS-N18,M
+Niles,Not Permitted,NP,Howard (W),1.5',NBCR,Indirect (DS-N16),U
+Niles / Chicago,ILM580035 / IL0045012,008 / 236,6872 Touhy Ave  (Franks & Nieman) (W),5',NBCR,DS-N13R,M
+North Riverside,ILM580030,2,26th St (West abutement of the bridge) (W),4.5',DPR,DS-D35,M
+North Riverside,ILM580030,1,26th St (East abutement of the bridge) (E),5',DPR,DS-D36,M
+Park Ridge,ILM580014,5,Algonquin Road (bridge abutment) (E),7',DPR,DS-D02,M
+Park Ridge,ILM580014,2,Howard St / Sibley Ave (E),5.5',DPR,DS-D05,M
+Park Ridge,ILM580014,6,Howard Street / Sibley Avenue (E),7',DPR,DS-D05,M
+Park Ridge,ILM580014,3,Touhy Ave (E),6',DPR,DS-D06,M
+Park Ridge,ILM580014,7,Touhy Ave (E),8',DPR,DS-D06,M
+Park Ridge,ILM580014,4,Devon Ave (E),8.5',DPR,DS-D07,M
+Park Ridge,ILM580014,8,Devon Ave (E),3.5',DPR,DS-D07,M
+Phoenix,IL0072834,1,9th Ave ext. &amp; 151st St (S),4',LCalR,CDS-45,M
+River Forest,ILM580024,3,Lake St (South of the bridge) (E),6.5',DPR,DS-D26,M
+River Grove,ILM580021,2,Grand Ave (W),3',DPR,DS-D16,M
+River Grove,ILM580021,3,Herrick Ave (W),2.5',DPR,DS-D17,M
+River Grove,ILM580021,4,Fullerton Ave ext. (W),1.75',DPR,DS-D17,M
+River Grove,ILM580021,5,Fullerton Ave (Maple &amp; Fullerton) (E),5',DPR,DS-D18,M
+River Grove,ILM580021,6,Lyndale/Palmer Ave (W),4',DPR,DS-D20I,M
+River Grove / Franklin Park,ILM580021 / ILM580029,001 / 002,Franklin St (W),10',DPR,DS-D15,M
+Riverdale,Not Permitted,NP,Wabash (IL Central RR) (S),1.5',LCalR,CDS-15,U
+Riverdale,ILM580007,2,Penn Central RR &amp; Dearborn St ext. (Near 134th St) (ACME,3.5',LCalR,CDS-15-1,M
+Riverdale,ILM580007,3,Wabash St (ACME Steel) (S),4',LCalR,CDS-15-2,M
+Riverdale,Not Permitted,NP,Extended State St  (ACME Steel) (ICC &amp; Wabash extended,2.5',LCalR,CDS-15-3,U
+Riverdale,ILM580007,4,Union Ave P.S. (N),7',LCalR,CDS-42,M
+Riverside,ILM580015,12,Ogden Ave (Approx. 50' north of the bridge) (E),5',DPR,DS-D41,M
+Riverside,ILM580015,9,Near Burling Rd (Library) (N),5.5',DPR,DS-D43,M
+Riverside,ILM580015,10,Near Junction of Gage &amp; Riverside Rd (N),4',DPR,"DS-D44,45",M
+Riverside,Not Permitted,NP,Olmstead Rd (N),2.25',DPR,"DS-D44,45",M
+Riverside,ILM580015,11,Blackhawk Rd ext. (E),1.25',DPR,"DS-D44,45",M
+Riverside,Not Permitted,NP,Extended Forest Ave. (SE corner of Forest Ave &amp; 1st Ave),1.5',DPR,DS-D66,M
+Riverside,Not Permitted,NP,31st Street (E),3',DPR,None,U
+Riverside,ILM580015,7,Barrypoint Bridge (N),2',DPR,None,U
+Robbins,Not Permitted,NP,Keeler Avenue (S),2',CSC,CI-1,U
+Robbins,Not Permitted,NP,St. Louis Avenue (S),1.5',CSC,CI-2,U
+Robbins,Not Permitted,NP,Homan Avenue (S),2',CSC,CI-3,U
+Schiller Park,ILM580013,1,South of Irving Park Rd (W),2.5',DPR,DS-D12I,M
+Skokie,ILM580036,5,Main St (W),7',NSC,DS-M104,M
+Skokie,ILM580036,2,Greenwood St &amp; McCormick Blvd (W),7',NSC,DS-M105W,M
+Skokie,ILM580036,3,Emerson St (W),7',NSC,DS-M107-1,M
+Skokie,ILM580036,4,Lake St (W),3.5',NSC,I-104,U
+Skokie,ILM580036,1,Howard St &amp; McCormick Bl (W),7',NSC,I-99,U
+South Holland,ILM580010,1,South Park Ave (N),1.75',LCalR,C-1,M
+South Holland,ILM580010,2,South Park Ave (S),4',LCalR,C-1,M
+South Holland,ILM580010,4,152nd St ext. West Structure No.1 (149th St) (W),2',LCalR,CDS-45,M
+South Holland,Not Permitted,NP,152nd St (ext) West Structure No.2 (149th St) (W),2',LCalR,CDS-45,M
+South Holland,ILM580010,3,State St. (Chicago &amp; Eastern R.R. Yard) (155th &amp; Woodlawn,2.5',LCalR,CDS-48,M
+South Holland,Not Permitted,NP,162nd Street /159th Street and Indiana Avenue (E),1.25',CUDD,Indirect  (CDS-47),U
+South Holland,ILM580010,5,153rd St &amp; Dearborn ext. (S),0.83',LCalR,Indirect (CDS-47),U
+Stickney,ILM580023,1,Hiawatha Ave (Highland Ave ext.) (N),5',CSSC,DS-M09,M
+Summit,ILM580033,1,Park Acres Subdivision (N),2',CSSC,DS-M5B,U
+Summit,ILM580033,3,Argo (63rd St) (E),4',CSSC,Indirect (DS-M03),U
+Summit,ILM580033,2,Lawndale Ave (E),3',CSSC,TG-M05,M
+Western Springs,IL0045039,Unknown,Howard Ave (Harding Ave) (S),4.5',SC,DS-13A-55,U
+Western Springs,IL0045039,Unknown,Grove Ave (S),3',SC,DS-13A-56,U
+Wilmette,ILM580012,2,Laurel (E),1.25' &amp; 1',NSC,DS-M113,U
+Wilmette,ILM580012,1,Sheridan Rd (W),8',NSC,DS-M114N-2,M
