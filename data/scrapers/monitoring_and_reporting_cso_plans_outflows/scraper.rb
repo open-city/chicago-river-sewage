@@ -20,7 +20,8 @@ urls.each do |url|
   outflows += parse_page_for url
 end
 
-File.open('./outflow_locations_mwrd_monitoring_plans.csv', 'a') do |file|
+File.open('./../../processed_data/outflow_locations_mwrd_monitoring_plans.csv', 'a') do |file|
+  file.puts "Discharge No.,TARP Structure,Outfall Location,CSO Outfall Owner(s)"
   outflows.each {|outflow| file.puts outflow.to_csv }
 end
 
