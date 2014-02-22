@@ -146,7 +146,7 @@ Evanston,ILM580002,11,Cleveland St (E),4.5',NSC,DS-M103,U ,DS-M10
 MWRD,IL0028088,102,Green Bay Rd &amp; McCormick (W),8.5' x 9.5',NSC,DS-M109N,M,DS-M109 N
 Chicago,IL0045012,20,Mango Ave ext. (Leonard & Miltmore) (W),9.5',NBCR,DS-N08,M,DS-D08
 Chicago,IL0045012,190,Ashland Ave (W),4',SFSBCR,DS-M33,U,DS-D33
-Des Plaines,Not Permitted,NP,Oakton St (W )),2.5',DPR,DS-D03R,U ,DS-M03
+Des Plaines,Not Permitted,NP,Oakton St (W )),2.5',DPR,DS-D03R,U ,
 Blue Island,ILM580031,4,Division Ave (N),5',CSC,CDS-9,U ,
 Blue Island / Posen,ILM580031/IL0043133,005 / 001,California Ave &amp; Edward St (S),4.5',CSC,CDS-6,M,
 Brookfield,ILM580032,7,Brookfield Ave (W )),2.5',SC,"DS-D39,42,46",M ,
@@ -368,7 +368,7 @@ South Holland,ILM580010,4,152nd St ext. West Structure No.1 (149th St) (W),2',LC
 South Holland,Not Permitted,NP,162nd Street /159th Street and Indiana Avenue (E),1.25',CUDD,Indirect  (CDS-47),U,
 South Holland,ILM580010,5,153rd St &amp; Dearborn ext. (S),0.83',LCalR,Indirect (CDS-47),U,
 Summit,ILM580033,1,Park Acres Subdivision (N),2',CSSC,DS-M5B,U,
-Summit,ILM580033,3,Argo (63rd St) (E),4',CSSC,Indirect (DS-M03),U,
+Summit,ILM580033,3,Argo (63rd St) (E),4',CSSC,Indirect (DS-M03),U,DS-M03
 Western Springs,IL0045039,Unknown,Howard Ave (Harding Ave) (S),4.5',SC,DS-13A-55,U,
 Western Springs,IL0045039,Unknown,Grove Ave (S),3',SC,DS-13A-56,U,
 Wilmette,ILM580012,2,Laurel (E),1.25' &amp; 1',NSC,DS-M113,U,
