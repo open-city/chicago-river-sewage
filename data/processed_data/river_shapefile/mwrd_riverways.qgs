@@ -4,10 +4,10 @@
     <mapcanvas>
         <units>degrees</units>
         <extent>
-            <xmin>-92.548106</xmin>
-            <ymin>38.250721</ymin>
-            <xmax>-85.083257</xmax>
-            <ymax>44.013652</ymax>
+            <xmin>-89.161120</xmin>
+            <ymin>41.050039</ymin>
+            <xmax>-87.294908</xmax>
+            <ymax>42.490772</ymax>
         </extent>
         <projections>1</projections>
         <destinationsrs>
@@ -39,8 +39,8 @@
                 <legendlayerfile isInOverview="0" layerid="cso_outfalls20140225214131941" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="MWRD Riverways" showFeatureCount="0">
-            <filegroup open="false" hidden="false">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="MWRD Riverways" showFeatureCount="0">
+            <filegroup open="true" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="MWRD_Riverways20140225202429620" visible="1"/>
             </filegroup>
         </legendlayer>
