@@ -5,10 +5,10 @@
     <mapcanvas>
         <units>meters</units>
         <extent>
-            <xmin>-9968902.80743977427482605</xmin>
-            <ymin>4925031.32000090647488832</ymin>
-            <xmax>-9397765.8250330314040184</xmax>
-            <ymax>5270422.45955913420766592</ymax>
+            <xmin>-10079854.46419998072087765</xmin>
+            <ymin>5075883.11356992088258266</ymin>
+            <xmax>-9508717.48178545199334621</xmax>
+            <ymax>5421274.25313285738229752</ymax>
         </extent>
         <projections>1</projections>
         <destinationsrs>
@@ -691,10 +691,10 @@
                 <multilineenabled fieldname="" on=""/>
                 <selectedonly on=""/>
             </labelattributes>
-            <editform></editform>
+            <editform>.</editform>
             <editforminit></editforminit>
             <featformsuppress>0</featformsuppress>
-            <annotationform></annotationform>
+            <annotationform>.</annotationform>
             <editorlayout>generatedlayout</editorlayout>
             <excludeAttributesWMS/>
             <excludeAttributesWFS/>
@@ -772,10 +772,10 @@
                 <multilineenabled fieldname="" on=""/>
                 <selectedonly on=""/>
             </labelattributes>
-            <editform></editform>
+            <editform>.</editform>
             <editforminit></editforminit>
             <featformsuppress>0</featformsuppress>
-            <annotationform></annotationform>
+            <annotationform>.</annotationform>
             <editorlayout>generatedlayout</editorlayout>
             <excludeAttributesWMS/>
             <excludeAttributesWFS/>
