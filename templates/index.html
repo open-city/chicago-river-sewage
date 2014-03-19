@@ -22,6 +22,7 @@
     <![endif]-->
 
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />
+    <link rel="stylesheet" href="static/css/leaflet.label.css" />
     <!--[if lte IE 8]>
       <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.ie.css" />
     <![endif]-->
@@ -40,12 +41,23 @@
         <div class="jumbotron">
           <p>Is there raw sewage being dumped in the Chicago River right now?</p>
           <h1 id='the-answer'></h1>
+        </div>
 
-          <div id='map-info' style='display: none;'>
-            <br />
-            <p id='report-link'></p>
-            <div id='map' style="height: 500px; width: 100%"></div>
-          </div>
+        <div id='map-info' style='display: none;'>
+          <div id='map' style="height: 600px; width: 100%"></div>
+          <table class='table' id='riverway-list'>
+            <thead>
+              <tr>
+                <th>Riverway</th>
+                <th>Segment description</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+          <hr />
+          <p>Read the official reports from the Metropolitan Water Reclamation District:</p>
+          <ul id='report-link'></ul>
         </div>
 
         <div class="panel-group" id="accordion">
@@ -136,6 +148,7 @@ http://istheresewageinthechicagoriver.com/water-status/?date=MM/DD/YYYY
     <script src="static/js/moment.min.js"></script>
 
     <script src="static/js/leaflet.js"></script>
+    <script src="static/js/leaflet.label.js"></script>
     <!-- <script src="static/js/leaflet_lib.js"></script> -->
 
     <script>
@@ -147,13 +160,20 @@ http://istheresewageinthechicagoriver.com/water-status/?date=MM/DD/YYYY
 
           $('#map-info').slideDown();
 
-          var suffix = 'places';
+          var suffix = 'riverways';
           if (data['cso-events'].length == 1)
-            suffix = 'place';
+            suffix = 'riverway';
 
           $("#the-answer").html("<span class='label label-warning'>Yes, in " + data['cso-events'].length + " " + suffix + "</span>");
 
-          $("#report-link").append("<i class='icon-file-text'></i> <a href='http://apps.mwrd.org/CSO/CSOEventSynopsisReport.aspx?passdate=" + current_date + "'>Report</a>&nbsp;&nbsp;&nbsp;<i class='icon-map-marker'></i><a href='http://apps.mwrd.org/CSO/cso_quick_view.aspx'>MWRD map</a>")
+          $("#report-link").append("<li><i class='icon-file-text'></i> <a href='http://apps.mwrd.org/CSO/CSOEventSynopsisReport.aspx?passdate=" + current_date + "'>Event Synopsis Report</a></li><li><i class='icon-map-marker'></i> <a href='http://apps.mwrd.org/CSO/cso_quick_view.aspx'>Current Combined Sewer Overflows map</a></li>")
+
+          for (var i = 0; i < data['cso-events'].length; i++) {
+            $('#riverway-list tbody').append("<tr>\
+              <td>" + data['cso-events'][i]['riverway'] + "</td>\
+              <td>" + data['cso-events'][i]['description'] + "</td>\
+              </tr>");
+          }
 
           // render a map!
           var map = L.map('map', { scrollWheelZoom: false }).setView([41.82, -87.7], 10);
@@ -166,8 +186,9 @@ http://istheresewageinthechicagoriver.com/water-status/?date=MM/DD/YYYY
             {style: { weight: 3, opacity: 1, color: '#f39c12' }}).addTo(map);
 
           geojson.eachLayer(function (layer) {
-            var popup = "<p>" + layer.feature.properties['NAME'] + "</p>";
-            layer.bindPopup(popup);
+            var popup = "<h4>" + layer.feature.properties['riverway'] + "</h4>\
+                        <p>" + layer.feature.properties['description'] + "</p>";
+            layer.bindLabel(popup);
           });
         }
         else {

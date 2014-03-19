@@ -34,29 +34,29 @@ class CSOEvent(db.Model):
 dthandler = lambda obj: obj.isoformat() if isinstance(obj, datetime) or isinstance(obj, date) else None
 
 waterway_segments = [
-  "North Shore Channel: Lake Michigan to North Side WRP",
-  "North Shore Channel: North Side WRP to the confluence with the North Branch of the Chicago River (NBCR)",
-  "NBCR: confluence with the North Shore Channel to Wolf Point, including the North Branch Canal east of Goose Island.",
-  "NBCR: Beckwith Road and West Fork to confluence with the North Shore Channel",
-  "Chicago River: Wolf Point to Chicago River Controlling Works (CRCW)",
-  "South Branch of Chicago River: Wolf Point to Damen Avenue",
-  "South Fork of SBCR (Bubbly Creek)",
-  "Chicago Sanitary and Ship Canal (CSSC): Damen Avenue to the Stickney WRP",
-  "CSSC: Stickney WRP to the confluence with the Calumet-Sag Channel",
-  "CSSC: from the confluence with the Calumet-Sag Channel to the Lemont WRP",
-  "CSSC: Lemont WRP to Lockport Lock & Dam",
-  "Weller Creek",
-  "Des Plaines River: Weller Creek to Willow-Higgins Creek",
-  "Des Plaines River: Willow-Higgins Creek to the confluence with Salt Creek",
-  "Des Plaines River: the confluence with Salt Creek to the confluence with the CSSC",
-  "Salt Creek: from Addison Creek to the confluence with the Des Plaines River",
-  "Calumet River: O'Brien Locks to Lake Michigan",
-  "Grand Calumet River: from confluence with the Little Calumet River to the Indiana state line",
-  "Little Calumet River: O'Brien Locks to the Calumet-Sag Channel",
-  "Little Calumet River: Indiane state line to the Calumet-Sag Channel",
-  "Calumet-Sag Channel",
-  "Calumet Union Drainage Ditch",
-  "Addison Creek"
+  {"riverway": "North Shore Channel", "description": "Lake Michigan to North Side Water Reclamation Plan"},
+  {"riverway": "North Shore Channel", "description": "North Side Water Reclamation Plan to the confluence with the North Branch of the Chicago River"},
+  {"riverway": "North Branch of Chicago River", "description": "Confluence with the North Shore Channel to Wolf Point"},
+  {"riverway": "North Branch of Chicago River", "description": "Beckwith Road and West Fork to confluence with the North Shore Channel"},
+  {"riverway": "Chicago River", "description": "Wolf Point to Chicago River Controlling Works"},
+  {"riverway": "South Branch of Chicago River", "description": "Wolf Point to Damen Avenue"},
+  {"riverway": "South Fork of SBCR (Bubbly Creek)", "description": ""},
+  {"riverway": "Chicago Sanitary and Ship Canal", "description": "Damen Avenue to the Stickney Water Reclamation Plan"},
+  {"riverway": "Chicago Sanitary and Ship Canal", "description": "Stickney Water Reclamation Plan to the confluence with the Calumet-Sag Channel"},
+  {"riverway": "Chicago Sanitary and Ship Canal", "description": "From the confluence with the Calumet-Sag Channel to the Lemont Water Reclamation Plant"},
+  {"riverway": "Chicago Sanitary and Ship Canal", "description": "Lemont Water Reclamation Plan to Lockport Lock & Dam"},
+  {"riverway": "Weller Creek", "description": ""},
+  {"riverway": "Des Plaines River", "description": "Weller Creek to Willow-Higgins Creek"},
+  {"riverway": "Des Plaines River", "description": "Willow-Higgins Creek to the confluence with Salt Creek"},
+  {"riverway": "Des Plaines River", "description": "The confluence with Salt Creek to the confluence with the CSSC"},
+  {"riverway": "Salt Creek", "description": "From Addison Creek to the confluence with the Des Plaines River"},
+  {"riverway": "Calumet River", "description": "O'Brien Locks to Lake Michigan"},
+  {"riverway": "Grand Calumet River", "description": "From confluence with the Little Calumet River to the Indiana state line"},
+  {"riverway": "Little Calumet River", "description": "O'Brien Locks to the Calumet-Sag Channel"},
+  {"riverway": "Little Calumet River", "description": "Indiane state line to the Calumet-Sag Channel"},
+  {"riverway": "Calumet-Sag Channel", "description": ""},
+  {"riverway": "Calumet Union Drainage Ditch", "description": ""},
+  {"riverway": "Addison Creek", "description": ""}
 ]
 
 # ROUTES
@@ -75,8 +75,12 @@ def water_status():
         water_segments = set(re.findall('images\/(\d+).GIF"', water_page.content))
         water_segment_details = []
         for w in water_segments:
-            water_segment_details.append([int(w), waterway_segments[int(w) - 1]])
- 
+            segment_detail = {}
+            segment_detail["segment-id"] = int(w)
+            segment_detail["riverway"] = (waterway_segments[int(w) - 1])["riverway"]
+            segment_detail["description"] = (waterway_segments[int(w) - 1])["description"]
+            water_segment_details.append(segment_detail)
+
         if len(water_segments) == 0:
             water_resp['cso-events'] = []
             water_resp['is-there-sewage'] = 'no'
@@ -90,7 +94,9 @@ def water_status():
             riverway_features_to_show = []
             for segment in water_segment_details:
               for f in riverway_features_all:
-                if f['properties']['SEGMENT_ID'] == segment[0]:
+                if f['properties']['SEGMENT_ID'] == segment['segment-id']:
+                  f['properties']['riverway'] = waterway_segments[f['properties']['SEGMENT_ID']-1]['riverway']
+                  f['properties']['description'] = waterway_segments[f['properties']['SEGMENT_ID']-1]['description']
                   riverway_features_to_show.append(f)
 
             chicago_riverways['features'] = riverway_features_to_show
