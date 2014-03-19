@@ -20,6 +20,11 @@
       <script src="static/js/html5shiv.js"></script>
       <script src="static/js/respond.min.js"></script>
     <![endif]-->
+
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />
+    <!--[if lte IE 8]>
+      <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.ie.css" />
+    <![endif]-->
   </head>
 
   <body>
@@ -34,9 +39,13 @@
 
         <div class="jumbotron">
           <p>Is there raw sewage being dumped in the Chicago River right now?</p>
-          <h1><a id='the-answer' href='#'></a></h1>
-          <p id='water-details'>
-          </p>
+          <h1 id='the-answer'></h1>
+
+          <div id='map-info' style='display: none;'>
+            <br />
+            <p id='report-link'></p>
+            <div id='map' style="height: 500px; width: 100%"></div>
+          </div>
         </div>
 
         <div class="panel-group" id="accordion">
@@ -124,41 +133,50 @@ http://istheresewageinthechicagoriver.com/water-status/?date=MM/DD/YYYY
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="static/js/bootstrap.min.js"></script>
-    <script src="static/js/analytics_lib.js"></script>
-
     <script src="static/js/moment.min.js"></script>
+
+    <script src="static/js/leaflet.js"></script>
+    <!-- <script src="static/js/leaflet_lib.js"></script> -->
 
     <script>
       var current_date = moment().format("M/D/YYYY");
-      var mwrd_map = "http://apps.mwrd.org/CSO/cso_quick_view.aspx"
 
       $.when( $.getJSON("/water-status/") ).then(function( data, textStatus, jqXHR ) {
 
-        $("#the-answer").attr("href", mwrd_map);
-
         if (data['is-there-sewage'] == 'yes') {
+
+          $('#map-info').slideDown();
+
           var suffix = 'places';
           if (data['cso-events'].length == 1)
             suffix = 'place';
 
           $("#the-answer").html("<span class='label label-warning'>Yes, in " + data['cso-events'].length + " " + suffix + "</span>");
 
-          // $("#water-details").append("<ul id='cso-events'></ul>");
-          // $.each(data['cso-events'], function(i, json){
-          //   $("#cso-events").append("<li>" + data['cso-events'][i][1] + "</li>");
-          // });
+          $("#report-link").append("<i class='icon-file-text'></i> <a href='http://apps.mwrd.org/CSO/CSOEventSynopsisReport.aspx?passdate=" + current_date + "'>Report</a>&nbsp;&nbsp;&nbsp;<i class='icon-map-marker'></i><a href='http://apps.mwrd.org/CSO/cso_quick_view.aspx'>MWRD map</a>")
 
-          $("#water-details").append("<br /><i class='icon-map-marker'></i> <a href='" + mwrd_map + "'>Map</a>")
+          // render a map!
+          var map = L.map('map', { scrollWheelZoom: false }).setView([41.82, -87.7], 10);
 
-          $("#water-details").append("&nbsp;&nbsp;&nbsp;<i class='icon-file-text'></i> <a href='http://apps.mwrd.org/CSO/CSOEventSynopsisReport.aspx?passdate=" + current_date + "'>Report</a>")
+          L.tileLayer('https://{s}.tiles.mapbox.com/v3/derekeder.hehblhbj/{z}/{x}/{y}.png', {
+              attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
+          }).addTo(map);
+
+          var geojson = L.geoJson(data['riverway-geojson'], 
+            {style: { weight: 3, opacity: 1, color: '#f39c12' }}).addTo(map);
+
+          geojson.eachLayer(function (layer) {
+            var popup = "<p>" + layer.feature.properties['NAME'] + "</p>";
+            layer.bindPopup(popup);
+          });
         }
         else {
           $("#the-answer").html("<span class='label label-success'>No</span>");
         }
-        
-
       });
     </script>
+
+    <script src="static/js/analytics_lib.js"></script>
 
   </body>
 </html>

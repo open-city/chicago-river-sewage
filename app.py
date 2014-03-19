@@ -83,6 +83,18 @@ def water_status():
         else:
             water_resp['cso-events'] = water_segment_details
             water_resp['is-there-sewage'] = 'yes'
+
+            chicago_riverways = json.load(open('static/data/chicago_riverways.json', 'rb'))
+            riverway_features_all = chicago_riverways['features']
+
+            riverway_features_to_show = []
+            for segment in water_segment_details:
+              for f in riverway_features_all:
+                if f['properties']['SEGMENT_ID'] == segment[0]:
+                  riverway_features_to_show.append(f)
+
+            chicago_riverways['features'] = riverway_features_to_show
+            water_resp['riverway-geojson'] = chicago_riverways
  
         resp = make_response(json.dumps(water_resp))
     else: 
