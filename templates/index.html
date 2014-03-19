@@ -39,7 +39,11 @@
         <div class='clearfix'></div>
 
         <div class="jumbotron">
-          <p>Is there raw sewage being dumped in the Chicago River right now?</p>
+          {% if today_flag %}
+            <p>Is raw sewage being dumped in the Chicago River right now?</p>
+          {% else %}
+            <p>Was raw sewage dumped in the Chicago River on {{ date.strftime("%b, %d %Y") }}?</p>
+          {% endif %}
           <h1 id='the-answer'></h1>
         </div>
 
@@ -149,12 +153,11 @@ http://istheresewageinthechicagoriver.com/water-status/?date=MM/DD/YYYY
 
     <script src="static/js/leaflet.js"></script>
     <script src="static/js/leaflet.label.js"></script>
-    <!-- <script src="static/js/leaflet_lib.js"></script> -->
 
     <script>
-      var current_date = moment().format("M/D/YYYY");
+      var current_date = moment("{{date.strftime('%m/%d/%Y')}}").format("M/D/YYYY");
 
-      $.when( $.getJSON("/water-status/") ).then(function( data, textStatus, jqXHR ) {
+      $.when( $.getJSON("/water-status/?date={{date.strftime('%m/%d/%Y')}}") ).then(function( data, textStatus, jqXHR ) {
 
         if (data['is-there-sewage'] == 'yes') {
 

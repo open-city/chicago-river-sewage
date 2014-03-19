@@ -8,6 +8,7 @@ import json
 import requests
 import re
 import os
+import operator
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data/processed_data/cso-data.db'
@@ -62,7 +63,7 @@ waterway_segments = [
 # ROUTES
 @app.route('/water-status/')
 def water_status():
-    lookup_date = datetime.today().strftime("%m/%d/%y")
+    lookup_date = datetime.today().strftime("%m/%d/%Y")
     request_date = request.args.get('date')
     if request_date:
         lookup_date = request_date
@@ -81,11 +82,13 @@ def water_status():
             segment_detail["description"] = (waterway_segments[int(w) - 1])["description"]
             water_segment_details.append(segment_detail)
 
+        water_segment_details_sorted = sorted(water_segment_details, key=lambda k: k['riverway']) 
+        
         if len(water_segments) == 0:
             water_resp['cso-events'] = []
             water_resp['is-there-sewage'] = 'no'
         else:
-            water_resp['cso-events'] = water_segment_details
+            water_resp['cso-events'] = water_segment_details_sorted
             water_resp['is-there-sewage'] = 'yes'
 
             chicago_riverways = json.load(open('static/data/chicago_riverways.json', 'rb'))
@@ -138,7 +141,20 @@ def index_es():
 
 @app.route('/')
 def index():
-    return render_app_template('index.html')
+    today = datetime.today()
+    request_date = request.args.get('date', today.strftime("%m/%d/%Y"))
+    today_flag = True
+
+    try:
+        request_date = datetime.strptime(request_date, "%m/%d/%Y")
+
+        if request_date.strftime("%m/%d/%Y") != today.strftime("%m/%d/%Y"):
+          today_flag = False
+    except ValueError:
+        print "Error parsing date", request_date
+        request_date = today
+
+    return render_app_template('index.html', date=request_date, today_flag=today_flag)
 
 # UTILITY
 def render_app_template(template, **kwargs):
