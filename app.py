@@ -35,17 +35,17 @@ class CSOEvent(db.Model):
 dthandler = lambda obj: obj.isoformat() if isinstance(obj, datetime) or isinstance(obj, date) else None
 
 waterway_segments = [
-  {"riverway": "North Shore Channel", "description": "Lake Michigan to North Side Water Reclamation Plan"},
-  {"riverway": "North Shore Channel", "description": "North Side Water Reclamation Plan to the confluence with the North Branch of the Chicago River"},
+  {"riverway": "North Shore Channel", "description": "Lake Michigan to North Side Water Reclamation Plant"},
+  {"riverway": "North Shore Channel", "description": "North Side Water Reclamation Plant to the confluence with the North Branch of the Chicago River"},
   {"riverway": "North Branch of Chicago River", "description": "Confluence with the North Shore Channel to Wolf Point"},
   {"riverway": "North Branch of Chicago River", "description": "Beckwith Road and West Fork to confluence with the North Shore Channel"},
   {"riverway": "Chicago River", "description": "Wolf Point to Chicago River Controlling Works"},
   {"riverway": "South Branch of Chicago River", "description": "Wolf Point to Damen Avenue"},
   {"riverway": "South Fork of SBCR (Bubbly Creek)", "description": ""},
-  {"riverway": "Chicago Sanitary and Ship Canal", "description": "Damen Avenue to the Stickney Water Reclamation Plan"},
-  {"riverway": "Chicago Sanitary and Ship Canal", "description": "Stickney Water Reclamation Plan to the confluence with the Calumet-Sag Channel"},
+  {"riverway": "Chicago Sanitary and Ship Canal", "description": "Damen Avenue to the Stickney Water Reclamation Plant"},
+  {"riverway": "Chicago Sanitary and Ship Canal", "description": "Stickney Water Reclamation Plant to the confluence with the Calumet-Sag Channel"},
   {"riverway": "Chicago Sanitary and Ship Canal", "description": "From the confluence with the Calumet-Sag Channel to the Lemont Water Reclamation Plant"},
-  {"riverway": "Chicago Sanitary and Ship Canal", "description": "Lemont Water Reclamation Plan to Lockport Lock & Dam"},
+  {"riverway": "Chicago Sanitary and Ship Canal", "description": "Lemont Water Reclamation Plant to Lockport Lock & Dam"},
   {"riverway": "Weller Creek", "description": ""},
   {"riverway": "Des Plaines River", "description": "Weller Creek to Willow-Higgins Creek"},
   {"riverway": "Des Plaines River", "description": "Willow-Higgins Creek to the confluence with Salt Creek"},
