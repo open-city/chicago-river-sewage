@@ -9,20 +9,20 @@
     <title>Is there sewage in the Chicago River?</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="static/css/bootstrap.min.css" rel="stylesheet">
-    <link href="static/css/font-awesome.css" rel="stylesheet">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/font-awesome.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="static/css/custom.css" rel="stylesheet">
+    <link href="/static/css/custom.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="static/js/html5shiv.js"></script>
-      <script src="static/js/respond.min.js"></script>
+      <script src="/static/js/html5shiv.js"></script>
+      <script src="/static/js/respond.min.js"></script>
     <![endif]-->
 
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />
-    <link rel="stylesheet" href="static/css/leaflet.label.css" />
+    <link rel="stylesheet" href="/static/css/leaflet.label.css" />
     <!--[if lte IE 8]>
       <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.ie.css" />
     <![endif]-->
@@ -40,11 +40,12 @@
 
         <div class="jumbotron">
           {% if today_flag %}
-            <p>Is raw sewage being dumped in the Chicago River right now?</p>
+            <p>Is raw sewage being dumped into Chicago riverways right now?</p>
           {% else %}
-            <p>Was raw sewage dumped in the Chicago River on {{ date.strftime("%b, %d %Y") }}?</p>
+            <p>Was raw sewage dumped into Chicago riverways on <strong>{{ date.strftime("%b, %d %Y") }}</strong>?</p>
           {% endif %}
           <h1 id='the-answer'></h1>
+          <div id='history-teaser'></div>
         </div>
 
         <div id='map-info' style='display: none;'>
@@ -99,19 +100,44 @@
                 <p>So for now, the Chicagoland water management agencies will <a href='http://www.mwrd.org/irj/portal/anonymous?NavigationTarget=navurl://a5611bcef89c3cc2abca008c0ea969df'>keep dumping raw sewage in to our river</a> and <strong>we'll keep notifying citizens when it happens</strong>.</p>
 
                 <p>This site is still a work in progress, so if you'd like to help out, <a href='mailto:riversewage@opencityapps.org'>send us an email</a> or <a href='https://github.com/open-city/chicago-river-sewage/issues'>collaborate with us on Github</a>.</p>
-
-                <hr />
-                <h4><i class='icon-cloud-download'></i> API</h4>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                  <i class='icon-cloud-download'></i> API
+                </a>
+              </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+              <div class="panel-body">
                 <p> Want to make something with this info? We made our scraped data available via a simple API. 
 
+                <h4>cso-status</h4>
                 <pre>
 # for data on the current status
-http://istheresewageinthechicagoriver.com/water-status/
+http://istheresewageinthechicagoriver.com/cso-status/
 
-# for data on a specific day from Jan 2007 on
-http://istheresewageinthechicagoriver.com/water-status/?date=MM/DD/YYYY
+# for data on a specific day from Jan 1, 2007
+http://istheresewageinthechicagoriver.com/cso-status/?date=MM/DD/YYYY
                 </pre>
 
+                <h4>cso-events</h4>
+                <pre>
+# for scraped report data on CSO outfall locations, including duration and river segment ID
+http://istheresewageinthechicagoriver.com/cso-events/
+
+# to paginate through all 10,000 records, use the offset parameter
+http://istheresewageinthechicagoriver.com/cso-events/?offset=100
+                </pre>
+
+                <h4>csos-by-waterway</h4>
+                <pre>
+# get the number of combined sewer overflows per waterway segment
+http://istheresewageinthechicagoriver.com/cso-events/
+                </pre>
                 </p>
 
                 <p>Data comes from scraping the <a href='http://www.mwrd.org'>Metropolitan Water Reclamation District of Greater Chicago</a> portal on <a href='http://www.mwrd.org/irj/portal/anonymous?NavigationTarget=navurl://54454aed0504d716cb64a988dcec8478'>Combined Sewer Overflows</a>.</p>
@@ -121,12 +147,12 @@ http://istheresewageinthechicagoriver.com/water-status/?date=MM/DD/YYYY
           <div class="panel panel-default">
             <div class="panel-heading">
               <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
                   <i class='icon-bullhorn'></i> Email and text message alerts
                 </a>
               </h4>
             </div>
-            <div id="collapseTwo" class="panel-collapse collapse">
+            <div id="collapseThree" class="panel-collapse collapse">
               <div class="panel-body">
                 <p>
                   The Metropolitan Water Reclamation District of Greater Chicago offers email and text message notifications for Combined Sewer Overflow events.
@@ -148,16 +174,16 @@ http://istheresewageinthechicagoriver.com/water-status/?date=MM/DD/YYYY
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src="static/js/bootstrap.min.js"></script>
-    <script src="static/js/moment.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/moment.min.js"></script>
 
-    <script src="static/js/leaflet.js"></script>
-    <script src="static/js/leaflet.label.js"></script>
+    <script src="/static/js/leaflet.js"></script>
+    <script src="/static/js/leaflet.label.js"></script>
 
     <script>
       var current_date = moment("{{date.strftime('%m/%d/%Y')}}").format("M/D/YYYY");
 
-      $.when( $.getJSON("/water-status/?date={{date.strftime('%m/%d/%Y')}}") ).then(function( data, textStatus, jqXHR ) {
+      $.when( $.getJSON("/cso-status/?date={{date.strftime('%m/%d/%Y')}}") ).then(function( data, textStatus, jqXHR ) {
 
         if (data['is-there-sewage'] == 'yes') {
 
@@ -196,11 +222,12 @@ http://istheresewageinthechicagoriver.com/water-status/?date=MM/DD/YYYY
         }
         else {
           $("#the-answer").html("<span class='label label-success'>No</span>");
+          $("#history-teaser").html("<br /><p>But it has happened <strong>430</strong> times since 2007. <a href='/history/'>See when &raquo;</a></p>")
         }
       });
     </script>
 
-    <script src="static/js/analytics_lib.js"></script>
+    <script src="/static/js/analytics_lib.js"></script>
 
   </body>
 </html>

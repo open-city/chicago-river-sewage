@@ -61,8 +61,8 @@ waterway_segments = [
 ]
 
 # ROUTES
-@app.route('/water-status/')
-def water_status():
+@app.route('/cso-status/')
+def cso_status():
     lookup_date = datetime.today().strftime("%m/%d/%Y")
     request_date = request.args.get('date')
     if request_date:
@@ -113,8 +113,8 @@ def water_status():
     return resp
 
 # API Routes
-@app.route('/data/')
-def api():
+@app.route('/cso-events/')
+def cso_events():
     offset = request.args.get('offset', 0)
     limit = request.args.get('limit', 100)
     base_query = CSOEvent.query.order_by(CSOEvent.date.desc())\
@@ -124,8 +124,8 @@ def api():
     resp.headers['Content-Type'] = 'application/json'
     return resp
 
-@app.route('/cso-history/')
-def cso_history():
+@app.route('/csos-by-waterway/')
+def csos_by_waterway():
     base_query = db.session.query(CSOEvent.segment,
         func.count(CSOEvent.duration))\
         .group_by(CSOEvent.segment)\
@@ -134,6 +134,15 @@ def cso_history():
     resp = make_response(json.dumps(resp))
     resp.headers['Content-Type'] = 'application/json'
     return resp
+
+@app.route('/history/')
+def history():
+    cso_dates = db.session.query(CSOEvent.date,
+                func.count(distinct(CSOEvent.segment)))\
+                .group_by(CSOEvent.date)\
+                .order_by(CSOEvent.date.desc()).all()
+
+    return render_app_template('history.html', cso_dates=cso_dates)
 
 @app.route('/espanol/')
 def index_es():
