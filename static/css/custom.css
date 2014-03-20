@@ -73,3 +73,41 @@ body {
 }
 
 .nowrap { white-space:nowrap; }
+
+/* Tables on Listing Pages */
+
+.listing td {
+  padding: 0.5em 0;
+  vertical-align: middle;
+}
+
+.bar {
+  padding: 0.4em 0;
+  position: relative;
+  width: 50%;
+}
+
+.bar span { 
+  background: #ecf0f1;
+  border-left: 1px solid #ecf0f1;
+  border-radius: 3px;
+  display: block;
+  font-weight: bold;
+  height: 100%;
+  overflow: visible;
+}
+
+.bar span strong { 
+  display: block; 
+  font-weight: normal; 
+  padding: 0.3em 0.5em; 
+}
+
+.listing .bar span strong { padding: 0.2em 0.5em; }
+
+.listing th span {
+  color: #027BB6;
+  cursor: pointer;
+}
+
+.riverways, .locations { width: 37%;}

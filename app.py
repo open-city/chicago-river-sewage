@@ -138,7 +138,8 @@ def csos_by_waterway():
 @app.route('/history/')
 def history():
     cso_dates = db.session.query(CSOEvent.date,
-                func.count(distinct(CSOEvent.segment)))\
+                func.count(distinct(CSOEvent.segment)),
+                func.count(CSOEvent.id))\
                 .group_by(CSOEvent.date)\
                 .order_by(CSOEvent.date.desc()).all()
 

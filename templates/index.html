@@ -1,233 +1,194 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+{% extends 'base.html' %}
 
-    <title>Is there sewage in the Chicago River?</title>
+{% block extra_css %}
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />
+<link rel="stylesheet" href="/static/css/leaflet.label.css" />
+<!--[if lte IE 8]>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.ie.css" />
+<![endif]-->
+{% endblock %}
 
-    <!-- Bootstrap core CSS -->
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/static/css/font-awesome.css" rel="stylesheet">
+{% block content %}
 
-    <!-- Custom styles for this template -->
-    <link href="/static/css/custom.css" rel="stylesheet">
+  <p class='pull-right'>
+    <a href="/espanol/">Español</a>
+  </p>
+  <div class='clearfix'></div>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="/static/js/html5shiv.js"></script>
-      <script src="/static/js/respond.min.js"></script>
-    <![endif]-->
+  <div class="jumbotron">
+    {% if today_flag %}
+      <p>Is raw sewage being dumped into Chicago riverways right now?</p>
+    {% else %}
+      <p>Was raw sewage dumped into Chicago riverways on <strong>{{ date.strftime("%b, %d %Y") }}</strong>?</p>
+    {% endif %}
+    <h1 id='the-answer'></h1>
+    <div id='history-teaser'></div>
+  </div>
 
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />
-    <link rel="stylesheet" href="/static/css/leaflet.label.css" />
-    <!--[if lte IE 8]>
-      <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.ie.css" />
-    <![endif]-->
-  </head>
+  <div id='map-info' style='display: none;'>
+    <div id='map' style="height: 600px; width: 100%"></div>
+    <table class='table' id='riverway-list'>
+      <thead>
+        <tr>
+          <th>Riverway</th>
+          <th>Segment description</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    <hr />
+    <p>Read the official reports from the Metropolitan Water Reclamation District:</p>
+    <ul id='report-link'></ul>
+  </div>
 
-  <body>
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+            <i class='icon-info-sign'></i> What is this?
+          </a>
+        </h4>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse">
+        <div class="panel-body">
+          <p>Every so often when Chicago gets a lot of rain or there's a significant snowmelt, the Chicagoland water management agencies pump excess wastewater into the lake and river in order to prevent flooding.</p>
 
-    <div class="container">
-      <div class='col-md-10 col-md-offset-1'>
+          <p class='text-center'>
+            <img src='static/images/chicago-river-bridges.jpg' class='img-responsive img-thumbnail' alt='The Chicago River' />
+            <br /><em>The Chicago River | Source: <a href='http://www.chicagomag.com/Chicago-Magazine/The-312/December-2011/Jeanne-Gang-and-Robert-Cassidy-Two-Generations-of-Urban-Planners-on-the-Chicago-River/'>Chicago Magazine</a></em>
+          </p>
 
-        <p class='pull-right'>
-          <a href="/espanol/">Español</a>
-        </p>
-        <div class='clearfix'></div>
+          <p>It's because of practices like these that the city <a href='http://en.wikipedia.org/wiki/Chicago_River#Reversing_the_flow'>reversed Chicago River's flow in 1900</a> to avoid contaminating our drinking supply. As a result, a significant amount of <a href='http://www.wbez.org/episode-segments/2011-06-23/front-and-center-how-chicagos-excrement-killing-fish-gulf-mexico-88234'>'nutrient pollution' from Chicago</a> travels down the Illinois and Mississippi rivers and collects in the Gulf of Mexico in a <a href='http://news.nationalgeographic.com/news/2013/06/130621-dead-zone-biggest-gulf-of-mexico-science-environment/'>dead zone roughly the size of New Hampshire</a>.</p>
 
-        <div class="jumbotron">
-          {% if today_flag %}
-            <p>Is raw sewage being dumped into Chicago riverways right now?</p>
-          {% else %}
-            <p>Was raw sewage dumped into Chicago riverways on <strong>{{ date.strftime("%b, %d %Y") }}</strong>?</p>
-          {% endif %}
-          <h1 id='the-answer'></h1>
-          <div id='history-teaser'></div>
+          <p class='text-center'>
+            <img src='static/images/tarp-tunnel.jpg' class='img-responsive img-thumbnail' alt='TARP Tunnel' />
+            <br /><em>The Chicago Tunnel and Resevoir | Source: <a href='http://www.chicagotribune.com/health/chi-110310-deep-tunnel-pictures,0,7655316.photogallery'>Chicago Tribune</a></em>
+          </p>
+
+          <p>In 1975, the <a href='http://www.mwrd.org/irj/portal/anonymous/Home'>Metropolitan Water Reclamation District of Greater Chicago</a> started building a massive <a href='http://en.wikipedia.org/wiki/Tunnel_and_Reservoir_Plan'>Tunnel and Reservoir</a> (dubbed TARP) to prevent this flooding, but is not scheduled to complete it until 2029. The <a href='http://articles.chicagotribune.com/2011-05-12/travel/ct-met-chicago-river-swimming-20110512_1_epa-orders-clean-water-act-chicago-river'>EPA has since sued to push this deadline forward</a>, but as of Jan 9, 2014 <a href='http://www.dailywhale.com/content-preview/eb2628e2081c3a62a1757bba96f68ef7/'>a judge ruled that the 2029 deadline will stand</a>.</p>
+
+          <p class='text-center'>
+            <a href='static/images/tarp-map-large.jpg'><img src='static/images/tarp-map.jpg' class='img-responsive img-thumbnail' alt='TARP Project Map' /></a>
+            <br /><em>The TARP Plan | Source: <a href='http://apps.mwrd.org/Engineering/OurCommunityFlooding/OCFBody0210.htm'>Metropolitan Water Reclamation District</a></em>
+          </p>
+
+          <p>So for now, the Chicagoland water management agencies will <a href='http://www.mwrd.org/irj/portal/anonymous?NavigationTarget=navurl://a5611bcef89c3cc2abca008c0ea969df'>keep dumping raw sewage in to our river</a> and <strong>we'll keep notifying citizens when it happens</strong>.</p>
+
+          <p>This site is still a work in progress, so if you'd like to help out, <a href='mailto:riversewage@opencityapps.org'>send us an email</a> or <a href='https://github.com/open-city/chicago-river-sewage/issues'>collaborate with us on Github</a>.</p>
         </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+            <i class='icon-cloud-download'></i> API
+          </a>
+        </h4>
+      </div>
+      <div id="collapseTwo" class="panel-collapse collapse">
+        <div class="panel-body">
+          <p> Want to make something with this info? We made our scraped data available via a simple API. 
 
-        <div id='map-info' style='display: none;'>
-          <div id='map' style="height: 600px; width: 100%"></div>
-          <table class='table' id='riverway-list'>
-            <thead>
-              <tr>
-                <th>Riverway</th>
-                <th>Segment description</th>
-              </tr>
-            </thead>
-            <tbody>
-            </tbody>
-          </table>
-          <hr />
-          <p>Read the official reports from the Metropolitan Water Reclamation District:</p>
-          <ul id='report-link'></ul>
-        </div>
-
-        <div class="panel-group" id="accordion">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                  <i class='icon-info-sign'></i> What is this?
-                </a>
-              </h4>
-            </div>
-            <div id="collapseOne" class="panel-collapse collapse">
-              <div class="panel-body">
-                <p>Every so often when Chicago gets a lot of rain or there's a significant snowmelt, the Chicagoland water management agencies pump excess wastewater into the lake and river in order to prevent flooding.</p>
-
-                <p class='text-center'>
-                  <img src='static/images/chicago-river-bridges.jpg' class='img-responsive img-thumbnail' alt='The Chicago River' />
-                  <br /><em>The Chicago River | Source: <a href='http://www.chicagomag.com/Chicago-Magazine/The-312/December-2011/Jeanne-Gang-and-Robert-Cassidy-Two-Generations-of-Urban-Planners-on-the-Chicago-River/'>Chicago Magazine</a></em>
-                </p>
-
-                <p>It's because of practices like these that the city <a href='http://en.wikipedia.org/wiki/Chicago_River#Reversing_the_flow'>reversed Chicago River's flow in 1900</a> to avoid contaminating our drinking supply. As a result, a significant amount of <a href='http://www.wbez.org/episode-segments/2011-06-23/front-and-center-how-chicagos-excrement-killing-fish-gulf-mexico-88234'>'nutrient pollution' from Chicago</a> travels down the Illinois and Mississippi rivers and collects in the Gulf of Mexico in a <a href='http://news.nationalgeographic.com/news/2013/06/130621-dead-zone-biggest-gulf-of-mexico-science-environment/'>dead zone roughly the size of New Hampshire</a>.</p>
-
-                <p class='text-center'>
-                  <img src='static/images/tarp-tunnel.jpg' class='img-responsive img-thumbnail' alt='TARP Tunnel' />
-                  <br /><em>The Chicago Tunnel and Resevoir | Source: <a href='http://www.chicagotribune.com/health/chi-110310-deep-tunnel-pictures,0,7655316.photogallery'>Chicago Tribune</a></em>
-                </p>
-
-                <p>In 1975, the <a href='http://www.mwrd.org/irj/portal/anonymous/Home'>Metropolitan Water Reclamation District of Greater Chicago</a> started building a massive <a href='http://en.wikipedia.org/wiki/Tunnel_and_Reservoir_Plan'>Tunnel and Reservoir</a> (dubbed TARP) to prevent this flooding, but is not scheduled to complete it until 2029. The <a href='http://articles.chicagotribune.com/2011-05-12/travel/ct-met-chicago-river-swimming-20110512_1_epa-orders-clean-water-act-chicago-river'>EPA has since sued to push this deadline forward</a>, but as of Jan 9, 2014 <a href='http://www.dailywhale.com/content-preview/eb2628e2081c3a62a1757bba96f68ef7/'>a judge ruled that the 2029 deadline will stand</a>.</p>
-
-                <p class='text-center'>
-                  <a href='static/images/tarp-map-large.jpg'><img src='static/images/tarp-map.jpg' class='img-responsive img-thumbnail' alt='TARP Project Map' /></a>
-                  <br /><em>The TARP Plan | Source: <a href='http://apps.mwrd.org/Engineering/OurCommunityFlooding/OCFBody0210.htm'>Metropolitan Water Reclamation District</a></em>
-                </p>
-
-                <p>So for now, the Chicagoland water management agencies will <a href='http://www.mwrd.org/irj/portal/anonymous?NavigationTarget=navurl://a5611bcef89c3cc2abca008c0ea969df'>keep dumping raw sewage in to our river</a> and <strong>we'll keep notifying citizens when it happens</strong>.</p>
-
-                <p>This site is still a work in progress, so if you'd like to help out, <a href='mailto:riversewage@opencityapps.org'>send us an email</a> or <a href='https://github.com/open-city/chicago-river-sewage/issues'>collaborate with us on Github</a>.</p>
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                  <i class='icon-cloud-download'></i> API
-                </a>
-              </h4>
-            </div>
-            <div id="collapseTwo" class="panel-collapse collapse">
-              <div class="panel-body">
-                <p> Want to make something with this info? We made our scraped data available via a simple API. 
-
-                <h4>cso-status</h4>
-                <pre>
+          <h4>cso-status</h4>
+          <pre>
 # for data on the current status
 http://istheresewageinthechicagoriver.com/cso-status/
 
 # for data on a specific day from Jan 1, 2007
 http://istheresewageinthechicagoriver.com/cso-status/?date=MM/DD/YYYY
-                </pre>
+          </pre>
 
-                <h4>cso-events</h4>
-                <pre>
+          <h4>cso-events</h4>
+          <pre>
 # for scraped report data on CSO outfall locations, including duration and river segment ID
 http://istheresewageinthechicagoriver.com/cso-events/
 
 # to paginate through all 10,000 records, use the offset parameter
 http://istheresewageinthechicagoriver.com/cso-events/?offset=100
-                </pre>
+          </pre>
 
-                <h4>csos-by-waterway</h4>
-                <pre>
+          <h4>csos-by-waterway</h4>
+          <pre>
 # get the number of combined sewer overflows per waterway segment
 http://istheresewageinthechicagoriver.com/cso-events/
-                </pre>
-                </p>
+          </pre>
+          </p>
 
-                <p>Data comes from scraping the <a href='http://www.mwrd.org'>Metropolitan Water Reclamation District of Greater Chicago</a> portal on <a href='http://www.mwrd.org/irj/portal/anonymous?NavigationTarget=navurl://54454aed0504d716cb64a988dcec8478'>Combined Sewer Overflows</a>.</p>
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                  <i class='icon-bullhorn'></i> Email and text message alerts
-                </a>
-              </h4>
-            </div>
-            <div id="collapseThree" class="panel-collapse collapse">
-              <div class="panel-body">
-                <p>
-                  The Metropolitan Water Reclamation District of Greater Chicago offers email and text message notifications for Combined Sewer Overflow events.
-                </p>
-                <a class='btn btn-default' href='http://apps.mwrd.org/cso/bookC.aspx'>Sign up to get notified &raquo;</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="footer">
-          <p>An <a href='http://opencityapps.org'>Open City</a> app by Scott Beslow, Derek Eder, Forest Gregg and Eric van Zanten | <a href='https://github.com/open-city/chicago-river-sewage'><i class='icon-github'></i> Pull requests welcome!</a></p>
+          <p>Data comes from scraping the <a href='http://www.mwrd.org'>Metropolitan Water Reclamation District of Greater Chicago</a> portal on <a href='http://www.mwrd.org/irj/portal/anonymous?NavigationTarget=navurl://54454aed0504d716cb64a988dcec8478'>Combined Sewer Overflows</a>.</p>
         </div>
       </div>
-    </div> <!-- /container -->
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+            <i class='icon-bullhorn'></i> Email and text message alerts
+          </a>
+        </h4>
+      </div>
+      <div id="collapseThree" class="panel-collapse collapse">
+        <div class="panel-body">
+          <p>
+            The Metropolitan Water Reclamation District of Greater Chicago offers email and text message notifications for Combined Sewer Overflow events.
+          </p>
+          <a class='btn btn-default' href='http://apps.mwrd.org/cso/bookC.aspx'>Sign up to get notified &raquo;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
 
+{% block extra_scripts %}
+<script src="/static/js/leaflet.js"></script>
+<script src="/static/js/leaflet.label.js"></script>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src="/static/js/bootstrap.min.js"></script>
-    <script src="/static/js/moment.min.js"></script>
+<script>
+  var current_date = moment("{{date.strftime('%m/%d/%Y')}}").format("M/D/YYYY");
 
-    <script src="/static/js/leaflet.js"></script>
-    <script src="/static/js/leaflet.label.js"></script>
+  $.when( $.getJSON("/cso-status/?date={{date.strftime('%m/%d/%Y')}}") ).then(function( data, textStatus, jqXHR ) {
 
-    <script>
-      var current_date = moment("{{date.strftime('%m/%d/%Y')}}").format("M/D/YYYY");
+    if (data['is-there-sewage'] == 'yes') {
 
-      $.when( $.getJSON("/cso-status/?date={{date.strftime('%m/%d/%Y')}}") ).then(function( data, textStatus, jqXHR ) {
+      $('#map-info').slideDown();
 
-        if (data['is-there-sewage'] == 'yes') {
+      var suffix = 'riverways';
+      if (data['cso-events'].length == 1)
+        suffix = 'riverway';
 
-          $('#map-info').slideDown();
+      $("#the-answer").html("<span class='label label-warning'>Yes, in " + data['cso-events'].length + " " + suffix + "</span>");
 
-          var suffix = 'riverways';
-          if (data['cso-events'].length == 1)
-            suffix = 'riverway';
+      $("#report-link").append("<li><i class='icon-file-text'></i> <a href='http://apps.mwrd.org/CSO/CSOEventSynopsisReport.aspx?passdate=" + current_date + "'>Event Synopsis Report</a></li><li><i class='icon-map-marker'></i> <a href='apps.mwrd.org/CSO/display_all.aspx?link_date=" + current_date + "'>Combined Sewer Overflows map</a></li>")
 
-          $("#the-answer").html("<span class='label label-warning'>Yes, in " + data['cso-events'].length + " " + suffix + "</span>");
+      for (var i = 0; i < data['cso-events'].length; i++) {
+        $('#riverway-list tbody').append("<tr>\
+          <td>" + data['cso-events'][i]['riverway'] + "</td>\
+          <td>" + data['cso-events'][i]['description'] + "</td>\
+          </tr>");
+      }
 
-          $("#report-link").append("<li><i class='icon-file-text'></i> <a href='http://apps.mwrd.org/CSO/CSOEventSynopsisReport.aspx?passdate=" + current_date + "'>Event Synopsis Report</a></li><li><i class='icon-map-marker'></i> <a href='http://apps.mwrd.org/CSO/cso_quick_view.aspx'>Current Combined Sewer Overflows map</a></li>")
+      // render a map!
+      var map = L.map('map', { scrollWheelZoom: false }).setView([41.82, -87.7], 10);
 
-          for (var i = 0; i < data['cso-events'].length; i++) {
-            $('#riverway-list tbody').append("<tr>\
-              <td>" + data['cso-events'][i]['riverway'] + "</td>\
-              <td>" + data['cso-events'][i]['description'] + "</td>\
-              </tr>");
-          }
+      L.tileLayer('https://{s}.tiles.mapbox.com/v3/derekeder.hehblhbj/{z}/{x}/{y}.png', {
+          attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
+      }).addTo(map);
 
-          // render a map!
-          var map = L.map('map', { scrollWheelZoom: false }).setView([41.82, -87.7], 10);
+      var geojson = L.geoJson(data['riverway-geojson'], 
+        {style: { weight: 3, opacity: 1, color: '#f39c12' }}).addTo(map);
 
-          L.tileLayer('https://{s}.tiles.mapbox.com/v3/derekeder.hehblhbj/{z}/{x}/{y}.png', {
-              attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
-          }).addTo(map);
-
-          var geojson = L.geoJson(data['riverway-geojson'], 
-            {style: { weight: 3, opacity: 1, color: '#f39c12' }}).addTo(map);
-
-          geojson.eachLayer(function (layer) {
-            var popup = "<h4>" + layer.feature.properties['riverway'] + "</h4>\
-                        <p>" + layer.feature.properties['description'] + "</p>";
-            layer.bindLabel(popup);
-          });
-        }
-        else {
-          $("#the-answer").html("<span class='label label-success'>No</span>");
-          $("#history-teaser").html("<br /><p>But it has happened <strong>430</strong> times since 2007. <a href='/history/'>See when &raquo;</a></p>")
-        }
+      geojson.eachLayer(function (layer) {
+        var popup = "<h4>" + layer.feature.properties['riverway'] + "</h4>\
+                    <p>" + layer.feature.properties['description'] + "</p>";
+        layer.bindLabel(popup);
       });
-    </script>
-
-    <script src="/static/js/analytics_lib.js"></script>
-
-  </body>
-</html>
+    }
+    else {
+      $("#the-answer").html("<span class='label label-success'>No</span>");
+      $("#history-teaser").html("<br /><p>But it has happened <strong>430</strong> times since 2007. <a href='/history/'>See when &raquo;</a></p>")
+    }
+  });
+</script>
+{% endblock %}
