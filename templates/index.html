@@ -161,7 +161,7 @@ http://istheresewageinthechicagoriver.com/csos-by-waterway/
 
       $("#the-answer").html("<span class='label label-warning'>Yes, in " + data['cso-events'].length + " " + suffix + "</span>");
 
-      $("#report-link").append("<li><i class='icon-file-text'></i> <a href='http://apps.mwrd.org/CSO/CSOEventSynopsisReport.aspx?passdate=" + current_date + "'>Event Synopsis Report</a></li><li><i class='icon-map-marker'></i> <a href='apps.mwrd.org/CSO/display_all.aspx?link_date=" + current_date + "'>Combined Sewer Overflows map</a></li>")
+      $("#report-link").append("<li><i class='icon-file-text'></i> <a href='http://apps.mwrd.org/CSO/CSOEventSynopsisReport.aspx?passdate=" + current_date + "'>Event Synopsis Report</a></li><li><i class='icon-map-marker'></i> <a href='http://apps.mwrd.org/CSO/display_all.aspx?link_date=" + current_date + "'>Combined Sewer Overflows map</a></li>")
 
       for (var i = 0; i < data['cso-events'].length; i++) {
         $('#riverway-list tbody').append("<tr>\
