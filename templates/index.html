@@ -18,9 +18,9 @@
 
   <div class="jumbotron">
     {% if today_flag %}
-      <p>Is raw sewage being dumped into Chicago riverways right now?</p>
+      <p>Is raw sewage being dumped into Chicago rivers right now?</p>
     {% else %}
-      <p>Was raw sewage dumped into Chicago riverways on <strong>{{ date.strftime("%b, %d %Y") }}</strong>?</p>
+      <p>Was raw sewage dumped into Chicago rivers on <strong>{{ date.strftime("%b, %d %Y") }}</strong>?</p>
     {% endif %}
     <h1 id='the-answer'></h1>
     <div id='history-teaser'></div>
@@ -31,8 +31,8 @@
     <table class='table' id='riverway-list'>
       <thead>
         <tr>
-          <th>Riverway</th>
-          <th>Segment description</th>
+          <th>River segment</th>
+          <th>Description</th>
         </tr>
       </thead>
       <tbody>
@@ -75,7 +75,7 @@
             <br /><em>The TARP Plan | Source: <a href='http://apps.mwrd.org/Engineering/OurCommunityFlooding/OCFBody0210.htm'>Metropolitan Water Reclamation District</a></em>
           </p>
 
-          <p>So for now, the Metropolitan Water Reclamation District will <a href='http://www.mwrd.org/irj/portal/anonymous?NavigationTarget=navurl://a5611bcef89c3cc2abca008c0ea969df'>keep dumping raw sewage in to our riverways</a> and <strong>we'll keep notifying citizens when it happens</strong>.</p>
+          <p>So for now, the Metropolitan Water Reclamation District will <a href='http://www.mwrd.org/irj/portal/anonymous?NavigationTarget=navurl://a5611bcef89c3cc2abca008c0ea969df'>keep dumping raw sewage in to our rivers</a> and <strong>we'll keep notifying citizens when it happens</strong>.</p>
 
           <p>This site is still a work in progress, so if you'd like to help out, <a href='mailto:riversewage@opencityapps.org'>send us an email</a> or <a href='https://github.com/open-city/chicago-river-sewage/issues'>collaborate with us on Github</a>.</p>
         </div>
@@ -155,9 +155,9 @@ http://istheresewageinthechicagoriver.com/csos-by-waterway/
 
       $('#map-info').slideDown();
 
-      var suffix = 'riverways';
+      var suffix = 'river segments';
       if (data['cso-events'].length == 1)
-        suffix = 'riverway';
+        suffix = 'river segment';
 
       $("#the-answer").html("<span class='label label-warning'>Yes, in " + data['cso-events'].length + " " + suffix + "</span>");
 
