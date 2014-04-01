@@ -4,6 +4,7 @@ from datetime import date, datetime, timedelta
 from sqlalchemy import Table, func, distinct, Column, create_engine, MetaData
 from sqlalchemy.orm import sessionmaker, scoped_session
 from sqlalchemy.exc import NoSuchTableError
+from operator import itemgetter
 import json
 import requests
 import re
@@ -34,91 +35,119 @@ class CSOEvent(db.Model):
 
 dthandler = lambda obj: obj.isoformat() if isinstance(obj, datetime) or isinstance(obj, date) else None
 
-waterway_segments = [
-  {"riverway": "North Shore Channel", "description": "Lake Michigan to North Side Water Reclamation Plant"},
-  {"riverway": "North Shore Channel", "description": "North Side Water Reclamation Plant to the confluence with the North Branch of the Chicago River"},
-  {"riverway": "North Branch of Chicago River", "description": "Confluence with the North Shore Channel to Wolf Point"},
-  {"riverway": "North Branch of Chicago River", "description": "Beckwith Road and West Fork to confluence with the North Shore Channel"},
-  {"riverway": "Chicago River", "description": "Wolf Point to Chicago River Controlling Works"},
-  {"riverway": "South Branch of Chicago River", "description": "Wolf Point to Damen Avenue"},
-  {"riverway": "South Fork of SBCR (Bubbly Creek)", "description": ""},
-  {"riverway": "Chicago Sanitary and Ship Canal", "description": "Damen Avenue to the Stickney Water Reclamation Plant"},
-  {"riverway": "Chicago Sanitary and Ship Canal", "description": "Stickney Water Reclamation Plant to the confluence with the Calumet-Sag Channel"},
-  {"riverway": "Chicago Sanitary and Ship Canal", "description": "From the confluence with the Calumet-Sag Channel to the Lemont Water Reclamation Plant"},
-  {"riverway": "Chicago Sanitary and Ship Canal", "description": "Lemont Water Reclamation Plant to Lockport Lock & Dam"},
-  {"riverway": "Weller Creek", "description": ""},
-  {"riverway": "Des Plaines River", "description": "Weller Creek to Willow-Higgins Creek"},
-  {"riverway": "Des Plaines River", "description": "Willow-Higgins Creek to the confluence with Salt Creek"},
-  {"riverway": "Des Plaines River", "description": "The confluence with Salt Creek to the confluence with the CSSC"},
-  {"riverway": "Salt Creek", "description": "From Addison Creek to the confluence with the Des Plaines River"},
-  {"riverway": "Calumet River", "description": "O'Brien Locks to Lake Michigan"},
-  {"riverway": "Grand Calumet River", "description": "From confluence with the Little Calumet River to the Indiana state line"},
-  {"riverway": "Little Calumet River", "description": "O'Brien Locks to the Calumet-Sag Channel"},
-  {"riverway": "Little Calumet River", "description": "Indiane state line to the Calumet-Sag Channel"},
-  {"riverway": "Calumet-Sag Channel", "description": ""},
-  {"riverway": "Calumet Union Drainage Ditch", "description": ""},
-  {"riverway": "Addison Creek", "description": ""}
-]
+def get_waterway_segment(segment):
+  waterway_segments = [
+    {"segment": 1 , "riverway": "North Shore Channel", "description": "Lake Michigan to North Side Water Reclamation Plant"},
+    {"segment": 2 , "riverway": "North Shore Channel", "description": "North Side Water Reclamation Plant to the confluence with the North Branch of the Chicago River"},
+    {"segment": 3 , "riverway": "North Branch of Chicago River", "description": "Confluence with the North Shore Channel to Wolf Point"},
+    {"segment": 4 , "riverway": "North Branch of Chicago River", "description": "Beckwith Road and West Fork to confluence with the North Shore Channel"},
+    {"segment": 5 , "riverway": "Chicago River", "description": "Wolf Point to Chicago River Controlling Works"},
+    {"segment": 6 , "riverway": "South Branch of Chicago River", "description": "Wolf Point to Damen Avenue"},
+    {"segment": 7 , "riverway": "South Fork of SBCR (Bubbly Creek)", "description": ""},
+    {"segment": 8 , "riverway": "Chicago Sanitary and Ship Canal", "description": "Damen Avenue to the Stickney Water Reclamation Plant"},
+    {"segment": 9 , "riverway": "Chicago Sanitary and Ship Canal", "description": "Stickney Water Reclamation Plant to the confluence with the Calumet-Sag Channel"},
+    {"segment": 10, "riverway": "Chicago Sanitary and Ship Canal", "description": "From the confluence with the Calumet-Sag Channel to the Lemont Water Reclamation Plant"},
+    {"segment": 11, "riverway": "Chicago Sanitary and Ship Canal", "description": "Lemont Water Reclamation Plant to Lockport Lock & Dam"},
+    {"segment": 12, "riverway": "Weller Creek", "description": ""},
+    {"segment": 13, "riverway": "Des Plaines River", "description": "Weller Creek to Willow-Higgins Creek"},
+    {"segment": 14, "riverway": "Des Plaines River", "description": "Willow-Higgins Creek to the confluence with Salt Creek"},
+    {"segment": 15, "riverway": "Des Plaines River", "description": "The confluence with Salt Creek to the confluence with the CSSC"},
+    {"segment": 16, "riverway": "Salt Creek", "description": "From Addison Creek to the confluence with the Des Plaines River"},
+    {"segment": 17, "riverway": "Calumet River", "description": "O'Brien Locks to Lake Michigan"},
+    {"segment": 18, "riverway": "Grand Calumet River", "description": "From confluence with the Little Calumet River to the Indiana state line"},
+    {"segment": 19, "riverway": "Little Calumet River", "description": "O'Brien Locks to the Calumet-Sag Channel"},
+    {"segment": 20, "riverway": "Little Calumet River", "description": "Indiane state line to the Calumet-Sag Channel"},
+    {"segment": 21, "riverway": "Calumet-Sag Channel", "description": ""},
+    {"segment": 22, "riverway": "Calumet Union Drainage Ditch", "description": ""},
+    {"segment": 23, "riverway": "Addison Creek", "description": ""},
+    {"segment": 30, "riverway": "Wilmette", "description": "Discharge to Lake Michigan"},
+    {"segment": 31, "riverway": "Chicago River Controlling Works", "description": "Discharge to Lake Michigan"},
+    {"segment": 32, "riverway": "O'Brien", "description": "Discharge to Lake Michigan"},
+  ]
+
+  return [s for s in waterway_segments if s['segment'] == segment][0]
+
+def get_riverway_geojson(segments):
+  chicago_riverways = json.load(open('static/data/chicago_riverways.json', 'rb'))
+  riverway_features_all = chicago_riverways['features']
+
+  riverway_features_to_show = []
+  for segment in segments:
+    for f in riverway_features_all:
+      if f['properties']['SEGMENT_ID'] == segment['segment']:
+        f['properties']['riverway'] = get_waterway_segment(f['properties']['SEGMENT_ID'])['riverway']
+        f['properties']['description'] = get_waterway_segment(f['properties']['SEGMENT_ID'])['description']
+        riverway_features_to_show.append(f)
+
+  chicago_riverways['features'] = riverway_features_to_show
+  return chicago_riverways
 
 # ROUTES
 @app.route('/cso-status/')
 def cso_status():
+    water_resp = {}
+    water_segments = set()
+    
     lookup_date = datetime.today().strftime("%m/%d/%Y")
     request_date = request.args.get('date')
-    if request_date:
-        lookup_date = request_date
-        water_page = requests.get('http://apps.mwrd.org/CSO/display_all.aspx?link_date=%s' % lookup_date)
-    else: # if no date given, MWRD has a different page for the current status :P
-        water_page = requests.get('http://apps.mwrd.org/CSO/cso_quick_view.aspx')
- 
-    if water_page.status_code is 200:
+    
+    if request_date: # look it up in the database
+      lookup_date = datetime.strptime(request_date, "%m/%d/%Y").date()
+      base_query = db.session.query(distinct(CSOEvent.segment))\
+                   .filter(CSOEvent.date == lookup_date)
+
+      for d in base_query.all():
+        water_segments.add(d[0])
+
+    else: # get the quick view page directly from the MWRD site
+      water_page = requests.get('http://apps.mwrd.org/CSO/cso_quick_view.aspx')
+      if water_page.status_code is 200:
         water_resp = {'date': lookup_date}
         water_segments = set(re.findall('images\/(\d+).GIF"', water_page.content))
-        water_segment_details = []
-        for w in water_segments:
-            segment_detail = {}
-            segment_detail["segment-id"] = int(w)
-            segment_detail["riverway"] = (waterway_segments[int(w) - 1])["riverway"]
-            segment_detail["description"] = (waterway_segments[int(w) - 1])["description"]
-            water_segment_details.append(segment_detail)
-
-        water_segment_details_sorted = sorted(water_segment_details, key=lambda k: k['riverway']) 
-        
-        if len(water_segments) == 0:
-            water_resp['cso-events'] = []
-            water_resp['is-there-sewage'] = 'no'
-        else:
-            water_resp['cso-events'] = water_segment_details_sorted
-            water_resp['is-there-sewage'] = 'yes'
-
-            chicago_riverways = json.load(open('static/data/chicago_riverways.json', 'rb'))
-            riverway_features_all = chicago_riverways['features']
-
-            riverway_features_to_show = []
-            for segment in water_segment_details:
-              for f in riverway_features_all:
-                if f['properties']['SEGMENT_ID'] == segment['segment-id']:
-                  f['properties']['riverway'] = waterway_segments[f['properties']['SEGMENT_ID']-1]['riverway']
-                  f['properties']['description'] = waterway_segments[f['properties']['SEGMENT_ID']-1]['description']
-                  riverway_features_to_show.append(f)
-
-            chicago_riverways['features'] = riverway_features_to_show
-            water_resp['riverway-geojson'] = chicago_riverways
- 
-        resp = make_response(json.dumps(water_resp))
-    else: 
+      else: 
         resp = make_response(json.dumps({'status': 'error', 'message': 'Something went wrong while performing your query. Try again'}), 500)
- 
+      
+    # build a JSON response
+    water_segment_details = []
+    for w in water_segments:
+      w = int(w)
+      waterway_record = get_waterway_segment(w)
+
+      segment_detail = {}
+      segment_detail["segment"] = w
+      segment_detail["riverway"] = waterway_record["riverway"]
+      segment_detail["description"] = waterway_record["description"]
+      water_segment_details.append(segment_detail)
+
+    water_segment_details_sorted = sorted(water_segment_details, key=itemgetter('segment')) 
+    
+    if len(water_segments) == 0:
+        water_resp['cso-events'] = []
+        water_resp['is-there-sewage'] = 'no'
+    else:
+        water_resp['cso-events'] = water_segment_details_sorted
+        water_resp['is-there-sewage'] = 'yes'
+
+        water_resp['riverway-geojson'] = get_riverway_geojson(water_segment_details)
+
+    resp = make_response(json.dumps(water_resp))
     resp.headers['Content-Type'] = 'application/json'
     return resp
 
 # API Routes
 @app.route('/cso-events/')
 def cso_events():
+    request_date = request.args.get('date')
     offset = request.args.get('offset', 0)
     limit = request.args.get('limit', 100)
-    base_query = CSOEvent.query.order_by(CSOEvent.date.desc())\
-        .offset(int(offset)).limit(int(limit))
+
+    if request_date:
+      request_date = datetime.strptime(request_date, "%m/%d/%Y").date()
+      base_query = CSOEvent.query.filter(CSOEvent.date == request_date)
+    else:
+      base_query = CSOEvent.query.order_by(CSOEvent.date.desc())\
+          .offset(int(offset)).limit(int(limit))
+
     data = [r.as_dict() for r in base_query.all()]
     resp = make_response(json.dumps(data, default=dthandler))
     resp.headers['Content-Type'] = 'application/json'
