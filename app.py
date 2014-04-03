@@ -88,11 +88,13 @@ def cso_status():
     water_resp = {}
     water_segments = set()
     
-    lookup_date = datetime.today().strftime("%m/%d/%Y")
+    lookup_date = datetime.today().date()
     request_date = request.args.get('date')
     
     if request_date: # look it up in the database
       lookup_date = datetime.strptime(request_date, "%m/%d/%Y").date()
+
+    if lookup_date < datetime.today().date():
       base_query = db.session.query(distinct(CSOEvent.segment))\
                    .filter(CSOEvent.date == lookup_date)
 
@@ -102,7 +104,7 @@ def cso_status():
     else: # get the quick view page directly from the MWRD site
       water_page = requests.get('http://apps.mwrd.org/CSO/cso_quick_view.aspx')
       if water_page.status_code is 200:
-        water_resp = {'date': lookup_date}
+        water_resp = {'date': lookup_date.strftime('%m/%d/%Y')}
         water_segments = set(re.findall('images\/(\d+).GIF"', water_page.content))
       else: 
         resp = make_response(json.dumps({'status': 'error', 'message': 'Something went wrong while performing your query. Try again'}), 500)
