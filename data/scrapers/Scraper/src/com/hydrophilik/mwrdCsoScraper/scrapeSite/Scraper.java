@@ -42,7 +42,7 @@ public abstract class Scraper {
 				theDate = theDate.plusDays(1);
 				continue;
 			}
-			
+
 			String date = theDate.toString();
 			
 			BufferedWriter bw = null;
