@@ -105,6 +105,10 @@ body {
 
 .listing .bar span strong { padding: 0.2em 0.5em; }
 
+.listing thead {
+  background-color: #ffffff;
+}
+
 .listing th span {
   color: #027BB6;
   cursor: pointer;

@@ -34,7 +34,8 @@
 {% block extra_scripts %}
   <script src="/static/js/jquery.dataTables.min.js"></script>
   <script src="/static/js/jquery.dataTables.sorting.js"></script>
-    <script src="/static/js/listing.bars.js"></script>
+  <script src="/static/js/listing.bars.js"></script>
+  <script src="/static/js/jquery.stickytableheaders.min.js"></script>
 
   <script>
     setBarWidthByNumber('riverways');
@@ -50,6 +51,6 @@
         "bInfo": false,
         "bPaginate": false,
         "bFilter": false
-    });
+    }).stickyTableHeaders();
   </script>
 {% endblock %}
