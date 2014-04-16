@@ -34,7 +34,8 @@
 {% block extra_scripts %}
   <script src="/static/js/jquery.dataTables.min.js"></script>
   <script src="/static/js/jquery.dataTables.sorting.js"></script>
-    <script src="/static/js/listing.bars.js"></script>
+  <script src="/static/js/listing.bars.js"></script>
+  <script src="/static/js/jquery.stickytableheaders.min.js"></script>
 
   <script>
     setBarWidthByNumber('riverways');
@@ -44,12 +45,12 @@
         "aaSorting": [ [0,'desc'] ],
         "aoColumns": [
             { "sType": "datetime" },
-            { "sType": "numeric" },
-            { "sType": "numeric" }
+            { "sType": "num-html" },
+            { "sType": "num-html" }
         ],
         "bInfo": false,
         "bPaginate": false,
         "bFilter": false
-    });
+    }).stickyTableHeaders();
   </script>
 {% endblock %}
