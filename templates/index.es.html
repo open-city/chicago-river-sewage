@@ -12,6 +12,8 @@
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
     <link href="/static/css/font-awesome.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />
+    <link rel="stylesheet" href="/static/css/leaflet.label.css" />
     <!-- Custom styles for this template -->
     <link href="/static/css/custom.css" rel="stylesheet">
 
@@ -28,16 +30,36 @@
       <div class='col-md-10 col-md-offset-1'>
 
         <p class='pull-right'>
+          <a href="/history/">Historia</a>&nbsp;&nbsp;&nbsp;&nbsp;
           <a href="/">English</a>
         </p>
         <div class='clearfix'></div>
 
         <div class="jumbotron">
-          <p>¿Se está desechando aguas residuales en el Rio Chicago en este momento?</p>
-          <!-- # Translated: <p>Is there raw sewage being dumped in the Chicago River right now?</p> -->
-          <h1><a id='the-answer' href='#'></a></h1>
-          <p id='water-details'>
-          </p>
+          {% if today_flag %}
+            <p>¿Se está desechando aguas residuales en el Rio Chicago en este momento?</p>
+          {% else %}
+            <p>¿Se está desechando aguas residuales en el Rio Chicago el <strong>{{ date.strftime("%b, %d %Y") }}</strong>?</p>
+          {% endif %}
+          <h1 id='the-answer'></h1>
+          <div id='history-teaser'></div>
+        </div>
+
+        <div id='map-info' style='display: none;'>
+          <div id='map' style="height: 600px; width: 100%"></div>
+          <table class='table' id='riverway-list'>
+            <thead>
+              <tr>
+                <th>Secciónes del rio</th>
+                <th>Descripción</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+          <hr />
+          <p>Lea los reportes officiales del Metropolitan Water Reclamation District:</p>
+          <ul id='report-link'></ul>
         </div>
 
         <div class="panel-group" id="accordion">
@@ -141,39 +163,54 @@
 
     <script src="/static/js/moment.min.js"></script>
 
+    <script src="/static/js/leaflet.js"></script>
+    <script src="/static/js/leaflet.label.js"></script>
+
     <script>
-     var current_date = moment().format("M/D/YYYY");
-     var mwrd_map = "http://apps.mwrd.org/CSO/cso_quick_view.aspx"
+      var current_date = moment("{{date.strftime('%m/%d/%Y')}}").format("M/D/YYYY");
 
-     $.when( $.getJSON("/water-status/") ).then(function( data, textStatus, jqXHR ) {
+      $.when( $.getJSON("/cso-status/?date={{date.strftime('%m/%d/%Y')}}") ).then(function( data, textStatus, jqXHR ) {
 
-       $("#the-answer").attr("href", mwrd_map);
+        if (data['is-there-sewage'] == 'yes') {
 
-       if (data['is-there-sewage'] == 'yes') {
-         var suffix = 'lugares';
-         // Translated: var suffix = 'places';
-         if (data['cso-events'].length == 1)
-         suffix = 'lugar';
-         // Translated: suffix = 'place';
+          $('#map-info').slideDown();
 
-         $("#the-answer").html("<span class='label label-warning'>Sí, en " + data['cso-events'].length + " " + suffix + "</span>");
-         // Translated: "<span class='label label-warning'>Yes, in " + data['cso-events'].length + " " + suffix + "</span>"
+          var suffix = 'secciónes del rio';
+          if (data['cso-events'].length == 1)
+            suffix = 'sección del rio';
 
-         // $("#water-details").append("<ul id='cso-events'></ul>");
-         // $.each(data['cso-events'], function(i, json){
-         //   $("#cso-events").append("<li>" + data['cso-events'][i][1] + "</li>");
-         // });
+          $("#the-answer").html("<span class='label label-warning'>Sí, en " + data['cso-events'].length + " " + suffix + "</span>");
 
-         $("#water-details").append("<br /><i class='icon-map-marker'></i> <a href='" + mwrd_map + "'>Map</a>")
+          $("#report-link").append("<li><i class='icon-file-text'></i> <a href='http://apps.mwrd.org/CSO/CSOEventSynopsisReport.aspx?passdate=" + current_date + "'>Event Synopsis Report</a></li><li><i class='icon-map-marker'></i> <a href='http://apps.mwrd.org/CSO/display_all.aspx?link_date=" + current_date + "'>Combined Sewer Overflows map</a></li>")
 
-         $("#water-details").append("&nbsp;&nbsp;&nbsp;<i class='icon-file-text'></i> <a href='http://apps.mwrd.org/CSO/CSOEventSynopsisReport.aspx?passdate=" + current_date + "'>Report</a>")
-       }
-       else {
-         $("#the-answer").html("<span class='label label-success'>No</span>");
-       }
+          for (var i = 0; i < data['cso-events'].length; i++) {
+            $('#riverway-list tbody').append("<tr>\
+              <td>" + data['cso-events'][i]['riverway'] + "</td>\
+              <td>" + data['cso-events'][i]['description'] + "</td>\
+              </tr>");
+          }
 
+          // render a map!
+          var map = L.map('map', { scrollWheelZoom: false }).setView([41.82, -87.7], 10);
 
-     });
+          L.tileLayer('https://{s}.tiles.mapbox.com/v3/derekeder.hehblhbj/{z}/{x}/{y}.png', {
+              attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
+          }).addTo(map);
+
+          var geojson = L.geoJson(data['riverway-geojson'], 
+            {style: { weight: 3, opacity: 1, color: '#f39c12' }}).addTo(map);
+
+          geojson.eachLayer(function (layer) {
+            var popup = "<h4>" + layer.feature.properties['riverway'] + "</h4>\
+                        <p>" + layer.feature.properties['description'] + "</p>";
+            layer.bindLabel(popup);
+          });
+        }
+        else {
+          $("#the-answer").html("<span class='label label-success'>No</span>");
+          $("#history-teaser").html("<br /><p>Pero ha pasado <strong>430 veces</strong> desde 2007. <a href='/history/'>Vea cuando &raquo;</a></p>")
+        }
+      });
     </script>
 
   </body>

@@ -178,7 +178,20 @@ def history():
 
 @app.route('/espanol/')
 def index_es():
-    return render_app_template('index.es.html')
+    today = datetime.today()
+    request_date = request.args.get('date', today.strftime("%m/%d/%Y"))
+    today_flag = True
+
+    try:
+        request_date = datetime.strptime(request_date, "%m/%d/%Y")
+
+        if request_date.strftime("%m/%d/%Y") != today.strftime("%m/%d/%Y"):
+          today_flag = False
+    except ValueError:
+        print "Error parsing date", request_date
+        request_date = today
+
+    return render_app_template('index.es.html', date=request_date, today_flag=today_flag)
 
 @app.route('/')
 def index():
