@@ -1,32 +1,33 @@
 package com.hydrophilik.mwrdCsoScraper.executables;
 
-import java.io.File;
-import java.io.IOException;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
+import org.joda.time.DateTime;
 
-import com.hydrophilik.mwrdCsoScraper.parsing.MwrdCsoSynopsisParser;
+import com.hydrophilik.mwrdCsoScraper.Configures;
+import com.hydrophilik.mwrdCsoScraper.db.DbConnection;
+import com.hydrophilik.mwrdCsoScraper.parsing.CsoEvent;
+import com.hydrophilik.mwrdCsoScraper.utils.DateTimeUtils;
 
 public class Tester {
 
-	public static void main(String[] args) {
-		Document doc;
+	public static void main(String[] args) throws Exception {
 		
-		File input = new File("/Users/scottbeslow/Downloads/mwrd/scrapedSites/20070425.txt");
-
-		try {
-			doc = Jsoup.parse(input, "UTF-8", "");
-		} catch (IOException e) {
-			e.printStackTrace();
-			return;
-		}
-
+		DateTime startTime = new DateTime(DateTimeUtils.chiTimeZone).minusDays(1);
+		DateTime endTime = new DateTime(DateTimeUtils.chiTimeZone);
 		
-		MwrdCsoSynopsisParser mwrdParser = new MwrdCsoSynopsisParser(doc);
-
-		mwrdParser.parseEvents();
+		CsoEvent csoEvent = new CsoEvent(startTime, endTime, "Area 51", 69);
 		
+		Configures configuration = new Configures("/Users/scottbeslow/Downloads/mwrdScraperWorking");
+		
+		DbConnection dbConnect = new DbConnection(configuration);
+		
+		String stmt = csoEvent.getSqlInsert();
+		
+		dbConnect.executeUpdate(stmt);
+		
+		
+
+
 
 	}
 

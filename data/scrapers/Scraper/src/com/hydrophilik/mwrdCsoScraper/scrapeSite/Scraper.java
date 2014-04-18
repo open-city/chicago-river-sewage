@@ -8,13 +8,22 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import org.joda.time.LocalDate;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
+import com.hydrophilik.mwrdCsoScraper.parsing.CsoEvent;
+import com.hydrophilik.mwrdCsoScraper.parsing.MwrdCsoSynopsisParser;
 
 public abstract class Scraper {
 
 	public static String mwrdWebPrefix = "http://apps.mwrd.org/CSO/CSOEventSynopsisReport.aspx?passdate=";
-	
+
 	public static void scrapeWebsite(String rawScrapingsDir) {
 		
 		LocalDate theDate;
@@ -80,6 +89,31 @@ public abstract class Scraper {
 		
 			theDate = theDate.plusDays(1);
 		}
+	}
+	
+	public static Map<String, List<CsoEvent>> grabEventFromSite(LocalDate date) throws Exception {
+		
+		String urlStr = mwrdWebPrefix + date.toString();
+		Document document = Jsoup.connect(urlStr).get();
+		
+		MwrdCsoSynopsisParser mwrdParser = new MwrdCsoSynopsisParser(document);
+		List<CsoEvent> thisDaysEvents = mwrdParser.parseEvents();
+		
+		Map<String, List<CsoEvent>> retVal = new HashMap<String, List<CsoEvent>>();
+		
+		if (null == thisDaysEvents)
+			return retVal;
+		
+		for (CsoEvent event : thisDaysEvents) {
+			List<CsoEvent> csoList = retVal.get(event.getKey());
+			if (null == csoList) {
+				csoList = new ArrayList<CsoEvent>();
+			}
+			csoList.add(event);
+			retVal.put(event.getKey(), csoList);
+		}
+		
+		return retVal;
 	}
 
 }
