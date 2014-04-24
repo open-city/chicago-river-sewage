@@ -1,10 +1,14 @@
 package com.hydrophilik.mwrdCsoScraper.executables;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.lang3.exception.ExceptionUtils;
+import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
 
 import com.hydrophilik.mwrdCsoScraper.Configures;
@@ -18,27 +22,34 @@ import com.hydrophilik.mwrdCsoScraper.utils.FileManager;
 public class DailyScraper {
 	
 	public static DbConnection dbConn = null;
+	public static final String csvFileName = "csoEvents.csv";
 
 	public static void main(String[] args) {
 
 		String workingDir;
 		Configures configuration = null;
 		// arg0 => working directory
+		
+		List<CsoEvent> csosFromRds = null;
 		try {
 			workingDir = args[0];
 			FileManager.setWorkingDirectory(workingDir);
 			configuration = new Configures(workingDir);
 			dbConn = new DbConnection(configuration);
-			LogLogger.log("Running scraper on: " + (new LocalDate()).toString());
+			LogLogger.log("Running scraper on: " + (new DateTime()).toString());
+			scrapeLastThirtyDays();
+			
+			csosFromRds = dbConn.getAllEventsInDb();
+			convertDbToCsv(csosFromRds, workingDir);
 		}
 		catch (Exception e) {
 			LogLogger.logError(ExceptionUtils.getStackTrace(e));
 			return;
 		}
 		
-		scrapeLastThirtyDays();
 		if (null != dbConn)
 			dbConn.releaseConnection();
+
 	}
 	
 	private static void scrapeLastThirtyDays() {
@@ -47,7 +58,7 @@ public class DailyScraper {
 		
 		//LocalDate today = new LocalDate(2014, 4, 10);
 		LocalDate today = new LocalDate(DateTimeUtils.chiTimeZone);
-		LocalDate date = new LocalDate(2007,1,1);
+		LocalDate date = today.minusDays(30);
 
 		//LocalDate date = today.minusDays(DAYS_AWAY);
 		
@@ -140,5 +151,40 @@ public class DailyScraper {
 		}
 		
 		return true;
+	}
+	
+	private static void convertDbToCsv(List<CsoEvent> csoEvents, String workingDirName) throws Exception {
+		
+		File csvFile = new File(workingDirName + "/" + csvFileName);
+		
+		if (csvFile.exists())
+			csvFile.delete();
+		
+		csvFile.createNewFile();
+		
+		FileWriter fw = null;
+		BufferedWriter bw = null;
+		
+		try {
+		
+			fw = new FileWriter(csvFile.getAbsoluteFile());
+			bw = new BufferedWriter(fw);
+			
+			for (CsoEvent csoEvent : csoEvents) {
+				bw.write(csoEvent.parseToString());
+				bw.newLine();
+				
+			}
+		}
+		catch (Exception e) {
+			throw new Exception(e);
+		}
+		finally {
+			try {
+				bw.close();
+				fw.close();
+			}
+			catch (Exception e) {}
+		}
 	}
 }

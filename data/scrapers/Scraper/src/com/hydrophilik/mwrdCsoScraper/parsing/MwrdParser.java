@@ -5,9 +5,6 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
 
 import org.joda.time.LocalDate;
 import org.jsoup.Jsoup;
@@ -89,7 +86,8 @@ public class MwrdParser {
 		}
 		System.out.println("Parsing done");
 	}
-	
+
+/*
 	public void parseToDb() {
 		Connection connection = null;
 		Statement stmt = null;
@@ -149,4 +147,5 @@ public class MwrdParser {
 	    	catch (Exception e) {}
 	    }
 	}
+*/
 }
