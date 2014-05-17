@@ -59,6 +59,7 @@ public class DailyScraper {
 		//LocalDate today = new LocalDate(2014, 4, 10);
 		LocalDate today = new LocalDate(DateTimeUtils.chiTimeZone);
 		LocalDate date = today.minusDays(30);
+		//LocalDate date = new LocalDate(2007, 1, 1);
 
 		//LocalDate date = today.minusDays(DAYS_AWAY);
 		
@@ -107,8 +108,11 @@ public class DailyScraper {
 			else {
 				for (CsoEvent scrapedEvent : scrapedEvents) {
 					
+					boolean sameEventFound = false;
+					
 					for (CsoEvent dbEvent : csoEventsFromDb) {
 						if (sameEvent(scrapedEvent, dbEvent)) {
+							sameEventFound = true;
 							continue;
 						}
 						if (overlap(scrapedEvent, dbEvent)) {
@@ -117,8 +121,11 @@ public class DailyScraper {
 							retVal.add(sqlCmd);
 							
 						}
-						retVal.add(scrapedEvent.getSqlInsert());
 					}
+					
+					if (false == sameEventFound)
+						retVal.add(scrapedEvent.getSqlInsert());
+
 				}
 			}
 		}
@@ -169,6 +176,9 @@ public class DailyScraper {
 		
 			fw = new FileWriter(csvFile.getAbsoluteFile());
 			bw = new BufferedWriter(fw);
+			
+			bw.write("OutfallLocation;WaterwaySegment;Date;StartTime;EndTime;DurationMins");
+			bw.newLine();
 			
 			for (CsoEvent csoEvent : csoEvents) {
 				bw.write(csoEvent.parseToString());

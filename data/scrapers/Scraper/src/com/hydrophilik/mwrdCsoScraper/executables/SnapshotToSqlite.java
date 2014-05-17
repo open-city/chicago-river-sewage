@@ -1,15 +1,18 @@
 package com.hydrophilik.mwrdCsoScraper.executables;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.joda.time.DateTime;
 
-import com.hydrophilik.mwrdCsoScraper.Configures;
-import com.hydrophilik.mwrdCsoScraper.db.DbConnection;
 import com.hydrophilik.mwrdCsoScraper.parsing.CsoEvent;
 import com.hydrophilik.mwrdCsoScraper.utils.DateTimeUtils;
 import com.hydrophilik.mwrdCsoScraper.utils.FileManager;
@@ -21,7 +24,6 @@ public class SnapshotToSqlite {
 
 	public static void main(String[] args) {
 
-		Configures configuration = null;
 		String workingDir = null;
 		String databasePath = null;
 
@@ -34,9 +36,8 @@ public class SnapshotToSqlite {
 			databasePath = args[1] + "/" + "cso-data.db";
 			
 			FileManager.setWorkingDirectory(workingDir);
-			configuration = new Configures(workingDir);
 			
-			List<CsoEvent> allCsoEvents = getCsoEventsFromRds(configuration);
+			List<CsoEvent> allCsoEvents = readEventsFromCsv(workingDir);
 
 			deleteAndRecreateSqliteDb(databasePath);
 			
@@ -55,31 +56,6 @@ public class SnapshotToSqlite {
 			}
 			catch (Exception e) {LogLogger.logError(e);}
 		}
-	}
-	
-	private static List<CsoEvent> getCsoEventsFromRds(Configures configuration) {
-		
-		DbConnection dbConn = null;
-
-		List<CsoEvent> allCsoEvents = null;
-		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			dbConn = new DbConnection(configuration);
-			allCsoEvents = dbConn.getAllEventsInDb();
-			
-			return allCsoEvents;
-
-		}
-		catch(Exception e) {
-			
-		}
-		finally {
-			if (null != dbConn)
-				dbConn.releaseConnection();
-		}
-
-		
-		return null;
 	}
 	
 	private static void deleteAndRecreateSqliteDb(String databasePath) throws Exception {
@@ -132,6 +108,45 @@ public class SnapshotToSqlite {
 			} catch (Exception e) {LogLogger.logError(e);}
 		}
 		
+	}
+	
+	private static List<CsoEvent> readEventsFromCsv(String workingDir) {
+		List<CsoEvent> retVal = new ArrayList<CsoEvent>();
+		
+		File csvFile = new File(workingDir + "/csoEvents.csv");
+		
+		if (false == csvFile.exists())
+			return null;
+		
+		BufferedReader br = null;
+		 
+		try {
+ 
+			String sCurrentLine;
+ 
+			br = new BufferedReader(new FileReader(csvFile));
+ 
+			while ((sCurrentLine = br.readLine()) != null) {
+				String [] split = sCurrentLine.split(";");
+				DateTime startTime = DateTimeUtils.createDateTime(split[2], split[3]);
+				DateTime endTime = DateTimeUtils.createDateTime(split[2], split[4]);
+				CsoEvent event = new CsoEvent(startTime, endTime, split[0], Integer.parseInt(split[1]));
+				retVal.add(event);
+				
+			}
+ 
+		} catch (IOException e) {
+			e.printStackTrace();
+			return null;
+		} finally {
+			try {
+				if (br != null)br.close();
+			} catch (IOException ex) {
+				ex.printStackTrace();
+			}
+		}
+		
+		return retVal;
 	}
 
 }

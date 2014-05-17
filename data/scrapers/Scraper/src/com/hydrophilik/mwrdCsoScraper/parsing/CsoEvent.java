@@ -47,9 +47,9 @@ public class CsoEvent {
 		String secondsBetweenStartAndEnd = Long.toString(millisBetweenStartAndEnd / 60000);
 
 		return outfallLocation + ";" + waterwaySegment + ";" + startTime.toLocalDate().toString() +
-				";" + startTime.toLocalTime().toString() + ";" + endTime.toLocalTime().toString() + ";" +
+				";" + DateTimeUtils.getTimeAsHoursMins(startTime.toLocalTime()) + ";" +
+				DateTimeUtils.getTimeAsHoursMins(endTime.toLocalTime()) + ";" +
 				secondsBetweenStartAndEnd;
-
 	}
 	
 	public String getSqlInsert() {
