@@ -74,7 +74,8 @@ public class SnapshotToSqlite {
 	    	sqlLiteConn = DriverManager.getConnection("jdbc:sqlite:" + databasePath);
 	    	
 	    	stmt = sqlLiteConn.createStatement();
-			String sql = "CREATE TABLE CsoEvents (Id int(11), Date text, OutfallLocation text, WaterwaySegment int(11), StartTime text, EndTime text, Duration int(11));";
+			//String sql = "CREATE TABLE CsoEvents (Id int(11), Date text, OutfallLocation text, WaterwaySegment int(11), StartTime text, EndTime text, Duration int(11));";
+			String sql = "CREATE TABLE CSOs (Id INTEGER PRIMARY KEY, Location text, Segment int(11), Date text, StartTime text, EndTime text, Duration int(11));";
 			
 			stmt.executeUpdate(sql);
     	
@@ -125,6 +126,9 @@ public class SnapshotToSqlite {
 			String sCurrentLine;
  
 			br = new BufferedReader(new FileReader(csvFile));
+			
+			// Get rid of first line which contains 
+			sCurrentLine = br.readLine();
  
 			while ((sCurrentLine = br.readLine()) != null) {
 				String [] split = sCurrentLine.split(";");
