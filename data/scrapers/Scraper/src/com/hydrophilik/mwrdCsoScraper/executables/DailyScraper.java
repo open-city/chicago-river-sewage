@@ -1,57 +1,36 @@
 package com.hydrophilik.mwrdCsoScraper.executables;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
 import org.apache.commons.lang3.exception.ExceptionUtils;
-import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
 
-import com.hydrophilik.mwrdCsoScraper.Configures;
-import com.hydrophilik.mwrdCsoScraper.db.DbConnection;
-import com.hydrophilik.mwrdCsoScraper.parsing.CsoEvent;
-import com.hydrophilik.mwrdCsoScraper.scrapeSite.Scraper;
+import com.hydrophilik.mwrdCsoScraper.parsing.Scrape;
 import com.hydrophilik.mwrdCsoScraper.utils.DateTimeUtils;
 import com.hydrophilik.mwrdCsoScraper.utils.LogLogger;
-import com.hydrophilik.mwrdCsoScraper.utils.FileManager;
 
 public class DailyScraper {
-	
-	public static DbConnection dbConn = null;
-	public static final String csvFileName = "csoEvents.csv";
 
 	public static void main(String[] args) {
+		Scrape scrape = null;
 
-		String workingDir;
-		Configures configuration = null;
-		// arg0 => working directory
-		
-		List<CsoEvent> csosFromRds = null;
 		try {
-			workingDir = args[0];
-			FileManager.setWorkingDirectory(workingDir);
-			configuration = new Configures(workingDir);
-			dbConn = new DbConnection(configuration);
-			LogLogger.log("Running scraper on: " + (new DateTime()).toString());
-			scrapeLastThirtyDays();
-			
-			csosFromRds = dbConn.getAllEventsInDb();
-			convertDbToCsv(csosFromRds, workingDir);
+			String configFile = args[0];
+			scrape = new Scrape(configFile);
 		}
 		catch (Exception e) {
 			LogLogger.logError(ExceptionUtils.getStackTrace(e));
 			return;
 		}
 		
-		if (null != dbConn)
-			dbConn.releaseConnection();
+		LocalDate endDate = new LocalDate(DateTimeUtils.chiTimeZone);
+		LocalDate startDate = endDate.minusDays(30);
+		
+		scrape.doScrape(startDate, endDate);
 
 	}
+}
+
 	
+/*
 	private static void scrapeLastThirtyDays() {
 		
 		//int DAYS_AWAY = 1;
@@ -196,5 +175,5 @@ public class DailyScraper {
 			}
 			catch (Exception e) {}
 		}
-	}
 }
+*/

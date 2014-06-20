@@ -56,6 +56,18 @@ public class CsoEvent {
 		long millisBetweenStartAndEnd = endTime.getMillis() - startTime.getMillis();
 		String secondsBetweenStartAndEnd = Long.toString(millisBetweenStartAndEnd / 60000);
 
+		return "INSERT INTO CsoEvents (id,OutfallLocation,WaterwaySegment,Date,StartTime,EndTime,Duration) " +
+				"VALUES (NULL, '" + outfallLocation +
+				"'," + waterwaySegment + ",'" + startTime.toLocalDate().toString() + "','" + DateTimeUtils.getTimeAsHoursMins(startTime.toLocalTime()) +
+				"','" + DateTimeUtils.getTimeAsHoursMins(endTime.toLocalTime()) + "'," +
+				secondsBetweenStartAndEnd + ")";
+
+	}
+	
+	public String getSqlInsertSqlite() {
+		long millisBetweenStartAndEnd = endTime.getMillis() - startTime.getMillis();
+		String secondsBetweenStartAndEnd = Long.toString(millisBetweenStartAndEnd / 60000);
+
 		return "INSERT INTO CSOs (id,Location,Segment,Date,StartTime,EndTime,Duration) " +
 				"VALUES (NULL, '" + outfallLocation +
 				"'," + waterwaySegment + ",'" + startTime.toLocalDate().toString() + "','" + DateTimeUtils.getTimeAsHoursMins(startTime.toLocalTime()) +
@@ -83,4 +95,32 @@ public class CsoEvent {
 	public DateTime getEndTime() {
 		return endTime;
 	}
+	
+	public boolean sameEvent(CsoEvent otherEvent) {
+		if (false == startTime.toString().equals(otherEvent.getStartTime().toString())) {
+			return false;
+		}
+		
+		if (false == endTime.toString().equals(otherEvent.getEndTime().toString())) {
+			return false;
+		}
+		
+		return true;
+	}
+	
+	public boolean overlap(CsoEvent otherEvent) {
+		
+		if (startTime.isAfter(otherEvent.getEndTime())) {
+			return false;
+		}
+		
+		if (endTime.isBefore(otherEvent.getStartTime())) {
+			return false;
+		}
+		
+		return true;
+		
+
+	}
+
 }

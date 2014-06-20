@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 
 import com.hydrophilik.mwrdCsoScraper.Configures;
 import com.hydrophilik.mwrdCsoScraper.parsing.CsoEvent;
+import com.hydrophilik.mwrdCsoScraper.utils.FileManager;
 import com.hydrophilik.mwrdCsoScraper.utils.LogLogger;
 
 import java.sql.Connection;
@@ -17,6 +18,7 @@ public class DbConnection {
 	
 	Connection connection = null;
 
+	// TODO: Delete this method
 	public DbConnection(Configures configuration) throws Exception {
 	    try {
 
@@ -27,6 +29,19 @@ public class DbConnection {
 	    	releaseConnection();
 	    	throw new Exception(e);
 	    }
+	}
+	
+	public DbConnection(String configFile) throws Exception {
+
+		try {
+			String dbInfo = FileManager.readOneLineFile(configFile);
+			connection = DriverManager.getConnection(dbInfo);
+		}
+		catch (Exception e) {
+			releaseConnection();
+			throw new Exception(e);
+		}
+		
 	}
 	
 	public void releaseConnection() {

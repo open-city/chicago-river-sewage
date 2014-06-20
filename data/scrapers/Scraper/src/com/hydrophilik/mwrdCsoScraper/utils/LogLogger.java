@@ -3,14 +3,15 @@ package com.hydrophilik.mwrdCsoScraper.utils;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.joda.time.LocalDate;
 
-import com.hydrophilik.mwrdCsoScraper.executables.DailyScraper;
+import com.hydrophilik.mwrdCsoScraper.parsing.Scrape;
+
 
 public class LogLogger {
 	
 	public static void logError(String message) {
-		if (null == DailyScraper.dbConn)
+		if (null == Scrape.dbConn)
 			return;
-		DailyScraper.dbConn.executeUpdate("INSERT INTO Logs (Id, Date, Type, Message) VALUES ("
+		Scrape.dbConn.executeUpdate("INSERT INTO Logs (Id, Date, Type, Message) VALUES ("
 				+ "NULL, '" + (new LocalDate(DateTimeUtils.chiTimeZone)).toString() + "',1,'" + message + "')");
 	}
 	
@@ -19,9 +20,8 @@ public class LogLogger {
 	}
 	
 	public static void log(String message) {
-		DailyScraper.dbConn.executeUpdate("INSERT INTO Logs (Id, Date, Type, Message) VALUES ("
+		Scrape.dbConn.executeUpdate("INSERT INTO Logs (Id, Date, Type, Message) VALUES ("
 				+ "NULL, '" + (new LocalDate(DateTimeUtils.chiTimeZone)).toString() + "',0,'" + message + "')");
 		
 	}
-
 }

@@ -81,7 +81,7 @@ public class SnapshotToSqlite {
     	
 			for (CsoEvent csoEvent : allCsoEvents) {
 				stmt = sqlLiteConn.createStatement();
-				sql = csoEvent.getSqlInsert();
+				sql = csoEvent.getSqlInsertSqlite();
 				System.out.println(sql);
 				
 				try {
@@ -132,9 +132,9 @@ public class SnapshotToSqlite {
  
 			while ((sCurrentLine = br.readLine()) != null) {
 				String [] split = sCurrentLine.split(";");
-				DateTime startTime = DateTimeUtils.createDateTime(split[2], split[3]);
-				DateTime endTime = DateTimeUtils.createDateTime(split[2], split[4]);
-				CsoEvent event = new CsoEvent(startTime, endTime, split[0], Integer.parseInt(split[1]));
+				DateTime startTime = DateTimeUtils.createDateTime(split[1], split[4]);
+				DateTime endTime = DateTimeUtils.createDateTime(split[1], split[5]);
+				CsoEvent event = new CsoEvent(startTime, endTime, split[2], Integer.parseInt(split[3]));
 				retVal.add(event);
 				
 			}

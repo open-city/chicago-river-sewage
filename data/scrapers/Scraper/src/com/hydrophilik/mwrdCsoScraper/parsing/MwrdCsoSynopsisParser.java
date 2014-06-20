@@ -110,7 +110,15 @@ public class MwrdCsoSynopsisParser {
 		}
 		
 		// Calculate the end time based on the duration
-		DateTime calculatedEndTime = start.plusMinutes(durationMins);
+		DateTime calculatedEndTime = new DateTime(start.plusMinutes(durationMins), DateTimeUtils.chiTimeZone);
+		
+		int daylightSavingsHr = DateTimeUtils.daylightSavingsDay(start.toLocalDate());
+		if (0 != daylightSavingsHr) {
+			if (DateTimeUtils.timeInInterval(start, calculatedEndTime, "1:59")) {
+				durationMins = durationMins + (60 * daylightSavingsHr);
+				calculatedEndTime = new DateTime(start.plusMinutes(durationMins), DateTimeUtils.chiTimeZone);
+			}
+		}
 		
 		if (DateTimeUtils.isSameDay(start, calculatedEndTime)) {
 			CsoEvent csoEvent = new CsoEvent(start, calculatedEndTime,
