@@ -4,33 +4,18 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import com.hydrophilik.mwrdCsoScraper.Configures;
 import com.hydrophilik.mwrdCsoScraper.parsing.CsoEvent;
-import com.hydrophilik.mwrdCsoScraper.utils.FileManager;
 import com.hydrophilik.mwrdCsoScraper.utils.LogLogger;
 
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class DbConnection {
 	
 	Connection connection = null;
 
-	// TODO: Delete this method
-	public DbConnection(Configures configuration) throws Exception {
-	    try {
-
-	        // setup the connection with the DB.
-	        connection = DriverManager.getConnection(configuration.getDbPath());
-	    }
-	    catch (Exception e) {
-	    	releaseConnection();
-	    	throw new Exception(e);
-	    }
-	}
-	
+/*
 	public DbConnection(String configFile) throws Exception {
 
 		try {
@@ -41,14 +26,24 @@ public class DbConnection {
 			releaseConnection();
 			throw new Exception(e);
 		}
-		
+	}
+*/
+	
+	public DbConnection(String databasePath) {
+		try {
+			Class.forName("org.sqlite.JDBC");
+			connection = DriverManager.getConnection("jdbc:sqlite:" + databasePath);
+		}
+		catch (Exception e) {
+			releaseConnection();
+		}
 	}
 	
 	public void releaseConnection() {
 		try {
-		if (null != connection)
-			connection.close();
-		}
+			if (null != connection)
+				connection.close();
+			}
 		catch (Exception e) {}
 	}
 	
@@ -65,7 +60,6 @@ public class DbConnection {
 	      finally {
 	    	  try {preparedStatement.close();} catch(Exception e) {}
 	      }
-
 	}
 	
 	public List<CsoEvent> getCsosAtDatePlace(String date, String outfallLocation) {
@@ -75,7 +69,7 @@ public class DbConnection {
 		
 		try {
 			preparedStatement = connection.prepareStatement(
-					"SELECT * FROM CsoEvents WHERE Date=? AND OutfallLocation=?");
+					"SELECT * FROM CSOs WHERE Date=? AND Location=?");
 			preparedStatement.setString(1, date);
 			preparedStatement.setString(2, outfallLocation);
 			
@@ -85,7 +79,7 @@ public class DbConnection {
 			
 			while (resultSet.next()) {
 				Integer id = resultSet.getInt("Id");
-				int waterwaySeg = resultSet.getInt("WaterwaySegment");
+				int waterwaySeg = resultSet.getInt("Segment");
 				String startTime = resultSet.getString("StartTime");
 				String endTime = resultSet.getString("EndTime");
 				CsoEvent thisEvent = new CsoEvent(id, date, startTime, endTime,
@@ -113,7 +107,7 @@ public class DbConnection {
 	
 	public List<CsoEvent> getAllEventsInDb() throws Exception {
 		PreparedStatement preparedStatement = connection.prepareStatement(
-				"SELECT * FROM CsoEvents");
+				"SELECT * FROM CSOs");
 		
 		ResultSet resultSet = preparedStatement.executeQuery();
 		

@@ -63,7 +63,7 @@ public class SnapshotToSqlite {
 		Runtime.getRuntime().exec("sqlite3 " + databasePath);
 		
 	}
-	
+
 	private static void writeToSqlite(String databasePath, List<CsoEvent> allCsoEvents) {
 		Statement stmt = null;
 		

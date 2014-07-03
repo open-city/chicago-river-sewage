@@ -37,7 +37,7 @@ public class Scrape {
 			catch (Exception e) {
 				LogLogger.logError(e);
 			}
-			
+
 			date = date.plusDays(1);
 		}
 	}
@@ -63,7 +63,7 @@ public class Scrape {
 			List<CsoEvent> scrapedEvents = csoEvents.get(key);
 			if ((null == csoEventsFromDb) || (0 == csoEventsFromDb.size())) {
 				for (CsoEvent scrapedEvent : scrapedEvents) {
-					retVal.add(scrapedEvent.getSqlInsert());
+					retVal.add(scrapedEvent.getSqlInsertSqlite());
 				}
 			}
 			else {
@@ -85,7 +85,7 @@ public class Scrape {
 					}
 					
 					if (false == sameEventFound)
-						retVal.add(scrapedEvent.getSqlInsert());
+						retVal.add(scrapedEvent.getSqlInsertSqlite());
 
 				}
 			}

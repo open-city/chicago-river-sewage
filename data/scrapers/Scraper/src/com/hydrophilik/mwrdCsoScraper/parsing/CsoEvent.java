@@ -51,7 +51,8 @@ public class CsoEvent {
 				DateTimeUtils.getTimeAsHoursMins(endTime.toLocalTime()) + ";" +
 				secondsBetweenStartAndEnd;
 	}
-	
+
+/*
 	public String getSqlInsert() {
 		long millisBetweenStartAndEnd = endTime.getMillis() - startTime.getMillis();
 		String secondsBetweenStartAndEnd = Long.toString(millisBetweenStartAndEnd / 60000);
@@ -63,6 +64,7 @@ public class CsoEvent {
 				secondsBetweenStartAndEnd + ")";
 
 	}
+*/
 	
 	public String getSqlInsertSqlite() {
 		long millisBetweenStartAndEnd = endTime.getMillis() - startTime.getMillis();
@@ -77,7 +79,7 @@ public class CsoEvent {
 	}
 	
 	public String getSqlRemove() {
-		return "DELETE FROM CsoEvents WHERE id=" + id;
+		return "DELETE FROM CSOs WHERE id=" + id;
 	}
 
 	public String getKey() {
