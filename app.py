@@ -82,6 +82,9 @@ def get_riverway_geojson(segments):
   chicago_riverways['features'] = riverway_features_to_show
   return chicago_riverways
 
+def get_day_count():
+    return db.session.query(func.count(distinct(CSOEvent.date))).all()[0][0]
+
 # ROUTES
 @app.route('/cso-status/')
 def cso_status():
@@ -191,7 +194,7 @@ def index_es():
         print "Error parsing date", request_date
         request_date = today
 
-    return render_app_template('index.es.html', date=request_date, today_flag=today_flag)
+    return render_app_template('index.es.html', date=request_date, today_flag=today_flag, day_count=get_day_count())
 
 @app.route('/')
 def index():
@@ -208,7 +211,7 @@ def index():
         print "Error parsing date", request_date
         request_date = today
 
-    return render_app_template('index.html', date=request_date, today_flag=today_flag)
+    return render_app_template('index.html', date=request_date, today_flag=today_flag, day_count=get_day_count())
 
 # UTILITY
 def render_app_template(template, **kwargs):
