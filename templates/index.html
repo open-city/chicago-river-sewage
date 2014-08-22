@@ -1,11 +1,8 @@
 {% extends 'base.html' %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />
-<link rel="stylesheet" href="/static/css/leaflet.label.css" />
-<!--[if lte IE 8]>
-  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.ie.css" />
-<![endif]-->
+<link rel="stylesheet" href="/static/css/leaflet.css?1" />
+<link rel="stylesheet" href="/static/css/leaflet.label.css?1" />
 {% endblock %}
 
 {% block content %}
@@ -150,12 +147,12 @@ http://istheresewageinthechicagoriver.com/csos-by-waterway/
 {% endblock %}
 
 {% block extra_scripts %}
-<script src="/static/js/leaflet.js"></script>
-<script src="/static/js/leaflet.label.js"></script>
+<script src="/static/js/leaflet.js?1"></script>
+<script src="/static/js/leaflet.label.js?1"></script>
 
 <script>
   var current_date = moment("{{date.strftime('%m/%d/%Y')}}").format("M/D/YYYY");
-
+  var map;
   $.when( $.getJSON("/cso-status/?date={{date.strftime('%m/%d/%Y')}}") ).then(function( data, textStatus, jqXHR ) {
 
     if (data['is-there-sewage'] == 'yes') {
@@ -178,7 +175,7 @@ http://istheresewageinthechicagoriver.com/csos-by-waterway/
       }
 
       // render a map!
-      var map = L.map('map', { scrollWheelZoom: false }).setView([41.82, -87.7], 10);
+      map = L.map('map', { scrollWheelZoom: false }).setView([41.82, -87.7], 10);
 
       L.tileLayer('https://{s}.tiles.mapbox.com/v3/derekeder.hehblhbj/{z}/{x}/{y}.png', {
           attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
@@ -186,6 +183,12 @@ http://istheresewageinthechicagoriver.com/csos-by-waterway/
 
       var geojson = L.geoJson(data['riverway-geojson'], 
         {style: { weight: 3, opacity: 1, color: '#f39c12' }}).addTo(map);
+
+      map.whenReady(function () {
+          window.setTimeout(function () {
+              map.fitBounds(geojson.getBounds(), {padding: [25,25], maxZoom: 12});
+          }.bind(this), 200);
+      }, this);
 
       geojson.eachLayer(function (layer) {
         var popup = "<h4>" + layer.feature.properties['riverway'] + "</h4>\

@@ -56,7 +56,7 @@ def get_waterway_segment(segment):
     {"segment": 17, "riverway": "Calumet River", "description": "O'Brien Locks to Lake Michigan"},
     {"segment": 18, "riverway": "Grand Calumet River", "description": "From confluence with the Little Calumet River to the Indiana state line"},
     {"segment": 19, "riverway": "Little Calumet River", "description": "O'Brien Locks to the Calumet-Sag Channel"},
-    {"segment": 20, "riverway": "Little Calumet River", "description": "Indiane state line to the Calumet-Sag Channel"},
+    {"segment": 20, "riverway": "Little Calumet River", "description": "Indiana state line to the Calumet-Sag Channel"},
     {"segment": 21, "riverway": "Calumet-Sag Channel", "description": ""},
     {"segment": 22, "riverway": "Calumet Union Drainage Ditch", "description": ""},
     {"segment": 23, "riverway": "Addison Creek", "description": ""},
