@@ -5,6 +5,10 @@ body {
   font-size: 17px;
 }
 
+.label {
+  display: inline-block;
+  white-space: normal;
+}
 .label:hover { text-decoration: none; }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
