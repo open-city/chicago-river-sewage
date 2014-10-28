@@ -1,5 +1,7 @@
 from flask import Flask, request, make_response, render_template
 from flask_sqlalchemy import SQLAlchemy
+from flask.ext.cache import Cache
+from functools import update_wrapper
 from datetime import date, datetime, timedelta
 from sqlalchemy import Table, func, distinct, Column, create_engine, MetaData
 from sqlalchemy.orm import sessionmaker, scoped_session
@@ -14,6 +16,9 @@ import operator
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data/processed_data/cso-data.db'
 db = SQLAlchemy(app)
+cache = Cache(config={'CACHE_TYPE': 'simple'})
+cache.init_app(app)
+CACHE_TIMEOUT = 60*5 # 5 minutes
 
 class CSOEvent(db.Model):
     __tablename__ = 'CSOs'
@@ -34,6 +39,54 @@ class CSOEvent(db.Model):
         return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
 dthandler = lambda obj: obj.isoformat() if isinstance(obj, datetime) or isinstance(obj, date) else None
+
+def crossdomain(origin=None, methods=None, headers=None,
+                max_age=21600, attach_to_all=True,
+                automatic_options=True): # pragma: no cover
+    if methods is not None:
+        methods = ', '.join(sorted(x.upper() for x in methods))
+    if headers is not None and not isinstance(headers, basestring):
+        headers = ', '.join(x.upper() for x in headers)
+    if not isinstance(origin, basestring):
+        origin = ', '.join(origin)
+    if isinstance(max_age, timedelta):
+        max_age = max_age.total_seconds()
+
+    def get_methods():
+        if methods is not None:
+            return methods
+
+        options_resp = app.make_default_options_response()
+        return options_resp.headers['allow']
+
+    def decorator(f):
+        def wrapped_function(*args, **kwargs):
+            if automatic_options and request.method == 'OPTIONS':
+                resp = current_app.make_default_options_response()
+            else:
+                resp = make_response(f(*args, **kwargs))
+            if not attach_to_all and request.method != 'OPTIONS':
+                return resp
+
+            h = resp.headers
+
+            h['Access-Control-Allow-Origin'] = origin
+            h['Access-Control-Allow-Methods'] = get_methods()
+            h['Access-Control-Max-Age'] = str(max_age)
+            if headers is not None:
+                h['Access-Control-Allow-Headers'] = headers
+            return resp
+
+        f.provide_automatic_options = False
+        return update_wrapper(wrapped_function, f)
+    return decorator
+
+def make_cache_key(*args, **kwargs):
+    path = request.path
+    args = str(hash(frozenset(request.args.items())))
+    # print 'cache_key:', (path+args)
+    print (path + args).encode('utf-8')
+    return (path + args).encode('utf-8')
 
 def get_waterway_segment(segment):
   waterway_segments = [
@@ -85,8 +138,18 @@ def get_riverway_geojson(segments):
 def get_day_count():
     return db.session.query(func.count(distinct(CSOEvent.date))).all()[0][0]
 
-# ROUTES
+# API Routes
+@app.route('/flush-cache')
+@crossdomain(origin="*")
+def flush_cache():
+    cache.clear()
+    resp = make_response(json.dumps({'status' : 'ok', 'message' : 'cache flushed!'}))
+    resp.headers['Content-Type'] = 'application/json'
+    return resp
+
 @app.route('/cso-status/')
+@cache.cached(timeout=CACHE_TIMEOUT, key_prefix=make_cache_key)
+@crossdomain(origin="*")
 def cso_status():
     water_resp = {}
     water_segments = set()
@@ -139,8 +202,8 @@ def cso_status():
     resp.headers['Content-Type'] = 'application/json'
     return resp
 
-# API Routes
 @app.route('/cso-events/')
+@crossdomain(origin="*")
 def cso_events():
     request_date = request.args.get('date')
     offset = request.args.get('offset', 0)
@@ -159,6 +222,7 @@ def cso_events():
     return resp
 
 @app.route('/csos-by-waterway/')
+@crossdomain(origin="*")
 def csos_by_waterway():
     base_query = db.session.query(CSOEvent.segment,
         func.count(CSOEvent.duration))\
@@ -169,6 +233,7 @@ def csos_by_waterway():
     resp.headers['Content-Type'] = 'application/json'
     return resp
 
+# HTML routes
 @app.route('/history/')
 def history():
     cso_dates = db.session.query(CSOEvent.date,
