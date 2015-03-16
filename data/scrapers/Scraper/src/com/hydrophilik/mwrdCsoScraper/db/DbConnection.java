@@ -14,20 +14,6 @@ import java.util.List;
 public class DbConnection {
 	
 	Connection connection = null;
-
-/*
-	public DbConnection(String configFile) throws Exception {
-
-		try {
-			String dbInfo = FileManager.readOneLineFile(configFile);
-			connection = DriverManager.getConnection(dbInfo);
-		}
-		catch (Exception e) {
-			releaseConnection();
-			throw new Exception(e);
-		}
-	}
-*/
 	
 	public DbConnection(String databasePath) {
 		try {
