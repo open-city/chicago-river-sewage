@@ -1,4 +1,4 @@
-package com.hydrophilik.mwrdCsoScraper.parsing;
+package org.opengovhacknight.parsing;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,8 +9,7 @@ import org.joda.time.format.DateTimeFormatter;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-
-import com.hydrophilik.mwrdCsoScraper.utils.DateTimeUtils;
+import org.opengovhacknight.utils.DateTimeHelpers;
 
 public class MwrdCsoSynopsisParser {
 	
@@ -55,7 +54,7 @@ public class MwrdCsoSynopsisParser {
 			
 			// If the value of the first column of this row is "Outfall Location", it
 			// is the title row.  Skip it.
-			if (false == aTable[0].equals("Outfall Location")) {
+			if (!aTable[0].equals("Outfall Location")) {
 				
 				// A given synopsis page could cover multiple days.
 				// Therefore, the build method could create multiple events
@@ -95,12 +94,12 @@ public class MwrdCsoSynopsisParser {
 		String outfallLocation = row[0];
 		int waterwaySegment = Integer.parseInt(row[1]);
 
-		DateTime start = DateTimeUtils.createDateTime(startDate, row[2]);
+		DateTime start = DateTimeHelpers.createDateTime(startDate, row[2]);
 		
 		// Use the duration field to determine if the event goes into the next day(s)
 		String [] durations = row[4].split(":");
 		
-		int durationMins = 0;
+		int durationMins;
 		try {
 			durationMins = (Integer.parseInt(durations[0]) * 60) + Integer.parseInt(durations[1]);
 		}
@@ -110,17 +109,17 @@ public class MwrdCsoSynopsisParser {
 		}
 		
 		// Calculate the end time based on the duration
-		DateTime calculatedEndTime = new DateTime(start.plusMinutes(durationMins), DateTimeUtils.chiTimeZone);
+		DateTime calculatedEndTime = new DateTime(start.plusMinutes(durationMins));
 		
-		int daylightSavingsHr = DateTimeUtils.daylightSavingsDay(start.toLocalDate());
+		int daylightSavingsHr = DateTimeHelpers.daylightSavingsDay(start.toLocalDate());
 		if (0 != daylightSavingsHr) {
-			if (DateTimeUtils.timeInInterval(start, calculatedEndTime, "1:59")) {
+			if (DateTimeHelpers.timeInInterval(start, calculatedEndTime, "1:59")) {
 				durationMins = durationMins + (60 * daylightSavingsHr);
-				calculatedEndTime = new DateTime(start.plusMinutes(durationMins), DateTimeUtils.chiTimeZone);
+				calculatedEndTime = new DateTime(start.plusMinutes(durationMins));
 			}
 		}
-		
-		if (DateTimeUtils.isSameDay(start, calculatedEndTime)) {
+
+        if (start.toLocalDate().equals(calculatedEndTime.toLocalDate())) {
 			CsoEvent csoEvent = new CsoEvent(start, calculatedEndTime,
 					outfallLocation, waterwaySegment);
 			retVal.add(csoEvent);
@@ -131,16 +130,16 @@ public class MwrdCsoSynopsisParser {
 		// So, let's break it up
 		
 		//System.out.println("Outfall " + outfallLocation + " overflowed across days starting " + startDate);		
-		
-		while (false == DateTimeUtils.isSameDay(start, calculatedEndTime)) {
+
+        while(!start.toLocalDate().equals(calculatedEndTime.toLocalDate())) {
 			DateTimeFormatter fmt = DateTimeFormat.forPattern("MM/dd/yyyy");
-			DateTime endOfThisDay = DateTimeUtils.createDateTime(fmt.print(start), "23:59").plusMinutes(1);
+			DateTime endOfThisDay = DateTimeHelpers.createDateTime(fmt.print(start), "23:59").plusMinutes(1);
 
 			CsoEvent csoEvent = new CsoEvent(start, endOfThisDay, outfallLocation,
 					waterwaySegment);
 			retVal.add(csoEvent);
 			
-			start = DateTimeUtils.createDateTime(fmt.print(start.plusDays(1)), "0:00");
+			start = DateTimeHelpers.createDateTime(fmt.print(start.plusDays(1)), "0:00");
 
 		}
 		

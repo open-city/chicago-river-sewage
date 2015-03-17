@@ -2,3 +2,6 @@
 *.pyc
 venv
 *.class
+
+data/scrapers/Scraper/.idea/
+*.iml

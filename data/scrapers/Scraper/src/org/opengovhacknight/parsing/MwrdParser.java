@@ -1,5 +1,6 @@
-package com.hydrophilik.mwrdCsoScraper.parsing;
+package org.opengovhacknight.parsing;
 
+/* TODO: Delete this file
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -147,5 +148,6 @@ public class MwrdParser {
 	    	catch (Exception e) {}
 	    }
 	}
-*/
+*
 }
+*/

@@ -1,10 +1,10 @@
-package com.hydrophilik.mwrdCsoScraper.db;
+package org.opengovhacknight.db;
 
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import com.hydrophilik.mwrdCsoScraper.parsing.CsoEvent;
+import org.opengovhacknight.parsing.CsoEvent;
 import com.hydrophilik.mwrdCsoScraper.utils.LogLogger;
 
 import java.sql.Connection;
@@ -14,20 +14,6 @@ import java.util.List;
 public class DbConnection {
 	
 	Connection connection = null;
-
-/*
-	public DbConnection(String configFile) throws Exception {
-
-		try {
-			String dbInfo = FileManager.readOneLineFile(configFile);
-			connection = DriverManager.getConnection(dbInfo);
-		}
-		catch (Exception e) {
-			releaseConnection();
-			throw new Exception(e);
-		}
-	}
-*/
 	
 	public DbConnection(String databasePath) {
 		try {

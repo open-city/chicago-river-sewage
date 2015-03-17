@@ -1,4 +1,4 @@
-package com.hydrophilik.mwrdCsoScraper.parsing;
+package org.opengovhacknight.parsing;
 
 import org.joda.time.DateTime;
 

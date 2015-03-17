@@ -2,7 +2,7 @@ package com.hydrophilik.mwrdCsoScraper.executables;
 
 import org.joda.time.LocalDate;
 
-import com.hydrophilik.mwrdCsoScraper.parsing.Scrape;
+import org.opengovhacknight.parsing.Scrape;
 import com.hydrophilik.mwrdCsoScraper.utils.DateTimeUtils;
 
 public class GuidedScrape {

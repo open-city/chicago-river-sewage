@@ -38,14 +38,14 @@ public abstract class DateTimeUtils {
 				chiTimeZone);
 
 	}
-	
+
 	// TODO: Remove this method
 	public static boolean isSameDay(DateTime firstDay, DateTime secondDay) {
 		if (firstDay.toLocalDate().toString().equals(secondDay.toLocalDate().toString()))
 				return true;
 		return false;
 	}
-	
+
 	public static boolean isSameDay(LocalDate firstDay, LocalDate secondDay) {
 		if (firstDay.toString().equals(secondDay.toString()))
 				return true;

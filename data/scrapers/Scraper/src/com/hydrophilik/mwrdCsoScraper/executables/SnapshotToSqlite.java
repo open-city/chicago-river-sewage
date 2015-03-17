@@ -13,7 +13,7 @@ import java.util.List;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.joda.time.DateTime;
 
-import com.hydrophilik.mwrdCsoScraper.parsing.CsoEvent;
+import org.opengovhacknight.parsing.CsoEvent;
 import com.hydrophilik.mwrdCsoScraper.utils.DateTimeUtils;
 import com.hydrophilik.mwrdCsoScraper.utils.FileManager;
 import com.hydrophilik.mwrdCsoScraper.utils.LogLogger;

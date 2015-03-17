@@ -3,7 +3,7 @@ package com.hydrophilik.mwrdCsoScraper.utils;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.joda.time.LocalDate;
 
-import com.hydrophilik.mwrdCsoScraper.parsing.Scrape;
+import org.opengovhacknight.parsing.Scrape;
 
 
 public class LogLogger {
