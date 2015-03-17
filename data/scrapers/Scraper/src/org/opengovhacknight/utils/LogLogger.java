@@ -1,17 +1,20 @@
-package com.hydrophilik.mwrdCsoScraper.utils;
+package org.opengovhacknight.utils;
 
+import com.hydrophilik.mwrdCsoScraper.utils.DateTimeUtils;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.joda.time.LocalDate;
 
+import org.opengovhacknight.db.DbConnection;
 import org.opengovhacknight.parsing.Scrape;
 
 
 public class LogLogger {
 	
 	public static void logError(String message) {
-		if (null == Scrape.dbConn)
+        DbConnection dbConn = Scrape.getDbConn();
+		if (null == dbConn)
 			return;
-		Scrape.dbConn.executeUpdate("INSERT INTO Logs (Id, Date, Type, Message) VALUES ("
+		dbConn.executeUpdate("INSERT INTO Logs (Id, Date, Type, Message) VALUES ("
 				+ "NULL, '" + (new LocalDate(DateTimeUtils.chiTimeZone)).toString() + "',1,'" + message + "')");
 	}
 	
@@ -20,7 +23,8 @@ public class LogLogger {
 	}
 	
 	public static void log(String message) {
-		Scrape.dbConn.executeUpdate("INSERT INTO Logs (Id, Date, Type, Message) VALUES ("
+        DbConnection dbConn = Scrape.getDbConn();
+		dbConn.executeUpdate("INSERT INTO Logs (Id, Date, Type, Message) VALUES ("
 				+ "NULL, '" + (new LocalDate(DateTimeUtils.chiTimeZone)).toString() + "',0,'" + message + "')");
 		
 	}

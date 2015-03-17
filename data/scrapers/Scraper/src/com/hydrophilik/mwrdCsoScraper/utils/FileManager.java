@@ -1,5 +1,7 @@
 package com.hydrophilik.mwrdCsoScraper.utils;
 
+import org.opengovhacknight.utils.LogLogger;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;

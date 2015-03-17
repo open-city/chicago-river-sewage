@@ -13,12 +13,20 @@ import org.opengovhacknight.db.DbConnection;
 
 public class Scrape {
 
-    public static String mwrdWebPrefix = "http://apps.mwrd.org/CSO/CSOEventSynopsisReport.aspx?passdate=";
-	
-	public static void doScrape(LocalDate startDate, LocalDate endDate, String pathToDatabase) {
-		LocalDate date = startDate;
+    private static DbConnection dbConn;
 
-        DbConnection dbConnection = new DbConnection(pathToDatabase);
+    public static String mwrdWebPrefix = "http://apps.mwrd.org/CSO/CSOEventSynopsisReport.aspx?passdate=";
+
+    public Scrape(String dbLocation) {
+        dbConn = new DbConnection(dbLocation);
+    }
+
+    public static DbConnection getDbConn() {
+        return dbConn;
+    }
+
+    public void doScrape(LocalDate startDate, LocalDate endDate) {
+		LocalDate date = startDate;
 
         while(!date.equals(endDate)) {
 
@@ -26,9 +34,9 @@ public class Scrape {
 
 			try {
 				csoEvents = grabEventFromSite(date);
-				List<String> sqlCommands = convertEventsToSql(csoEvents, dbConnection);
+				List<String> sqlCommands = convertEventsToSql(csoEvents, dbConn);
 				for (String sqlCommand : sqlCommands) {
-                    dbConnection.executeUpdate(sqlCommand);
+                    dbConn.executeUpdate(sqlCommand);
 				}
 			}
 			catch (Exception e) {

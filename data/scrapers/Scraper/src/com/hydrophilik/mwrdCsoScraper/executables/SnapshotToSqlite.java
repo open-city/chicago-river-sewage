@@ -16,7 +16,7 @@ import org.joda.time.DateTime;
 import org.opengovhacknight.parsing.CsoEvent;
 import com.hydrophilik.mwrdCsoScraper.utils.DateTimeUtils;
 import com.hydrophilik.mwrdCsoScraper.utils.FileManager;
-import com.hydrophilik.mwrdCsoScraper.utils.LogLogger;
+import org.opengovhacknight.utils.LogLogger;
 
 public class SnapshotToSqlite {
 	

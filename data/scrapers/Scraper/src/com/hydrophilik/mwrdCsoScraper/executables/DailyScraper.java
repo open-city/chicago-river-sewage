@@ -5,7 +5,7 @@ import org.joda.time.LocalDate;
 
 import org.opengovhacknight.parsing.Scrape;
 import com.hydrophilik.mwrdCsoScraper.utils.DateTimeUtils;
-import com.hydrophilik.mwrdCsoScraper.utils.LogLogger;
+import org.opengovhacknight.utils.LogLogger;
 
 public class DailyScraper {
 
