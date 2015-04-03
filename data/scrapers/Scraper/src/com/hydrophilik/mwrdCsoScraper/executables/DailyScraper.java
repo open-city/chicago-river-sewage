@@ -1,11 +1,9 @@
 package com.hydrophilik.mwrdCsoScraper.executables;
 
-import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.joda.time.LocalDate;
-
 import org.opengovhacknight.parsing.Scrape;
+
 import com.hydrophilik.mwrdCsoScraper.utils.DateTimeUtils;
-import org.opengovhacknight.utils.LogLogger;
 
 public class DailyScraper {
 
@@ -17,7 +15,6 @@ public class DailyScraper {
 			scrape = new Scrape(configFile);
 		}
 		catch (Exception e) {
-			LogLogger.logError(ExceptionUtils.getStackTrace(e));
 			return;
 		}
 		

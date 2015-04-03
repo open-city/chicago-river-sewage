@@ -16,7 +16,6 @@ import org.joda.time.DateTime;
 import org.opengovhacknight.parsing.CsoEvent;
 import com.hydrophilik.mwrdCsoScraper.utils.DateTimeUtils;
 import com.hydrophilik.mwrdCsoScraper.utils.FileManager;
-import org.opengovhacknight.utils.LogLogger;
 
 public class SnapshotToSqlite {
 	
@@ -46,7 +45,7 @@ public class SnapshotToSqlite {
 			System.out.println("Ending  " + (new DateTime(DateTimeUtils.chiTimeZone)).toString());
 		}
 		catch (Exception e) {
-			LogLogger.logError(ExceptionUtils.getStackTrace(e));
+			e.printStackTrace();
 			return;
 		}
 		finally {
@@ -54,7 +53,7 @@ public class SnapshotToSqlite {
 
 				System.out.println("Ending finally");
 			}
-			catch (Exception e) {LogLogger.logError(e);}
+			catch (Exception e) {e.printStackTrace();}
 		}
 	}
 	
@@ -97,7 +96,7 @@ public class SnapshotToSqlite {
 			}
 		}
 		catch (Exception e) {
-			LogLogger.logError(e);
+			e.printStackTrace();
 		}
 		finally {
 			try {
@@ -106,7 +105,7 @@ public class SnapshotToSqlite {
 				if (null != stmt) {
 					stmt.close();
 				}
-			} catch (Exception e) {LogLogger.logError(e);}
+			} catch (Exception e) {e.printStackTrace();}
 		}
 		
 	}

@@ -5,7 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import org.opengovhacknight.parsing.CsoEvent;
-import org.opengovhacknight.utils.LogLogger;
 
 import java.sql.Connection;
 import java.util.ArrayList;
@@ -15,13 +14,14 @@ public class DbConnection {
 	
 	Connection connection = null;
 	
-	public DbConnection(String databasePath) {
+	public DbConnection(String databasePath) throws Exception {
 		try {
 			Class.forName("org.sqlite.JDBC");
 			connection = DriverManager.getConnection("jdbc:sqlite:" + databasePath);
 		}
 		catch (Exception e) {
 			releaseConnection();
+			throw e;
 		}
 	}
 	
@@ -41,7 +41,7 @@ public class DbConnection {
 		      preparedStatement.executeUpdate();
 	      }
 	      catch (Exception e) {
-	    	  LogLogger.logError(e);
+	    	  e.printStackTrace();
 	      }
 	      finally {
 	    	  try {preparedStatement.close();} catch(Exception e) {}
@@ -77,7 +77,7 @@ public class DbConnection {
 			return retVal;
 		}
 		catch (Exception e) {
-			LogLogger.logError(e);
+			e.printStackTrace();
 			return null;
 		}
 		finally {

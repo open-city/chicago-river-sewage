@@ -1,7 +1,5 @@
 package com.hydrophilik.mwrdCsoScraper.utils;
 
-import org.opengovhacknight.utils.LogLogger;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -38,7 +36,7 @@ public class FileManager {
  
  
 		} catch (IOException e) {
-			LogLogger.logError(e);
+			e.printStackTrace();
 			return null;
 		} finally {
 			try {

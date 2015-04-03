@@ -17,8 +17,9 @@ public class Scrape {
 
     public static String mwrdWebPrefix = "http://apps.mwrd.org/CSO/CSOEventSynopsisReport.aspx?passdate=";
 
-    public Scrape(String dbLocation) {
-        dbConn = new DbConnection(dbLocation);
+    public Scrape(String pathtoDatabase) throws Exception {
+    	
+        dbConn = new DbConnection(pathtoDatabase);
     }
 
     public static DbConnection getDbConn() {
