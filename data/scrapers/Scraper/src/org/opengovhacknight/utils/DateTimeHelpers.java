@@ -2,6 +2,7 @@ package org.opengovhacknight.utils;
 
 import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
+import org.joda.time.LocalTime;
 
 public abstract class DateTimeHelpers {
 
@@ -73,5 +74,10 @@ public abstract class DateTimeHelpers {
         return false;
 
     }
+    
+	public static String getTimeAsHoursMins(LocalTime localTime) {
+		String [] timeArray = localTime.toString().split(":");
+		return timeArray[0] + ":" + timeArray[1];
+	}
 
 }

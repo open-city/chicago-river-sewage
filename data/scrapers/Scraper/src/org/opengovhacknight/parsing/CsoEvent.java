@@ -1,8 +1,7 @@
 package org.opengovhacknight.parsing;
 
 import org.joda.time.DateTime;
-
-import com.hydrophilik.mwrdCsoScraper.utils.DateTimeUtils;
+import org.opengovhacknight.utils.DateTimeHelpers;
 
 public class CsoEvent {
 	
@@ -28,8 +27,8 @@ public class CsoEvent {
 			String outfallLocation, int waterwaySegment) {
 		this.id = id;
 		
-		this.startTime = DateTimeUtils.createDateTime(date, startTime);
-		this.endTime = DateTimeUtils.createDateTime(date, endTime);
+		this.startTime = DateTimeHelpers.createDateTime(date, startTime);
+		this.endTime = DateTimeHelpers.createDateTime(date, endTime);
 
 		this.outfallLocation = outfallLocation;
 		this.waterwaySegment = waterwaySegment;
@@ -47,33 +46,19 @@ public class CsoEvent {
 		String secondsBetweenStartAndEnd = Long.toString(millisBetweenStartAndEnd / 60000);
 
 		return outfallLocation + ";" + waterwaySegment + ";" + startTime.toLocalDate().toString() +
-				";" + DateTimeUtils.getTimeAsHoursMins(startTime.toLocalTime()) + ";" +
-				DateTimeUtils.getTimeAsHoursMins(endTime.toLocalTime()) + ";" +
+				";" + DateTimeHelpers.getTimeAsHoursMins(startTime.toLocalTime()) + ";" +
+				DateTimeHelpers.getTimeAsHoursMins(endTime.toLocalTime()) + ";" +
 				secondsBetweenStartAndEnd;
 	}
 
-/*
-	public String getSqlInsert() {
-		long millisBetweenStartAndEnd = endTime.getMillis() - startTime.getMillis();
-		String secondsBetweenStartAndEnd = Long.toString(millisBetweenStartAndEnd / 60000);
-
-		return "INSERT INTO CsoEvents (id,OutfallLocation,WaterwaySegment,Date,StartTime,EndTime,Duration) " +
-				"VALUES (NULL, '" + outfallLocation +
-				"'," + waterwaySegment + ",'" + startTime.toLocalDate().toString() + "','" + DateTimeUtils.getTimeAsHoursMins(startTime.toLocalTime()) +
-				"','" + DateTimeUtils.getTimeAsHoursMins(endTime.toLocalTime()) + "'," +
-				secondsBetweenStartAndEnd + ")";
-
-	}
-*/
-	
 	public String getSqlInsertSqlite() {
 		long millisBetweenStartAndEnd = endTime.getMillis() - startTime.getMillis();
 		String secondsBetweenStartAndEnd = Long.toString(millisBetweenStartAndEnd / 60000);
 
 		return "INSERT INTO CSOs (id,Location,Segment,Date,StartTime,EndTime,Duration) " +
 				"VALUES (NULL, '" + outfallLocation +
-				"'," + waterwaySegment + ",'" + startTime.toLocalDate().toString() + "','" + DateTimeUtils.getTimeAsHoursMins(startTime.toLocalTime()) +
-				"','" + DateTimeUtils.getTimeAsHoursMins(endTime.toLocalTime()) + "'," +
+				"'," + waterwaySegment + ",'" + startTime.toLocalDate().toString() + "','" + DateTimeHelpers.getTimeAsHoursMins(startTime.toLocalTime()) +
+				"','" + DateTimeHelpers.getTimeAsHoursMins(endTime.toLocalTime()) + "'," +
 				secondsBetweenStartAndEnd + ")";
 
 	}
