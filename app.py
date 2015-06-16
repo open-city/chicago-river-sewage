@@ -171,7 +171,7 @@ def cso_status():
       water_page = requests.get('http://apps.mwrd.org/CSO/cso_quick_view.aspx')
       if water_page.status_code is 200:
         water_resp = {'date': lookup_date.strftime('%m/%d/%Y')}
-        water_segments = set(re.findall('images\/(\d+).GIF"', water_page.content))
+        water_segments = set(re.findall('images\/(\d+).(?:GIF|gif)"', water_page.content))
       else: 
         resp = make_response(json.dumps({'status': 'error', 'message': 'Something went wrong while performing your query. Try again'}), 500)
       
