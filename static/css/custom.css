@@ -120,3 +120,5 @@ body {
 }
 
 .riverways, .locations { width: 37%;}
+
+#cso-chart { height: 250px;}

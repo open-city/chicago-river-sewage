@@ -242,7 +242,20 @@ def history():
                 .group_by(CSOEvent.date)\
                 .order_by(CSOEvent.date.desc()).all()
 
-    return render_app_template('history.html', cso_dates=cso_dates)
+    csos_by_month = db.session.query(func.strftime('%Y-%m', CSOEvent.date),
+                    func.count(distinct(CSOEvent.date)))\
+                    .group_by(func.strftime('%Y-%m-1', CSOEvent.date))\
+                    .order_by(CSOEvent.date.desc()).all()
+
+    chart_data =  [[d[1], 
+                    d[0].split('-')[0],
+                    d[0].split('-')[1],
+                    1]
+                    for d in csos_by_month ]
+
+    print chart_data
+
+    return render_app_template('history.html', cso_dates=cso_dates, chart_data=chart_data)
 
 @app.route('/espanol/')
 def index_es():

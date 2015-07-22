@@ -9,6 +9,8 @@
 
   <p>These occurrences are referred to as <strong>combined sewer overflow</strong> events, or CSOs.</p>
 
+  <div id="cso-chart"></div>
+
   <table class='table listing' id='history'>
     <thead>
       <tr>
@@ -36,6 +38,9 @@
   <script src="/static/js/jquery.dataTables.sorting.js"></script>
   <script src="/static/js/listing.bars.js"></script>
   <script src="/static/js/jquery.stickytableheaders.min.js"></script>
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+  <script src="/static/js/moment.min.js"></script>
+  <script src="/static/js/chart_helper.js"></script>
 
   <script>
     setBarWidthByNumber('riverways');
@@ -52,5 +57,16 @@
         "bPaginate": false,
         "bFilter": false
     }).stickyTableHeaders();
+
+    var csos = {{ chart_data|tojson|safe }}
+    var csos_f = [];
+
+    for (i = 0; i < csos.length; i++) {
+        csos_f.push([Date.UTC(csos[i][1],csos[i][2]-1,csos[i][3]), csos[i][0]]);
+    }
+
+    ChartHelper.donations('cso-chart', 'Combined Sewer Overflows', '', 'Combined Sewer Overflows', csos_f);
+
+
   </script>
 {% endblock %}
