@@ -85,7 +85,7 @@ def make_cache_key(*args, **kwargs):
     path = request.path
     args = str(hash(frozenset(request.args.items())))
     # print 'cache_key:', (path+args)
-    print (path + args).encode('utf-8')
+    print(  (path + args).encode('utf-8') )
     return (path + args).encode('utf-8')
 
 def get_waterway_segment(segment):
@@ -256,7 +256,7 @@ def index_es():
         if request_date.strftime("%m/%d/%Y") != today.strftime("%m/%d/%Y"):
           today_flag = False
     except ValueError:
-        print "Error parsing date", request_date
+        print(  "Error parsing date", request_date )
         request_date = today
 
     return render_app_template('index.es.html', date=request_date, today_flag=today_flag, day_count=get_day_count())
@@ -273,7 +273,7 @@ def index():
         if request_date.strftime("%m/%d/%Y") != today.strftime("%m/%d/%Y"):
           today_flag = False
     except ValueError:
-        print "Error parsing date", request_date
+        print(  "Error parsing date", request_date )
         request_date = today
 
     return render_app_template('index.html', date=request_date, today_flag=today_flag, day_count=get_day_count())
