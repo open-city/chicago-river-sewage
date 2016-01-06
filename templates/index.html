@@ -156,7 +156,6 @@ http://istheresewageinthechicagoriver.com/csos-by-waterway/
       if (featureCollection.features.length > 0) {
         $('#map-info').slideDown();
         init_map();
-        console.log(featureCollection);
         var geojson = L.geoJson(featureCollection, {
           pointToLayer: function(feature, latlng){
             return L.circleMarker(latlng, {
@@ -171,7 +170,17 @@ http://istheresewageinthechicagoriver.com/csos-by-waterway/
           var popup = "<h4>" + layer.feature.properties['WATERWAY_REACH'] + "</h4>\
                       <p>" + layer.feature.properties['LOCATION'] + "</p>";
           layer.bindPopup(popup);
+
+          //cross check WATERWAY_REACH against riverway segments and display geojson
+
+          //add waterways to display table
         })
+
+        map.whenReady(function () {
+            window.setTimeout(function () {
+                map.fitBounds(geojson.getBounds(), {padding: [25,25], maxZoom: 12});
+            }.bind(this), 200);
+        }, this);
       }
       else {
         display_empty();
