@@ -34,6 +34,18 @@
       <tbody>
       </tbody>
     </table>
+
+    <table class='table' id='location-list'>
+      <thead>
+        <tr>
+          <th>Location</th>
+          <th>River segment</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
     <hr />
     <p>Read the official reports from the Metropolitan Water Reclamation District:</p>
     <ul id='report-link'></ul>
@@ -141,11 +153,8 @@ http://istheresewageinthechicagoriver.com/csos-by-waterway/
     $("#history-teaser").html("<br /><p>But sewage overflow has occurred on <strong>{{day_count}} days</strong> since 2007. <a href='/history/'>See when &raquo;</a></p>")
   }
   
-
   {% if today_flag %}
     // do it the new ESRI way
-    
-
     var outfalls = L.esri.featureLayer({
       url: "http://utility.arcgis.com/usrsvcs/servers/6b8c99dc28b34d5399f59e480951655a/rest/services/CSO/CSO_Final/MapServer/0",
       style: function () {
@@ -155,6 +164,7 @@ http://istheresewageinthechicagoriver.com/csos-by-waterway/
     outfalls.query().where("CSO_EVENT='Yes'").run(function(error, featureCollection){
       if (featureCollection.features.length > 0) {
         $('#map-info').slideDown();
+        $('#riverway-list').hide();
         init_map();
         var geojson = L.geoJson(featureCollection, {
           pointToLayer: function(feature, latlng){
@@ -166,6 +176,8 @@ http://istheresewageinthechicagoriver.com/csos-by-waterway/
                         opacity: 1 });
           }
         }).addTo(map);
+
+        var total_locations = 0;
         geojson.eachLayer(function(layer){
           var popup = "<h4>" + layer.feature.properties['WATERWAY_REACH'] + "</h4>\
                       <p>" + layer.feature.properties['LOCATION'] + "</p>";
@@ -174,7 +186,20 @@ http://istheresewageinthechicagoriver.com/csos-by-waterway/
           //cross check WATERWAY_REACH against riverway segments and display geojson
 
           //add waterways to display table
+          total_locations += 1;
+          $('#location-list tbody').append("<tr>\
+            <td>" + layer.feature.properties['LOCATION'] + "</td>\
+            <td>" + layer.feature.properties['WATERWAY_REACH'] + "</td>\
+            </tr>");
         })
+
+        var suffix = 'locations';
+        if (total_locations == 1)
+          suffix = 'location';
+
+        $("#the-answer").html("<span class='label label-warning'>Yes, in " + total_locations + " " + suffix + "</span>");
+
+        $("#report-link").append("<li><i class='icon-file-text'></i> <a href='http://apps.mwrd.org/CSO/CSOEventSynopsisReport.aspx?passdate=" + current_date + "'>Event Synopsis Report</a></li><li><i class='icon-map-marker'></i> <a href='http://apps.mwrd.org/CSO/display_all.aspx?link_date=" + current_date + "'>Combined Sewer Overflows map</a></li>")
 
         map.whenReady(function () {
             window.setTimeout(function () {
@@ -194,7 +219,7 @@ http://istheresewageinthechicagoriver.com/csos-by-waterway/
       if (data['is-there-sewage'] == 'yes') {
 
         $('#map-info').slideDown();
-
+        $('#location-list').hide();
         var suffix = 'river segments';
         if (data['cso-events'].length == 1)
           suffix = 'river segment';

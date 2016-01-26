@@ -57,6 +57,18 @@
             <tbody>
             </tbody>
           </table>
+
+          <table class='table' id='location-list'>
+            <thead>
+              <tr>
+                <th>Localización</th>
+                <th>Secciónes del rio</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+
           <hr />
           <p>Lea los reportes officiales del Metropolitan Water Reclamation District:</p>
           <ul id='report-link'></ul>
@@ -138,59 +150,133 @@
 
     <script src="/static/js/moment.min.js"></script>
 
-    <script src="/static/js/leaflet.js?1"></script>
-    <script src="/static/js/leaflet.label.js?1"></script>
+    <script src="http://cdn.leafletjs.com/leaflet-1.0.0-b1/leaflet.js"></script>
+    <script src="http://cdn.jsdelivr.net/leaflet.esri/2.0.0-beta.5/esri-leaflet.js"></script>
 
     <script>
+
       var current_date = moment("{{date.strftime('%m/%d/%Y')}}").format("M/D/YYYY");
+      var map;
 
-      $.when( $.getJSON("/cso-status/?date={{date.strftime('%m/%d/%Y')}}") ).then(function( data, textStatus, jqXHR ) {
+      function init_map(){
+        // render a map!
+        map = L.map('map', { scrollWheelZoom: false }).setView([41.82, -87.7], 10);
 
-        if (data['is-there-sewage'] == 'yes') {
+        L.tileLayer('https://{s}.tiles.mapbox.com/v3/derekeder.hehblhbj/{z}/{x}/{y}.png', {
+            attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
+        }).addTo(map);
+      }
 
-          $('#map-info').slideDown();
-
-          var suffix = 'secciónes del rio';
-          if (data['cso-events'].length == 1)
-            suffix = 'sección del rio';
-
-          $("#the-answer").html("<span class='label label-warning'>Sí, en " + data['cso-events'].length + " " + suffix + "</span>");
-
-          $("#report-link").append("<li><i class='icon-file-text'></i> <a href='http://apps.mwrd.org/CSO/CSOEventSynopsisReport.aspx?passdate=" + current_date + "'>Event Synopsis Report</a></li><li><i class='icon-map-marker'></i> <a href='http://apps.mwrd.org/CSO/display_all.aspx?link_date=" + current_date + "'>Combined Sewer Overflows map</a></li>")
-
-          for (var i = 0; i < data['cso-events'].length; i++) {
-            $('#riverway-list tbody').append("<tr>\
-              <td>" + data['cso-events'][i]['riverway'] + "</td>\
-              <td>" + data['cso-events'][i]['description'] + "</td>\
-              </tr>");
+      function display_empty(){
+        $("#the-answer").html("<span class='label label-success'>No</span>");
+        $("#history-teaser").html("<br /><p>But sewage overflow has occurred on <strong>{{day_count}} days</strong> since 2007. <a href='/history/'>See when &raquo;</a></p>")
+      }
+      
+      {% if today_flag %}
+        // do it the new ESRI way
+        var outfalls = L.esri.featureLayer({
+          url: "http://utility.arcgis.com/usrsvcs/servers/6b8c99dc28b34d5399f59e480951655a/rest/services/CSO/CSO_Final/MapServer/0",
+          style: function () {
+            return { color: "#70ca49", weight: 2 };
           }
+        });
+        outfalls.query().where("CSO_EVENT='Yes'").run(function(error, featureCollection){
+          if (featureCollection.features.length > 0) {
+            $('#map-info').slideDown();
+            $('#riverway-list').hide();
+            init_map();
+            var geojson = L.geoJson(featureCollection, {
+              pointToLayer: function(feature, latlng){
+                return L.circleMarker(latlng, {
+                            color: '#d8b365', 
+                            fillColor: '#d8b365',
+                            radius: 8,
+                            weight: 2,
+                            opacity: 1 });
+              }
+            }).addTo(map);
 
-          // render a map!
-          var map = L.map('map', { scrollWheelZoom: false }).setView([41.82, -87.7], 10);
+            var total_locations = 0;
+            geojson.eachLayer(function(layer){
+              var popup = "<h4>" + layer.feature.properties['WATERWAY_REACH'] + "</h4>\
+                          <p>" + layer.feature.properties['LOCATION'] + "</p>";
+              layer.bindPopup(popup);
 
-          L.tileLayer('https://{s}.tiles.mapbox.com/v3/derekeder.hehblhbj/{z}/{x}/{y}.png', {
-              attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
-          }).addTo(map);
+              //cross check WATERWAY_REACH against riverway segments and display geojson
 
-          var geojson = L.geoJson(data['riverway-geojson'], 
-            {style: { weight: 3, opacity: 1, color: '#f39c12' }}).addTo(map);
-          map.whenReady(function () {
-              window.setTimeout(function () {
-                  map.fitBounds(geojson.getBounds(), {padding: [25,25], maxZoom: 12});
-              }.bind(this), 200);
-          }, this);
+              //add waterways to display table
+              total_locations += 1;
+              $('#location-list tbody').append("<tr>\
+                <td>" + layer.feature.properties['LOCATION'] + "</td>\
+                <td>" + layer.feature.properties['WATERWAY_REACH'] + "</td>\
+                </tr>");
+            })
 
-          geojson.eachLayer(function (layer) {
-            var popup = "<h4>" + layer.feature.properties['riverway'] + "</h4>\
-                        <p>" + layer.feature.properties['description'] + "</p>";
-            layer.bindLabel(popup);
-          });
-        }
-        else {
-          $("#the-answer").html("<span class='label label-success'>No</span>");
-          $("#history-teaser").html("<br /><p>Pero han pasado <strong>{{day_count}} días</strong> desde 2007. <a href='/history/'>Vea cuando &raquo;</a></p>")
-        }
-      });
+            var suffix = 'lugares';
+            if (total_locations == 1)
+              suffix = 'lugar';
+
+            $("#the-answer").html("<span class='label label-warning'>Sí, en " + total_locations + " " + suffix + "</span>");
+
+            $("#report-link").append("<li><i class='icon-file-text'></i> <a href='http://apps.mwrd.org/CSO/CSOEventSynopsisReport.aspx?passdate=" + current_date + "'>Event Synopsis Report</a></li><li><i class='icon-map-marker'></i> <a href='http://apps.mwrd.org/CSO/display_all.aspx?link_date=" + current_date + "'>Combined Sewer Overflows map</a></li>")
+
+            map.whenReady(function () {
+                window.setTimeout(function () {
+                    map.fitBounds(geojson.getBounds(), {padding: [25,25], maxZoom: 12});
+                }.bind(this), 200);
+            }, this);
+          }
+          else {
+            display_empty();
+          }
+        })
+
+      {% else %}
+        
+        $.when( $.getJSON("/cso-status/?date={{date.strftime('%m/%d/%Y')}}") ).then(function( data, textStatus, jqXHR ) {
+
+          if (data['is-there-sewage'] == 'yes') {
+
+            $('#map-info').slideDown();
+            $('#location-list').hide();
+            var suffix = 'river segments';
+            if (data['cso-events'].length == 1)
+              suffix = 'river segment';
+
+            $("#the-answer").html("<span class='label label-warning'>Yes, in " + data['cso-events'].length + " " + suffix + "</span>");
+
+            $("#report-link").append("<li><i class='icon-file-text'></i> <a href='http://apps.mwrd.org/CSO/CSOEventSynopsisReport.aspx?passdate=" + current_date + "'>Event Synopsis Report</a></li><li><i class='icon-map-marker'></i> <a href='http://apps.mwrd.org/CSO/display_all.aspx?link_date=" + current_date + "'>Combined Sewer Overflows map</a></li>")
+
+            for (var i = 0; i < data['cso-events'].length; i++) {
+              $('#riverway-list tbody').append("<tr>\
+                <td>" + data['cso-events'][i]['riverway'] + "</td>\
+                <td>" + data['cso-events'][i]['description'] + "</td>\
+                </tr>");
+            }
+
+            // render a map!
+            init_map();
+
+            var geojson = L.geoJson(data['riverway-geojson'],
+              {style: { weight: 3, opacity: 1, color: '#f39c12' }}).addTo(map);
+
+            map.whenReady(function () {
+                window.setTimeout(function () {
+                    map.fitBounds(geojson.getBounds(), {padding: [25,25], maxZoom: 12});
+                }.bind(this), 200);
+            }, this);
+
+            geojson.eachLayer(function (layer) {
+              var popup = "<h4>" + layer.feature.properties['riverway'] + "</h4>\
+                          <p>" + layer.feature.properties['description'] + "</p>";
+              // layer.bindLabel(popup);
+            });
+          }
+          else {
+           display_empty();
+          }
+        });
+      {% endif %}
     </script>
 
   </body>

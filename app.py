@@ -20,6 +20,35 @@ cache = Cache(config={'CACHE_TYPE': 'simple'})
 cache.init_app(app)
 CACHE_TIMEOUT = 60*5 # 5 minutes
 
+WATERWAY_SEGMENTS = [
+    {"segment": 1 , "waterway": "NSC Upper (NSWRP)", "riverway": "North Shore Channel", "description": "Lake Michigan to North Side Water Reclamation Plant"},
+    {"segment": 2 , "waterway": "NSC Lower (NSWRP)", "riverway": "North Shore Channel", "description": "North Side Water Reclamation Plant to the confluence with the North Branch of the Chicago River"},
+    {"segment": 3 , "waterway": "NBCR Lower (NSC Confluence)", "riverway": "North Branch of Chicago River", "description": "Confluence with the North Shore Channel to Wolf Point"},
+    {"segment": 4 , "waterway": "NBCR Upper (NSC Confluence)", "riverway": "North Branch of Chicago River", "description": "Beckwith Road and West Fork to confluence with the North Shore Channel"},
+    {"segment": 5 , "waterway": "Chicago R", "riverway": "Chicago River", "description": "Wolf Point to Chicago River Controlling Works"},
+    {"segment": 6 , "waterway": "SB Chicago R", "riverway": "South Branch of Chicago River", "description": "Wolf Point to Damen Avenue"},
+    {"segment": 7 , "waterway": "SF SB Chicago R", "riverway": "South Fork of SBCR (Bubbly Creek)", "description": ""},
+    {"segment": 8 , "waterway": "CSSC Upper (SWRP)", "riverway": "Chicago Sanitary and Ship Canal", "description": "Damen Avenue to the Stickney Water Reclamation Plant"},
+    {"segment": 9 , "waterway": "CSSC Lower (SWRP)", "riverway": "Chicago Sanitary and Ship Canal", "description": "Stickney Water Reclamation Plant to the confluence with the Calumet-Sag Channel"},
+    {"segment": 10, "waterway": "CSSC Lower (SWRP)", "riverway": "Chicago Sanitary and Ship Canal", "description": "From the confluence with the Calumet-Sag Channel to the Lemont Water Reclamation Plant"},
+    {"segment": 11, "waterway": "CSSC Lower (SWRP)", "riverway": "Chicago Sanitary and Ship Canal", "description": "Lemont Water Reclamation Plant to Lockport Lock & Dam"},
+    {"segment": 12, "waterway": "Weller Cr", "riverway": "Weller Creek", "description": ""},
+    {"segment": 13, "waterway": "DesPlaines Upper", "riverway": "Des Plaines River", "description": "Weller Creek to Willow-Higgins Creek"},
+    {"segment": 14, "waterway": "DesPlaines Middle", "riverway": "Des Plaines River", "description": "Willow-Higgins Creek to the confluence with Salt Creek"},
+    {"segment": 15, "waterway": "DesPlaines Lower", "riverway": "Des Plaines River", "description": "The confluence with Salt Creek to the confluence with the CSSC"},
+    {"segment": 16, "waterway": "Salt Cr", "riverway": "Salt Creek", "description": "From Addison Creek to the confluence with the Des Plaines River"},
+    {"segment": 17, "waterway": "Cal R", "riverway": "Calumet River", "description": "O'Brien Locks to Lake Michigan"},
+    {"segment": 18, "waterway": "Grand Cal R", "riverway": "Grand Calumet River", "description": "From confluence with the Little Calumet River to the Indiana state line"},
+    {"segment": 19, "waterway": "Little Cal R (North)", "riverway": "Little Calumet River", "description": "O'Brien Locks to the Calumet-Sag Channel"},
+    {"segment": 20, "waterway": "Little Cal R (South)", "riverway": "Little Calumet River", "description": "Indiana state line to the Calumet-Sag Channel"},
+    {"segment": 21, "waterway": "Cal Sag Ch", "riverway": "Calumet-Sag Channel", "description": ""},
+    {"segment": 22, "waterway": "Cal Union drainage Ditch", "riverway": "Calumet Union Drainage Ditch", "description": ""},
+    {"segment": 23, "waterway": "Addison Cr", "riverway": "Addison Creek", "description": ""},
+    {"segment": 30, "waterway": "", "riverway": "Wilmette", "description": "Discharge to Lake Michigan"},
+    {"segment": 31, "waterway": "", "riverway": "Chicago River Controlling Works", "description": "Discharge to Lake Michigan"},
+    {"segment": 32, "waterway": "", "riverway": "O'Brien", "description": "Discharge to Lake Michigan"},
+]
+
 class CSOEvent(db.Model):
     __tablename__ = 'CSOs'
     __table_args__ = (db.UniqueConstraint('location', 'date', 'starttime'),)
@@ -89,36 +118,7 @@ def make_cache_key(*args, **kwargs):
     return (path + args).encode('utf-8')
 
 def get_waterway_segment(segment):
-  waterway_segments = [
-    {"segment": 1 , "waterway": "NSC Upper (NSWRP)", "riverway": "North Shore Channel", "description": "Lake Michigan to North Side Water Reclamation Plant"},
-    {"segment": 2 , "waterway": "NSC Lower (NSWRP)", "riverway": "North Shore Channel", "description": "North Side Water Reclamation Plant to the confluence with the North Branch of the Chicago River"},
-    {"segment": 3 , "waterway": "NBCR Lower (NSC Confluence)", "riverway": "North Branch of Chicago River", "description": "Confluence with the North Shore Channel to Wolf Point"},
-    {"segment": 4 , "waterway": "NBCR Upper (NSC Confluence)", "riverway": "North Branch of Chicago River", "description": "Beckwith Road and West Fork to confluence with the North Shore Channel"},
-    {"segment": 5 , "waterway": "Chicago R", "riverway": "Chicago River", "description": "Wolf Point to Chicago River Controlling Works"},
-    {"segment": 6 , "waterway": "SB Chicago R", "riverway": "South Branch of Chicago River", "description": "Wolf Point to Damen Avenue"},
-    {"segment": 7 , "waterway": "SF SB Chicago R", "riverway": "South Fork of SBCR (Bubbly Creek)", "description": ""},
-    {"segment": 8 , "waterway": "CSSC Upper (SWRP)", "riverway": "Chicago Sanitary and Ship Canal", "description": "Damen Avenue to the Stickney Water Reclamation Plant"},
-    {"segment": 9 , "waterway": "CSSC Lower (SWRP)", "riverway": "Chicago Sanitary and Ship Canal", "description": "Stickney Water Reclamation Plant to the confluence with the Calumet-Sag Channel"},
-    {"segment": 10, "waterway": "CSSC Lower (SWRP)", "riverway": "Chicago Sanitary and Ship Canal", "description": "From the confluence with the Calumet-Sag Channel to the Lemont Water Reclamation Plant"},
-    {"segment": 11, "waterway": "CSSC Lower (SWRP)", "riverway": "Chicago Sanitary and Ship Canal", "description": "Lemont Water Reclamation Plant to Lockport Lock & Dam"},
-    {"segment": 12, "waterway": "Weller Cr", "riverway": "Weller Creek", "description": ""},
-    {"segment": 13, "waterway": "DesPlaines Upper", "riverway": "Des Plaines River", "description": "Weller Creek to Willow-Higgins Creek"},
-    {"segment": 14, "waterway": "DesPlaines Middle", "riverway": "Des Plaines River", "description": "Willow-Higgins Creek to the confluence with Salt Creek"},
-    {"segment": 15, "waterway": "DesPlaines Lower", "riverway": "Des Plaines River", "description": "The confluence with Salt Creek to the confluence with the CSSC"},
-    {"segment": 16, "waterway": "Salt Cr", "riverway": "Salt Creek", "description": "From Addison Creek to the confluence with the Des Plaines River"},
-    {"segment": 17, "waterway": "Cal R", "riverway": "Calumet River", "description": "O'Brien Locks to Lake Michigan"},
-    {"segment": 18, "waterway": "Grand Cal R", "riverway": "Grand Calumet River", "description": "From confluence with the Little Calumet River to the Indiana state line"},
-    {"segment": 19, "waterway": "Little Cal R (North)", "riverway": "Little Calumet River", "description": "O'Brien Locks to the Calumet-Sag Channel"},
-    {"segment": 20, "waterway": "Little Cal R (South)", "riverway": "Little Calumet River", "description": "Indiana state line to the Calumet-Sag Channel"},
-    {"segment": 21, "waterway": "Cal Sag Ch", "riverway": "Calumet-Sag Channel", "description": ""},
-    {"segment": 22, "waterway": "Cal Union drainage Ditch", "riverway": "Calumet Union Drainage Ditch", "description": ""},
-    {"segment": 23, "waterway": "Addison Cr", "riverway": "Addison Creek", "description": ""},
-    {"segment": 30, "waterway": "", "riverway": "Wilmette", "description": "Discharge to Lake Michigan"},
-    {"segment": 31, "waterway": "", "riverway": "Chicago River Controlling Works", "description": "Discharge to Lake Michigan"},
-    {"segment": 32, "waterway": "", "riverway": "O'Brien", "description": "Discharge to Lake Michigan"},
-  ]
-
-  return [s for s in waterway_segments if s['segment'] == segment][0]
+  return [s for s in WATERWAY_SEGMENTS if s['segment'] == segment][0]
 
 def get_riverway_geojson(segments):
   chicago_riverways = json.load(open('static/data/chicago_riverways.json', 'rb'))
