@@ -138,6 +138,7 @@ http://istheresewageinthechicagoriver.com/csos-by-waterway/
 
   var current_date = moment("{{date.strftime('%m/%d/%Y')}}").format("M/D/YYYY");
   var map;
+  var waterway_segments = {{waterway_segments|tojson|safe}};
 
   function init_map(){
     // render a map!
@@ -171,7 +172,7 @@ http://istheresewageinthechicagoriver.com/csos-by-waterway/
             return L.circleMarker(latlng, {
                         color: '#d8b365', 
                         fillColor: '#d8b365',
-                        radius: 8,
+                        radius: 10,
                         weight: 2,
                         opacity: 1 });
           }

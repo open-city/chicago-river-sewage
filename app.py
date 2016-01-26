@@ -276,7 +276,7 @@ def index():
         print(  "Error parsing date", request_date )
         request_date = today
 
-    return render_app_template('index.html', date=request_date, today_flag=today_flag, day_count=get_day_count())
+    return render_app_template('index.html', date=request_date, today_flag=today_flag, day_count=get_day_count(), waterway_segments=get_riverway_geojson(WATERWAY_SEGMENTS))
 
 # UTILITY
 def render_app_template(template, **kwargs):
