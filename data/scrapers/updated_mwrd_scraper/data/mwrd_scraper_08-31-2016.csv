@@ -4,71 +4,27 @@ CDS-C-1,South Park Ave (S),TG02,Little Cal R (South),Calumet,8/20/2016 10:04:00 
 DS-D05,Riverside Dr. near Sibley Ave. (E),TG2,DesPlaines Upper,Stickney,7/23/2016 10:28:17 PM,7/23/2016 10:57:21 PM,:00:29:04
 DS-D05,Riverside Dr. near Sibley Ave. (E),TG2,DesPlaines Upper,Stickney,7/21/2016 9:12:01 PM,7/21/2016 9:32:09 PM,:00:20:08
 DS-D05,Riverside Dr. near Sibley Ave. (E),TG2,DesPlaines Upper,Stickney,6/22/2016 8:33:33 PM,6/22/2016 9:09:13 PM,:00:35:40
-DS-D06,Touhy Ave (E),TG1,DesPlaines Upper,Stickney,5/13/2016 8:46:05 PM,5/14/2016 1:42:09 AM,:04:56:04
-DS-D06,Touhy Ave (E),TG1,DesPlaines Upper,Stickney,5/12/2016 3:06:05 AM,5/12/2016 5:25:13 AM,:02:19:08
-DS-D07,Devon Ave (E),TG3,DesPlaines Upper,Stickney,5/13/2016 10:15:37 PM,5/13/2016 11:32:21 PM,:01:16:44
-DS-D07,Devon Ave (E),TG2,DesPlaines Upper,Stickney,5/13/2016 10:12:17 PM,5/14/2016 1:42:49 AM,:03:30:32
-DS-D07,South Devon Ave. & E. River Road (E),TG1,DesPlaines Upper,Stickney,5/13/2016 10:12:17 PM,5/14/2016 2:22:29 AM,:04:10:12
-DS-D07,Devon Ave (E),TG3,DesPlaines Upper,Stickney,5/12/2016 3:09:13 AM,5/12/2016 4:35:05 AM,:01:25:52
-DS-D07,Devon Ave (E),TG2,DesPlaines Upper,Stickney,5/12/2016 3:08:17 AM,5/12/2016 5:32:29 AM,:02:24:12
-DS-D07,South Devon Ave. & E. River Road (E),TG1,DesPlaines Upper,Stickney,5/12/2016 3:07:21 AM,5/12/2016 6:28:01 AM,:03:20:40
-DS-D09,Foster Ave (N),TG2,DesPlaines Middle,Stickney,5/13/2016 10:28:53 PM,5/14/2016 12:52:09 AM,:02:23:16
-DS-D09,Foster Ave (N),TG1,DesPlaines Middle,Stickney,5/13/2016 10:28:17 PM,5/14/2016 1:06:21 AM,:02:38:04
-DS-D09,Foster Ave (N),TG2,DesPlaines Middle,Stickney,5/12/2016 3:17:57 AM,5/12/2016 4:51:33 AM,:01:33:36
-DS-D09,Foster Ave (N),TG1,DesPlaines Middle,Stickney,5/12/2016 3:17:29 AM,5/12/2016 5:14:09 AM,:01:56:40
 DS-D10,Wilson Ave ext. (Wilson & East River Rd) (E),TG1,DesPlaines Middle,Stickney,7/24/2016 6:19:37 PM,7/24/2016 6:49:53 PM,:00:30:16
-DS-D10,Wilson Ave ext. (Wilson & East River Rd) (E),TG1,DesPlaines Middle,Stickney,5/13/2016 9:22:45 PM,5/14/2016 1:08:29 AM,:03:45:44
 DS-D11,Belmont Ave (E),TG1,DesPlaines Middle,Stickney,7/24/2016 7:04:57 PM,7/24/2016 7:50:09 PM,:00:45:12
 DS-D11,Belmont Ave (E),TG1,DesPlaines Middle,Stickney,7/23/2016 7:11:17 PM,7/23/2016 7:51:49 PM,:00:40:32
 DS-D11,Belmont Ave (E),TG1,DesPlaines Middle,Stickney,6/22/2016 8:55:09 PM,6/22/2016 9:48:13 PM,:00:53:04
 DS-D11,Belmont Ave (E),TG1,DesPlaines Middle,Stickney,5/25/2016 6:53:57 PM,5/25/2016 7:46:45 PM,:00:52:48
-DS-D11,Belmont Ave (E),TG1,DesPlaines Middle,Stickney,5/12/2016 3:13:21 AM,5/12/2016 3:50:05 AM,:00:36:44
 DS-D12I,South of Irving Park Rd (W),TG1,DesPlaines Middle,Stickney,6/22/2016 8:41:45 PM,6/22/2016 8:43:49 PM,:00:02:04
-DS-D12I,South of Irving Park Rd (W),TG1,DesPlaines Middle,Stickney,5/13/2016 9:41:25 PM,5/14/2016 1:13:01 AM,:03:31:36
-DS-D13,Robinson Rd (W),TG1,DesPlaines Middle,Stickney,5/13/2016 10:27:37 PM,5/13/2016 11:12:29 PM,:00:44:52
-DS-D13,Robinson Rd (W),TG1,DesPlaines Middle,Stickney,5/12/2016 2:57:13 AM,5/12/2016 5:58:13 AM,:03:01:00
-DS-D15,Franklin St (W),TG1,DesPlaines Middle,Stickney,5/13/2016 11:41:49 PM,5/14/2016 12:24:57 AM,:00:43:08
-DS-D15,Franklin St (W),TG1,DesPlaines Middle,Stickney,5/13/2016 9:56:05 PM,5/13/2016 11:23:53 PM,:01:27:48
-DS-D15,Franklin St (W),TG1,DesPlaines Middle,Stickney,5/12/2016 2:26:33 AM,5/12/2016 5:56:29 AM,:03:29:56
 DS-D16,Grand Ave (W),TG1,DesPlaines Middle,Stickney,6/22/2016 8:26:09 PM,6/22/2016 9:18:09 PM,:00:52:00
 DS-D16,Grand Ave (W),TG1,DesPlaines Middle,Stickney,6/15/2016 2:29:01 AM,6/15/2016 2:58:41 AM,:00:29:40
 DS-D16,Grand Ave (W),TG1,DesPlaines Middle,Stickney,5/25/2016 8:22:05 PM,5/25/2016 10:03:01 PM,:01:40:56
 DS-D16,Grand Ave (W),TG1,DesPlaines Middle,Stickney,5/25/2016 6:18:53 PM,5/25/2016 7:49:51 PM,:01:30:58
 DS-D16,Grand Ave (W),TG1,DesPlaines Middle,Stickney,5/25/2016 5:49:49 PM,5/25/2016 6:13:33 PM,:00:23:44
-DS-D17,Fullerton Ave Ext. (W),TG2,DesPlaines Middle,Stickney,5/12/2016 2:59:21 AM,5/12/2016 3:17:25 AM,:00:18:04
-DS-D17,Herrick Ave (W),TG1,DesPlaines Middle,Stickney,5/12/2016 2:53:29 AM,5/12/2016 3:12:49 AM,:00:19:20
 "DS-D19,23",North Ave (Thatcher Rd) (E),TG1,DesPlaines Middle,Stickney,5/31/2016 1:59:52 PM,6/1/2016 7:53:12 AM,:17:53:20
-"DS-D19,23",North Ave (Thatcher Rd) (E),TG1,DesPlaines Middle,Stickney,5/12/2016 2:37:53 AM,5/12/2016 4:28:05 AM,:01:50:12
-DS-D20I,Lyndale and Palmer Ave (W),TG1,DesPlaines Middle,Stickney,5/12/2016 2:23:29 AM,5/12/2016 3:30:53 AM,:01:07:24
 "DS-D21,25",South Side of Lake St and East of 1st Ave,TG3,DesPlaines Middle,Stickney,6/22/2016 8:47:21 PM,6/22/2016 8:51:01 PM,:00:03:40
-"DS-D21,25",North Side of Lake St. and East of 1st Ave.,TG1,DesPlaines Middle,Stickney,5/12/2016 2:57:49 AM,5/12/2016 3:14:09 AM,:00:16:20
-"DS-D21,25",South Side of Lake St and East of 1st Ave,TG3,DesPlaines Middle,Stickney,5/12/2016 2:56:01 AM,5/12/2016 3:12:11 AM,:00:16:10
-"DS-D21,25",South Side of Lake St and 1st Ave (W),TG2,DesPlaines Middle,Stickney,5/12/2016 2:55:25 AM,5/12/2016 3:26:21 AM,:00:30:56
-DS-D26,Lake St (South of the bridge) (E),TG1,DesPlaines Middle,Stickney,5/12/2016 2:35:53 AM,5/12/2016 4:46:45 AM,:02:10:52
 DS-D27I,1st Ave & Oak St (W),TG2,DesPlaines Middle,Stickney,7/24/2016 7:13:01 PM,7/24/2016 7:30:13 PM,:00:17:12
 DS-D27I,1st Ave & Oak St (W),TG2,DesPlaines Middle,Stickney,7/24/2016 7:07:33 PM,7/24/2016 7:10:51 PM,:00:03:18
 DS-D27I,1st Ave & Oak St (W),TG2,DesPlaines Middle,Stickney,5/26/2016 5:45:45 AM,5/27/2016 7:39:41 AM,:01:53:56
-DS-D27I,1st Ave & Oak St (W),TG2,DesPlaines Middle,Stickney,5/13/2016 11:53:01 PM,5/14/2016 12:27:49 AM,:00:34:48
-DS-D27I,1st Ave & Oak St (W),TG2,DesPlaines Middle,Stickney,5/13/2016 9:05:45 PM,5/13/2016 11:36:53 PM,:02:31:08
-DS-D27I,1st Ave & Oak St (W),TG2,DesPlaines Middle,Stickney,5/12/2016 2:08:25 AM,5/12/2016 10:49:53 AM,:08:41:28
-DS-D27I,1st Ave & Oak St (W),TG2,DesPlaines Middle,Stickney,5/4/2016 2:30:05 AM,5/4/2016 2:33:11 AM,:00:03:06
-DS-D28,Van Buren ext. in Concordia Cemetery (At C&NW Rail Rd) (E),TG1,DesPlaines Middle,Stickney,5/13/2016 8:25:21 PM,5/14/2016 1:18:25 AM,:04:53:04
-DS-D28,Van Buren ext. in Concordia Cemetery (At C&NW Rail Rd) (E),TG1,DesPlaines Middle,Stickney,5/13/2016 7:46:25 PM,5/13/2016 8:18:01 PM,:00:31:36
-DS-D28,Van Buren ext. in Concordia Cemetery (At C&NW Rail Rd) (E),TG1,DesPlaines Middle,Stickney,5/12/2016 12:18:29 PM,5/12/2016 12:38:25 PM,:00:19:56
-DS-D28,Van Buren ext. in Concordia Cemetery (At C&NW Rail Rd) (E),TG1,DesPlaines Middle,Stickney,5/12/2016 2:21:45 AM,5/12/2016 6:21:05 AM,:03:59:20
 DS-D31,Washington Blvd (S of Bridge) (W),TG1,DesPlaines Middle,Stickney,7/24/2016 7:14:21 PM,7/24/2016 7:34:17 PM,:00:19:56
 DS-D31,Washington Blvd (S of Bridge) (W),TG1,DesPlaines Middle,Stickney,7/23/2016 10:25:57 PM,7/23/2016 10:26:41 PM,:00:00:44
-DS-D31,Washington Blvd (S of Bridge) (W),TG1,DesPlaines Middle,Stickney,5/13/2016 9:45:21 PM,5/13/2016 11:14:29 PM,:01:29:08
-DS-D31,Washington Blvd (S of Bridge) (W),TG1,DesPlaines Middle,Stickney,5/12/2016 2:14:21 AM,5/12/2016 7:02:37 AM,:04:48:16
-DS-D31,Washington Blvd (S of Bridge) (W),TG1,DesPlaines Middle,Stickney,5/4/2016 5:14:13 AM,5/4/2016 6:17:29 AM,:01:03:16
-DS-D31,Washington Blvd (S of Bridge) (W),TG1,DesPlaines Middle,Stickney,5/4/2016 5:08:09 AM,5/4/2016 5:11:49 AM,:00:03:40
 DS-D32,Maybrook Dr - C&NW RR (S),TG1,DesPlaines Middle,Stickney,5/26/2016 9:28:33 AM,5/27/2016 7:40:01 AM,:22:11:28
-DS-D32,Maybrook Dr - C&NW RR (S),TG1,DesPlaines Middle,Stickney,5/13/2016 10:21:33 PM,5/14/2016 3:47:41 AM,:05:26:08
-DS-D32,Maybrook Dr - C&NW RR (S),TG1,DesPlaines Middle,Stickney,5/12/2016 2:05:41 AM,5/12/2016 5:23:13 AM,:03:17:32
-DS-D32,Maybrook Dr - C&NW RR (S),TG1,DesPlaines Middle,Stickney,5/4/2016 3:38:53 AM,5/4/2016 3:42:41 AM,:00:03:48
 DS-D33,1st Ave & Roosevelt Rd (W),TG1,DesPlaines Middle,Stickney,7/24/2016 7:44:49 PM,7/24/2016 8:06:41 PM,:00:21:52
 DS-D33,1st Ave & Roosevelt Rd (W),TG1,DesPlaines Middle,Stickney,5/27/2016 9:45:45 PM,5/28/2016 9:07:22 AM,:11:21:37
-DS-D33,1st Ave & Roosevelt Rd (W),TG1,DesPlaines Middle,Stickney,5/12/2016 2:30:45 AM,5/12/2016 4:26:25 AM,:01:55:40
 DS-D34-AI,Westchester P.S.(N),All,Addison Cr,Pumping Station Westchester,8/27/2016 6:30:00 AM,8/27/2016 11:30:00 AM,:05:00:00
 DS-D34-AI,Westchester P.S.(N),All,Addison Cr,Pumping Station Westchester,8/20/2016 8:40:00 AM,8/20/2016 11:30:00 AM,:02:50:00
 DS-D34-AI,Westchester P.S.(N),All,Addison Cr,Pumping Station Westchester,8/18/2016 7:00:00 AM,8/18/2016 8:05:00 AM,:01:05:00
@@ -76,35 +32,15 @@ DS-D34-AI,Westchester P.S.(N),All,Addison Cr,Pumping Station Westchester,7/23/20
 DS-D34-AI,Westchester P.S.(N),All,Addison Cr,Pumping Station Westchester,6/22/2016 9:00:00 PM,6/22/2016 9:45:00 PM,:00:45:00
 DS-D34-AI,Westchester P.S.(N),All,Addison Cr,Pumping Station Westchester,5/31/2016 6:30:00 PM,5/31/2016 6:35:00 PM,:00:05:00
 DS-D34-AI,Westchester P.S.(N),All,Addison Cr,Pumping Station Westchester,5/25/2016 6:25:00 PM,5/26/2016 2:30:00 AM,:08:05:00
-DS-D34-AI,Westchester P.S.(N),All,Addison Cr,Pumping Station Westchester,5/13/2016 10:20:00 PM,5/13/2016 10:30:00 PM,:00:10:00
-DS-D34-AI,Westchester P.S.(N),All,Addison Cr,Pumping Station Westchester,5/12/2016 2:15:00 AM,5/12/2016 2:15:00 PM,:12:00:00
-DS-D34-AI,Westchester P.S.(N),All,Addison Cr,Pumping Station Westchester,5/10/2016 12:00:00 PM,5/10/2016 1:40:00 PM,:01:40:00
-DS-D34-DI,Roosevelt Rd (W),TG1,DesPlaines Middle,Stickney,5/13/2016 10:18:21 PM,5/13/2016 10:45:09 PM,:00:26:48
-DS-D34-DI,Roosevelt Rd (W),TG1,DesPlaines Middle,Stickney,5/12/2016 2:29:57 AM,5/12/2016 11:27:05 AM,:08:57:08
 DS-D35,26th St (West abutement of the bridge) (W),TG1,DesPlaines Middle,Stickney,7/24/2016 7:07:13 PM,7/24/2016 8:33:13 PM,:01:26:00
 DS-D35,26th St (West abutement of the bridge) (W),TG1,DesPlaines Middle,Stickney,5/27/2016 8:58:45 PM,5/27/2016 9:37:21 PM,:00:38:36
-DS-D35,26th St (West abutement of the bridge) (W),TG1,DesPlaines Middle,Stickney,5/13/2016 10:00:25 PM,5/13/2016 11:19:53 PM,:01:19:28
-DS-D35,26th St (West abutement of the bridge) (W),TG1,DesPlaines Middle,Stickney,5/12/2016 2:08:41 AM,5/12/2016 6:04:37 AM,:03:55:56
-DS-D35,26th St (West abutement of the bridge) (W),TG1,DesPlaines Middle,Stickney,5/4/2016 5:59:21 AM,5/4/2016 6:01:05 AM,:00:01:44
 "DS-D37,38",30th St. and Forest Ave. (W),TG2,Salt Cr,Stickney,7/24/2016 7:27:25 PM,7/24/2016 7:53:57 PM,:00:26:32
-"DS-D37,38",30th St. and Forest Ave. (W),TG2,Salt Cr,Stickney,5/13/2016 9:51:33 PM,5/14/2016 1:06:01 AM,:03:14:28
-"DS-D37,38",31st St. and Forest Ave (W),TG1,Salt Cr,Stickney,5/12/2016 3:13:25 AM,5/12/2016 3:19:49 AM,:00:06:24
-"DS-D37,38",31st St. and Forest Ave (W),TG1,Salt Cr,Stickney,5/12/2016 2:22:13 AM,5/12/2016 3:12:53 AM,:00:50:40
-"DS-D37,38",30th St. and Forest Ave. (W),TG2,Salt Cr,Stickney,5/12/2016 2:10:17 AM,5/12/2016 5:24:17 AM,:03:14:00
-"DS-D37,38",30th St. and Forest Ave. (W),TG2,Salt Cr,Stickney,5/4/2016 6:04:53 AM,5/4/2016 6:32:25 AM,:00:27:32
 "DS-D39,42,46",Brookfield Ave (SE wing wall of the bridge) (E),TG3,Salt Cr,Stickney,7/24/2016 7:30:53 PM,7/24/2016 7:32:01 PM,:00:01:08
 "DS-D39,42,46",South of Brookfield Ave (Southwest wing wall of the bridge) (W),TG2,Salt Cr,Stickney,5/27/2016 9:14:53 PM,5/27/2016 10:04:25 PM,:00:49:32
 "DS-D39,42,46",Brookfield Ave (SE wing wall of the bridge) (E),TG3,Salt Cr,Stickney,5/27/2016 9:11:13 PM,5/27/2016 9:12:21 PM,:00:01:08
 "DS-D39,42,46",South of Brookfield Ave (Southwest wing wall of the bridge) (W),TG2,Salt Cr,Stickney,5/25/2016 5:38:33 PM,5/25/2016 6:51:41 PM,:01:13:08
-"DS-D39,42,46",South of Brookfield Ave (Southwest wing wall of the bridge) (W),TG2,Salt Cr,Stickney,5/13/2016 9:51:25 PM,5/14/2016 5:10:57 AM,:07:19:32
-"DS-D39,42,46",South of Brookfield Ave (Southwest wing wall of the bridge) (W),TG2,Salt Cr,Stickney,5/12/2016 2:12:37 AM,5/12/2016 9:18:57 PM,:19:06:20
-"DS-D39,42,46",North of Brookfield Ave (W),TG1,Salt Cr,Stickney,5/12/2016 2:12:37 AM,5/12/2016 9:18:59 PM,:19:06:22
-"DS-D39,42,46",Brookfield Ave (SE wing wall of the bridge) (E),TG3,Salt Cr,Stickney,5/12/2016 2:10:53 AM,5/12/2016 2:12:01 AM,:00:01:08
 DS-D41,Ogden Ave (Approx. 50' north of the bridge) (E),TG1,DesPlaines Lower,Stickney,5/27/2016 8:45:31 PM,5/27/2016 10:31:21 PM,:01:45:50
 DS-D41,Ogden Ave (Approx. 50' north of the bridge) (E),TG1,DesPlaines Lower,Stickney,5/26/2016 2:11:29 AM,5/26/2016 8:23:29 AM,:06:12:00
-DS-D41,Ogden Ave (Approx. 50' north of the bridge) (E),TG1,DesPlaines Lower,Stickney,5/13/2016 9:14:01 PM,5/14/2016 3:59:37 PM,:18:45:36
-DS-D41,Ogden Ave (Approx. 50' north of the bridge) (E),TG1,DesPlaines Lower,Stickney,5/12/2016 2:13:25 AM,5/13/2016 1:45:49 AM,:23:32:24
-DS-D41,Ogden Ave (Approx. 50' north of the bridge) (E),TG1,DesPlaines Lower,Stickney,5/4/2016 2:43:13 AM,5/4/2016 2:46:17 AM,:00:03:04
 DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,7/24/2016 9:18:45 PM,7/24/2016 9:19:37 PM,:00:00:52
 DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,7/24/2016 9:13:05 PM,7/24/2016 9:14:09 PM,:00:01:04
 DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,7/24/2016 9:09:05 PM,7/24/2016 9:10:37 PM,:00:01:32
@@ -147,37 +83,6 @@ DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/26/2016 5:34:25
 DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/26/2016 4:46:25 AM,5/26/2016 5:33:49 AM,:00:47:24
 DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/26/2016 2:41:57 AM,5/26/2016 4:45:53 AM,:02:03:56
 DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/26/2016 2:33:01 AM,5/26/2016 2:41:21 AM,:00:08:20
-DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/14/2016 3:29:57 PM,5/14/2016 3:30:49 PM,:00:00:52
-DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/14/2016 3:15:13 PM,5/14/2016 3:16:17 PM,:00:01:04
-DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/14/2016 2:54:57 PM,5/14/2016 2:56:21 PM,:00:01:24
-DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/14/2016 2:48:51 PM,5/14/2016 2:50:57 PM,:00:02:06
-DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/14/2016 2:43:37 PM,5/14/2016 2:44:33 PM,:00:00:56
-DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/14/2016 2:40:41 PM,5/14/2016 2:41:57 PM,:00:01:16
-DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/14/2016 2:37:17 PM,5/14/2016 2:38:29 PM,:00:01:12
-DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/14/2016 2:34:21 PM,5/14/2016 2:35:33 PM,:00:01:12
-DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/14/2016 2:22:25 PM,5/14/2016 2:23:41 PM,:00:01:16
-DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/14/2016 2:20:01 PM,5/14/2016 2:21:29 PM,:00:01:28
-DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/14/2016 2:15:49 PM,5/14/2016 2:17:41 PM,:00:01:52
-DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/14/2016 2:09:21 PM,5/14/2016 2:12:01 PM,:00:02:40
-DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/14/2016 2:05:29 PM,5/14/2016 2:08:05 PM,:00:02:36
-DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/14/2016 2:02:53 PM,5/14/2016 2:03:53 PM,:00:01:00
-DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/14/2016 1:55:41 PM,5/14/2016 2:02:13 PM,:00:06:32
-DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/14/2016 1:49:25 PM,5/14/2016 1:53:53 PM,:00:04:28
-DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/14/2016 1:39:13 PM,5/14/2016 1:48:29 PM,:00:09:16
-DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/14/2016 1:36:01 PM,5/14/2016 1:38:21 PM,:00:02:20
-DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/14/2016 1:28:29 PM,5/14/2016 1:35:29 PM,:00:07:00
-DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/14/2016 1:15:29 PM,5/14/2016 1:27:57 PM,:00:12:28
-DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/14/2016 1:04:01 PM,5/14/2016 1:14:57 PM,:00:10:56
-DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/14/2016 12:42:13 PM,5/14/2016 1:03:25 PM,:00:21:12
-DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/13/2016 9:27:09 PM,5/14/2016 12:41:41 PM,:15:14:32
-DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/13/2016 4:27:37 AM,5/13/2016 4:31:25 AM,:00:03:48
-DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/13/2016 4:19:53 AM,5/13/2016 4:21:57 AM,:00:02:04
-DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/13/2016 4:10:21 AM,5/13/2016 4:14:21 AM,:00:04:00
-DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/13/2016 4:00:17 AM,5/13/2016 4:03:21 AM,:00:03:04
-DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/13/2016 3:49:13 AM,5/13/2016 3:55:21 AM,:00:06:08
-DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/13/2016 3:41:29 AM,5/13/2016 3:48:37 AM,:00:07:08
-DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/13/2016 3:34:09 AM,5/13/2016 3:40:53 AM,:00:06:44
-DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/12/2016 2:17:05 AM,5/13/2016 3:33:33 AM,:01:16:28
 "DS-D44,45",Blackhawk Rd ext. (E),TG1,DesPlaines Lower,Stickney,7/25/2016 12:00:00 AM,7/25/2016 12:10:33 AM,:00:10:33
 "DS-D44,45",Near Junction of Gage & Riverside Rd (N),TG3,DesPlaines Lower,Stickney,7/24/2016 7:18:05 PM,7/24/2016 8:04:29 PM,:00:46:24
 "DS-D44,45",Blackhawk Rd ext. (E),TG1,DesPlaines Lower,Stickney,7/24/2016 7:09:01 PM,7/25/2016 12:00:00 AM,:04:50:59
@@ -186,12 +91,6 @@ DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/12/2016 2:17:05
 "DS-D44,45",Blackhawk Rd ext. (E),TG1,DesPlaines Lower,Stickney,5/27/2016 8:43:01 PM,5/28/2016 9:07:22 AM,:12:24:21
 "DS-D44,45",Blackhawk Rd ext. (E),TG1,DesPlaines Lower,Stickney,5/26/2016 2:17:45 AM,5/26/2016 8:32:57 AM,:06:15:12
 "DS-D44,45",Olmstead Rd (N),TG2,DesPlaines Lower,Stickney,5/26/2016 2:12:37 AM,5/28/2016 1:47:05 AM,:23:34:28
-"DS-D44,45",Olmstead Rd (N),TG2,DesPlaines Lower,Stickney,5/14/2016 10:37:06 PM,5/26/2016 10:14:57 PM,:23:37:51
-"DS-D44,45",Blackhawk Rd ext. (E),TG1,DesPlaines Lower,Stickney,5/13/2016 9:53:09 PM,5/14/2016 6:03:25 PM,:20:10:16
-"DS-D44,45",Olmstead Rd (N),TG2,DesPlaines Lower,Stickney,5/13/2016 9:53:09 PM,5/14/2016 11:09:25 PM,:01:16:16
-"DS-D44,45",Olmstead Rd (N),TG2,DesPlaines Lower,Stickney,5/12/2016 10:23:09 AM,5/13/2016 5:29:45 AM,:19:06:36
-"DS-D44,45",Blackhawk Rd ext. (E),TG1,DesPlaines Lower,Stickney,5/12/2016 10:23:09 AM,5/13/2016 9:58:05 AM,:23:34:56
-"DS-D44,45",Olmstead Rd (N),TG2,DesPlaines Lower,Stickney,5/4/2016 5:57:25 AM,5/4/2016 5:59:31 AM,:00:02:06
 "DS-D47,50,51 & DS-13A-1",Konrad Ave and Patricia Dr. (S),TG3,Salt Cr,Stickney,7/24/2016 7:42:57 PM,7/24/2016 8:20:01 PM,:00:37:04
 "DS-D47,50,51",Southview Ave and Custer (W),TG2,Salt Cr,Stickney,7/24/2016 7:32:41 PM,7/24/2016 9:00:17 PM,:01:27:36
 "DS-D47,50,51",Southview Ave and Custer (W),TG2,Salt Cr,Stickney,5/27/2016 11:21:53 PM,5/28/2016 12:12:17 AM,:00:50:24
@@ -199,65 +98,24 @@ DS-D43,Near Burling Rd (Library),TG1,DesPlaines Lower,Stickney,5/12/2016 2:17:05
 "DS-D47,50,51",Southview Ave and Custer (W),TG2,Salt Cr,Stickney,5/27/2016 9:08:37 PM,5/27/2016 10:47:37 PM,:01:39:00
 "DS-D47,50,51 & DS-13A-1",Konrad Ave and Patricia Dr. (S),TG3,Salt Cr,Stickney,5/25/2016 9:44:45 PM,5/25/2016 9:47:13 PM,:00:02:28
 "DS-D47,50,51 & DS-13A-1",Konrad Ave and Patricia Dr. (S),TG3,Salt Cr,Stickney,5/25/2016 8:57:31 PM,5/25/2016 9:43:05 PM,:00:45:34
-"DS-D47,50,51",Southview Ave and Custer (W),TG2,Salt Cr,Stickney,5/13/2016 9:01:57 PM,5/14/2016 6:40:13 AM,:09:38:16
-"DS-D47,50,51",Southview Ave and Custer (W),TG2,Salt Cr,Stickney,5/12/2016 2:09:09 AM,5/12/2016 8:26:53 AM,:06:17:44
-"DS-D47,50,51 & DS-13A-1",Konrad Ave and Patricia Dr. (S),TG3,Salt Cr,Stickney,5/12/2016 2:07:17 AM,5/14/2016 8:09:33 AM,:06:02:16
-"DS-D47,50,51",Southview Ave and Custer (W),TG2,Salt Cr,Stickney,5/4/2016 3:01:05 AM,5/4/2016 3:09:05 AM,:00:08:00
 DS-D48,40th St. ext. (40th St. & Haas) (E),TG1,DesPlaines Lower,Stickney,7/25/2016 12:00:00 AM,7/25/2016 12:11:13 AM,:00:11:13
 DS-D48,40th St. ext. (40th St. & Haas) (E),TG1,DesPlaines Lower,Stickney,7/24/2016 7:07:37 PM,7/25/2016 12:00:00 AM,:04:52:23
 DS-D48,40th St. ext. (40th St. & Haas) (E),TG1,DesPlaines Lower,Stickney,7/18/2016 12:14:45 AM,7/18/2016 12:31:25 AM,:00:16:40
 DS-D48,40th St. ext. (40th St. & Haas) (E),TG1,DesPlaines Lower,Stickney,5/27/2016 8:46:41 PM,5/27/2016 9:51:29 PM,:01:04:48
 DS-D48,40th St. ext. (40th St. & Haas) (E),TG1,DesPlaines Lower,Stickney,5/26/2016 2:53:57 AM,5/26/2016 5:49:17 AM,:02:55:20
-DS-D48,40th St. ext. (40th St. & Haas) (E),TG1,DesPlaines Lower,Stickney,5/13/2016 9:55:29 PM,5/14/2016 1:33:17 AM,:03:37:48
-DS-D48,40th St. ext. (40th St. & Haas) (E),TG1,DesPlaines Lower,Stickney,5/12/2016 2:08:21 AM,5/12/2016 10:40:57 AM,:08:32:36
-DS-D48,40th St. ext. (40th St. & Haas) (E),TG1,DesPlaines Lower,Stickney,5/4/2016 2:31:13 AM,5/4/2016 2:33:53 AM,:00:02:40
 DS-D49,Ogden Ave (SW wing wall of the bridge) (W),TG1,DesPlaines Lower,Stickney,7/24/2016 7:06:05 PM,7/25/2016 4:53:41 AM,:09:47:36
 DS-D49,Ogden Ave (SW wing wall of the bridge) (W),TG1,DesPlaines Lower,Stickney,7/21/2016 9:28:53 PM,7/21/2016 9:33:37 PM,:00:04:44
 DS-D49,Ogden Ave (SW wing wall of the bridge) (W),TG1,DesPlaines Lower,Stickney,7/17/2016 11:12:33 PM,7/17/2016 11:36:13 PM,:00:23:40
-DS-D62,"Jackson Ave (Brookfield Zoo, across from Wolf Den) (E)",TG1,Salt Cr,Stickney,5/12/2016 2:18:57 AM,5/13/2016 6:20:49 AM,:04:01:52
 DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,7/24/2016 7:17:13 PM,7/24/2016 10:43:57 PM,:03:26:44
 DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,7/23/2016 11:00:01 PM,7/24/2016 5:48:49 AM,:06:48:48
 DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,7/23/2016 10:55:49 PM,7/23/2016 10:58:13 PM,:00:02:24
 DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,5/25/2016 11:05:25 PM,5/25/2016 11:07:41 PM,:00:02:16
 DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,5/25/2016 10:57:05 PM,5/25/2016 11:03:45 PM,:00:06:40
 DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,5/25/2016 6:02:05 PM,5/25/2016 7:39:37 PM,:01:37:32
-DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,5/13/2016 10:08:01 PM,5/14/2016 3:18:09 AM,:05:10:08
-DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,5/12/2016 2:41:21 AM,5/12/2016 10:28:54 AM,:07:47:33
-DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,5/10/2016 1:35:25 PM,5/10/2016 2:10:41 PM,:00:35:16
-DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,5/10/2016 1:32:57 PM,5/10/2016 1:34:53 PM,:00:01:56
-DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,5/10/2016 1:11:33 PM,5/10/2016 1:15:01 PM,:00:03:28
-DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,5/10/2016 1:07:41 PM,5/10/2016 1:10:05 PM,:00:02:24
-DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,5/10/2016 6:23:13 AM,5/10/2016 10:48:52 AM,:04:25:39
-DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,5/10/2016 4:38:45 AM,5/10/2016 4:42:49 AM,:00:04:04
-DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,5/10/2016 4:28:57 AM,5/10/2016 4:38:12 AM,:00:09:15
-DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,5/10/2016 2:44:29 AM,5/10/2016 4:28:24 AM,:01:43:55
-DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,5/9/2016 8:52:29 PM,5/10/2016 1:02:43 AM,:04:10:14
-DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,5/4/2016 8:34:41 AM,5/4/2016 8:35:53 AM,:00:01:12
-DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,5/4/2016 8:31:41 AM,5/4/2016 8:32:41 AM,:00:01:00
-DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,5/4/2016 8:25:37 AM,5/4/2016 8:30:49 AM,:00:05:12
-DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,5/4/2016 3:30:41 AM,5/4/2016 8:24:37 AM,:04:53:56
-DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,5/1/2016 11:13:05 PM,5/2/2016 1:18:41 AM,:02:05:36
-DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,4/30/2016 3:59:05 PM,4/30/2016 11:16:41 PM,:07:17:36
-DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,4/30/2016 3:10:53 PM,4/30/2016 3:12:01 PM,:00:01:08
-DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,4/30/2016 12:25:21 AM,4/30/2016 12:27:09 AM,:00:01:48
-DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,4/28/2016 12:37:49 AM,4/28/2016 5:25:17 AM,:04:47:28
-DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,4/27/2016 9:09:05 PM,4/27/2016 9:11:37 PM,:00:02:32
-DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,4/27/2016 8:48:41 PM,4/27/2016 9:04:05 PM,:00:15:24
-DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,4/27/2016 8:31:33 PM,4/27/2016 8:46:45 PM,:00:15:12
-DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,4/6/2016 9:24:09 PM,4/6/2016 9:25:45 PM,:00:01:36
-DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,4/6/2016 9:19:17 PM,4/6/2016 9:23:25 PM,:00:04:08
-DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,4/6/2016 9:16:21 PM,4/6/2016 9:18:41 PM,:00:02:20
-DS-M03,67th St ext. (E),TG1,CSSC Lower (SWRP),Stickney,4/6/2016 7:15:21 PM,4/6/2016 9:15:41 PM,:02:00:20
 DS-M08,Natchez Ave ext. (S),TG1,CSSC Lower (SWRP),Stickney,7/24/2016 7:27:25 PM,7/24/2016 10:01:45 PM,:02:34:20
 DS-M08,Natchez Ave ext. (S),TG1,CSSC Lower (SWRP),Stickney,7/23/2016 10:38:01 PM,7/24/2016 4:31:17 AM,:05:53:16
 DS-M08,Natchez Ave ext. (S),TG1,CSSC Lower (SWRP),Stickney,6/22/2016 10:35:21 PM,6/22/2016 10:36:25 PM,:00:01:04
 DS-M08,Natchez Ave ext. (S),TG1,CSSC Lower (SWRP),Stickney,5/25/2016 5:43:33 PM,5/25/2016 7:39:37 PM,:01:56:04
-DS-M08,Natchez Ave ext. (S),TG1,CSSC Lower (SWRP),Stickney,5/13/2016 10:22:49 PM,5/14/2016 2:34:05 AM,:04:11:16
-DS-M08,Natchez Ave ext. (S),TG1,CSSC Lower (SWRP),Stickney,5/12/2016 2:24:37 AM,5/12/2016 8:41:29 AM,:06:16:52
-DS-M08,Natchez Ave ext. (S),TG1,CSSC Lower (SWRP),Stickney,5/1/2016 9:23:53 PM,5/1/2016 10:49:37 PM,:01:25:44
-DS-M08,Natchez Ave ext. (S),TG1,CSSC Lower (SWRP),Stickney,4/28/2016 12:31:13 AM,4/28/2016 1:57:53 AM,:01:26:40
-DS-M08,Natchez Ave ext. (S),TG1,CSSC Lower (SWRP),Stickney,4/27/2016 7:06:17 PM,4/27/2016 8:09:41 PM,:01:03:24
-DS-M08,Natchez Ave ext. (S),TG1,CSSC Lower (SWRP),Stickney,4/20/2016 11:08:25 PM,4/20/2016 11:14:09 PM,:00:05:44
 DS-M09,Hiawatha Ave (Highland Ave ext.) (N),TG1,CSSC Lower (SWRP),Stickney,7/23/2016 10:57:49 PM,7/24/2016 4:27:33 AM,:05:29:44
 DS-M09,Hiawatha Ave (Highland Ave ext.) (N),TG1,CSSC Lower (SWRP),Stickney,7/23/2016 10:32:53 PM,7/23/2016 10:47:41 PM,:00:14:48
 DS-M09,Hiawatha Ave (Highland Ave ext.) (N),TG1,CSSC Lower (SWRP),Stickney,5/25/2016 11:02:09 PM,5/25/2016 11:04:29 PM,:00:02:20
@@ -266,9 +124,6 @@ DS-M09,Hiawatha Ave (Highland Ave ext.) (N),TG1,CSSC Lower (SWRP),Stickney,5/25/
 DS-M09,Hiawatha Ave (Highland Ave ext.) (N),TG1,CSSC Lower (SWRP),Stickney,5/25/2016 9:55:53 PM,5/25/2016 9:59:29 PM,:00:03:36
 DS-M09,Hiawatha Ave (Highland Ave ext.) (N),TG1,CSSC Lower (SWRP),Stickney,5/25/2016 8:48:01 PM,5/25/2016 9:55:17 PM,:01:07:16
 DS-M09,Hiawatha Ave (Highland Ave ext.) (N),TG1,CSSC Lower (SWRP),Stickney,5/25/2016 6:41:41 PM,5/25/2016 8:20:41 PM,:01:39:00
-DS-M09,Hiawatha Ave (Highland Ave ext.) (N),TG1,CSSC Lower (SWRP),Stickney,5/13/2016 10:36:45 PM,5/13/2016 10:39:17 PM,:00:02:32
-DS-M09,Hiawatha Ave (Highland Ave ext.) (N),TG1,CSSC Lower (SWRP),Stickney,5/13/2016 10:23:41 PM,5/13/2016 10:34:01 PM,:00:10:20
-DS-M09,Hiawatha Ave (Highland Ave ext.) (N),TG1,CSSC Lower (SWRP),Stickney,5/12/2016 2:51:25 AM,5/12/2016 6:35:37 AM,:03:44:12
 DS-M10,Lombard Ave (N),TG3,CSSC Lower (SWRP),Stickney,7/24/2016 10:50:29 PM,7/24/2016 10:51:41 PM,:00:01:12
 DS-M10,Lombard Ave (N),TG2,CSSC Lower (SWRP),Stickney,7/24/2016 10:49:53 PM,7/24/2016 10:51:05 PM,:00:01:12
 DS-M10,Lombard Ave (N),TG3,CSSC Lower (SWRP),Stickney,7/24/2016 8:27:57 PM,7/24/2016 9:36:21 PM,:01:08:24
@@ -289,110 +144,42 @@ DS-M10,Lombard Ave (N),TG2,CSSC Lower (SWRP),Stickney,5/25/2016 9:51:53 PM,5/25/
 DS-M10,Lombard Ave (N),TG3,CSSC Lower (SWRP),Stickney,5/25/2016 9:37:45 PM,5/25/2016 9:58:41 PM,:00:20:56
 DS-M10,Lombard Ave (N),TG3,CSSC Lower (SWRP),Stickney,5/25/2016 7:14:29 PM,5/25/2016 7:51:01 PM,:00:36:32
 DS-M10,Lombard Ave (N),TG2,CSSC Lower (SWRP),Stickney,5/25/2016 7:13:53 PM,5/25/2016 7:41:41 PM,:00:27:48
-DS-M10,Lombard Ave (N),TG3,CSSC Lower (SWRP),Stickney,5/14/2016 1:50:17 AM,5/14/2016 1:53:25 AM,:00:03:08
-DS-M10,Lombard Ave (N),TG2,CSSC Lower (SWRP),Stickney,5/14/2016 1:49:45 AM,5/14/2016 1:53:53 AM,:00:04:08
-DS-M10,Lombard Ave (N),TG2,CSSC Lower (SWRP),Stickney,5/14/2016 1:42:45 AM,5/14/2016 1:44:29 AM,:00:01:44
-DS-M10,Lombard Ave (N),TG2,CSSC Lower (SWRP),Stickney,5/14/2016 1:40:17 AM,5/14/2016 1:42:13 AM,:00:01:56
-DS-M10,Lombard Ave (N),TG3,CSSC Lower (SWRP),Stickney,5/14/2016 1:35:49 AM,5/14/2016 1:36:49 AM,:00:01:00
-DS-M10,Lombard Ave (N),TG2,CSSC Lower (SWRP),Stickney,5/14/2016 1:28:57 AM,5/14/2016 1:37:25 AM,:00:08:28
-DS-M10,Lombard Ave (N),TG3,CSSC Lower (SWRP),Stickney,5/14/2016 1:24:53 AM,5/14/2016 1:33:53 AM,:00:09:00
-DS-M10,Lombard Ave (N),TG3,CSSC Lower (SWRP),Stickney,5/13/2016 10:49:25 PM,5/14/2016 1:22:45 AM,:02:33:20
-DS-M10,Lombard Ave (N),TG2,CSSC Lower (SWRP),Stickney,5/13/2016 10:49:25 PM,5/14/2016 1:28:21 AM,:02:38:56
-DS-M10,Lombard Ave (N),TG3,CSSC Lower (SWRP),Stickney,5/12/2016 3:06:13 AM,5/12/2016 6:52:37 AM,:03:46:24
-DS-M10,Lombard Ave (N),TG2,CSSC Lower (SWRP),Stickney,5/12/2016 3:05:09 AM,5/12/2016 6:51:25 AM,:03:46:16
 DS-M101,Mulford St (E),TG1,NSC Lower (NSWRP),Stickney,5/25/2016 7:02:41 PM,5/25/2016 9:02:53 PM,:02:00:12
 DS-M101,Mulford St (E),TG2,NSC Lower (NSWRP),Stickney,5/25/2016 7:02:41 PM,5/25/2016 9:02:53 PM,:02:00:12
-DS-M101,Mulford St (E),TG2,NSC Lower (NSWRP),Stickney,4/28/2016 2:29:29 AM,4/28/2016 4:29:41 AM,:02:00:12
 DS-M104W,Main St (W),TG1,NSC Upper (NSWRP),Stickney,7/24/2016 6:36:41 PM,7/24/2016 7:53:57 PM,:01:17:16
 DS-M104W,Main St (W),TG1,NSC Upper (NSWRP),Stickney,7/23/2016 10:39:05 PM,7/24/2016 2:04:29 AM,:03:25:24
 DS-M104W,Main St (W),TG1,NSC Upper (NSWRP),Stickney,7/23/2016 8:21:51 PM,7/23/2016 8:57:01 PM,:00:35:10
 DS-M104W,Main St (W),TG1,NSC Upper (NSWRP),Stickney,5/27/2016 9:39:41 PM,5/27/2016 10:03:33 PM,:00:23:52
 DS-M104W,Main St (W),TG1,NSC Upper (NSWRP),Stickney,5/25/2016 9:25:01 PM,5/25/2016 9:48:21 PM,:00:23:20
 DS-M104W,Main St (W),TG1,NSC Upper (NSWRP),Stickney,5/25/2016 7:01:29 PM,5/25/2016 7:39:13 PM,:00:37:44
-DS-M104W,Main St (W),TG1,NSC Upper (NSWRP),Stickney,5/14/2016 12:11:25 AM,5/14/2016 12:50:57 AM,:00:39:32
-DS-M104W,Main St (W),TG1,NSC Upper (NSWRP),Stickney,5/13/2016 9:30:53 PM,5/14/2016 12:02:45 AM,:02:31:52
-DS-M104W,Main St (W),TG1,NSC Upper (NSWRP),Stickney,5/12/2016 2:57:05 AM,5/12/2016 4:37:53 AM,:01:40:48
-DS-M104W,Main St (W),TG1,NSC Upper (NSWRP),Stickney,5/10/2016 1:13:05 PM,5/10/2016 1:39:05 PM,:00:26:00
-DS-M104W,Main St (W),TG1,NSC Upper (NSWRP),Stickney,5/1/2016 9:15:29 PM,5/1/2016 10:44:45 PM,:01:29:16
-DS-M104W,Main St (W),TG1,NSC Upper (NSWRP),Stickney,4/28/2016 2:02:25 AM,4/28/2016 4:59:45 AM,:02:57:20
 DS-M104E,Main St (E),TG1,NSC Upper (NSWRP),Stickney,7/23/2016 7:03:41 PM,7/23/2016 7:07:45 PM,:00:04:04
 DS-M104E,Main St (E),TG1,NSC Upper (NSWRP),Stickney,6/22/2016 8:34:57 PM,6/22/2016 8:39:13 PM,:00:04:16
-DS-M104E,Main St (E),TG1,NSC Upper (NSWRP),Stickney,5/12/2016 3:18:49 AM,5/12/2016 3:37:05 AM,:00:18:16
-DS-M104E,Main St (E),TG1,NSC Upper (NSWRP),Stickney,4/30/2016 7:10:29 PM,4/30/2016 7:12:01 PM,:00:01:32
 DS-M105W,Greenwood St & McCormick Blvd (W),TG1,NSC Upper (NSWRP),Stickney,7/24/2016 6:32:33 PM,7/24/2016 11:04:29 PM,:04:31:56
 DS-M105W,Greenwood St & McCormick Blvd (W),TG1,NSC Upper (NSWRP),Stickney,5/25/2016 7:13:33 PM,5/25/2016 7:41:51 PM,:00:28:18
-DS-M105W,Greenwood St & McCormick Blvd (W),TG1,NSC Upper (NSWRP),Stickney,5/13/2016 9:47:45 PM,5/13/2016 11:51:17 PM,:02:03:32
-DS-M105W,Greenwood St & McCormick Blvd (W),TG1,NSC Upper (NSWRP),Stickney,5/1/2016 9:59:53 PM,5/12/2016 4:15:29 AM,:06:15:36
-DS-M105W,Greenwood St & McCormick Blvd (W),TG1,NSC Upper (NSWRP),Stickney,4/28/2016 1:59:17 AM,4/28/2016 7:26:33 AM,:05:27:16
 DS-M106E,Lake St (E),TG1,NSC Upper (NSWRP),Stickney,5/25/2016 7:28:37 PM,5/25/2016 7:39:29 PM,:00:10:52
-DS-M106E,Lake St (E),TG1,NSC Upper (NSWRP),Stickney,5/13/2016 10:04:09 PM,5/13/2016 11:33:09 PM,:01:29:00
-DS-M106E,Lake St (E),TG1,NSC Upper (NSWRP),Stickney,5/12/2016 3:14:57 AM,5/12/2016 4:28:41 AM,:01:13:44
-DS-M106E,Lake St (E),TG1,NSC Upper (NSWRP),Stickney,5/1/2016 9:37:09 PM,5/1/2016 10:34:05 PM,:00:56:56
-DS-M106E,Lake St (E),TG1,NSC Upper (NSWRP),Stickney,4/28/2016 2:25:25 AM,4/28/2016 7:20:11 AM,:04:54:46
 DS-M109N,Green Bay Rd & McCormick (W),TG1,NSC Upper (NSWRP),Stickney,7/24/2016 6:55:53 PM,7/24/2016 7:38:37 PM,:00:42:44
 DS-M109N,Green Bay Rd & McCormick (W),TG1,NSC Upper (NSWRP),Stickney,7/23/2016 8:20:17 PM,7/24/2016 7:16:06 AM,:10:55:49
 DS-M109N,Green Bay Rd & McCormick (W),TG1,NSC Upper (NSWRP),Stickney,5/25/2016 7:24:21 PM,5/25/2016 7:38:53 PM,:00:14:32
-DS-M109N,Green Bay Rd & McCormick (W),TG1,NSC Upper (NSWRP),Stickney,5/13/2016 9:48:17 PM,5/14/2016 1:24:29 AM,:03:36:12
-DS-M109N,Green Bay Rd & McCormick (W),TG1,NSC Upper (NSWRP),Stickney,5/12/2016 3:11:33 AM,5/12/2016 4:29:13 AM,:01:17:40
-DS-M109N,Green Bay Rd & McCormick (W),TG1,NSC Upper (NSWRP),Stickney,5/1/2016 9:45:09 PM,5/1/2016 10:45:57 PM,:01:00:48
-DS-M109N,Green Bay Rd & McCormick (W),TG1,NSC Upper (NSWRP),Stickney,4/28/2016 2:12:13 AM,4/28/2016 7:25:31 AM,:05:13:18
-DS-M11,"Imhoff Tank Stickney WRP, 54th Ct near Lorel Ave (West Side)",TG2,CSSC Upper (SWRP),Stickney,4/30/2016 8:26:25 PM,4/30/2016 11:59:59 PM,:03:33:34
-DS-M11,"Imhoff Tank Stickney WRP, 54th Ct near Lorel Ave (West Side)",TG2,CSSC Upper (SWRP),Stickney,4/27/2016 9:03:49 PM,4/28/2016 7:21:01 AM,:10:17:12
 DS-M114N,Sheridan Rd (Wilmette P.S.) (W),TG1,NSC Upper (NSWRP),Stickney,7/23/2016 10:24:01 PM,7/24/2016 3:51:49 AM,:05:27:48
 DS-M114N,Sheridan Rd (Wilmette P.S.) (W),TG1,NSC Upper (NSWRP),Stickney,7/23/2016 6:37:25 PM,7/23/2016 9:16:45 PM,:02:39:20
 DS-M114N,Sheridan Rd (Wilmette P.S.) (W),TG1,NSC Upper (NSWRP),Stickney,7/23/2016 6:04:17 PM,7/23/2016 6:20:25 PM,:00:16:08
 DS-M114N,Sheridan Rd (Wilmette P.S.) (W),TG1,NSC Upper (NSWRP),Stickney,6/22/2016 8:42:01 PM,6/22/2016 10:07:09 PM,:01:25:08
 DS-M114N,Sheridan Rd (Wilmette P.S.) (W),TG1,NSC Upper (NSWRP),Stickney,5/27/2016 9:35:29 PM,5/27/2016 9:54:21 PM,:00:18:52
 DS-M114N,Sheridan Rd (Wilmette P.S.) (W),TG1,NSC Upper (NSWRP),Stickney,5/25/2016 8:24:33 PM,5/25/2016 9:23:01 PM,:00:58:28
-DS-M114N,Sheridan Rd (Wilmette P.S.) (W),TG1,NSC Upper (NSWRP),Stickney,5/13/2016 9:39:53 PM,5/13/2016 11:42:49 PM,:02:02:56
-DS-M114N,Sheridan Rd (Wilmette P.S.) (W),TG1,NSC Upper (NSWRP),Stickney,5/12/2016 3:16:41 AM,5/12/2016 4:03:57 AM,:00:47:16
-DS-M114N,Sheridan Rd (Wilmette P.S.) (W),TG1,NSC Upper (NSWRP),Stickney,5/1/2016 9:31:09 PM,5/1/2016 10:42:21 PM,:01:11:12
-DS-M114N,Sheridan Rd (Wilmette P.S.) (W),TG1,NSC Upper (NSWRP),Stickney,4/28/2016 2:43:13 AM,4/28/2016 3:05:09 AM,:00:21:56
 DS-M13,"Laramie Ave ext. (Edmeir Rd, SE of SWRP guardhouse) (N)",TG1,CSSC Upper (SWRP),Stickney,7/24/2016 7:22:53 PM,7/24/2016 8:21:21 PM,:00:58:28
 DS-M13,"Laramie Ave ext. (Edmeir Rd, SE of SWRP guardhouse) (N)",TG1,CSSC Upper (SWRP),Stickney,7/24/2016 2:40:21 AM,7/24/2016 2:40:57 AM,:00:00:36
 DS-M13,"Laramie Ave ext. (Edmeir Rd, SE of SWRP guardhouse) (N)",TG1,CSSC Upper (SWRP),Stickney,7/23/2016 10:38:33 PM,7/24/2016 2:39:25 AM,:04:00:52
 DS-M13,"Laramie Ave ext. (Edmeir Rd, SE of SWRP guardhouse) (N)",TG1,CSSC Upper (SWRP),Stickney,7/23/2016 8:30:49 PM,7/23/2016 9:25:05 PM,:00:54:16
 DS-M13,"Laramie Ave ext. (Edmeir Rd, SE of SWRP guardhouse) (N)",TG1,CSSC Upper (SWRP),Stickney,7/6/2016 3:41:49 AM,7/6/2016 5:19:01 AM,:01:37:12
-DS-M13,"Laramie Ave ext. (Edmeir Rd, SE of SWRP guardhouse) (N)",TG1,CSSC Upper (SWRP),Stickney,5/13/2016 11:25:41 PM,5/13/2016 11:26:17 PM,:00:00:36
-DS-M13,"Laramie Ave ext. (Edmeir Rd, SE of SWRP guardhouse) (N)",TG1,CSSC Upper (SWRP),Stickney,5/13/2016 10:23:13 PM,5/13/2016 11:24:45 PM,:01:01:32
-DS-M13,"Laramie Ave ext. (Edmeir Rd, SE of SWRP guardhouse) (N)",TG1,CSSC Upper (SWRP),Stickney,5/12/2016 5:38:37 AM,5/12/2016 5:40:29 AM,:00:01:52
-DS-M13,"Laramie Ave ext. (Edmeir Rd, SE of SWRP guardhouse) (N)",TG1,CSSC Upper (SWRP),Stickney,5/12/2016 2:42:49 AM,5/12/2016 5:38:05 AM,:02:55:16
-DS-M13,"Laramie Ave ext. (Edmeir Rd, SE of SWRP guardhouse) (N)",TG1,CSSC Upper (SWRP),Stickney,4/28/2016 1:18:49 AM,4/28/2016 2:36:53 AM,:01:18:04
 DS-M15,Kenton Ave (Kostner Ave Ext.) (N),TG2,CSSC Upper (SWRP),Stickney,7/24/2016 7:17:01 PM,7/24/2016 11:05:13 PM,:03:48:12
 DS-M15,Kenton Ave (Kostner Ave Ext.) (N),TG2,CSSC Upper (SWRP),Stickney,7/23/2016 10:55:33 PM,7/24/2016 5:35:57 AM,:06:40:24
 DS-M15,Kenton Ave (Kostner Ave Ext.) (N),TG2,CSSC Upper (SWRP),Stickney,5/25/2016 9:26:21 PM,5/26/2016 1:37:17 AM,:04:10:56
 DS-M15,Kenton Ave (Kostner Ave Ext.) (N),TG2,CSSC Upper (SWRP),Stickney,5/25/2016 5:58:57 PM,5/25/2016 8:08:41 PM,:02:09:44
-DS-M15,Kenton Ave (Kostner Ave Ext.) (N),TG2,CSSC Upper (SWRP),Stickney,5/13/2016 10:06:41 PM,5/14/2016 3:17:13 AM,:05:10:32
-DS-M15,Kenton Ave (Kostner Ave Ext.) (N),TG2,CSSC Upper (SWRP),Stickney,5/12/2016 2:42:53 AM,5/12/2016 9:48:41 AM,:07:05:48
-DS-M15,Kenton Ave (Kostner Ave Ext.) (N),TG2,CSSC Upper (SWRP),Stickney,5/1/2016 9:40:01 PM,5/1/2016 11:50:37 PM,:02:10:36
-DS-M15,Kenton Ave (Kostner Ave Ext.) (N),TG2,CSSC Upper (SWRP),Stickney,4/28/2016 1:01:53 AM,4/28/2016 7:26:21 AM,:06:24:28
-DS-M15,Kenton Ave (Kostner Ave Ext.) (N),TG2,CSSC Upper (SWRP),Stickney,4/27/2016 8:29:21 PM,4/27/2016 11:10:05 PM,:02:40:44
-DS-M15,Kenton Ave (Kostner Ave Ext.) (N),TG2,CSSC Upper (SWRP),Stickney,4/20/2016 11:05:57 PM,4/20/2016 11:11:11 PM,:00:05:14
-DS-M15,Kenton Ave (Kostner Ave Ext.) (N),TG2,CSSC Upper (SWRP),Stickney,4/6/2016 11:41:01 AM,4/6/2016 4:30:29 PM,:04:49:28
 DS-M19,California Ave (S),TG2,CSSC Upper (SWRP),Stickney,7/23/2016 11:09:25 PM,7/24/2016 1:33:53 AM,:02:24:28
 DS-M19,California Ave (S),TG2,CSSC Upper (SWRP),Stickney,5/25/2016 7:30:13 PM,5/25/2016 7:39:33 PM,:00:09:20
-DS-M19,California Ave (S),TG2,CSSC Upper (SWRP),Stickney,5/12/2016 3:55:05 AM,5/12/2016 5:30:09 AM,:01:35:04
-DS-M19,California Ave (S),TG2,CSSC Upper (SWRP),Stickney,4/28/2016 7:07:37 AM,4/28/2016 7:12:01 AM,:00:04:24
-DS-M19,California Ave (S),TG2,CSSC Upper (SWRP),Stickney,4/28/2016 6:39:25 AM,4/28/2016 6:44:25 AM,:00:05:00
-DS-M19,California Ave (S),TG2,CSSC Upper (SWRP),Stickney,4/28/2016 6:30:41 AM,4/28/2016 6:38:37 AM,:00:07:56
-DS-M19,California Ave (S),TG2,CSSC Upper (SWRP),Stickney,4/28/2016 3:20:29 AM,4/28/2016 6:29:05 AM,:03:08:36
 DS-M21,Western Ave (S),TG2,CSSC Upper (SWRP),Stickney,6/2/2016 7:53:15 AM,6/2/2016 10:31:13 AM,:02:37:58
 DS-M21,Western Ave (S),TG2,CSSC Upper (SWRP),Stickney,5/25/2016 7:15:33 PM,5/25/2016 7:39:37 PM,:00:24:04
 DS-M21,Western Ave (S),TG1,CSSC Upper (SWRP),Stickney,5/25/2016 7:15:05 PM,5/25/2016 7:39:37 PM,:00:24:32
-DS-M21,Western Ave (S),TG2,CSSC Upper (SWRP),Stickney,5/14/2016 2:22:41 AM,5/14/2016 2:24:49 AM,:00:02:08
-DS-M21,Western Ave (S),TG1,CSSC Upper (SWRP),Stickney,5/14/2016 2:22:09 AM,5/14/2016 2:25:25 AM,:00:03:16
-DS-M21,Western Ave (S),TG1,CSSC Upper (SWRP),Stickney,5/14/2016 2:13:37 AM,5/14/2016 2:14:45 AM,:00:01:08
-DS-M21,Western Ave (S),TG2,CSSC Upper (SWRP),Stickney,5/14/2016 2:09:09 AM,5/14/2016 2:10:33 AM,:00:01:24
-DS-M21,Western Ave (S),TG1,CSSC Upper (SWRP),Stickney,5/14/2016 2:08:33 AM,5/14/2016 2:11:09 AM,:00:02:36
-DS-M21,Western Ave (S),TG2,CSSC Upper (SWRP),Stickney,5/14/2016 1:54:29 AM,5/14/2016 2:00:25 AM,:00:05:56
-DS-M21,Western Ave (S),TG2,CSSC Upper (SWRP),Stickney,5/13/2016 10:27:45 PM,5/14/2016 1:52:05 AM,:03:24:20
-DS-M21,Western Ave (S),TG1,CSSC Upper (SWRP),Stickney,5/13/2016 10:27:13 PM,5/14/2016 2:00:25 AM,:03:33:12
-DS-M21,Western Ave (S),TG2,CSSC Upper (SWRP),Stickney,5/12/2016 3:30:37 AM,5/12/2016 4:31:17 AM,:01:00:40
-DS-M21,Western Ave (S),TG2,CSSC Upper (SWRP),Stickney,5/12/2016 3:28:21 AM,5/12/2016 3:30:05 AM,:00:01:44
-DS-M21,Western Ave (S),TG1,CSSC Upper (SWRP),Stickney,5/12/2016 3:27:45 AM,5/12/2016 4:35:57 AM,:01:08:12
-DS-M21,Western Ave (S),TG2,CSSC Upper (SWRP),Stickney,4/28/2016 7:01:37 AM,4/28/2016 7:10:41 AM,:00:09:04
-DS-M21,Western Ave (S),TG2,CSSC Upper (SWRP),Stickney,4/28/2016 1:55:33 AM,4/28/2016 6:56:05 AM,:05:00:32
-DS-M21,Western Ave (S),TG1,CSSC Upper (SWRP),Stickney,4/28/2016 1:54:13 AM,4/28/2016 7:15:41 AM,:05:21:28
 DS-M25,Paulina St (N),TG1,SB Chicago R,Stickney,7/24/2016 7:06:53 PM,7/24/2016 8:21:45 PM,:01:14:52
 DS-M25,Paulina St (N),TG1,SB Chicago R,Stickney,7/24/2016 2:35:05 AM,7/24/2016 2:36:49 AM,:00:01:44
 DS-M25,Paulina St (N),TG1,SB Chicago R,Stickney,7/23/2016 10:58:01 PM,7/24/2016 2:32:21 AM,:03:34:20
@@ -403,12 +190,6 @@ DS-M25,Paulina St (N),TG1,SB Chicago R,Stickney,6/22/2016 9:07:49 PM,6/22/2016 1
 DS-M25,Paulina St (N),TG1,SB Chicago R,Stickney,6/2/2016 7:53:15 AM,6/2/2016 10:31:25 AM,:02:38:10
 DS-M25,Paulina St (N),TG1,SB Chicago R,Stickney,5/27/2016 4:04:13 PM,5/27/2016 4:32:13 PM,:00:28:00
 DS-M25,Paulina St (N),TG1,SB Chicago R,Stickney,5/25/2016 5:55:37 PM,5/25/2016 10:17:05 PM,:04:21:28
-DS-M25,Paulina St (N),TG1,SB Chicago R,Stickney,5/13/2016 9:52:33 PM,5/14/2016 1:32:57 AM,:03:40:24
-DS-M25,Paulina St (N),TG1,SB Chicago R,Stickney,5/12/2016 2:43:01 AM,5/12/2016 7:31:21 AM,:04:48:20
-DS-M25,Paulina St (N),TG1,SB Chicago R,Stickney,5/10/2016 2:31:13 AM,5/10/2016 2:46:13 AM,:00:15:00
-DS-M25,Paulina St (N),TG1,SB Chicago R,Stickney,5/1/2016 9:46:09 PM,5/1/2016 10:10:25 PM,:00:24:16
-DS-M25,Paulina St (N),TG1,SB Chicago R,Stickney,4/28/2016 3:45:49 AM,4/28/2016 4:48:49 AM,:01:03:00
-DS-M25,Paulina St (N),TG1,SB Chicago R,Stickney,4/28/2016 1:06:01 AM,4/28/2016 2:44:33 AM,:01:38:32
 "DS-M27,DS-M28,& DS-M29 (RAPS)",Racine Ave P.S. (S),All,SF SB Chicago R,Pumping Station Racine Avenue,8/27/2016 7:54:00 AM,8/27/2016 12:52:00 PM,:04:58:00
 "DS-M27,DS-M28,& DS-M29 (RAPS)",Racine Ave P.S. (S),All,SF SB Chicago R,Pumping Station Racine Avenue,8/20/2016 9:30:00 AM,8/20/2016 8:25:00 PM,:10:55:00
 "DS-M27,DS-M28,& DS-M29 (RAPS)",Racine Ave P.S. (S),All,SF SB Chicago R,Pumping Station Racine Avenue,8/12/2016 6:35:00 PM,8/13/2016 10:40:00 AM,:16:05:00
@@ -421,15 +202,6 @@ DS-M25,Paulina St (N),TG1,SB Chicago R,Stickney,4/28/2016 1:06:01 AM,4/28/2016 2
 "DS-M27,DS-M28,& DS-M29 (RAPS)",Racine Ave P.S. (S),All,SF SB Chicago R,Pumping Station Racine Avenue,5/27/2016 6:03:00 PM,5/28/2016 5:50:00 AM,:11:47:00
 "DS-M27,DS-M28,& DS-M29 (RAPS)",Racine Ave P.S. (S),All,SF SB Chicago R,Pumping Station Racine Avenue,5/26/2016 12:00:00 AM,5/26/2016 2:00:00 PM,:14:00:00
 "DS-M27,DS-M28,& DS-M29 (RAPS)",Racine Ave P.S. (S),All,SF SB Chicago R,Pumping Station Racine Avenue,5/25/2016 6:10:00 PM,5/25/2016 11:59:59 PM,:05:49:59
-"DS-M27,DS-M28,& DS-M29 (RAPS)",Racine Ave P.S. (S),All,SF SB Chicago R,Pumping Station Racine Avenue,5/13/2016 8:15:00 PM,5/15/2016 8:20:00 AM,:12:05:00
-"DS-M27,DS-M28,& DS-M29 (RAPS)",Racine Ave P.S. (S),All,SF SB Chicago R,Pumping Station Racine Avenue,5/12/2016 2:15:00 AM,5/13/2016 7:40:00 AM,:05:25:00
-"DS-M27,DS-M28,& DS-M29 (RAPS)",Racine Ave P.S. (S),All,SF SB Chicago R,Pumping Station Racine Avenue,5/11/2016 12:00:00 AM,5/11/2016 3:38:00 AM,:03:38:00
-"DS-M27,DS-M28,& DS-M29 (RAPS)",Racine Ave P.S. (S),All,SF SB Chicago R,Pumping Station Racine Avenue,5/10/2016 12:06:00 AM,5/10/2016 11:59:59 PM,:23:53:59
-"DS-M27,DS-M28,& DS-M29 (RAPS)",Racine Ave P.S. (S),All,SF SB Chicago R,Pumping Station Racine Avenue,5/4/2016 3:50:00 AM,5/4/2016 1:45:00 PM,:09:55:00
-"DS-M27,DS-M28,& DS-M29 (RAPS)",Racine Ave P.S. (S),All,SF SB Chicago R,Pumping Station Racine Avenue,5/1/2016 8:40:00 PM,5/2/2016 10:15:00 AM,:13:35:00
-"DS-M27,DS-M28,& DS-M29 (RAPS)",Racine Ave P.S. (S),All,SF SB Chicago R,Pumping Station Racine Avenue,5/1/2016 12:00:00 AM,5/1/2016 9:50:00 AM,:09:50:00
-"DS-M27,DS-M28,& DS-M29 (RAPS)",Racine Ave P.S. (S),All,SF SB Chicago R,Pumping Station Racine Avenue,4/30/2016 5:05:00 PM,4/30/2016 11:59:59 PM,:06:54:59
-"DS-M27,DS-M28,& DS-M29 (RAPS)",Racine Ave P.S. (S),All,SF SB Chicago R,Pumping Station Racine Avenue,4/28/2016 1:30:00 AM,4/28/2016 7:45:00 AM,:06:15:00
 DS-M30,35th St. (W),TG1,SF SB Chicago R,Stickney,7/24/2016 6:59:17 PM,7/24/2016 8:16:21 PM,:01:17:04
 DS-M30,35th St. (W),TG1,SF SB Chicago R,Stickney,7/23/2016 10:35:21 PM,7/24/2016 2:29:37 AM,:03:54:16
 DS-M30,35th St. (W),TG1,SF SB Chicago R,Stickney,7/23/2016 7:19:57 PM,7/23/2016 9:04:17 PM,:01:44:20
@@ -439,11 +211,6 @@ DS-M30,35th St. (W),TG1,SF SB Chicago R,Stickney,7/13/2016 7:49:49 PM,7/13/2016 
 DS-M30,35th St. (W),TG1,SF SB Chicago R,Stickney,7/6/2016 6:15:57 AM,7/6/2016 6:50:57 AM,:00:35:00
 DS-M30,35th St. (W),TG1,SF SB Chicago R,Stickney,7/6/2016 3:24:13 AM,7/6/2016 5:18:53 AM,:01:54:40
 DS-M30,35th St. (W),TG1,SF SB Chicago R,Stickney,5/25/2016 7:13:05 PM,5/25/2016 7:20:01 PM,:00:06:56
-DS-M30,35th St. (W),TG1,SF SB Chicago R,Stickney,5/13/2016 10:19:25 PM,5/13/2016 10:43:17 PM,:00:23:52
-DS-M30,35th St. (W),TG1,SF SB Chicago R,Stickney,5/12/2016 3:54:49 AM,5/12/2016 4:13:05 AM,:00:18:16
-DS-M30,35th St. (W),TG1,SF SB Chicago R,Stickney,5/12/2016 3:18:17 AM,5/12/2016 3:39:33 AM,:00:21:16
-DS-M30,35th St. (W),TG1,SF SB Chicago R,Stickney,4/28/2016 3:21:29 AM,4/28/2016 4:54:09 AM,:01:32:40
-DS-M30,35th St. (W),TG1,SF SB Chicago R,Stickney,4/28/2016 12:51:09 AM,4/28/2016 2:35:25 AM,:01:44:16
 DS-M38,Union Ave (N),TG1,SB Chicago R,Stickney,7/24/2016 9:16:05 PM,7/24/2016 9:17:21 PM,:00:01:16
 DS-M38,Union Ave (N),TG2,SB Chicago R,Stickney,7/24/2016 8:51:17 PM,7/24/2016 9:05:29 PM,:00:14:12
 DS-M38,Union Ave (N),TG2,SB Chicago R,Stickney,7/24/2016 8:48:37 PM,7/24/2016 8:50:41 PM,:00:02:04
@@ -461,16 +228,6 @@ DS-M38,Union Ave (N),TG1,SB Chicago R,Stickney,5/25/2016 7:04:01 PM,5/25/2016 7:
 DS-M38,Union Ave (N),TG2,SB Chicago R,Stickney,5/25/2016 6:43:25 PM,5/25/2016 6:44:41 PM,:00:01:16
 DS-M38,Union Ave (N),TG2,SB Chicago R,Stickney,5/25/2016 6:13:01 PM,5/25/2016 6:33:33 PM,:00:20:32
 DS-M38,Union Ave (N),TG1,SB Chicago R,Stickney,5/25/2016 6:12:29 PM,5/25/2016 6:46:25 PM,:00:33:56
-DS-M38,Union Ave (N),TG2,SB Chicago R,Stickney,5/14/2016 1:28:29 AM,5/14/2016 1:29:37 AM,:00:01:08
-DS-M38,Union Ave (N),TG1,SB Chicago R,Stickney,5/14/2016 1:27:49 AM,5/14/2016 1:30:09 AM,:00:02:20
-DS-M38,Union Ave (N),TG1,SB Chicago R,Stickney,5/14/2016 1:24:57 AM,5/14/2016 1:26:49 AM,:00:01:52
-DS-M38,Union Ave (N),TG2,SB Chicago R,Stickney,5/14/2016 1:20:37 AM,5/14/2016 1:22:41 AM,:00:02:04
-DS-M38,Union Ave (N),TG1,SB Chicago R,Stickney,5/13/2016 10:28:53 PM,5/14/2016 1:24:21 AM,:02:55:28
-DS-M38,Union Ave (N),TG2,SB Chicago R,Stickney,5/13/2016 10:28:21 PM,5/14/2016 1:16:29 AM,:02:48:08
-DS-M38,Union Ave (N),TG1,SB Chicago R,Stickney,5/12/2016 3:21:49 AM,5/12/2016 5:24:05 AM,:02:02:16
-DS-M38,Union Ave (N),TG2,SB Chicago R,Stickney,5/12/2016 3:21:09 AM,5/12/2016 5:19:57 AM,:01:58:48
-DS-M38,Union Ave (N),TG1,SB Chicago R,Stickney,4/28/2016 4:28:57 AM,4/28/2016 4:31:29 AM,:00:02:32
-DS-M38,Union Ave (N),TG1,SB Chicago R,Stickney,4/28/2016 4:20:09 AM,4/28/2016 4:21:21 AM,:00:01:12
 DS-M40,Normal Ave (S),TG2,SB Chicago R,Stickney,7/24/2016 7:23:25 PM,7/25/2016 8:56:37 AM,:13:33:12
 DS-M40,Normal Ave (S),TG1,SB Chicago R,Stickney,7/24/2016 7:22:25 PM,7/25/2016 8:56:37 AM,:13:34:12
 DS-M40,Normal Ave (S),TG2,SB Chicago R,Stickney,7/23/2016 11:03:49 PM,7/23/2016 11:40:45 PM,:00:36:56
@@ -479,16 +236,9 @@ DS-M40,Normal Ave (S),TG2,SB Chicago R,Stickney,5/25/2016 7:20:05 PM,5/25/2016 7
 DS-M40,Normal Ave (S),TG1,SB Chicago R,Stickney,5/25/2016 7:19:29 PM,5/25/2016 7:54:25 PM,:00:34:56
 DS-M40,Normal Ave (S),TG2,SB Chicago R,Stickney,5/25/2016 6:29:49 PM,5/25/2016 6:53:37 PM,:00:23:48
 DS-M40,Normal Ave (S),TG1,SB Chicago R,Stickney,5/25/2016 6:28:57 PM,5/25/2016 6:54:49 PM,:00:25:52
-DS-M40,Normal Ave (S),TG2,SB Chicago R,Stickney,5/13/2016 10:25:13 PM,5/13/2016 11:09:33 PM,:00:44:20
-DS-M40,Normal Ave (S),TG1,SB Chicago R,Stickney,5/13/2016 10:24:37 PM,5/13/2016 11:12:21 PM,:00:47:44
-DS-M40,Normal Ave (S),TG2,SB Chicago R,Stickney,5/12/2016 3:24:53 AM,5/12/2016 4:33:09 AM,:01:08:16
-DS-M40,Normal Ave (S),TG1,SB Chicago R,Stickney,5/12/2016 3:24:09 AM,5/12/2016 4:36:01 AM,:01:11:52
 DS-M45,14th St (E),TG1,SB Chicago R,Stickney,7/24/2016 7:02:17 PM,7/24/2016 7:54:41 PM,:00:52:24
 DS-M45,14th St (E),TG1,SB Chicago R,Stickney,7/23/2016 10:47:57 PM,7/24/2016 1:28:37 AM,:02:40:40
 DS-M45,14th St (E),TG1,SB Chicago R,Stickney,5/25/2016 5:56:09 PM,5/25/2016 7:39:25 PM,:01:43:16
-DS-M45,14th St (E),TG1,SB Chicago R,Stickney,5/13/2016 10:17:17 PM,5/13/2016 11:09:21 PM,:00:52:04
-DS-M45,14th St (E),TG1,SB Chicago R,Stickney,5/12/2016 3:12:11 AM,5/12/2016 4:31:01 AM,:01:18:50
-DS-M45,14th St (E),TG1,SB Chicago R,Stickney,4/28/2016 1:15:01 AM,4/28/2016 2:13:41 AM,:00:58:40
 DS-M47,Maxwell St (Maxwell & Lumber) (W),TG1,SB Chicago R,Stickney,7/24/2016 6:53:41 PM,7/24/2016 8:15:49 PM,:01:22:08
 DS-M47,Maxwell St (Maxwell & Lumber) (W),TG1,SB Chicago R,Stickney,7/23/2016 10:36:45 PM,7/24/2016 3:31:09 AM,:04:54:24
 DS-M47,Maxwell St (Maxwell & Lumber) (W),TG1,SB Chicago R,Stickney,7/23/2016 7:14:37 PM,7/23/2016 9:20:21 PM,:02:05:44
@@ -500,19 +250,13 @@ DS-M47,Maxwell St (Maxwell & Lumber) (W),TG1,SB Chicago R,Stickney,6/22/2016 8:5
 DS-M47,Maxwell St (Maxwell & Lumber) (W),TG1,SB Chicago R,Stickney,6/22/2016 5:00:02 PM,6/22/2016 8:46:41 PM,:03:46:39
 DS-M47,Maxwell St (Maxwell & Lumber) (W),TG1,SB Chicago R,Stickney,5/25/2016 7:11:21 PM,5/25/2016 7:42:51 PM,:00:31:30
 DS-M47,Maxwell St (Maxwell & Lumber) (W),TG1,SB Chicago R,Stickney,5/25/2016 5:55:21 PM,5/25/2016 6:22:41 PM,:00:27:20
-DS-M47,Maxwell St (Maxwell & Lumber) (W),TG1,SB Chicago R,Stickney,5/13/2016 10:17:25 PM,5/13/2016 10:45:13 PM,:00:27:48
-DS-M47,Maxwell St (Maxwell & Lumber) (W),TG1,SB Chicago R,Stickney,5/12/2016 2:49:01 AM,5/12/2016 3:48:57 AM,:00:59:56
 DS-M49,Roosevelt Rd (Roosevelt & Lumber) (W),TG1,SB Chicago R,Stickney,7/23/2016 11:01:13 PM,7/24/2016 1:45:21 AM,:02:44:08
 DS-M49,Roosevelt Rd (Roosevelt & Lumber) (W),TG1,SB Chicago R,Stickney,5/25/2016 7:11:09 PM,5/25/2016 7:39:21 PM,:00:28:12
 DS-M49,Roosevelt Rd (Roosevelt & Lumber) (W),TG1,SB Chicago R,Stickney,5/25/2016 5:52:33 PM,5/25/2016 6:23:01 PM,:00:30:28
-DS-M49,Roosevelt Rd (Roosevelt & Lumber) (W),TG1,SB Chicago R,Stickney,5/12/2016 3:12:21 AM,5/12/2016 4:44:41 AM,:01:32:20
-DS-M49,Roosevelt Rd (Roosevelt & Lumber) (W),TG1,SB Chicago R,Stickney,4/28/2016 1:28:37 AM,4/28/2016 1:38:33 AM,:00:09:56
 DS-M51,Harrison St (W),TG1,SB Chicago R,Stickney,7/24/2016 1:51:01 AM,7/24/2016 1:54:57 AM,:00:03:56
 DS-M51,Harrison St (W),TG1,SB Chicago R,Stickney,7/23/2016 11:00:29 PM,7/24/2016 1:49:41 AM,:02:49:12
 DS-M51,Harrison St (W),TG1,SB Chicago R,Stickney,5/25/2016 7:11:13 PM,5/25/2016 7:34:29 PM,:00:23:16
 DS-M51,Harrison St (W),TG1,SB Chicago R,Stickney,5/25/2016 5:58:41 PM,5/25/2016 6:05:17 PM,:00:06:36
-DS-M51,Harrison St (W),TG1,SB Chicago R,Stickney,5/13/2016 10:55:17 PM,5/14/2016 12:28:37 AM,:01:33:20
-DS-M51,Harrison St (W),TG1,SB Chicago R,Stickney,5/12/2016 3:11:13 AM,5/12/2016 4:55:01 AM,:01:43:48
 DS-M61A,Fulton St & Canal St (W),TG2,NBCR Lower (NSC Confluence),Stickney,7/24/2016 9:08:29 PM,7/24/2016 9:09:25 PM,:00:00:56
 DS-M61A,Fulton St & Canal St (W),TG2,NBCR Lower (NSC Confluence),Stickney,7/24/2016 9:01:05 PM,7/24/2016 9:07:57 PM,:00:06:52
 DS-M61A,Fulton St & Canal St (W),TG2,NBCR Lower (NSC Confluence),Stickney,7/24/2016 7:01:33 PM,7/24/2016 9:00:29 PM,:01:58:56
@@ -532,15 +276,6 @@ DS-M61A,Fulton St & Canal St (W),TG2,NBCR Lower (NSC Confluence),Stickney,5/25/2
 DS-M61A,Fulton St & Canal St (W),TG2,NBCR Lower (NSC Confluence),Stickney,5/25/2016 6:58:29 PM,5/25/2016 7:41:41 PM,:00:43:12
 DS-M61A,Fulton St & Canal St (W),TG2,NBCR Lower (NSC Confluence),Stickney,5/25/2016 6:56:13 PM,5/25/2016 6:57:17 PM,:00:01:04
 DS-M61A,Fulton St & Canal St (W),TG2,NBCR Lower (NSC Confluence),Stickney,5/25/2016 6:53:25 PM,5/25/2016 6:54:45 PM,:00:01:20
-DS-M61A,Fulton St & Canal St (W),TG2,NBCR Lower (NSC Confluence),Stickney,5/14/2016 1:55:29 AM,5/14/2016 1:56:57 AM,:00:01:28
-DS-M61A,Fulton St & Canal St (W),TG2,NBCR Lower (NSC Confluence),Stickney,5/14/2016 1:46:41 AM,5/14/2016 1:51:29 AM,:00:04:48
-DS-M61A,Fulton St & Canal St (W),TG2,NBCR Lower (NSC Confluence),Stickney,5/13/2016 10:25:45 PM,5/14/2016 1:45:57 AM,:03:20:12
-DS-M61A,Fulton St & Canal St (W),TG2,NBCR Lower (NSC Confluence),Stickney,5/12/2016 6:14:37 AM,5/12/2016 6:17:09 AM,:00:02:32
-DS-M61A,Fulton St & Canal St (W),TG2,NBCR Lower (NSC Confluence),Stickney,5/12/2016 6:05:21 AM,5/12/2016 6:08:45 AM,:00:03:24
-DS-M61A,Fulton St & Canal St (W),TG2,NBCR Lower (NSC Confluence),Stickney,5/12/2016 5:56:53 AM,5/12/2016 5:59:57 AM,:00:03:04
-DS-M61A,Fulton St & Canal St (W),TG2,NBCR Lower (NSC Confluence),Stickney,5/12/2016 5:47:53 AM,5/12/2016 5:50:25 AM,:00:02:32
-DS-M61A,Fulton St & Canal St (W),TG2,NBCR Lower (NSC Confluence),Stickney,5/12/2016 3:10:29 AM,5/12/2016 5:44:57 AM,:02:34:28
-DS-M61A,Fulton St & Canal St (W),TG2,NBCR Lower (NSC Confluence),Stickney,4/28/2016 4:04:57 AM,4/28/2016 4:52:01 AM,:00:47:04
 DS-M66,Blackhawk St (W),TG2,NBCR Lower (NSC Confluence),Stickney,7/24/2016 9:55:57 PM,7/24/2016 9:57:45 PM,:00:01:48
 DS-M66,Blackhawk St (W),TG2,NBCR Lower (NSC Confluence),Stickney,7/24/2016 9:52:45 PM,7/24/2016 9:55:21 PM,:00:02:36
 DS-M66,Blackhawk St (W),TG2,NBCR Lower (NSC Confluence),Stickney,7/24/2016 6:59:53 PM,7/24/2016 9:52:09 PM,:02:52:16
@@ -553,42 +288,15 @@ DS-M66,Blackhawk St (W),TG2,NBCR Lower (NSC Confluence),Stickney,5/25/2016 9:27:
 DS-M66,Blackhawk St (W),TG1,NBCR Lower (NSC Confluence),Stickney,5/25/2016 9:27:05 PM,5/26/2016 12:17:25 AM,:02:50:20
 DS-M66,Blackhawk St (W),TG2,NBCR Lower (NSC Confluence),Stickney,5/25/2016 6:34:01 PM,5/25/2016 8:09:09 PM,:01:35:08
 DS-M66,Blackhawk St (W),TG1,NBCR Lower (NSC Confluence),Stickney,5/25/2016 6:33:25 PM,5/25/2016 8:09:09 PM,:01:35:44
-DS-M66,Blackhawk St (W),TG2,NBCR Lower (NSC Confluence),Stickney,5/13/2016 10:09:57 PM,5/14/2016 1:56:49 AM,:03:46:52
-DS-M66,Blackhawk St (W),TG1,NBCR Lower (NSC Confluence),Stickney,5/13/2016 10:09:21 PM,5/14/2016 2:02:25 AM,:03:53:04
-DS-M66,Blackhawk St (W),TG1,NBCR Lower (NSC Confluence),Stickney,5/12/2016 10:25:53 AM,5/12/2016 10:26:29 AM,:00:00:36
-DS-M66,Blackhawk St (W),TG2,NBCR Lower (NSC Confluence),Stickney,5/12/2016 10:24:33 AM,5/12/2016 10:25:53 AM,:00:01:20
-DS-M66,Blackhawk St (W),TG2,NBCR Lower (NSC Confluence),Stickney,5/12/2016 9:28:09 AM,5/12/2016 9:29:05 AM,:00:00:56
-DS-M66,Blackhawk St (W),TG1,NBCR Lower (NSC Confluence),Stickney,5/12/2016 9:27:37 AM,5/12/2016 9:29:41 AM,:00:02:04
-DS-M66,Blackhawk St (W),TG2,NBCR Lower (NSC Confluence),Stickney,5/12/2016 2:44:53 AM,5/12/2016 9:01:33 AM,:06:16:40
-DS-M66,Blackhawk St (W),TG1,NBCR Lower (NSC Confluence),Stickney,5/12/2016 2:44:21 AM,5/12/2016 9:16:37 AM,:06:32:16
-DS-M66,Blackhawk St (W),TG2,NBCR Lower (NSC Confluence),Stickney,5/1/2016 9:55:29 PM,5/1/2016 10:49:33 PM,:00:54:04
-DS-M66,Blackhawk St (W),TG1,NBCR Lower (NSC Confluence),Stickney,5/1/2016 9:54:49 PM,5/1/2016 10:50:17 PM,:00:55:28
-DS-M66,Blackhawk St (W),TG2,NBCR Lower (NSC Confluence),Stickney,4/28/2016 3:55:21 AM,4/28/2016 5:18:37 AM,:01:23:16
-DS-M66,Blackhawk St (W),TG1,NBCR Lower (NSC Confluence),Stickney,4/28/2016 3:54:49 AM,4/28/2016 5:22:17 AM,:01:27:28
-DS-M66,Blackhawk St (W),TG2,NBCR Lower (NSC Confluence),Stickney,4/28/2016 3:00:53 AM,4/28/2016 3:03:37 AM,:00:02:44
-DS-M66,Blackhawk St (W),TG2,NBCR Lower (NSC Confluence),Stickney,4/28/2016 1:44:37 AM,4/28/2016 3:00:21 AM,:01:15:44
-DS-M66,Blackhawk St (W),TG1,NBCR Lower (NSC Confluence),Stickney,4/28/2016 1:44:05 AM,4/28/2016 3:06:29 AM,:01:22:24
 DS-M70,North Ave (E),TG1,NBCR Lower (NSC Confluence),Stickney,7/23/2016 11:00:29 PM,7/24/2016 2:06:45 AM,:03:06:16
 DS-M70,North Ave (E),TG1,NBCR Lower (NSC Confluence),Stickney,5/27/2016 3:48:01 PM,5/27/2016 4:07:41 PM,:00:19:40
 DS-M70,North Ave (E),TG1,NBCR Lower (NSC Confluence),Stickney,5/25/2016 9:24:29 PM,5/25/2016 10:04:17 PM,:00:39:48
 DS-M70,North Ave (E),TG1,NBCR Lower (NSC Confluence),Stickney,5/25/2016 6:34:13 PM,5/25/2016 7:58:37 PM,:01:24:24
 DS-M70,North Ave (E),TG1,NBCR Lower (NSC Confluence),Stickney,5/25/2016 6:10:13 PM,5/25/2016 6:28:49 PM,:00:18:36
-DS-M70,North Ave (E),TG1,NBCR Lower (NSC Confluence),Stickney,5/12/2016 2:27:09 AM,5/12/2016 3:46:33 AM,:01:19:24
-DS-M70,North Ave (E),TG1,NBCR Lower (NSC Confluence),Stickney,4/28/2016 1:57:05 AM,4/28/2016 2:05:53 AM,:00:08:48
 DS-M73,McLean Ave (W),TG1,NBCR Lower (NSC Confluence),Stickney,7/24/2016 6:49:45 PM,7/24/2016 9:01:01 PM,:02:11:16
 DS-M73,McLean Ave (W),TG1,NBCR Lower (NSC Confluence),Stickney,7/23/2016 10:44:17 PM,7/24/2016 2:57:29 AM,:04:13:12
 DS-M73,McLean Ave (W),TG1,NBCR Lower (NSC Confluence),Stickney,5/25/2016 9:25:45 PM,5/25/2016 9:49:41 PM,:00:23:56
 DS-M73,McLean Ave (W),TG1,NBCR Lower (NSC Confluence),Stickney,5/25/2016 6:30:17 PM,5/25/2016 7:39:45 PM,:01:09:28
-DS-M73,McLean Ave (W),TG1,NBCR Lower (NSC Confluence),Stickney,5/13/2016 10:07:17 PM,5/14/2016 12:29:33 AM,:02:22:16
-DS-M73,McLean Ave (W),TG1,NBCR Lower (NSC Confluence),Stickney,5/12/2016 2:37:05 AM,5/12/2016 5:19:21 AM,:02:42:16
-DS-M73,McLean Ave (W),TG1,NBCR Lower (NSC Confluence),Stickney,5/1/2016 9:54:57 PM,5/1/2016 10:28:09 PM,:00:33:12
-DS-M73,McLean Ave (W),TG1,NBCR Lower (NSC Confluence),Stickney,4/28/2016 1:35:21 AM,4/28/2016 2:38:25 AM,:01:03:04
-DS-M75,Fullerton Ave (E),TG1,NBCR Lower (NSC Confluence),Stickney,5/4/2016 9:51:21 AM,5/4/2016 1:33:05 PM,:03:41:44
-DS-M75,Fullerton Ave (E),TG2,NBCR Lower (NSC Confluence),Stickney,5/4/2016 9:51:21 AM,5/4/2016 1:33:05 PM,:03:41:44
-DS-M75,Fullerton Ave (E),TG1,NBCR Lower (NSC Confluence),Stickney,5/1/2016 10:10:01 PM,5/1/2016 10:20:37 PM,:00:10:36
-DS-M75,Fullerton Ave (E),TG2,NBCR Lower (NSC Confluence),Stickney,5/1/2016 10:09:29 PM,5/1/2016 10:32:57 PM,:00:23:28
-DS-M75,Fullerton Ave (E),TG1,NBCR Lower (NSC Confluence),Stickney,4/28/2016 2:16:57 AM,4/28/2016 2:47:57 AM,:00:31:00
-DS-M75,Fullerton Ave (E),TG2,NBCR Lower (NSC Confluence),Stickney,4/28/2016 2:16:25 AM,4/28/2016 2:55:57 AM,:00:39:32
 DS-M79,Logan Blvd (W),TG3,NBCR Lower (NSC Confluence),Stickney,7/24/2016 6:58:33 PM,7/24/2016 10:06:33 PM,:03:08:00
 DS-M79,Logan Blvd (W),TG2,NBCR Lower (NSC Confluence),Stickney,7/24/2016 6:46:29 PM,7/24/2016 9:52:01 PM,:03:05:32
 DS-M79,Logan Blvd (W),TG2,NBCR Lower (NSC Confluence),Stickney,7/24/2016 3:39:33 AM,7/24/2016 3:41:29 AM,:00:01:56
@@ -605,48 +313,17 @@ DS-M79,Logan Blvd (W),TG2,NBCR Lower (NSC Confluence),Stickney,5/27/2016 9:35:21
 DS-M79,Diversey Ave (W),TG1,NBCR Lower (NSC Confluence),Stickney,5/25/2016 7:05:01 PM,5/25/2016 7:43:13 PM,:00:38:12
 DS-M79,Logan Blvd (W),TG3,NBCR Lower (NSC Confluence),Stickney,5/25/2016 6:42:21 PM,5/26/2016 1:01:09 AM,:06:18:48
 DS-M79,Logan Blvd (W),TG2,NBCR Lower (NSC Confluence),Stickney,5/25/2016 6:13:33 PM,5/26/2016 12:41:09 AM,:06:27:36
-DS-M79,Logan Blvd (W),TG3,NBCR Lower (NSC Confluence),Stickney,5/13/2016 10:47:21 PM,5/14/2016 2:17:21 AM,:03:30:00
-DS-M79,Logan Blvd (W),TG2,NBCR Lower (NSC Confluence),Stickney,5/13/2016 9:35:57 PM,5/14/2016 1:50:41 AM,:04:14:44
-DS-M79,Logan Blvd (W),TG3,NBCR Lower (NSC Confluence),Stickney,5/12/2016 3:29:49 AM,5/12/2016 6:49:25 AM,:03:19:36
-DS-M79,Logan Blvd (W),TG2,NBCR Lower (NSC Confluence),Stickney,5/12/2016 2:37:45 AM,5/12/2016 6:17:13 AM,:03:39:28
-DS-M79,Logan Blvd (W),TG2,NBCR Lower (NSC Confluence),Stickney,5/10/2016 12:55:01 PM,5/10/2016 2:18:45 PM,:01:23:44
-DS-M79,Logan Blvd (W),TG3,NBCR Lower (NSC Confluence),Stickney,5/1/2016 10:13:09 PM,5/1/2016 11:47:53 PM,:01:34:44
-DS-M79,Logan Blvd (W),TG2,NBCR Lower (NSC Confluence),Stickney,5/1/2016 9:12:49 PM,5/1/2016 11:34:49 PM,:02:22:00
-DS-M79,Logan Blvd (W),TG2,NBCR Lower (NSC Confluence),Stickney,4/28/2016 6:51:37 AM,4/28/2016 6:52:21 AM,:00:00:44
-DS-M79,Logan Blvd (W),TG3,NBCR Lower (NSC Confluence),Stickney,4/28/2016 6:50:21 AM,4/28/2016 7:25:51 AM,:00:35:30
-DS-M79,Logan Blvd (W),TG2,NBCR Lower (NSC Confluence),Stickney,4/28/2016 6:46:53 AM,4/28/2016 6:49:45 AM,:00:02:52
-DS-M79,Logan Blvd (W),TG2,NBCR Lower (NSC Confluence),Stickney,4/28/2016 1:23:09 AM,4/28/2016 6:46:17 AM,:05:23:08
-DS-M79,Logan Blvd (W),TG2,NBCR Lower (NSC Confluence),Stickney,4/27/2016 7:46:01 PM,4/27/2016 9:41:13 PM,:01:55:12
-DS-M79,Logan Blvd (W),TG2,NBCR Lower (NSC Confluence),Stickney,4/25/2016 11:06:13 PM,4/25/2016 11:33:49 PM,:00:27:36
-DS-M79,Logan Blvd (W),TG2,NBCR Lower (NSC Confluence),Stickney,4/25/2016 10:53:13 PM,4/25/2016 10:55:57 PM,:00:02:44
-DS-M79,Logan Blvd (W),TG2,NBCR Lower (NSC Confluence),Stickney,4/20/2016 10:28:33 PM,4/20/2016 10:31:11 PM,:00:02:38
-DS-M79,Logan Blvd (W),TG2,NBCR Lower (NSC Confluence),Stickney,4/6/2016 4:14:29 PM,4/6/2016 4:15:13 PM,:00:00:44
-DS-M79,Logan Blvd (W),TG2,NBCR Lower (NSC Confluence),Stickney,4/6/2016 2:57:37 PM,4/6/2016 2:59:09 PM,:00:01:32
-DS-M79,Logan Blvd (W),TG2,NBCR Lower (NSC Confluence),Stickney,4/6/2016 2:34:25 PM,4/6/2016 2:35:13 PM,:00:00:48
-DS-M79,Logan Blvd (W),TG2,NBCR Lower (NSC Confluence),Stickney,4/6/2016 1:59:49 PM,4/6/2016 2:00:33 PM,:00:00:44
-DS-M79,Logan Blvd (W),TG2,NBCR Lower (NSC Confluence),Stickney,4/6/2016 11:21:37 AM,4/6/2016 1:45:33 PM,:02:23:56
 DS-M80,"Leavitt St East Bank (N), Southwest of DS-M80",TG1,NBCR Lower (NSC Confluence),Stickney,7/24/2016 6:51:29 PM,7/24/2016 7:58:29 PM,:01:07:00
 DS-M80,"Leavitt St East Bank (N), Southwest of DS-M80",TG1,NBCR Lower (NSC Confluence),Stickney,7/23/2016 10:54:21 PM,7/24/2016 1:49:49 AM,:02:55:28
 DS-M80,"Leavitt St East Bank (N), Southwest of DS-M80",TG1,NBCR Lower (NSC Confluence),Stickney,5/25/2016 6:21:25 PM,5/25/2016 7:39:25 PM,:01:18:00
-DS-M80,"Leavitt St East Bank (N), Southwest of DS-M80",TG1,NBCR Lower (NSC Confluence),Stickney,5/13/2016 9:59:25 PM,5/14/2016 12:31:05 AM,:02:31:40
-DS-M80,"Leavitt St East Bank (N), Southwest of DS-M80",TG1,NBCR Lower (NSC Confluence),Stickney,5/12/2016 2:39:45 AM,5/12/2016 4:29:09 AM,:01:49:24
-DS-M80,"Leavitt St East Bank (N), Southwest of DS-M80",TG1,NBCR Lower (NSC Confluence),Stickney,5/1/2016 9:45:41 PM,5/1/2016 10:24:17 PM,:00:38:36
-DS-M80,"Leavitt St East Bank (N), Southwest of DS-M80",TG1,NBCR Lower (NSC Confluence),Stickney,4/28/2016 5:39:45 AM,4/28/2016 6:00:57 AM,:00:21:12
-DS-M80,"Leavitt St East Bank (N), Southwest of DS-M80",TG1,NBCR Lower (NSC Confluence),Stickney,4/28/2016 5:33:41 AM,4/28/2016 5:36:33 AM,:00:02:52
-DS-M80,"Leavitt St East Bank (N), Southwest of DS-M80",TG1,NBCR Lower (NSC Confluence),Stickney,4/28/2016 4:05:41 AM,4/28/2016 5:33:09 AM,:01:27:28
-DS-M80,"Leavitt St East Bank (N), Southwest of DS-M80",TG1,NBCR Lower (NSC Confluence),Stickney,4/28/2016 1:39:53 AM,4/28/2016 2:36:25 AM,:00:56:32
 DS-M82,Belmont Ave (W),TG1,NBCR Lower (NSC Confluence),Stickney,6/2/2016 10:58:45 AM,6/2/2016 11:11:11 AM,:00:12:26
 DS-M82,Belmont Ave (W),TG1,NBCR Lower (NSC Confluence),Stickney,5/25/2016 7:09:09 PM,5/25/2016 7:45:51 PM,:00:36:42
-DS-M82,Belmont Ave (W),TG1,NBCR Lower (NSC Confluence),Stickney,5/1/2016 12:11:17 AM,5/1/2016 10:55:37 PM,:22:44:20
 DS-M83,Melrose St & North Rockwell St (W),TG1,NBCR Lower (NSC Confluence),Stickney,5/31/2016 1:59:52 PM,6/1/2016 7:53:12 AM,:17:53:20
 DS-M83,Melrose St & North Rockwell St (W),TG1,NBCR Lower (NSC Confluence),Stickney,5/25/2016 9:04:21 PM,5/25/2016 9:42:01 PM,:00:37:40
 DS-M83,Melrose St & North Rockwell St (W),TG1,NBCR Lower (NSC Confluence),Stickney,5/25/2016 8:43:41 PM,5/25/2016 8:59:25 PM,:00:15:44
 DS-M83,Melrose St & North Rockwell St (W),TG1,NBCR Lower (NSC Confluence),Stickney,5/25/2016 7:18:57 PM,5/25/2016 7:49:21 PM,:00:30:24
 DS-M83,Melrose St & North Rockwell St (W),TG1,NBCR Lower (NSC Confluence),Stickney,5/25/2016 6:36:53 PM,5/25/2016 7:16:25 PM,:00:39:32
 DS-M83,Melrose St & North Rockwell St (W),TG1,NBCR Lower (NSC Confluence),Stickney,5/25/2016 5:58:21 PM,5/25/2016 6:10:29 PM,:00:12:08
-DS-M83,Melrose St & North Rockwell St (W),TG1,NBCR Lower (NSC Confluence),Stickney,5/12/2016 3:08:53 AM,5/12/2016 3:22:53 AM,:00:14:00
-DS-M83,Melrose St & North Rockwell St (W),TG1,NBCR Lower (NSC Confluence),Stickney,5/12/2016 2:29:49 AM,5/12/2016 2:50:53 AM,:00:21:04
-DS-M83,Melrose St & North Rockwell St (W),TG1,NBCR Lower (NSC Confluence),Stickney,4/28/2016 1:38:13 AM,4/28/2016 1:49:45 AM,:00:11:32
 DS-M84,Roscoe St (W),TG2,NBCR Lower (NSC Confluence),Stickney,7/24/2016 6:50:09 PM,7/24/2016 9:02:13 PM,:02:12:04
 DS-M84,Roscoe St (W),TG4,NBCR Lower (NSC Confluence),Stickney,7/24/2016 6:49:33 PM,7/24/2016 9:04:17 PM,:02:14:44
 DS-M84,Roscoe St (W),TG4,NBCR Lower (NSC Confluence),Stickney,7/23/2016 10:54:37 PM,7/24/2016 5:22:45 AM,:06:28:08
@@ -670,22 +347,6 @@ DS-M84,Roscoe St (W),TG4,NBCR Lower (NSC Confluence),Stickney,5/25/2016 9:26:45 
 DS-M84,Roscoe St (W),TG2,NBCR Lower (NSC Confluence),Stickney,5/25/2016 9:25:21 PM,5/25/2016 11:01:33 PM,:01:36:12
 DS-M84,Roscoe St (W),TG2,NBCR Lower (NSC Confluence),Stickney,5/25/2016 6:31:17 PM,5/25/2016 8:08:37 PM,:01:37:20
 DS-M84,Roscoe St (W),TG4,NBCR Lower (NSC Confluence),Stickney,5/25/2016 6:30:33 PM,5/25/2016 7:39:41 PM,:01:09:08
-DS-M84,Roscoe St (W),TG2,NBCR Lower (NSC Confluence),Stickney,5/13/2016 9:48:17 PM,5/14/2016 1:28:05 AM,:03:39:48
-DS-M84,Roscoe St (W),TG4,NBCR Lower (NSC Confluence),Stickney,5/13/2016 9:47:41 PM,5/14/2016 1:26:53 AM,:03:39:12
-DS-M84,Roscoe St (W),TG2,NBCR Lower (NSC Confluence),Stickney,5/12/2016 2:44:49 AM,5/12/2016 5:21:49 AM,:02:37:00
-DS-M84,Roscoe St (W),TG4,NBCR Lower (NSC Confluence),Stickney,5/12/2016 2:44:49 AM,5/12/2016 5:24:29 AM,:02:39:40
-DS-M84,Roscoe St (W),TG2,NBCR Lower (NSC Confluence),Stickney,5/10/2016 1:00:09 PM,5/10/2016 1:56:21 PM,:00:56:12
-DS-M84,Roscoe St (W),TG4,NBCR Lower (NSC Confluence),Stickney,5/10/2016 12:58:49 PM,5/10/2016 2:28:37 PM,:01:29:48
-DS-M84,Roscoe St (W),TG4,NBCR Lower (NSC Confluence),Stickney,5/1/2016 9:24:17 PM,5/2/2016 1:39:41 AM,:04:15:24
-DS-M84,Roscoe St (W),TG4,NBCR Lower (NSC Confluence),Stickney,4/28/2016 4:16:45 AM,4/28/2016 7:25:41 AM,:03:08:56
-DS-M84,Roscoe St (W),TG2,NBCR Lower (NSC Confluence),Stickney,4/28/2016 1:50:29 AM,4/28/2016 7:25:57 AM,:05:35:28
-DS-M84,Roscoe St (W),TG4,NBCR Lower (NSC Confluence),Stickney,4/28/2016 1:49:57 AM,4/28/2016 3:54:25 AM,:02:04:28
-DS-M84,Roscoe St (W),TG2,NBCR Lower (NSC Confluence),Stickney,4/27/2016 8:08:57 PM,4/27/2016 8:48:05 PM,:00:39:08
-DS-M84,Roscoe St (W),TG4,NBCR Lower (NSC Confluence),Stickney,4/27/2016 8:07:21 PM,4/27/2016 8:47:29 PM,:00:40:08
-DS-M84,Roscoe St (W),TG2,NBCR Lower (NSC Confluence),Stickney,4/25/2016 10:56:01 PM,4/25/2016 11:27:05 PM,:00:31:04
-DS-M84,Roscoe St (W),TG4,NBCR Lower (NSC Confluence),Stickney,4/25/2016 10:54:37 PM,4/25/2016 11:26:09 PM,:00:31:32
-DS-M84,Roscoe St (W),TG2,NBCR Lower (NSC Confluence),Stickney,4/6/2016 11:51:25 AM,4/6/2016 2:36:17 PM,:02:44:52
-DS-M84,Roscoe St (W),TG4,NBCR Lower (NSC Confluence),Stickney,4/6/2016 11:48:45 AM,4/6/2016 1:19:45 PM,:01:31:00
 DS-M86,"Grace St (W), North of DS-M86",TG2,NBCR Lower (NSC Confluence),Stickney,7/24/2016 6:56:41 PM,7/24/2016 7:41:41 PM,:00:45:00
 DS-M86,"Grace St (W), North of DS-M86",TG2,NBCR Lower (NSC Confluence),Stickney,7/23/2016 10:55:37 PM,7/24/2016 12:55:53 AM,:02:00:16
 DS-M86,"Grace St (W), North of DS-M86",TG2,NBCR Lower (NSC Confluence),Stickney,5/25/2016 7:02:29 PM,5/25/2016 7:38:57 PM,:00:36:28
@@ -708,16 +369,6 @@ DS-M97,North Shore Ave (E),TG3,NSC Lower (NSWRP),Stickney,5/25/2016 9:24:33 PM,5
 DS-M97,North Shore Ave (E),TG3,NSC Lower (NSWRP),Stickney,5/25/2016 7:10:49 PM,5/25/2016 7:39:21 PM,:00:28:32
 DS-M97,Pratt Ave (E),TG1,NSC Lower (NSWRP),Stickney,5/25/2016 6:45:13 PM,5/25/2016 7:51:11 PM,:01:05:58
 DS-M97,Pratt Ave (E),TG2,NSC Lower (NSWRP),Stickney,5/25/2016 6:45:13 PM,5/25/2016 7:51:11 PM,:01:05:58
-DS-M97,Pratt Ave (E),TG1,NSC Lower (NSWRP),Stickney,5/13/2016 10:06:29 PM,5/13/2016 11:06:29 PM,:01:00:00
-DS-M97,Pratt Ave (E),TG2,NSC Lower (NSWRP),Stickney,5/13/2016 10:06:29 PM,5/13/2016 11:06:29 PM,:01:00:00
-DS-M97,North Shore Ave (E),TG3,NSC Lower (NSWRP),Stickney,5/12/2016 3:20:37 AM,5/12/2016 3:59:13 AM,:00:38:36
-DS-M97,Pratt Ave (E),TG1,NSC Lower (NSWRP),Stickney,5/12/2016 3:09:09 AM,5/12/2016 3:57:13 AM,:00:48:04
-DS-M97,Pratt Ave (E),TG2,NSC Lower (NSWRP),Stickney,5/12/2016 3:09:09 AM,5/12/2016 3:57:13 AM,:00:48:04
-DS-M97,Pratt Ave (E),TG1,NSC Lower (NSWRP),Stickney,5/1/2016 9:56:49 PM,5/1/2016 10:11:01 PM,:00:14:12
-DS-M97,Pratt Ave (E),TG2,NSC Lower (NSWRP),Stickney,5/1/2016 9:56:49 PM,5/1/2016 10:11:01 PM,:00:14:12
-DS-M97,Pratt Ave (E),TG1,NSC Lower (NSWRP),Stickney,4/28/2016 2:05:01 AM,4/28/2016 2:53:21 AM,:00:48:20
-DS-M97,Pratt Ave (E),TG2,NSC Lower (NSWRP),Stickney,4/28/2016 2:05:01 AM,4/28/2016 2:53:21 AM,:00:48:20
-DS-M97,North Shore Ave (E),TG3,NSC Lower (NSWRP),Stickney,4/28/2016 2:03:09 AM,4/28/2016 2:59:13 AM,:00:56:04
 DS-N02,Foster Ave & Keeler (W),TG1,NBCR Upper (NSC Confluence),Stickney,7/24/2016 6:32:05 PM,7/24/2016 7:55:33 PM,:01:23:28
 DS-N02,Foster Ave & Keeler (W),TG1,NBCR Upper (NSC Confluence),Stickney,7/24/2016 1:39:17 AM,7/24/2016 1:57:29 AM,:00:18:12
 DS-N02,Foster Ave & Keeler (W),TG1,NBCR Upper (NSC Confluence),Stickney,7/23/2016 10:31:57 PM,7/24/2016 1:24:41 AM,:02:52:44
@@ -727,30 +378,13 @@ DS-N02,Foster Ave & Keeler (W),TG1,NBCR Upper (NSC Confluence),Stickney,6/22/201
 DS-N02,Foster Ave & Keeler (W),TG1,NBCR Upper (NSC Confluence),Stickney,5/27/2016 9:26:41 PM,5/27/2016 9:45:09 PM,:00:18:28
 DS-N02,Foster Ave & Keeler (W),TG1,NBCR Upper (NSC Confluence),Stickney,5/25/2016 9:22:17 PM,5/25/2016 9:49:53 PM,:00:27:36
 DS-N02,Foster Ave & Keeler (W),TG1,NBCR Upper (NSC Confluence),Stickney,5/25/2016 6:34:09 PM,5/25/2016 7:54:37 PM,:01:20:28
-DS-N02,Foster Ave & Keeler (W),TG1,NBCR Upper (NSC Confluence),Stickney,5/13/2016 10:00:33 PM,5/13/2016 11:10:33 PM,:01:10:00
-DS-N02,Foster Ave & Keeler (W),TG1,NBCR Upper (NSC Confluence),Stickney,5/12/2016 2:43:25 AM,5/12/2016 4:04:13 AM,:01:20:48
-DS-N02,Foster Ave & Keeler (W),TG1,NBCR Upper (NSC Confluence),Stickney,5/1/2016 8:59:49 PM,5/1/2016 10:15:01 PM,:01:15:12
 DS-N04,"Cicero Ave (N), South of Forest Glen",TG2,NBCR Upper (NSC Confluence),Stickney,7/23/2016 10:55:49 PM,7/23/2016 10:58:29 PM,:00:02:40
 DS-N04,"Cicero Ave (N), South of Forest Glen",TG2,NBCR Upper (NSC Confluence),Stickney,5/25/2016 6:55:29 PM,5/25/2016 7:39:05 PM,:00:43:36
-DS-N04,"Cicero Ave (N), South of Forest Glen",TG2,NBCR Upper (NSC Confluence),Stickney,4/28/2016 2:20:25 AM,4/28/2016 2:23:49 AM,:00:03:24
 DS-N05,"Forest Glen Ave (S), West of Cicero",TG1,NBCR Upper (NSC Confluence),Stickney,7/24/2016 6:35:41 PM,7/24/2016 8:18:17 PM,:01:42:36
 DS-N05,"Forest Glen Ave (S), West of Cicero",TG1,NBCR Upper (NSC Confluence),Stickney,5/25/2016 9:24:45 PM,5/25/2016 9:55:25 PM,:00:30:40
 DS-N05,"Forest Glen Ave (S), West of Cicero",TG1,NBCR Upper (NSC Confluence),Stickney,5/25/2016 6:38:51 PM,5/25/2016 9:55:25 PM,:03:16:34
-DS-N05,"Forest Glen Ave (S), West of Cicero",TG1,NBCR Upper (NSC Confluence),Stickney,5/14/2016 10:55:09 PM,5/25/2016 7:54:05 PM,:20:58:56
-DS-N05,"Forest Glen Ave (S), West of Cicero",TG1,NBCR Upper (NSC Confluence),Stickney,5/13/2016 10:37:29 PM,5/13/2016 10:45:13 PM,:00:07:44
-DS-N05,"Forest Glen Ave (S), West of Cicero",TG1,NBCR Upper (NSC Confluence),Stickney,5/12/2016 3:00:33 AM,5/12/2016 4:10:41 AM,:01:10:08
-DS-N05,"Forest Glen Ave (S), West of Cicero",TG1,NBCR Upper (NSC Confluence),Stickney,5/1/2016 9:46:21 PM,5/1/2016 10:10:17 PM,:00:23:56
-DS-N05,"Forest Glen Ave (S), West of Cicero",TG1,NBCR Upper (NSC Confluence),Stickney,4/28/2016 1:46:25 AM,4/28/2016 7:25:51 AM,:05:39:26
-DS-N05,"Forest Glen Ave (S), West of Cicero",TG1,NBCR Upper (NSC Confluence),Stickney,4/25/2016 10:03:45 PM,4/26/2016 12:37:49 AM,:02:34:04
-DS-N05,"Forest Glen Ave (S), West of Cicero",TG1,NBCR Upper (NSC Confluence),Stickney,4/6/2016 9:11:49 AM,4/6/2016 4:29:13 PM,:07:17:24
-DS-N05,"Forest Glen Ave (S), West of Cicero",TG1,NBCR Upper (NSC Confluence),Stickney,4/6/2016 5:14:17 AM,4/6/2016 6:59:09 AM,:01:44:52
-DS-N05,"Forest Glen Ave (S), West of Cicero",TG1,NBCR Upper (NSC Confluence),Stickney,4/2/2016 3:40:02 PM,4/2/2016 10:10:34 PM,:06:30:32
-DS-N05,"Forest Glen Ave (S), West of Cicero",TG1,NBCR Upper (NSC Confluence),Stickney,4/2/2016 10:44:58 AM,4/2/2016 11:58:50 AM,:01:13:52
-DS-N05,"Forest Glen Ave (S), West of Cicero",TG1,NBCR Upper (NSC Confluence),Stickney,4/2/2016 10:17:26 AM,4/2/2016 10:20:14 AM,:00:02:48
-DS-N05,"Forest Glen Ave (S), West of Cicero",TG1,NBCR Upper (NSC Confluence),Stickney,4/1/2016 5:54:02 PM,4/1/2016 11:07:50 PM,:05:13:48
 DS-N06,Ardmore Ave (Indian & Ardmore)  (W),TG1,NBCR Upper (NSC Confluence),Stickney,7/23/2016 10:56:33 PM,7/23/2016 10:58:33 PM,:00:02:00
 DS-N06,Ardmore Ave (Indian & Ardmore)  (W),TG1,NBCR Upper (NSC Confluence),Stickney,5/25/2016 6:44:37 PM,5/25/2016 7:38:49 PM,:00:54:12
-DS-N06,Ardmore Ave (Indian & Ardmore)  (W),TG1,NBCR Upper (NSC Confluence),Stickney,4/28/2016 1:52:01 AM,4/28/2016 2:19:49 AM,:00:27:48
 DS-N07,Central Ave (5900 - 6100 North) (N),TG1,NBCR Upper (NSC Confluence),Stickney,7/24/2016 6:23:33 PM,7/24/2016 7:19:17 PM,:00:55:44
 DS-N07,Central Ave (5900 - 6100 North) (N),TG1,NBCR Upper (NSC Confluence),Stickney,7/23/2016 10:32:01 PM,7/23/2016 11:23:37 PM,:00:51:36
 DS-N07,Central Ave (5900 - 6100 North) (N),TG1,NBCR Upper (NSC Confluence),Stickney,7/23/2016 6:49:17 PM,7/23/2016 7:58:25 PM,:01:09:08
@@ -763,65 +397,36 @@ DS-N08,Mango Ave ext. (Leonard & Miltmore) (W),TG1,NBCR Upper (NSC Confluence),S
 DS-N08,Mango Ave ext. (Leonard & Miltmore) (W),TG1,NBCR Upper (NSC Confluence),Stickney,6/22/2016 8:51:37 PM,6/22/2016 8:55:41 PM,:00:04:04
 DS-N08,Mango Ave ext. (Leonard & Miltmore) (W),TG1,NBCR Upper (NSC Confluence),Stickney,5/25/2016 9:26:01 PM,5/25/2016 9:52:33 PM,:00:26:32
 DS-N08,Mango Ave ext. (Leonard & Miltmore) (W),TG1,NBCR Upper (NSC Confluence),Stickney,5/25/2016 6:48:41 PM,5/25/2016 8:08:25 PM,:01:19:44
-DS-N08,Mango Ave ext. (Leonard & Miltmore) (W),TG1,NBCR Upper (NSC Confluence),Stickney,5/13/2016 10:37:33 PM,5/13/2016 10:51:49 PM,:00:14:16
-DS-N08,Mango Ave ext. (Leonard & Miltmore) (W),TG1,NBCR Upper (NSC Confluence),Stickney,5/12/2016 3:06:49 AM,5/12/2016 3:43:17 AM,:00:36:28
-DS-N08,Mango Ave ext. (Leonard & Miltmore) (W),TG1,NBCR Upper (NSC Confluence),Stickney,4/28/2016 1:34:41 AM,4/28/2016 7:25:41 AM,:05:51:00
-DS-N08,Mango Ave ext. (Leonard & Miltmore) (W),TG1,NBCR Upper (NSC Confluence),Stickney,4/27/2016 10:03:33 PM,4/27/2016 11:25:53 PM,:01:22:20
-DS-N08,Mango Ave ext. (Leonard & Miltmore) (W),TG1,NBCR Upper (NSC Confluence),Stickney,4/27/2016 7:07:37 PM,4/27/2016 9:09:41 PM,:02:02:04
-DS-N08,Mango Ave ext. (Leonard & Miltmore) (W),TG1,NBCR Upper (NSC Confluence),Stickney,4/25/2016 9:53:09 PM,4/25/2016 11:36:17 PM,:01:43:08
-DS-N08,Mango Ave ext. (Leonard & Miltmore) (W),TG1,NBCR Upper (NSC Confluence),Stickney,4/20/2016 9:51:09 PM,4/20/2016 11:12:13 PM,:01:21:04
-DS-N08,Mango Ave ext. (Leonard & Miltmore) (W),TG1,NBCR Upper (NSC Confluence),Stickney,4/6/2016 11:33:49 AM,4/6/2016 2:17:13 PM,:02:43:24
-DS-N08,Mango Ave ext. (Leonard & Miltmore) (W),TG1,NBCR Upper (NSC Confluence),Stickney,4/1/2016 5:53:43 PM,4/1/2016 7:42:38 PM,:01:48:55
 DS-N09,Miami Ave (Indian & Monitor) (W),TG1,NBCR Upper (NSC Confluence),Stickney,7/24/2016 6:32:25 PM,7/24/2016 6:47:29 PM,:00:15:04
 DS-N09,Miami Ave (Indian & Monitor) (W),TG1,NBCR Upper (NSC Confluence),Stickney,5/25/2016 7:09:41 PM,5/25/2016 7:38:33 PM,:00:28:52
 DS-N10A,Wildwood Ave ext. (Caldwell & Tonty) (E),TG1,NBCR Upper (NSC Confluence),Stickney,7/23/2016 10:20:05 PM,7/24/2016 2:01:17 AM,:03:41:12
 DS-N10A,Wildwood Ave ext. (Caldwell & Tonty) (E),TG1,NBCR Upper (NSC Confluence),Stickney,7/23/2016 6:48:33 PM,7/23/2016 9:21:01 PM,:02:32:28
 DS-N10A,Wildwood Ave ext. (Caldwell & Tonty) (E),TG1,NBCR Upper (NSC Confluence),Stickney,7/21/2016 9:15:45 PM,7/21/2016 10:27:09 PM,:01:11:24
 DS-N10A,Wildwood Ave ext. (Caldwell & Tonty) (E),TG1,NBCR Upper (NSC Confluence),Stickney,5/25/2016 6:49:29 PM,5/25/2016 7:39:09 PM,:00:49:40
-DS-N10A,Wildwood Ave ext. (Caldwell & Tonty) (E),TG1,NBCR Upper (NSC Confluence),Stickney,4/28/2016 4:10:05 AM,4/28/2016 5:14:01 AM,:01:03:56
-DS-N10A,Wildwood Ave ext. (Caldwell & Tonty) (E),TG1,NBCR Upper (NSC Confluence),Stickney,4/28/2016 1:49:49 AM,4/28/2016 3:16:21 AM,:01:26:32
 DS-N10B,Imlay St & Milwaukee (W),TG1,NBCR Upper (NSC Confluence),Stickney,7/24/2016 6:24:33 PM,7/24/2016 7:17:13 PM,:00:52:40
 DS-N10B,Imlay St & Milwaukee (W),TG1,NBCR Upper (NSC Confluence),Stickney,7/23/2016 10:25:37 PM,7/23/2016 11:44:57 PM,:01:19:20
 DS-N10B,Imlay St & Milwaukee (W),TG1,NBCR Upper (NSC Confluence),Stickney,7/23/2016 7:08:01 PM,7/23/2016 7:14:45 PM,:00:06:44
 DS-N10B,Imlay St & Milwaukee (W),TG1,NBCR Upper (NSC Confluence),Stickney,7/7/2016 7:14:17 PM,7/7/2016 7:45:09 PM,:00:30:52
 DS-N10B,Imlay St & Milwaukee (W),TG1,NBCR Upper (NSC Confluence),Stickney,6/22/2016 8:42:21 PM,6/22/2016 9:09:41 PM,:00:27:20
 DS-N10B,Imlay St & Milwaukee (W),TG1,NBCR Upper (NSC Confluence),Stickney,5/25/2016 6:43:53 PM,5/25/2016 8:08:01 PM,:01:24:08
-DS-N10B,Imlay St & Milwaukee (W),TG1,NBCR Upper (NSC Confluence),Stickney,4/28/2016 4:04:45 AM,4/28/2016 5:27:33 AM,:01:22:48
-DS-N10B,Imlay St & Milwaukee (W),TG1,NBCR Upper (NSC Confluence),Stickney,4/28/2016 1:35:49 AM,4/28/2016 3:28:09 AM,:01:52:20
-DS-N10B,Imlay St & Milwaukee (W),TG1,NBCR Upper (NSC Confluence),Stickney,4/27/2016 7:32:53 PM,4/27/2016 7:56:33 PM,:00:23:40
-DS-N10B,Imlay St & Milwaukee (W),TG1,NBCR Upper (NSC Confluence),Stickney,4/27/2016 7:30:25 PM,4/27/2016 7:32:01 PM,:00:01:36
-DS-N10B,Imlay St & Milwaukee (W),TG1,NBCR Upper (NSC Confluence),Stickney,4/27/2016 7:27:45 PM,4/27/2016 7:29:29 PM,:00:01:44
-DS-N10B,Imlay St & Milwaukee (W),TG1,NBCR Upper (NSC Confluence),Stickney,4/27/2016 7:25:05 PM,4/27/2016 7:26:49 PM,:00:01:44
-DS-N10B,Imlay St & Milwaukee (W),TG1,NBCR Upper (NSC Confluence),Stickney,4/27/2016 7:22:53 PM,4/27/2016 7:23:53 PM,:00:01:00
-DS-N10B,Imlay St & Milwaukee (W),TG1,NBCR Upper (NSC Confluence),Stickney,4/25/2016 9:56:45 PM,4/25/2016 10:22:13 PM,:00:25:28
-DS-N10B,Imlay St & Milwaukee (W),TG1,NBCR Upper (NSC Confluence),Stickney,4/1/2016 6:10:03 PM,4/1/2016 6:26:11 PM,:00:16:08
 DS-N11,Forestview Lane & Riverside Dr  (E of Milwaukee) (W),TG1,NBCR Upper (NSC Confluence),Stickney,7/23/2016 10:53:41 PM,7/23/2016 10:58:05 PM,:00:04:24
 DS-N11,Forestview Lane & Riverside Dr  (E of Milwaukee) (W),TG1,NBCR Upper (NSC Confluence),Stickney,5/25/2016 6:46:01 PM,5/25/2016 7:38:45 PM,:00:52:44
-DS-N11,Forestview Lane & Riverside Dr  (E of Milwaukee) (W),TG1,NBCR Upper (NSC Confluence),Stickney,4/28/2016 1:47:45 AM,4/28/2016 2:20:09 AM,:00:32:24
 DS-N12,Caldwell Ave & Touhy Ave (Harts Rd & Touhy Ave) (E),TG1,NBCR Upper (NSC Confluence),Stickney,7/23/2016 10:53:25 PM,7/23/2016 10:58:45 PM,:00:05:20
 DS-N12,Caldwell Ave & Touhy Ave (Harts Rd & Touhy Ave) (E),TG1,NBCR Upper (NSC Confluence),Stickney,5/25/2016 6:51:01 PM,5/25/2016 7:38:45 PM,:00:47:44
-DS-N12,Caldwell Ave & Touhy Ave (Harts Rd & Touhy Ave) (E),TG1,NBCR Upper (NSC Confluence),Stickney,4/28/2016 1:41:33 AM,4/28/2016 5:46:37 AM,:04:05:04
-DS-N12,Caldwell Ave & Touhy Ave (Harts Rd & Touhy Ave) (E),TG1,NBCR Upper (NSC Confluence),Stickney,4/27/2016 7:35:05 PM,4/27/2016 8:29:45 PM,:00:54:40
 DS-N13R,6872 Touhy Ave (Franks and Nieman) (E),TG1,NBCR Upper (NSC Confluence),Stickney,7/24/2016 6:08:53 PM,7/24/2016 8:26:37 PM,:02:17:44
 DS-N13R,6872 Touhy Ave (Franks and Nieman) (E),TG1,NBCR Upper (NSC Confluence),Stickney,7/23/2016 6:45:37 PM,7/24/2016 2:30:05 AM,:07:44:28
 DS-N13R,6872 Touhy Ave (Franks and Nieman) (E),TG1,NBCR Upper (NSC Confluence),Stickney,7/21/2016 9:08:51 PM,7/22/2016 12:14:45 AM,:03:05:54
 DS-N13R,6872 Touhy Ave (Franks and Nieman) (E),TG1,NBCR Upper (NSC Confluence),Stickney,6/22/2016 8:30:33 PM,6/22/2016 11:07:42 PM,:02:37:09
 DS-N13R,6872 Touhy Ave (Franks and Nieman) (E),TG1,NBCR Upper (NSC Confluence),Stickney,5/25/2016 6:49:13 PM,5/25/2016 8:08:05 PM,:01:18:52
-DS-N13R,6872 Touhy Ave (Franks and Nieman) (E),TG1,NBCR Upper (NSC Confluence),Stickney,4/28/2016 4:07:37 AM,4/28/2016 5:04:33 AM,:00:56:56
-DS-N13R,6872 Touhy Ave (Franks and Nieman) (E),TG1,NBCR Upper (NSC Confluence),Stickney,4/28/2016 1:38:17 AM,4/28/2016 3:11:45 AM,:01:33:28
 DS-N16,Dobson St and Nordica Ave (W),TG1,NBCR Upper (NSC Confluence),Stickney,7/23/2016 10:25:13 PM,7/23/2016 11:19:21 PM,:00:54:08
 DS-N16,Dobson St and Nordica Ave (W),TG1,NBCR Upper (NSC Confluence),Stickney,5/25/2016 6:56:37 PM,5/25/2016 7:39:25 PM,:00:42:48
-DS-N16,Dobson St and Nordica Ave (W),TG1,NBCR Upper (NSC Confluence),Stickney,4/28/2016 1:58:53 AM,4/28/2016 2:15:25 AM,:00:16:32
 DS-N17,Cleveland St east of Caldwell Ave (W),TG1,NBCR Upper (NSC Confluence),Stickney,7/23/2016 10:27:05 PM,7/23/2016 11:29:13 PM,:01:02:08
 DS-N17,Cleveland St east of Caldwell Ave (W),TG1,NBCR Upper (NSC Confluence),Stickney,5/25/2016 6:58:29 PM,5/25/2016 7:39:17 PM,:00:40:48
-DS-N17,Cleveland St east of Caldwell Ave (W),TG1,NBCR Upper (NSC Confluence),Stickney,4/28/2016 2:00:13 AM,4/28/2016 2:48:29 AM,:00:48:16
 DS-N18,East of Caldwell Ave at Main St ext.(W),TG1,NBCR Upper (NSC Confluence),Stickney,7/24/2016 6:12:45 PM,7/24/2016 8:28:53 PM,:02:16:08
 DS-N18,East of Caldwell Ave at Main St ext.(W),TG1,NBCR Upper (NSC Confluence),Stickney,7/23/2016 10:04:37 PM,7/24/2016 3:05:53 AM,:05:01:16
 DS-N18,East of Caldwell Ave at Main St ext.(W),TG1,NBCR Upper (NSC Confluence),Stickney,7/23/2016 6:34:37 PM,7/23/2016 8:48:11 PM,:02:13:34
 DS-N18,East of Caldwell Ave at Main St ext.(W),TG1,NBCR Upper (NSC Confluence),Stickney,7/21/2016 9:09:11 PM,7/21/2016 11:27:09 PM,:02:17:58
 DS-N18,East of Caldwell Ave at Main St ext.(W),TG1,NBCR Upper (NSC Confluence),Stickney,5/25/2016 6:59:45 PM,5/25/2016 8:49:51 PM,:01:50:06
-DS-N18,East of Caldwell Ave at Main St ext.(W),TG1,NBCR Upper (NSC Confluence),Stickney,4/28/2016 4:28:25 AM,4/28/2016 4:46:29 AM,:00:18:04
-DS-N18,East of Caldwell Ave at Main St ext.(W),TG1,NBCR Upper (NSC Confluence),Stickney,4/28/2016 1:59:49 AM,4/28/2016 3:03:41 AM,:01:03:52
 DS-N19,Dempster St near Lincoln Ave (E),TG1,NBCR Upper (NSC Confluence),Stickney,7/24/2016 6:14:13 PM,7/24/2016 6:54:53 PM,:00:40:40
 DS-N19,Dempster St near Lincoln Ave (E),TG1,NBCR Upper (NSC Confluence),Stickney,7/23/2016 10:03:21 PM,7/24/2016 12:34:01 AM,:02:30:40
 DS-N19,Dempster St near Lincoln Ave (E),TG1,NBCR Upper (NSC Confluence),Stickney,7/23/2016 6:26:05 PM,7/23/2016 8:23:01 PM,:01:56:56
@@ -830,16 +435,8 @@ DS-N19,Dempster St near Lincoln Ave (E),TG1,NBCR Upper (NSC Confluence),Stickney
 DS-N19,Dempster St near Lincoln Ave (E),TG1,NBCR Upper (NSC Confluence),Stickney,7/6/2016 8:55:21 AM,7/6/2016 10:02:01 AM,:01:06:40
 DS-N19,Dempster St near Lincoln Ave (E),TG1,NBCR Upper (NSC Confluence),Stickney,6/22/2016 8:27:13 PM,6/22/2016 9:58:57 PM,:01:31:44
 DS-N19,Dempster St near Lincoln Ave (E),TG1,NBCR Upper (NSC Confluence),Stickney,5/25/2016 6:59:49 PM,5/25/2016 7:38:49 PM,:00:39:00
-DS-N19,Dempster St near Lincoln Ave (E),TG1,NBCR Upper (NSC Confluence),Stickney,4/28/2016 2:06:05 AM,4/28/2016 2:44:57 AM,:00:38:52
 TG1,Stickney,5/31/2016 1:59:52 PM,6/1/2016 7:53:12 AM,:17:53:20
 TG-I12,Albany Ave (N),TG1,Collateral Channel,Stickney,5/25/2016 6:58:49 PM,5/25/2016 7:46:13 PM,:00:47:24
-TG-I12,Albany Ave (N),TG1,Collateral Channel,Stickney,5/14/2016 2:13:53 AM,5/14/2016 2:14:25 AM,:00:00:32
-TG-I12,Albany Ave (N),TG1,Collateral Channel,Stickney,5/14/2016 1:38:05 AM,5/14/2016 1:38:25 AM,:00:00:20
-TG-I12,Albany Ave (N),TG1,Collateral Channel,Stickney,5/14/2016 1:19:05 AM,5/14/2016 1:31:29 AM,:00:12:24
-TG-I12,Albany Ave (N),TG1,Collateral Channel,Stickney,5/14/2016 1:08:21 AM,5/14/2016 1:08:37 AM,:00:00:16
-TG-I12,Albany Ave (N),TG1,Collateral Channel,Stickney,5/13/2016 10:24:53 PM,5/14/2016 1:06:17 AM,:02:41:24
-TG-I12,Albany Ave (N),TG1,Collateral Channel,Stickney,5/12/2016 3:27:25 AM,5/12/2016 7:42:41 AM,:04:15:16
-TG-I12,Albany Ave (N),TG1,Collateral Channel,Stickney,5/12/2016 3:08:57 AM,5/12/2016 3:26:13 AM,:00:17:16
 TG-I28 & I29,Taylor St (W),TG1,SB Chicago R,Stickney,7/24/2016 6:51:05 PM,7/24/2016 7:42:41 PM,:00:51:36
 TG-I28 & I29,Taylor St (W),TG1,SB Chicago R,Stickney,7/24/2016 6:48:17 PM,7/24/2016 6:49:05 PM,:00:00:48
 TG-I28 & I29,Taylor St (W),TG1,SB Chicago R,Stickney,7/24/2016 6:41:13 PM,7/24/2016 6:43:05 PM,:00:01:52
@@ -855,31 +452,16 @@ TG-I28 & I29,Taylor St (W),TG1,SB Chicago R,Stickney,7/6/2016 3:02:29 AM,7/6/201
 TG-I28 & I29,Taylor St (W),TG1,SB Chicago R,Stickney,6/22/2016 8:49:05 PM,6/22/2016 9:10:25 PM,:00:21:20
 TG-I28 & I29,Taylor St (W),TG1,SB Chicago R,Stickney,6/2/2016 7:53:15 AM,6/2/2016 10:27:21 AM,:02:34:06
 TG-I28 & I29,Taylor St (W),TG1,SB Chicago R,Stickney,5/25/2016 7:08:21 PM,5/25/2016 7:38:49 PM,:00:30:28
-TG-I28 & I29,Taylor St (W),TG1,SB Chicago R,Stickney,5/14/2016 10:37:07 PM,5/25/2016 5:38:41 PM,:19:01:34
 TG-I32,Polk St (W),TG1,SB Chicago R,Stickney,7/23/2016 10:47:17 PM,7/24/2016 2:04:13 AM,:03:16:56
 TG-I32,Polk St (W),TG1,SB Chicago R,Stickney,5/25/2016 7:09:37 PM,5/25/2016 7:39:13 PM,:00:29:36
-TG-I32,Polk St (W),TG1,SB Chicago R,Stickney,5/13/2016 10:29:57 PM,5/13/2016 10:30:45 PM,:00:00:48
-TG-I32,Polk St (W),TG1,SB Chicago R,Stickney,5/12/2016 3:36:37 AM,5/12/2016 5:17:21 AM,:01:40:44
 TG-M16,Lawndale Ave (N),TG1,CSSC Upper (SWRP),Stickney,7/23/2016 10:57:57 PM,7/24/2016 3:17:41 AM,:04:19:44
 TG-M16,Lawndale Ave (N),TG1,CSSC Upper (SWRP),Stickney,7/23/2016 10:41:31 PM,7/23/2016 10:53:05 PM,:00:11:34
-TG-M16,Lawndale Ave (N),TG1,CSSC Upper (SWRP),Stickney,5/13/2016 10:24:41 PM,5/13/2016 10:48:45 PM,:00:24:04
 TG-M22,Oakley Ave (N),TG2,CSSC Upper (SWRP),Stickney,7/24/2016 7:03:49 PM,7/24/2016 8:35:17 PM,:01:31:28
 TG-M22,Oakley Ave (N),TG2,CSSC Upper (SWRP),Stickney,7/23/2016 10:58:37 PM,7/24/2016 2:30:01 AM,:03:31:24
-TG-M22,Oakley Ave (N),TG2,CSSC Upper (SWRP),Stickney,5/13/2016 10:10:33 PM,5/14/2016 12:20:57 AM,:02:10:24
-TG-M22,Oakley Ave (N),TG2,CSSC Upper (SWRP),Stickney,5/12/2016 2:47:41 AM,5/12/2016 5:08:49 AM,:02:21:08
 TG-M94,Ardmore Ave (E),TG1,NSC Lower (NSWRP),Stickney,7/23/2016 10:55:17 PM,7/23/2016 11:14:21 PM,:00:19:04
 TG-M94,Ardmore Ave (E),TG1,NSC Lower (NSWRP),Stickney,7/23/2016 10:42:11 PM,7/23/2016 10:53:53 PM,:00:11:42
 TG-M94,Ardmore Ave (E),TG1,NSC Lower (NSWRP),Stickney,7/23/2016 7:08:41 PM,7/23/2016 7:25:09 PM,:00:16:28
 TG-M94,Ardmore Ave (E),TG1,NSC Lower (NSWRP),Stickney,6/22/2016 8:44:57 PM,6/22/2016 9:14:09 PM,:00:29:12
-TG-M94,Ardmore Ave (E),TG1,NSC Lower (NSWRP),Stickney,5/12/2016 3:07:01 AM,5/12/2016 3:33:33 AM,:00:26:32
-TG-NASH,Nashville Ave P.S. (S),TG3,CSSC Lower (SWRP),Stickney,5/13/2016 11:10:29 PM,5/13/2016 11:11:21 PM,:00:00:52
-TG-NASH,Nashville Ave P.S. (S),TG2,CSSC Lower (SWRP),Stickney,5/13/2016 10:48:41 PM,5/13/2016 10:51:37 PM,:00:02:56
-TG-NASH,Nashville Ave P.S. (S),TG2,CSSC Lower (SWRP),Stickney,5/13/2016 10:39:57 PM,5/13/2016 10:46:37 PM,:00:06:40
-TG-NASH,Nashville Ave P.S. (S),TG2,CSSC Lower (SWRP),Stickney,5/13/2016 10:22:57 PM,5/13/2016 10:38:29 PM,:00:15:32
-TG-NASH,Nashville Ave P.S. (S),TG2,CSSC Lower (SWRP),Stickney,5/13/2016 10:08:53 PM,5/13/2016 10:19:09 PM,:00:10:16
-TG-NASH,Nashville Ave P.S. (S),TG2,CSSC Lower (SWRP),Stickney,5/13/2016 9:57:45 PM,5/13/2016 10:06:25 PM,:00:08:40
-TG-NASH,Nashville Ave P.S. (S),TG2,CSSC Lower (SWRP),Stickney,5/12/2016 2:21:25 AM,5/12/2016 3:05:57 AM,:00:44:32
-TG-NASH,Nashville Ave P.S. (S),TG2,CSSC Lower (SWRP),Stickney,5/1/2016 9:24:21 PM,5/1/2016 9:53:33 PM,:00:29:12
 UDP-DS1 (K1),S of Central Rd Bridge (N),GATE0101,Weller Cr,Kirie,7/23/2016 10:11:28 PM,7/23/2016 10:35:41 PM,:00:24:13
 UDP-DS1 (K2-1),S of Central Rd Bridge (N),GATE0201,Weller Cr,Kirie,7/23/2016 10:09:54 PM,7/23/2016 10:36:08 PM,:00:26:14
 UDP-DS1 (K2-2),S of Central Rd Bridge (N),GATE0202,Weller Cr,Kirie,7/23/2016 10:09:54 PM,7/23/2016 10:36:08 PM,:00:26:14
