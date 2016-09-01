@@ -1,4 +1,4 @@
-from __future__ import absolute_import, division, print_function, unicode_literals
+from __future__ import absolute_import, division, print_function
 
 import csv
 from datetime import datetime, timedelta
@@ -6,16 +6,20 @@ import requests
 from bs4 import BeautifulSoup
 import os
 import sqlite3
+import argparse
 
 data_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 processed_data_dir = os.path.join(data_dir, 'processed_data')
 
+# MWRD site requires cookies for POST request, including headers for request
 mwrd_url = 'http://apps.mwrd.org/csoreports/CSO_Synopisis_Report'
 headers = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36',
     'Connection': 'keep-alive',
     'Accept-Encoding': 'gzip, deflate'
 }
+# There are several mandatory hidden inputs, but some that appear on the page
+# are not submitted when accessing past CSO events
 drop_keys = [
     'bttSearchDay',
     'bttResetSearch2',
@@ -88,7 +92,7 @@ def scrape_table(start_date, end_date):
     cso_table = mwrd_post_soup.select("table[cols=9]")
     # Getting all rows except placeholder row which is blank and does not share
     # the valign top attribute
-    table_rows = cso_table[0].select("tr[valign='top']")
+    table_rows = cso_table[0].select('tr[valign="top"]')
     table_list = []
 
     for row in table_rows:
@@ -98,7 +102,7 @@ def scrape_table(start_date, end_date):
             row_list.append(cell.text.strip())
         table_list.append(row_list)
 
-    mod_filename = date_today.replace('/', '-')
+    mod_filename = end_date.replace('/', '-')
     mwrd_filepath = os.path.join
     with open('data/mwrd_scraper_{}.csv'.format(mod_filename), 'w') as mwrd_file:
         mwrd_writer = csv.writer(mwrd_file, delimiter=',', lineterminator='\n')
@@ -128,7 +132,7 @@ def write_to_db(updated_table):
     con.close()
 
 # Updates CSV format to be compatible with existing database
-def reformat_compatible(mwrd_file):
+def reformat_table(mwrd_file, enddate):
     with open(mwrd_file, 'r') as mwrd_csv:
         mwrd_reader = csv.DictReader(mwrd_csv)
         mwrd_table = list(mwrd_reader)
@@ -156,14 +160,20 @@ def reformat_compatible(mwrd_file):
                                  minutes=duration.minute,
                                  seconds=duration.second)
 
-        updated_row['date'] = start_datetime.strftime("%Y-%m-%d")
-        updated_row['starttime'] = start_datetime.strftime("%H:%M")
+        updated_row['datetime'] = start_datetime
         updated_row['endtime'] = end_datetime.strftime("%H:%M")
         updated_row['duration'] = int(duration_min.total_seconds() / 60)
         updated_mwrd_table.append(updated_row)
 
-    updated_mwrd_table.sort(key=lambda x: (x['date'], x['starttime']))
-    mod_filename = date_today.replace('/', '-')
+    # Left actual datetime in to sort on value, not string representation
+    # Add strings for date and starttime back in, then remove datetime
+    updated_mwrd_table.sort(key=lambda x: x['datetime'])
+    for row in updated_mwrd_table:
+        row['date'] = row['datetime'].strftime("%Y-%m-%d")
+        row['starttime'] = row['datetime'].strftime("%H:%M")
+        row.pop('datetime')
+
+    mod_filename = enddate.replace('/', '-')
     with open('data/mwrd_scraper_compatible_{}.csv'.format(mod_filename), 'w') as mwrd_clean:
         mwrd_writer = csv.DictWriter(mwrd_clean,
                                      fieldnames=['location','segment','date','starttime','endtime','duration'],
@@ -172,11 +182,59 @@ def reformat_compatible(mwrd_file):
         mwrd_writer.writeheader()
         mwrd_writer.writerows(updated_mwrd_table)
 
-    write_to_db(updated_mwrd_table)
+    return updated_mwrd_table
+
+# Submit dates in format MM/DD/YYYY
+# If one date supplied, it is applied as the start date, otherwise both will
+# default to the current date
+def get_args():
+    date_today = datetime.now().strftime("%m/%d/%Y")
+    parser = argparse.ArgumentParser(
+        description='Scrapes MWRD site with start and end date provided')
+
+    parser.add_argument('startdate',
+                        type=str,
+                        help='Optional start date',
+                        nargs='?',
+                        default=date_today)
+
+    parser.add_argument('enddate',
+                        type=str,
+                        help='Optional end date',
+                        nargs='?',
+                        default=date_today)
+
+    args = parser.parse_args()
+    return args.startdate, args.enddate
+
+def replace_overlap():
+    date_today = datetime.now().strftime("%m/%d/%Y")
+    scrape_table('01/01/2015', date_today)
+    file_suffix = date_today.replace('/', '-')
+    mwrd_table = reformat_table('data/mwrd_scraper_{}.csv'.format(file_suffix),
+                                date_today)
+
+    earliest_date = mwrd_table[0]['date'].replace('/', '-')
+    con = sqlite3.connect(os.path.join(processed_data_dir, 'cso-data.db'))
+    cur = con.cursor()
+    insert_records = [(i['location'],
+                       i['segment'],
+                       i['date'],
+                       i['starttime'],
+                       i['endtime'],
+                       i['duration']) for i in mwrd_table]
+
+    cur.execute("DELETE FROM CSOs WHERE date >= (?);", (earliest_date,))
+    con.commit()
+    cur.executemany("INSERT INTO CSOs (location, segment, date, starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?);",
+                    insert_records)
+    con.commit()
+    con.close()
 
 if __name__ == '__main__':
-    date_today = datetime.now().strftime("%m/%d/%Y")
-    # Start from first day after data collection stopped
-    scrape_table('05/15/2016', date_today)
-    file_suffix = date_today.replace('/', '-')
-    reformat_compatible('data/mwrd_scraper_{}.csv'.format(file_suffix))
+    startdate, enddate = get_args()
+    scrape_table(startdate, enddate)
+    file_suffix = enddate.replace('/', '-')
+    mwrd_table = reformat_table('data/mwrd_scraper_{}.csv'.format(file_suffix),
+                                enddate)
+    write_to_db(mwrd_table)
