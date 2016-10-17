@@ -163,7 +163,7 @@ http://istheresewageinthechicagoriver.com/csos-by-waterway/
       }
     });
     outfalls.query().where("CSO_EVENT='Yes'").run(function(error, featureCollection){
-      if (featureCollection.features.length > 0) {
+      if (featureCollection && featureCollection.features.length > 0) {
         $('#map-info').slideDown();
         $('#riverway-list').hide();
         init_map();
