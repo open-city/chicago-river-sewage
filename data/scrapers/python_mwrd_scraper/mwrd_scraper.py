@@ -189,6 +189,7 @@ def reformat_table(mwrd_file, enddate):
 # default to the current date
 def get_args():
     date_today = datetime.now().strftime("%m/%d/%Y")
+    one_month_ago = (datetime.now() - timedelta(days=30)).strftime("%m/%d/%Y")
     parser = argparse.ArgumentParser(
         description='Scrapes MWRD site with start and end date provided')
 
@@ -196,7 +197,7 @@ def get_args():
                         type=str,
                         help='Optional start date',
                         nargs='?',
-                        default=date_today)
+                        default=one_month_ago)
 
     parser.add_argument('enddate',
                         type=str,
@@ -205,6 +206,9 @@ def get_args():
                         default=date_today)
 
     args = parser.parse_args()
+
+    print(args.startdate + " - " + args.enddate)
+
     return args.startdate, args.enddate
 
 def replace_overlap():
