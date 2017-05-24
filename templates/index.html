@@ -156,13 +156,19 @@ http://istheresewageinthechicagoriver.com/csos-by-waterway/
   
   {% if today_flag %}
     // do it the new ESRI way
+
+    //old url
+    //http://utility.arcgis.com/usrsvcs/servers/6b8c99dc28b34d5399f59e480951655a/rest/services/CSO/CSO_Final/MapServer/0
+
     var outfalls = L.esri.featureLayer({
-      url: "http://utility.arcgis.com/usrsvcs/servers/6b8c99dc28b34d5399f59e480951655a/rest/services/CSO/CSO_Final/MapServer/0",
+      url: "https://utility.arcgis.com/usrsvcs/servers/96bec60971e8401885894c0066fbb881/rest/services/CSO/CSO_Final/FeatureServer/0/",
       style: function () {
         return { color: "#70ca49", weight: 2 };
       }
     });
     outfalls.query().where("CSO_EVENT='Yes'").run(function(error, featureCollection){
+      // console.log(error)
+      // console.log(featureCollection)
       if (featureCollection && featureCollection.features.length > 0) {
         $('#map-info').slideDown();
         $('#riverway-list').hide();
